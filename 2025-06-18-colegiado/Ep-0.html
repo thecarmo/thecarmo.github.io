@@ -1,0 +1,595 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de participação em eventos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1994,
+1],
+[1996,
+8],
+[1997,
+4],
+[1998,
+7],
+[1999,
+1],
+[2000,
+6],
+[2001,
+8],
+[2002,
+17],
+[2003,
+11],
+[2004,
+13],
+[2005,
+17],
+[2006,
+13],
+[2007,
+8],
+[2008,
+14],
+[2009,
+11],
+[2010,
+9],
+[2011,
+5],
+[2012,
+5],
+[2013,
+7],
+[2014,
+8],
+[2015,
+8],
+[2016,
+2],
+[2017,
+3],
+[2018,
+5],
+[2019,
+3],
+[2021,
+4]]}]});
+        });
+        </script>
+        
+                <h3>Total de participação em eventos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 198<br>
+                    
+                    
+                    <div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>I Colóquio de Educação Matemática e Computacional da UFSB: Desafios do Século XXI.Educação para a vida: da matemática ao raciocínio computacional, onde mais podemos chegar?. 2021. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>I Seminário de Pesquisa PPGDesign.TFC ? O DESENVOLVIMENTO DE UMA FONTE TIPOGRÁFICA DIGITAL COMO FERRAMENTA DE ESTUDO DE CALIGRAFIA. 2021. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>II Seminário de Psicologia e Políticas Públicas: Integrando Olhares e Reflexões no Âmbito da Educação..Seminário de Psicologia e Políticas Públicas: Integrando Olhares e Reflexões no Âmbito da Educação.. 2021. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>VI Congresso sobre Tecnologias na Educação. 2021. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>I ACM Latin American School on Recommender Systems. 2019. (Outra).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>I Congresso dos Municípios Cearenses. 2019. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Workshop dos Pólos da UAB no Ceará. 2019. (Oficina).</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>13º Congresso de Pesquisa e Desenvolvimento em Design. O desenvolvimento de um framework descritivo de ductus caligráfico. 2018. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>24º CIAED Congresso Internacional ABED de Educação a Distância. UTILIZAÇÃO DE TÉCNICAS DE MINERAÇÃO DE DADOS E ESTATÍSTICA PARA MELHORIA DA GESTÃO DO PROCESSO DE AVALIAÇÃO DE ATORES EM EDUCAÇÃO SEMIPRESENCIA. 2018. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>IHC 2018 XVII SIMPÓSIO BRASILEIRO SOBRE FATORES HUMANOS EM SISTEMAS COMPUTACIONAIS. 2018. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>The 31st Conference on Graphics, Patterns and Images (SIBGRAPI 2018). Real-time discovery of hot routes on trajectory data streams using interactive visualization based on GPU. 2018. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>XXIX Simpósio Brasileiro de Informática na Educação (Brazilian Symposium on Computers in Education). 2018. (Simpósio).</td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>16th Brazilian Symposium on Human Factors in Computing Systems.Uma Investigação da Relação entre Valores Humanos e a Intenção Emocional do Usuário em suas postagens no Twitter. 2017. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Advances in Intelligent Data Analysis XVI. IDA 2017. Visualization of Topic-Sentiment Dynamics in Crowdfunding Projects. 2017. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Memória Gráfica no Agreste. 2017. (Encontro).</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>12º P&D - Congresso Brasileiro de Pesquisa e Desenvolvimento em Design. Ensino de caligrafia canônica no Brasil: Análise do material didático e técnicas utilizadas em cursos introdutórios. 2016. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DiaTipo Caruaru. 2016. (Encontro).</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2015 International Symposium on Computer Architecture and High Performance Computing Workshop (SBACPADW). 2015. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>33º Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos. 2015. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>4th International Workshop on ADVANCEs in ICT INfrastructures and Services (ADVANCE 2015). An Architecture Proposal for High Performance Computing in Cloud Computing Environments. 2015. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>4th Workshop on Parallel Programming Models. 2015. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>ATypI Conference. 2015. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Media Weekend.Tipografia Digital. 2015. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>V Workshop de Sistemas Distribuídos Autonômicos (WOSIDA2015). 2015. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>XXVI Simpósio Brasileiro de Informática na Educação. Uma Ontologia de Domínio para a Análise do Diálogo Freireano em Fóruns de Discussão da Educação a Distância.. 2015. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Conferencia Latinoamericana en Informática - CLEI 2014. Analysis of pre-patterns in the specification of the interaction design for Digital TV. 2014. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Conferencia Latinoamericana en Informática. The DIRCE approach for Requirements Elicitation and Design of Interaction in innovative systems. 2014. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Conferência Internacional sobre Informática na Educação. Análise da Afetividade em Fóruns Virtuais: Construção de uma Ontologia de Domínio.. 2014. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DiaTipo SP. 2014. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>I EADCE - Encontro de Educação a Distância e Aberta do Ceará.1. Mesa redonda: Ferramentas para Aplicação em EAD; 2. Mesa redonda Tecnologias Aplicadas à Educação e Produção de Material Didático em EAD. 2014. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>IHC2014 - XIII Simpósio Brasileiro Sobre Fatores Humanos em Sistemas Computacionais. 2014. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Semana 3 1/2.Tipografia Experimental. 2014. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Seminário de Gestão. 2014. (Seminário).</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>31º Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos. Uma Arquitetura de Aplicação Móvel para Suporte a Fóruns usando Text-to-Speech em Ambientes Virtuais de Aprendizagem. 2013. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Brazilian Conference on Intelligent Systems (BRACIS-13). 2013. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DiaTipo SP. 2013. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Infobrasil. Membro do Comitê de Programa e Revisor. 2013. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>STIL 2013 ? The 9th Brazilian Symposium in Information and Human Language Technology.STILAn investigation in support of usability evaluation in Social Systems using Natural Language Processing. 2013. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>X Simpósio Brasileiro de Sistemas Colaborativos.Framework de apoio na avaliação da usabilidade de softwares sociais a partir da Linguagem Natural. 2013. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>XII Simpósio Brasileiro sobre Fatores Humanos em Sistemas Computacionais. 2013. (Simpósio).</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Infobrasil. Membro do Comitê de Programa e Revisor. 2012. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Simpósio Brasileiro de Informática na Educação.Processo de Adaptação de Objetos de Aprendizagem para o Ensino de Matemática. 2012. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Workshop Recursos Educacionais Abertos. Ampliando a Autonomia Docente com o Uso de Objetos de Aprendizagem Customizáveis. 2012. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Workshop Recursos Educacionais Abertos. Localização de Recursos Educacionais Digitais Americanos para o Ensino de Matemática no Contexto Brasileiro. 2012. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>XIV Symposium on Virtual and Augmented Reality.System Model for Shooting Training Based on Interactive Video, Tridimensional Computer Graphics and Laser Ray Capture. 2012. (Seminário).</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>EvenSoft: Escola de verão em Engenharia de software.INTERATIVIDADE NA TV DIGITAL BRASILEIRA. 2011. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>III Seminário de Integração e Planejamento do Instituto UFC Virtual. 2011. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>InfoBrasil. Membro do Comitê de Programa e Revisor. 2011. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Seminário Temáticos de Pesquisa do Instituto Universidade Virtual.Adaptação de Recursos Educacionais Digitais: uma necessidade do contexto educacional mundial. 2011. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>VII Seminário Jogos Eletrônicos, Educação e Comunicação.Jogos Sérios: Panoramas e Oportunidades. 2011. (Seminário).</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1º Cultura de Quinta.Mídias Digitais. 2010. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Congresso Latinoamericano de Objetos de Aprendizagem. Desenvolvendo Objetos de Aprendizagem Utilizando Modelos Arquiteturais. 2010. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>I Workshop de Televisão digital: Interatividade e Educação.Interatividade para TVD. 2010. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>II Seminário de Integração e Planejamento do Instituto UFC Virtual. 2010. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>II Workshop de Televisão digital: Interatividade e Educação.InteratividadeparaTVD. 2010. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>III Oficina de TV Digital Interativa. 2010. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Internacional Symposium on Open Educational Resources: Issues for Globalization and Localization.Guided Customization for Learning Objects. 2010. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>VI Seminário Jogos Eletrônicos, Educação e Comunicação - construindo novas trilhas (Online). 2010. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>VI Seminário Jogos Eletrônicos, Educação e Comunicação - construindo novas trilhas (Online).MEMOLIBRAS ? JOGO ELETRÔNICO COMO FERRAMENTA CONTEXTUALIZADA DE MEDIAÇÃO DE APRENDIZAGEM DA LÍNGUA BRASILEIRA DE SINAIS PELA CRIANÇA SURDA. 2010. (Seminário).</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2º Congresso Muito Especial de Tecnologia Assistiva e Inclusão Social de Pessoas com Deficiência de Pernambuco. 2009. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>I Seminário de Integração e Planejamento do Intituto UFC Virtual. 2009. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>II Workshop de Tecnologia da Informação do Sertão Central.História da Computação. 2009. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>InfoBrasil. 2009. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Latin-American Conference on Human-Computer Interaction (CLIHC). Uma metodologia para o projeto da interação utilizando técnicas de Prototipação da Experiência e Pré-patterns. 2009. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Mundo Unifor.Interatividade na TV digital: Conceitos e Aplicações. 2009. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Mundo Unifor.Interatividade na TV digital: Práticas em Projetos de Interface. 2009. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Seminario de Ambientação de Novos Servidores. 2009. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Seminário de Integração Docente. 2009. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Simpósio Brasileiro de Engenharia de Software. 2009. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Simpósio Brasileiro de Informática na Educação.Modelo para Qualidade de Objetos de Aprendizagem: da sua Concepção ao Uso em Sala de Aula. 2009. (Simpósio).</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2º Fórum Estadual - Planejamento Participativo e Regionalizado.As políticas culturais para o Estado do Ceará para o ano de 2009. 2008. (Outra).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>7a Conferência Latino-Americana em Linguagens de Padrões para Programação. 2008. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Congresso Ceará de Gestão Pública. 2008. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Congresso E-duca. 2008. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>I Congreso Internacional de Intercambio de Experiencias de Innovación Docente Universitária. Desarrollo de materiales educativos en la Universidad de Fortaleza. 2008. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>I Seminário de Educação à Distância em Administraão.ISeminário de Educação à Distância em administração. 2008. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>I Workshop de Tecnologia da Informação do Sertão Central.Desafio da Interiorização no Estado do Ceará. 2008. (Outra).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>IHC2008 - VIII Simpósio Brasileiro de Fatores Humanos em Sistemas Computacionais.Um sistema para criação de conteúdos em diversas plataformas a partir da experiência dos usuários. 2008. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>II SIPEMAT - Simpósio Internacional de Pesquisa em educação Matemática.O Estudo de Funções Mediado por um Objeto de Aprendizagem; Desafios para a Pesquisa em Educação Matemática na sala de Aula. 2008. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>III Feira de Profissões.-. 2008. (Outra).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Infobrasil TI & Telecom. -. 2008. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>XII Simpósio Brasileiro de Linguagem de Programação. 2008. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>XIX Simpósio Brasileiro de Informática na Educação. 2008. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>XXII Simpósio Brasileiro de Engenharia de Software. 2008. (Simpósio).</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Feira de Amostras - Governo do Estado do Ceará. 2007. (Outra).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>I Encontro Estadual de Controle Interno. 2007. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>II ENCONTRO NACIONAL SOBRE HIPERTEXTO.AVA 2.0: Ambientes virtuais de aprendizagem par web 2.0. 2007. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>InfoBrasil 2007. 2007. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>IX Encontro dos Grupos PET da UECE.Educação como Instrumento de Emancipação Humana: o conhecimento a serviço da sociedade. 2007. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>IX Encontro Nacional de Educação Matemática - IX ENEM.Educação Matemática: Diálogos entre a pesquisa e a prática educativa. 2007. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Moodle Moot Castilla y León. 2007. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>XXVII Congresso da Sociedade Brasileira de Computação. 2007. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>17th European Conference on Artificial Intelligence. 2006. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>1st European Workshop on Intelligent Technologies for Cultural Heritage Exploitation.Extracting Patterns from Brazilian Guitar Accompaniment Data. 2006. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>58a Reuniao Anual da SBPC. 2006. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>I Encontro Técnico dos Programas Mídias na Educação e RIVED. 2006. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>IHC 2006 - Simpósio Sobre Fatores Humanos em Sistemas Computacionais.Mapeamento de um Portal de Acesso de Televisão Digital. 2006. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>VIII Congresso Iberoamericano Informática educativa. FASE : Uma ferramenta para Automatização do Processo de Avaliação de Software. 2006. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>VIII Symposium on Virtual Reality (SVR'2006).Uma Estratégia Eficiente para a Detecção de Colisões Exatas Usando a Semântica de Transformações. 2006. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>XIV Encontro de Extensão.Comissão de avaliação de trabalhos completos concorrentes à premiação. 2006. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>XIX Simpósio Brasileiro de Computação Gráfica, Processamento de Imagens e Visão Computacional.Transformation Semantics: An Efficient Approach for Collision Detection. 2006. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>XVII Simpósi Brasileiro de Informática na Educação.SOCRATES ? Sistema On-Line para Criação de Projetos e Comunidades. 2006. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>XXIV EFNNE ENCONTRO DE FÍSICA DO NORTE NORDESTE.Aprendizagem de Conceitos Basicos da Física Moderna e Contemporânea:A Ultilização do Software Quantum com Alunos do Ensino Médio. 2006. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>XXIV EFNNE ENCONTRO DE FÍSICA DO NORTE NORDESTE.Recursos Computacionais Aplicados ao Ensino de Física: o Desenvolvimento de Objetos de Aprendizagem a Partir de Critérios Técnicos e Educacionais. 2006. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>XXVI CONGRESSO DA SOCIEDADE BRASILEIRA DE COMPUTAÇÃO. Projetos Colaborativos e Comunidades de Aprendizagem. 2006. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>12º Congresso Internacional de Educação à Distância. Gestão de Programas Educacionais Corporativos Não Presenciais. 2005. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>6ª Mostra de Publicidade. 2005. (Outra).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Encontro Regional sobre Formação e Práticas Docentes - EFPD2005.Expositor da Mesa Redonda Formação Docente e Tecnologias de Informação e Comunicação. 2005. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>I Seminário de Educação Mediada pelas Tecnologias da Informação e Comunicação.Embasamento Teórico para as aprendizagens mediadas pelas tecnologias. 2005. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>I SEMINÁRIO DE EDUCAÇÃO MEDIADA PELAS TECNOLOGIAS DA INFORMAÇÃO E COMUNICAÇÃO.MESA-REDONDA: EMBASAMENTO TEÓRICO PARA AS APRENDIZAGENS MEDIADAS PELAS TECNOLOGIAS. 2005. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>II Simpósio Internacional de Educação do Ceará. 2005. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Parallel and Distributed Computing and Networks. A fully distributed prime numbers generation using the wheel sieve. 2005. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Projeto Encontros de Formação Executiva. 2005. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Semana da Computação. 2005. (Outra).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Seminário sobre Organização do Trabalho Docente. 2005. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Simpósio Brasileiro de Redes de Computadores. 2005. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>WIE - XI Workshop sobre Informática na Escola. Avaliação de Software para o Ensino de Música: Reconhecendo a Singularidade do Discurso Musical. 2005. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>X Enapet. 2005. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>X Simpósio Brasileiro de Computação Musical (SBCM'05).X Simpósio Brasileiro de Computação Musical. 2005. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>XIV Simpósio Brasileiro de Informática na Educação. 2005. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>XXV Congresso da Sociedade Brasileira de Computação. Avaliação de Software para o Ensino de Música: Reconhecendo a Singularidade do Discurso Musical. 2005. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>XXV Congresso da Sociedade Brasileira de Computação. Cartas interativas: Desenvolvendo o pensamento algébrico mediado por um software educativo. 2005. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>11º Congresso Internaciona de Educação à Distância. Criação do Centro de Pesquisa e Tecnologia em Educação à Distância na UNOPAR. 2004. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>International Conference on Telecomunications. Assigning codes in a random wireless network. 2004. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>IV Encontro de Pesquisa e Pós-Graduação/ IV Encontro de Iniciação Científica e Tecnológica.Uso de Um Ambiente Informatizado para Desenvolver Conceitos Algébricos. 2004. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Oficina de Desenvolvimento de Aplicações.Oficina de Desenvolvimento de Aplicações. 2004. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Programa Institucional de Bolsas de Iniciação Científica PIBIC/CNPq/UFC.Processo de seleção. 2004. (Outra).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Semana de Educação 2004.Mesa Redonda - Novas Tecnologias e suas implicações na formação do professor.. 2004. (Outra).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Semana de Informática da Universidade Federal do Ceará.Semana de Informática da Universidade Federal do Ceará. 2004. (Outra).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Séminaire OCAD.Quelques contributions à l'algorithmique distribuée. 2004. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>VII Symposium on Virtual Reality (SVR'2004).CRAbRender: Um Sistema de Renderização para Aplicações de Realidade Virtual. 2004. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>VIII Encontro Nacional de Educação Matemática.Competências Matemáticas de Alunos de Primeiro e Segundo Ciclos em Situações Aditivas e Multiplicativas. 2004. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>XV SBIE - Simpósio Brasileiro de Informática na Educação.XV SBIE - Simpósio Brasileiro de Informática na Educação. 2004. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>xv Simpósio Brasileiro de Informática na Educação. 2004. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>XXIII Encontro Universitário de Iniciação Científica.Encontro Universitário de Iniciação Cientifica. 2004. (Encontro).</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CONGRESSO REGIONAL DE GESTÃO DO CONHECIMENTO - KM CEARÁ. 2003. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>IV Seminário de Educação a Distância.Construção de Curso em EAD - A necessidade multidisciplinar. 2003. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>IV WORKSHOP BRASILEIRO DE INTELIGÊNCIA COMPETITIVA. 2003. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>IX Simpósio Brasileiro de Computação Musical.SOS: A Tool for the Automatic Segmentation of Musical Flows. 2003. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>KM BRASIL2003. 2003. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAnifestation des JEunes Chercheurs en STIC. Le crible de la roue en distribué. 2003. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Séminaire Junior.Le crible de la roue en distribué. 2003. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Séminaire OCAD.Génération de nombres premiers en distribuée. 2003. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>VI Symposium on Virtual Reality.CRAbGE: Um Motor Gráfico Customizável, Expansível e Portável Para Aplicações de Realidade Virtual. 2003. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>XXII Congresso da Sociedade Brasileira da Computação. XXII Congresso da Sociedade Brasileira da Computação. 2003. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>XXIII Congresso da Sociedade Brasileira de Computação. 2003. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>15th Brazilian Symposium on Computer Graphics and Image Processing (SIBGRAPI 2002). 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>15th SIBGRAPI/IMIGRA 2002. 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>1st Games and Digital Entertainment Workshop. 2002. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>5th IHC. 2002. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>5th Symposium on Human Factors in Computer Systems (IHC). 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>5th Symposium on Virtual Reality (SVR). 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>8th Brazilian Symposium on Multimedia and Hypermedia Systems (SBMIDIA). 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>I congresso Internacional de Telemática na Educação. I congresso Internacional de Telemática na Educação. 2002. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>I ENOEPE.I Encontro Nordestino dos Estudantes de Pedagogia. 2002. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>II Fórum Interinstitucional sobre Educação Pública no Estado do Ceará.II Fórum Interinstitucional sobre Educação Pública no Estado do Ceará. 2002. (Outra).</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>III Seminário de Educação a Distância. 2002. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Políticas Públicas para a Educação: Diagnótico do Ensino Público no Ceará.O logo na Cosntrução do Pensamento. 2002. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SemanaCOM.4. 2002. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SemanaCOM.4.3D Studio. 2002. (Oficina).</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Seminário: A Articulação Ensino, Pesquisa e Extensão. 2002. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>V Symposium on Virtual Reality (SVR 2002).V Symposium on Virtual Reality (SVR 2002). 2002. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>VI CCHLA - Conhecimento em Debate.Musicologia e computação: apresentação das pesquisas realizadas no GMT. 2002. (Outra).</td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Congresso Fenasoft 2001. 2001. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>I Simpósio Ibero-Americano de informática Educativa.I Simpósio Ibero-Americano de informática Educativa. 2001. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>I Workshop do Projeto AVAL - ProTeM-CC/CNPq.Estratégias para Representação de Avatares. 2001. (Outra).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>II Workshop do Projeto AVAL - ProTeM-CC/CNPq.Construção de Ambientes Virtuais Colaborativos Tridimensionais. 2001. (Outra).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>III Simpósio Internacional de Filosofia Nietzsche e Deleuze.III Simpósio Internacional de Filosofia Nietzsche e Deleuze. 2001. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>XIII Simpósio Brasileiro de Computação Musical. 2001. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>XX Congresso Nacional das APAEs. XX Congresso Nacional das APAEs. 2001. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>XXI Congresso da Sociedade Brasileira de Computação. XXI Congresso da Sociedade Brasileira de Computação. 2001. (Congresso).</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>II ENCOINFO - Encontro de Estudante de Informatica do Tocantins.Um exemplo de heurística: algoritmos genéticos. 2000. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>II ENCOINFO - Encontro de Estudantes de Informatica do Tocantins.Uma Introdução a Sistemas Operacionais e seus Aspectos Gerais. 2000. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>II Encontro de Informática do Estado do Tocantins.II Encontro de Informática do Estado do Tocantins. 2000. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Semana de Pesquisa da Unit.Introdução ao Paralelismo e seus Aspectos Gerais. 2000. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>V CCHLA - Conhecimento em Debate. 2000. (Outra).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>XX Congresso Nacional da Sociedade Brasileira de Computação. Automatic Segmentation of Musical Flows: a Rational Agents Approach. 2000. (Congresso).</td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>I Econtro de Pós-Graduandos da UFPB.I Seminário de Pós-Graduação. 1999. (Seminário).</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Décima primeira escola de computação. 1998. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>International Meeting on Language, Logic and Artificial Intelligence. 1998. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>IX Simpósio Brasileiro de Informática na Educação. 1998. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Semana de Informáticada UFC - Seminfo'98. 1998. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Seminário de Computação Gráfica 98. 1998. (Seminário).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>VI Encontro de Iniciação Científica.A Klavierstück XI de Stockhausen: uma imensa melodia de timbres. 1998. (Encontro).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>XI Encontro Nacional da Associação Nacional de Pesquisa e Pós-Graduação em Música (ANPPOM). A Klavierstück XI de Stockhausen: uma imensa melodia de timbres. 1998. (Congresso).</td></tr>
+            </table></div><div id="dv-year-1997"><h3 class="year">1997</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>II Festival Nacional de Música de Câmera - Paraíba.Apresentação de obras musicais. 1997. (Outra).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>XI Simpósio Brasileiro de Engenharia de Software. 1997. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>XII Simpósio Brasileiro de Banco de Dados. 1997. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>XXVIII Festival de Inverno de Campos do Jordão.Apresentação de obras musicais. 1997. (Outra).</td></tr>
+            </table></div><div id="dv-year-1996"><h3 class="year">1996</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Congresso Fenasoft 96. 1996. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Décima Escola de computação. 1996. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>I Festival Nacional de Música de Cãmera - Paraíba.Apresentação de obras musicais. 1996. (Outra).</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>II Workshop em sistemas hipermídia - WOSH. 1996. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>INFOSOL 2006 - CONGRESSO E FEIRA DE INFORMÁTICA E TELECOMUNICAÇÕES. 1996. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>XIV Simpósio Brasileiro de Redes de Computadores. 1996. (Congresso).</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>XIV Simpósio Brasileiro de Redes de Computadores. 1996. (Simpósio).</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>XVI Congresso da Sociedade Brasileira de Computação. 1996. (Congresso).</td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Oficina de Piano Clássico com o Pianista Ernst Ueckermann.Apresentação de obras musicais. 1994. (Oficina).</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

@@ -1,0 +1,215 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Tese de doutorado'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2007,
+1],
+[2008,
+1],
+[2009,
+1],
+[2010,
+2],
+[2011,
+1],
+[2012,
+1],
+[2014,
+3],
+[2016,
+3],
+[2017,
+2],
+[2018,
+2],
+[2019,
+2],
+[2022,
+1],
+[2023,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Tese de doutorado</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 21<br>
+                    
+                    
+                    <div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9598760381296500">RAYSSA MELO DE OLIVEIRA</a>. <b>Formação Online de Professores dos Anos Iniciais do Ensino Fundamental Para o Ensino de Estatística: Uma Investigação no Período Remoto Emergencial</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Rui Rodrigues de Mello Junior. <b>EXPLORANDO A EQUIVALÊNCIA ENTRE UMA MÁQUINA QUÍMICA ABSTRATA E COMPUTAÇÃO DATAFLOW</b>. Tese (Doutorado em PESC - Programa de Engenharia de Sistemas e Computação) - Universidade Federal do Rio de Janeiro, . 2022.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Carolina Morais Ribeiro da Silva. <b>Tecnologias digitais e língua portuguesa: o uso da internet como ferramenta para produção textual na escola</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2019.<br><i><font size=-1>Orientadores: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>, <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/0626524930808526">Paula Patricia Barbosa Ventura</a>. <b>Indicadores de Metodologias Ativas com Suporte das Tecnologias Digitais - Estudo com Docentes do Instituto Federal de Educação, Ciência e Tecnologia do Ceará.</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2019.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/1956480147016671">JULIANA SILVA ARRUDA</a>. <b>APRENDIZAGEM BASEADA EM PROJETOS E ARTEFATOS DIGITAIS SOB A ÓTICA DA TEORIA DA ATIVIDADE</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4675883924160014">LILIANE MARIA RAMALHO DE CASTRO SIQUEIRA</a>. <b>Tecnologias digitais e o desenvolvimento da tomada de decisão na contabilidade: a importância das metodologias ativas na aprendizagem da administração financeira</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Henrique Sérgio Lima Pequeno. <b>Digital Class: Um Modelo para a Criação de Cursos no Paradigma de Ensino Híbrido</b>. Tese (Doutorado em Ciência da Computação) - Universidade Federal do Ceará, . 2017.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2352144605333782">Rodrigo Lacerda Carvalho</a>. <b>Contribuições do campo conceitual multiplicativo para a formação inicial de professores de Matemática com suporte das tecnologias digitais</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2017.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4047293288281493">Dennys Leite Maia</a>. <b>Aprendizagem docente sobre estruturas multiplicativas a partir de uma formação colaborativa apoiada em tecnologias digitais</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2525374702919730">Juscileide Braga de Castro</a>. <b>Construção do conceito de covariação por estudantes do Ensino Fundamental em ambientes de múltiplas representações com suporte de tecnologias digitais</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/5267121220942302">Karla Angélica Silva do Nascimento</a>. <b>MC-Learning: Práticas colaborativas na escola com o suporte da tecnologia móvel.</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>. <b>multiletramentos mediados pelo computador em sala de aula: a perspectiva das culturas juvenis em fluxo</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/0724083224913311">Maria Auricélia da Silva</a>. <b>Trabalho Colaborativo em Rede no Projeto UCA - Um Computador por Aluno: conhecimentos e práticas docentes</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7436456163727979">Ofélia Alencar de Mesquita</a>. <b>Ciberconteúdos educativos: denominação e processo de elaboração em rede</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Maria de Fátima Costa de Souza. <b>Customização Guiada: uma estratégida orientada a modelos para produção de objetos de aprendizagem</b>. Tese (Doutorado em Engenharia de Teleinformática) - Universidade Federal do Ceará, . 2012.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>. <b>Desenvolvimento de conceitos algébricos por professores dos anos iniciais do Ensino Fundamental</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3713032970984293">Gerardo S. Viana Júnior</a>. <b>Formação Musical de Professores em Ambientes Virtuais de Aprendizagem</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4580502642241951">Priscila Barros David</a>. <b>Interações contingentes em ambientes virtuais de aprendizagem</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2741856107159943">Luiz Antônio de Oliveira Barreto</a>. <b>A Análise da Compreensão do Conceito de Função Mediada por Ambientes Computacionais</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4278906426912439">GILDÁSIO GUEDES FERNANDES</a>. <b>AVALIAÇÃO ERGONÔMICA DA INTERFACE HUMANO COMPUTADOR DE AMBIENTES VIRTUAIS DE APRENDIZAGEM</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Nilson Fonseca Miranda. <b>Internet e Software Educativo no Ensino de Química</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

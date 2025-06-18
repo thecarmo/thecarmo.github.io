@@ -1,0 +1,323 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Trabalhos técnicos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1998,
+3],
+[1999,
+2],
+[2002,
+2],
+[2003,
+2],
+[2004,
+2],
+[2006,
+1],
+[2007,
+3],
+[2008,
+11],
+[2009,
+3],
+[2010,
+4],
+[2011,
+1],
+[2012,
+2],
+[2013,
+1],
+[2014,
+1],
+[2015,
+3],
+[2016,
+2],
+[2018,
+1],
+[2019,
+6],
+[2020,
+4],
+[2021,
+3],
+[2022,
+3],
+[2023,
+2],
+[2024,
+3]]}]});
+        });
+        </script>
+        
+                <h3>Trabalhos técnicos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 65<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXXV Simpósio Brasileiro de Informática na Educação (SBIE 2024)</b>. 2024.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXX Workshop de Informática na Escola (WIE 2024)</b>. 2024.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro da Comissão Executiva e da Comissão Científica do 6º Simpósio Internacional de Pesquisa em Educação Matemática ? 6º SIPEMAT</b>. 2024.</td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXXIV Simpósio Brasileiro de Informática na Educação (SBIE 2023)</b>. 2023.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXIX Workshop de Informática na Escola (WIE 2024)</b>. 2023.</td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXXIII Simpósio Brasileiro de Informática na Educação (SBIE 2022)</b>. 2022.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXVIII Workshop de Informática na Escola (WIE 2022)</b>. 2022.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>co-chair da Teacher Learning section da Division K (Teaching and Teacher Education) da American Educational Research Association (AERA)</b>. 2022.</td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXVII Workshop de Informática na Escola (WIE 2021)</b>. 2021.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Castro Filho, José Aires de. <b>Membro do comitê de programa do XXXII Simpósio Brasileiro de Informática na Educação (SBIE 2021)</b>. 2021.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; FREIRE, R. S. ; NASCIMENTO, G. M.. <b>Guia do Professor para o RED - O reino de Aljabar: o desafio da balança</b>. 2021.</td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXXI Simpósio Brasileiro de Informática na Educação (SBIE 2020)</b>. 2020.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXVI Workshop de Informática na Escola (WIE 2020)</b>. 2020.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MENDES, MARILIA SOARES. <b>Parecerista em Projetos Lei da Informática</b>. 2020.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>NOVAIS, C. E. B.; Nascimento, Lízie S.. <b>TFC: Type for Calligraphy. 2020; Tema: Fonte tipográfica digital para ensino de caligrafia</b>. 2020.</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXVWorkshop de Informática na Escola (WIE 2019)</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do Comitê Gestor da Comissão Especial de Informática na Educação (CEIE)</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; SOUSA, J. S. ; RUFINO, L. L. M.. <b>Guia do Professor para o RED - Divertix</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; SOUSA, J. S. ; RUFINO, L. L. M.. <b>Guia do Professor para o RED - Brincando com as Formas</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; SOUSA, J. S. ; RUFINO, L. L. M.. <b>Guia do Professor para o RED - Meu Álbum Geométrico</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; SOUSA, J. S. ; RUFINO, L. L. M.. <b>Guia do Professor para o RED - É o Bicho 2.0</b>. 2019.</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDES, MARILIA S.; MONTEIRO, A. A. S.. <b>Programa CASa Aberta. 2018. (Programa de rádio ou TV/Mesa</b>. 2018.</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDONCA JUNIOR, G. M. ; Nascimento, Lízie S. ; SABOIA, I. F. ; PEREIRA, G. C. ; FURTADO, I. P. ; NOVAIS, C. E. B.. <b>A era do profissional híbrido. 2016. (Programa de rádio ou TV/Mesa</b>. 2016.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SILVA, Henrique Barbosa. <b>Análise Conjunta dos Resultados do Monitoramento e das Avaliações nos Postos do SINE</b>. 2016.</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Parecer de 1 artigo para a XIV Conferencia Interamericana de Educación Matemática (XIV CIAEM)</b>. 2015.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; AVILA, B.. <b>Web Designer quer saber - Tipografia. 2015. (Programa de rádio ou</b>. 2015.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>PINTO, P. A. H. S. ; MENDES, MARILIA S. ; ARAGAO, D.. <b>Programa CASa Aberta. 2015. (Programa de rádio ou TV/Mesa</b>. 2015.</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B.; BENEDICTO, B.. <b>DiaTipo CE. 2014; Tema: Tipografia e Web Design. (Rede</b>. 2014.</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Pequeno, Henrique S.L.; MENEZES, G. ; ROCHA, M. ; VIEIRA, A.. <b>Programa Pode Entrar (TVC). 2013. (Programa de rádio ou</b>. 2013.</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B.; OLIVEIRA, A. S. ; CARMO, R. A. ; OLIVEIRA, A. T. ; FERREIRA, G. M. ; CASTRO, S. S. ; CARNEIRO, M. P. G.. <b>O Tipo da Fonte. 2012; Tema: Tipografia</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; OLIVEIRA, A. S. ; OLIVEIRA, A. T. ; CARNEIRO, M. P. G. ; CARMO, R. A.. <b>O Tipo da Fonte. 2012; Tema: Tipografia e Web Design. (Rede</b>. 2012.</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê internacional do programa da XIII Conferência Interamericana de Educação Matemática</b>. 2011.</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XVII Workshop de de Informática na Escola</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XXI Simpósio Brasileiro de Informática na Educação</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa da IADIS IADIS INTERNATIONAL CONFERENCE GAME AND ENTERTAINMENT TECHNOLOGIES (GET2010)</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A. ; MATTOS, Fernando Lincoln Carneiro Leão de. <b>Uso das Tecnologias de Informação e Comunicação na Graduação Presencial da UFC</b>. 2010.</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XX Simpósio Brasileiro de Informática na Educação</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XVI Workshop de de Informática na Escola</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa da IADIS Multi Conference on Computer Science and Information Systems (MCCSIS 2009)</b>. 2009.</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XIX Simpósio Brasileiro de Informática na Educação</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do XVI Workshop de de Informática na Escola</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do II Simpósio Internacional de Pesquisa em Educação Matemática</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do IX CONGRESO IBEROAMERICANO DE INFORMATICA EDUCATIVA</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares.. <b>Projeto SAMBA DIGITAL. 2008. (Programa de rádio ou</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>GOMES, George Allan Menezes. <b>Membro do Comitê de Programa do Evento Científico Regional InfoBrasil 2008</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L.. <b>Projeto Pedagógico Curso Superior de Tecnologia em Sistemas para Internet</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L.. <b>Projeto Pedagógico Curso Superior de Tecnologia em Redes de Computadores</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L.. <b>Projeto Pedagógico Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L.. <b>Projeto Pedagógico Curso Superior de Tecnologia em Banco de Dados</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MENDES, Marilia Soares. <b>Atualizando o jovem sobre as transmissões da TV digital. 2008. (Programa de rádio ou</b>. 2008.</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares. ; SCHILLING, Albert ; SOARES, Pedro Pseligmann ; FAVA, Fabrício ; MADEIRA, K.. <b>SAMBA desenvolvido pela Unifor. 2007. (Programa de rádio ou</b>. 2007.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares. ; SOARES, Pedro Pseligmann. <b>A produção de conteúdos para a TV digital. 2007. (Programa de rádio ou</b>. 2007.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; SCHILLING, Albert ; VASCONCELOS, Patrícia Freitas Campos de ; MENDES, Marilia Soares.. <b>Projeto Samba Digital Na Universidade de Fortaleza. 2007. (Programa de rádio ou</b>. 2007.</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Membro do comitê de programa do VIII CONGRESSO IBEROAMERICANO DE INFORMATICA EDUCATIVA</b>. 2006.</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; MAGALHÃES, Wladimir Capelo ; FREIRE, Eduardo Nunes. <b>Projeto da Habilitação em Multimídia do Curso de Comunicação Social da Universidade de Fortaleza</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A.. <b>Proposta para Credenciamento pelo MEC de um Curso de Especialização em Ciências da Natureza e Matemática</b>. 2004.</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARAÚJO, Maria Neyara de Oliveira ; ALMEIDA, Custódio Luís Silva de ; LIMA, Maria Do Céu de ; CASTRO FILHO, J. A. ; RODRIGUES, Maria de Fátima Ferreira ; BARBOSA, Ivone Cordeiro ; BARRETO, Sônia Pereira. <b>REDE NACIONAL DE CENTROS DE PESQUISA E DESENVOLVIMENTO DA EDUCAÇÃO ÁREA DE ESPECIALIDADE: ENSINO DE CIÊNCIAS HUMANAS E SOCIAIS</b>. 2003.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A. ; DIAS, Ana Iório. <b>Licenciatura a distância em Matemática e Ciências</b>. 2003.</td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GOMES, Alex Sandro ; BARRÊTO, Marcília Chagas ; LIRA, Ana Karina Morais da. <b>IDENTIFICAÇÃO DE DIFICULDADES NA APRENDIZAGEM DE CONCEITOS MATEMÁTICOS NAS SÉRIES INICIAIS DO ENSINO FUNDAMENTAL (SPAECE-MAT)</b>. 2002.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; GOMES, Alex Sandro ; TEDESCO, P.. <b>ambientes de aprendizagem nas Ciências e Matemática</b>. 2002.</td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; BARROS FILHO, Edgar Marçal de. <b>AVAL - Ambientes Virtuais para o Aprendizado de Línguas</b>. 1999.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, H. S. L.; SARMENTO, W. W. F. ; PEQUENO, M. C. ; LOUREIRO, R. C.. <b>Tecnologia de Informação e comunicação para o Aperfeiçoamento de Professores</b>. 1999.</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEITE JUNIOR, A. J. M. <b>Uma Proposta de Ambiente Virtual Multiusuário voltado para a Educação a Distância</b>. 1998.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; BARROS FILHO, Edgar Marçal de. <b>Uma Ferramenta para Aprendizado da Língua Inglesa com Realidade Virtual e Ensino Cooperativo</b>. 1998.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Música Germânica para Piano no Século XX: Aspectos Formais</b>. 1998.</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

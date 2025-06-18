@@ -1,0 +1,43 @@
+{
+"nodes":[
+{ "name":"Antonio Jose Melo Leite Junior", "idlattes":"2610619567290943", "rotulo":"[Sem rotulo]", "collaborationrank":1.1966829299926758 },
+{ "name":"Carlos Eduardo Brito Novais", "idlattes":"4467706783113621", "rotulo":"[Sem rotulo]", "collaborationrank":0.7988983392715454 },
+{ "name":"Ernesto Trajano de Lima Neto", "idlattes":"3037263625761342", "rotulo":"[Sem rotulo]", "collaborationrank":1.2787656784057617 },
+{ "name":"Gabriel Antoine Louis Paillard", "idlattes":"4427578264303416", "rotulo":"[Sem rotulo]", "collaborationrank":1.1627944707870483 },
+{ "name":"George Allan Menezes Gomes", "idlattes":"5012576140529904", "rotulo":"[Sem rotulo]", "collaborationrank":0.9341009855270386 },
+{ "name":"Henrique Barbosa Silva", "idlattes":"9848407021720705", "rotulo":"[Sem rotulo]", "collaborationrank":0.24434983730316162 },
+{ "name":"Henrique Sergio Lima Pequeno", "idlattes":"8556816688689358", "rotulo":"[Sem rotulo]", "collaborationrank":0.6659988164901733 },
+{ "name":"Inga Freire Saboia", "idlattes":"4277758788188363", "rotulo":"[Sem rotulo]", "collaborationrank":0.6592977046966553 },
+{ "name":"José Aires de Castro Filho", "idlattes":"1001172700194924", "rotulo":"[Sem rotulo]", "collaborationrank":2.392026662826538 },
+{ "name":"José Gilvan Rodrigues Maia", "idlattes":"0022110232147076", "rotulo":"[Sem rotulo]", "collaborationrank":0.5246241092681885 },
+{ "name":"Maria de Fátima Costa de Souza", "idlattes":"8761933941200089", "rotulo":"[Sem rotulo]", "collaborationrank":0.9963510632514954 },
+{ "name":"Marília Soares Mendes", "idlattes":"3731017260116598", "rotulo":"[Sem rotulo]", "collaborationrank":0.15000000596046448 },
+{ "name":"Rafael Augusto Ferreira do Carmo", "idlattes":"3102406452063651", "rotulo":"[Sem rotulo]", "collaborationrank":0.8328970670700073 },
+{ "name":"Raquel Santiago Freire", "idlattes":"9322311013034336", "rotulo":"[Sem rotulo]", "collaborationrank":1.313212275505066 }
+],
+"links":[
+{ "source":0, "target":2, "value":1.0 },
+{ "source":0, "target":3, "value":1.0 },
+{ "source":0, "target":4, "value":8.0 },
+{ "source":0, "target":6, "value":1.0 },
+{ "source":0, "target":12, "value":3.0 },
+{ "source":1, "target":7, "value":3.0 },
+{ "source":1, "target":12, "value":1.0 },
+{ "source":2, "target":3, "value":12.0 },
+{ "source":2, "target":6, "value":1.0 },
+{ "source":2, "target":8, "value":1.0 },
+{ "source":2, "target":9, "value":1.0 },
+{ "source":2, "target":12, "value":3.0 },
+{ "source":3, "target":12, "value":4.0 },
+{ "source":4, "target":6, "value":2.0 },
+{ "source":4, "target":9, "value":1.0 },
+{ "source":5, "target":6, "value":1.0 },
+{ "source":6, "target":8, "value":1.0 },
+{ "source":6, "target":9, "value":1.0 },
+{ "source":8, "target":9, "value":4.0 },
+{ "source":8, "target":10, "value":30.0 },
+{ "source":8, "target":13, "value":44.0 },
+{ "source":9, "target":10, "value":1.0 },
+{ "source":10, "target":13, "value":3.0 }
+]
+}

@@ -1,0 +1,255 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de organização de eventos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1998,
+1],
+[2005,
+1],
+[2006,
+1],
+[2007,
+2],
+[2008,
+3],
+[2011,
+1],
+[2012,
+4],
+[2013,
+3],
+[2014,
+4],
+[2015,
+2],
+[2016,
+1],
+[2018,
+2],
+[2021,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Total de organização de eventos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 41<br>
+                    
+                    
+                    <div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA, ANA MARGARIDA PISCO ; SABOIA, I. F.. <b>ehSemi - Seminário de estudantes em Tecnologias Digitais e Saúde/Bem-Estar</b>. 2021. Congresso</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; FREIRE, R. S. ; CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; SILVA, M. A. ; MAIA, D. L.. <b>III Congresso sobre Tecnologias na Educação (Ctrl+E 2018)</b>. 2018. Congresso</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; VASCONCELOS, Francisco Herbert Lima. <b>Congressso Brasileiro de Informática na Educação</b>. 2018. Congresso</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDES, MARILIA S.; MENEZES, M. V. ; LIMA, M. V. A. ; FREITAS, M. ; ARAGAO, D.. <b>II SESCOMP - Semana de Engenharia de Software e Ciência da Computação</b>. 2016. Congresso</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; Marinho, Simão Pedro Pinto ; Ferrete, Anne Alilma Silva Souza ; PEQUENO, M. C.. <b>III Workshop Sobre Tecnologias Móveis Na Educação</b>. 2015. Outro</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Mendes, Marilia S.; MENEZES, M. V. ; ALMADA, L. ; VINICIUS, M. ; FREITAS, M. ; ARAGAO, D.. <b>Semana de Engenharia de Software e Ciências da Computação - SESCOMP 2015</b>. 2015. Congresso</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CASTRO, A. ; MAIA, D. L. ; DA SILVA, MARIA AURICÉLIA ; Cavalcante , Andrea Pinheiro Paiva ; CASTRO, J. B. ; DE MELO, MARIA BERNADETE O. ; ARRUDA, J. S. ; Medeiros, Marcia ; NASCIMENTO, K. A. S. ; LIMA, Lavina Lúcia Vieira ; BARBOSA, Jaiane Ramos. <b>III Seminário Um Computador por Aluno</b>. 2014. Outro</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; Marinho, Simão Pedro Pinto ; FERRETE, A. A. S. S. ; PEQUENO, M. C.. <b>II Workshop Sobre Tecnologias Móveis Na Educação</b>. 2014. Outro</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. E. B.; BENEDICTO, B.. <b>DiaTipo CE</b>. 2014. Outro</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SANCHEZ, J. ; CASTRO FILHO, J. A. ; CARVALHO, W. V. ; FACANHA, A. ; TRAJANO DE LIMA, ERNESTO. <b>XIX Conferência Internacional sobre Informática na Educação</b>. 2014. Congresso</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; Marinho, Simão Pedro Pinto ; FERRETE, A. A. S. S. ; PEQUENO, M. C.. <b>III Workshop sobre Formação e Exeriências Educacionais no Projeto Um Computador por Auno e I Workshop Sobre Tecnologias Móveis Na Educação</b>. 2013. Outro</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; ROCHA, Betânia Tenório Soares da ; MAIA, D. L. ; MEDEIROS, F. C. ; BARBOSA, Jaiane Ramos ; CASTRO, J. B. ; NASCIMENTO, K. A. S. ; LIMA, Lavina Lúcia Vieira ; Morais, Márcia de Oliveira ; Silva, Maria Auricélia da ; MELO, M. B. O. ; Lima, Mixilene Sales Santos ; Pontes, Renata Lopes Jaguaribe ; CARVALHO, R. L. ; SILVA, S. H.. <b>II Seminário Um Computador por Aluno</b>. 2013. Outro</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FURTADO, E. ; Mendes, Marília Soares ; Lisboa. Rafaela ; MILITAO, G.. <b>1ª Jornada de Interação Humano Computador para empresas</b>. 2013. Congresso</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; BARRÊTO, Marcília Chagas ; Barguil, Paulo Meireles ; PONTES, Maria Gilvanise de Oliveira ; Jucá, Adelmir de Menezes. <b>3º SIPEMAT - Simpósio Internacional de Pesquisa em Educação Matemática</b>. 2012. Congresso</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; Marinho, Simão Pedro Pinto ; Ferrete, Anne Alilma Silva Souza ; CYSNEIROS, Paulo Gileno ; PEQUENO, Mauro Cavalcante. <b>II Workshop sobre formação e experiências educacionais no programa Um Computador por Aluno</b>. 2012. Outro</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; NASCIMENTO, K. A. S. ; Silva, Maria Auricélia da ; Melo, Maria Bernadete Oriá de ; Castro, Juscileide ; Maia, Dennys Leite. <b>I Seminário UCA Ceará - Experiências com Laptop educacional no Ceará</b>. 2012. Outro</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DARIN, T. G. R. ; CARVALHO, W. V. ; NOVAIS, C. E. B.. <b>II MediaWeek - Semana do Curso de Sistemas e Mídias Digitais</b>. 2012. Outro</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; Marinho, Simão Pedro Pinto ; PEQUENO, Mauro Cavalcante ; Ferrete, Anne Alilma Silva Souza. <b>I Workshop sobre formação e experiências educacionais no projeto Um Computador por Aluno (UCA)</b>. 2011. Outro</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L. ; FALCAO, J. A.. <b>Semana da Computação - SECOMP 08 - FLF</b>. 2008. Outro</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A.. <b>XIX Simpósio Brasileiro de Informática na Educação</b>. 2008. Congresso</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Salgueiro, Geny Lucia ; LIRA, Ana Karina Morais da ; CASTRO FILHO, J. A.. <b>V Seminário Municipal de Informática Educativa</b>. 2008. Congresso</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L. ; FALCAO, J. A.. <b>Semana da Computação - SECOMP 07 - FLF</b>. 2007. Outro</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Salgueiro, Geny Lucia ; LIRA, Ana Karina Morais da ; CASTRO FILHO, J. A.. <b>IV Seminário Municipal de Informática Educativa</b>. 2007. Congresso</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; BARBOSA, R. F. L. ; FALCAO, J. A. ; SANTANNA, J. L. F.. <b>Semana da Computação - SECOMP 06 - FLF</b>. 2006. Outro</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Salgueiro, Geny Lucia ; LIRA, Ana Karina Morais da ; CASTRO FILHO, J. A.. <b>III Seminário Municipal de Informática Educativa</b>. 2005. Congresso</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PEQUENO, M. C. ; SARMENTO, W. W. F. ; LOUREIRO, R. C. ; PEQUENO, H. S. L.. <b>Simpósio Brasileiro de Informática Educativa</b>. 1998. Congresso</td></tr>
+            </table></div><div id="dv-year-*itens sem ano"><h3 class="year">*itens sem ano</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CARMO, R. A. F. Semana da Computação 2005. 2005. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CARMO, R. A. F. SugarLoafPLop 2008. 2008. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CARMO, RAFAEL A.F. Euro-American Conference on Telematics and Information Systems - EATIS. 2018. (Congresso).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, J. A.. Congresso de Tecnologias na Educação (CTRL+E). 2018. (Congresso).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Gabriel Paillard. 8th Euro American Conference on Telematics and Information Systems - EATIS 2016. 2016. (Congresso).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>GOMES, George Allan Menezes. Semana da Computação - SeComp - UECE. 1999. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PAILLARD, G. A. L.. Festival Latino-americano de Instalação de Software Livre. 2008. (Festival).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PAILLARD, G. A. L.. Festival Latino-americano de Instalação de Software Livre. 2009. (Festival).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>PAILLARD, G. A. L.. I Semana de Engenharia da Computação em Sobral. 2008. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>PAILLARD, G. A. L.. II Semana de Engenharia da Computação. 2010. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SABOIA, I. F.. Brado! Seja ouvido. 2015. (Concurso).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SABOIA, I. F.. Media Weekend. 2015. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SABOIA, I. F.. Media Weekend. 2016. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SILVA, Henrique Barbosa. PLANEJAMENTO ESTRATÉGICO DA CADEIA PRODUTIVA DO ARTESANATO. 2003. (Outro).. <b></b>. 0. </td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. VI Congresso sobre Tecnologias na Educação. 2021. (Congresso).. <b></b>. 0. </td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

@@ -1,0 +1,291 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Demais tipos de produção técnica'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2004,
+3],
+[2005,
+2],
+[2006,
+3],
+[2007,
+3],
+[2008,
+1],
+[2009,
+5],
+[2010,
+4],
+[2011,
+1],
+[2012,
+5],
+[2015,
+3],
+[2016,
+1],
+[2018,
+3],
+[2019,
+3],
+[2020,
+11],
+[2021,
+1],
+[2022,
+5],
+[2024,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Demais tipos de produção técnica</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 55<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COSTA, J. E. ; CASTRO FILHO, J. A. ; MAIA, J. G. R.. <b>GUIA DIDÁTICO da Narrativa Interativa Gamificada (NIG) A Jornada da Mel</b>. 2024. Desenvolvimento de material didático ou instrucional - Educacional</td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>co-chair for the Teacher Learning section of the Division K Teaching and Teacher Education of The American Educational Research Association (AERA)</b>. 2022. Científica</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; FREIRE, R. S. ; SOUZA, MARIA DE FATIMA C. DE. <b>Desenvolvimento de Recursos Educacionais Digitais para a Educação Básica</b>. 2022. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Dominando o processo de vetorização</b>. 2022. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Criando uma fonte de forma fácil e rápida</b>. 2022. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, SOLANGE. <b>TFC - Foundational Hand</b>. 2022. Desenvolvimento de material didático ou instrucional - Ensino de Caligrafia</td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; HITZSCHKY, R. A. ; LIMA, C. A. ; OLIVEIRA, C. O. S. ; GERMANO, F. A. ; MOURAO, J. A. F. ; BEZERRA, E. L. C.. <b>Explorando as Potencialidades Pedagógicas e a Portabilidade de Recursos Educacionais Digitais (RED) do Repositório Athena</b>. 2021. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. S.; CASTRO FILHO, J. A. ; SOUZA, M. F. C. ; MATTOS, F. L. C. L.. <b>Uso de Recursos Educacionais Digitais</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M. V. C. ; HITZSCHKY, RAYSSA ; SOUSA, D. C. ; SANTOS, L. A ; CASTRO FILHO, JOSÉ AIRES DE. <b>Guia didático pedagógico do RED: A turma da Mila em: pelas ruas da cidade</b>. 2020. Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M. V. C. ; SANTOS, L. A ; SOUSA, D. C. ; HITZSCHKY, RAYSSA. <b>Gui didático pedagógico do RED: A Turma da Mila em: Os enigmas dos bilhetes</b>. 2020. Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M. V. C. ; SOUSA, D. C. ; SANTOS, L. A ; HITZSCHKY, RAYSSA ; CASTRO FILHO, JOSÉ AIRES DE. <b>Guia didático pedagógico do recurso: A turma da Mila em: regras de jogos</b>. 2020. Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; HITZSCHKY, RAYSSA ; SANTOS, L. A. ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>A Turma da Mila em: Organizando álbuns</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; HITZSCHKY, RAYSSA ; SANTOS, L. A ; CASTRO FILHO, J. A.. <b>A Turma da Mila em: Pelas ruas da cidade</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; HITZSCHKY, RAYSSA ; SANTOS, L. A ; CASTRO FILHO, J. A.. <b>A Turma da Mila em: As regras de jogo</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FREIRE, R. S.; HITZSCHKY, R. A. ; FIGUEIREDO, M. V. C. ; SOUSA, D. C. ; SANTOS, L. A ; CASTRO FILHO, JOSÉ AIRES DE. <b>Guida didático pedagógico do RED: A Turma da Mila em: O livro de parlendas</b>. 2020. Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FREIRE, R. S.; HITZSCHKY, R. A. ; SOUSA, D. C. ; FIGUEIREDO, M. V. C. ; SANTOS, L. A ; CASTRO FILHO, J. A.. <b>Guia didático pedagógico do recurso: A turma da Mila em: Organizando Álbum</b>. 2020. Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>FREIRE, R. S.; HITZSCHKY, RAYSSA ; SANTOS, L. A ; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>A Turma da Mila em: Os enigmas dos bilhetes</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>FREIRE, RAQUEL SANTIAGO; HITZSCHKY, R. A. ; SANTOS, L. A ; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>A Turma da Mila em: O livro de parlendas</b>. 2020. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; HITZSCHKY, R. A. ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>Qual o seu pedido?</b>. 2019. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático(português</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; HITZSCHKY, R. A. ; CASTRO FILHO, J. A.. <b>Aventura no mundo dos quadrinhos</b>. 2019. Desenvolvimento de material didático ou instrucional - Produção de material didático(português</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, R. S.; HITZSCHKY, R. A. ; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>Revista Digital da Criança</b>. 2019. Desenvolvimento de material didático ou instrucional - Produção de material didático(português</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; HITZSCHKY, RAYSSA ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>Fábulas animadas</b>. 2018. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático(português</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; FIGUEIREDO, M.V,C ; HITZSCHKY, RAYSSA ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>De olho na lista</b>. 2018. Desenvolvimento de material didático ou instrucional - Produçãodematerialdidático(português</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MILITAO, J. G. ; MENDES, MARILIA S. ; FURTADO, E. ; VASCONCELOS, Patrícia Freitas Campos de ; Lisboa. Rafaela. <b>O Uso de Metodologias Ativas para Ensino de IHC</b>. 2018. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Design Tipográfico</b>. 2016. Curso de curta duração ministrado/Extensão</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Design Caligráfico</b>. 2015. Curso de curta duração ministrado/Extensão</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Design Grafica e Caligrafia</b>. 2015. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SABOIA, I. F. <b>DESIGN DE INTERFACE GRÁFICA. 2015</b>. 2015. </td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Castro, Juscileide ; BARRETO, Antônio Luiz de Oliveira ; CASTRO FILHO, J. A.. <b>DESENVOLVENDO O PENSAMENTO ESTATÍSTICO COM USO DE TECNOLOGIAS DIGITAIS</b>. 2012. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Harmonia Cromática</b>. 2012. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. E. B.; OLIVEIRA, A. S. ; CARMO, R. A. ; OLIVEIRA, A. T.. <b>O.TTF - Oficina de tipografia Tipo da Fonte</b>. 2012. Curso de curta duração ministrado/Extensão</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Material didático para a disciplina de aprendizagem mediada pelo computador</b>. 2012. Desenvolvimento de material didático ou instrucional - Educacional</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Material didático para formação de tutores de física</b>. 2012. Desenvolvimento de material didático ou instrucional - Educacional</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>material didático para formação de tutores matemática UAB/UFC</b>. 2011. Desenvolvimento de material didático ou instrucional - Educacional</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. S. <b>Formação Continuada de Tutores em Educação a Distância</b>. 2010. Desenvolvimento de material didático ou instrucional - Produção de material didático</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; Castro-Filho, J. A. ; BYLAARDT, C. O. <b>Primeiro, Aprender Digital. 2010. (Desenvolvimento de material didático ou instrucional - Produção de material</b>. 2010. Desenvolvimento de material didático ou instrucional - Produção de material didático (português</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SABOIA, I. F. <b>Capa para o folheto ?Regresso às aulas? de 2010</b>. 2010. Editoração/Outra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SABOIA, I. F. <b>Catálogo da empresa Albano Alves</b>. 2010. Editoração/Catálogo</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. ; FREIRE, R. S.. <b>Aprendizagem mediada por computador</b>. 2009. Desenvolvimento de material didático ou instrucional - Aula para disciplina de graduação</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares. ; MILITAO, G. ; BARBOSA, D. ; MATOS, Italo. <b>Interatividade na TV digital</b>. 2009. Curso de curta duração ministrado</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Guedes, Francisca Danielle ; Medeiros, Marcia ; Mesquita, Ofélia Alencar ; CASTRO FILHO, J. A.. <b>Planejamento e Elaboração de aulas com o uso de tecnologias da informação e comunicação (TIC): os recursos e ferramentas do Portal do Professor e do repositório Banco Internacional de Objetos Educacionais a favor do professor</b>. 2009. Desenvolvimento de material didático ou instrucional - Mini-curso</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MENDONCA JUNIOR, G. ; LEITE, ANTONIO JOSÉ MELO ; George Allan Menezes Gomes ; SARMENTO, W. W. F.. <b>Projeto Pedagógico do Curso de Bacharelado em Sistemas e Mídias Digitais</b>. 2009. Projeto Pedagógico</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Desenvolvimento de material didático em Flash</b>. 2009. Curso de curta duração ministrado/Extensão</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Ramos, Sonia Maria Petitto ; CASTRO FILHO, J. A. ; FERNANDES, Alisandra Cavalcante. <b>Interligando Mundos: Comunidades questionadoras e aprendentes: uso de recursos das WebQuests na construção de significados</b>. 2008. Desenvolvimento de material didático ou instrucional - Mini-curso</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; SOUZA, Maria de Fátima Costa de ; BARRETO, A. L. O.. <b>Como Usar Objetos de Aprendizagem no Ensino de Matemática</b>. 2007. Curso de curta duração ministrado/Extensão</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SABOIA, I. F. <b>Criação da monofolha ?crianças chegaram as férias?</b>. 2007. Editoração/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante ; BARRETO, A. L. O. ; FREIRE, R. S.. <b>Objetos de Aprendizagem e Ensino de Matemática</b>. 2007. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; VASCONCELOS, Patrícia Freitas Campos de ; SOARES, Pedro Pseligmann ; MENDES, Marilia Soares.. <b>Development of Interfaces for Multiple User Interfaces</b>. 2006. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Desenvolvimento de Jogos 2D com Macromedia Flash</b>. 2006. Curso de curta duração ministrado/Extensão</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>VASCONCELOS, Patrícia Freitas Campos de ; SOARES, Pedro Pseligmann ; MENDES, Marilia Soares. ; BRASIL FILHO, Amaury Teófilo. <b>Mini Curso- Desenvolvimento de aplicações para Televisão Digital</b>. 2006. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDES, Marilia Soares.; SOARES, Pedro Pseligmann ; VASCONCELOS, Patrícia Freitas Campos de ; BRASIL FILHO, Amaury Teófilo. <b>Desenvolvimento de aplicações para Televisão Digital</b>. 2005. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>VASCONCELOS, Patrícia Freitas Campos de ; MENDES, Marilia Soares. ; BRASIL FILHO, Amaury Teófilo ; SOARES, Pedro Pseligmann. <b>Mini Curso- Programação web para Televisão Digital</b>. 2005. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Como fazer Objetos de Aprendizagem</b>. 2004. Curso de curta duração ministrado/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>MAIA, J. G. R.; MENDONÇA JÚNIOR, Glaudiney Moreira. <b>Introdução ao Desenvolvimento de Jogos</b>. 2004. Curso de curta duração ministrado/Extensão</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SILVA, Henrique Barbosa. <b>Filosofia e Ética Profissional</b>. 2004. Curso de curta duração ministrado/Outra</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

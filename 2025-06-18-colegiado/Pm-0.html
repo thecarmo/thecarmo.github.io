@@ -1,0 +1,279 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de prêmios e títulos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1998,
+1],
+[2001,
+1],
+[2002,
+1],
+[2003,
+2],
+[2004,
+4],
+[2005,
+5],
+[2006,
+4],
+[2007,
+3],
+[2008,
+1],
+[2009,
+3],
+[2011,
+2],
+[2012,
+2],
+[2015,
+1],
+[2016,
+3],
+[2017,
+2],
+[2018,
+3],
+[2019,
+1],
+[2020,
+4],
+[2021,
+2],
+[2024,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Total de prêmios e títulos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 46<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Menção Honrosa - Artigo Completo - SBGames 2024, Trilha de Arte & Design, Sociedade Brasileira de Computação.. 2024.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Huawei Certified ICT Associate ? Artificial Intelligence (HCIA-AI V3.0), Huawei Technologies Co... 2021.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Melhor Artigo Completo - WebMedia 2021, Sociedade Brasileira de Computação.. 2021.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1° lugar na categoria demonstração de Recursos Educacionais Digitais, com o trabalho - Ilha das operações: em busca das pedras Múltiplis e Divisarions, V Congresso sobre Tecnologias na Educação (CTRL+E 2020).. 2020.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Best Full Paper - 3º Lugar - Trilha de Artes & Design - XIX Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGames), Sociedade Brasileira de Computação.. 2020.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Huawei Certified Academy Instructor, Huawei Technologies Co... 2020.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Huawei Certified ICT Associate ? Artificial Intelligence (HCIA-AI V1.0), Huawei Technologies Co... 2020.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2° lugar na categoria demonstração de Recursos Educacionais Digitais, com o trabalho - Divertix: um recurso educacional digital para a aprendizagem da Estatística nos anos iniciais do Ens. Fundamental, IV Congresso sobre Tecnologias na Educação (CTRL+E ).. 2019.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Best Full Paper - 3º Lugar - Trilha de Cultura - XVII Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGames), Sociedade Brasileira de Computação.. 2018.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Best Paper Award in the category Computer Graphics/Visualization, The 31st Conference on Graphics, Patterns and Images (SIBGRAPI 2018).. 2018.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/5012576140529904">George Allan Menezes Gomes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Melhor Poster - Redesign de aplicativos para pessoas com Transtorno do Espectro Autista orientado pelas diretrizes do GAIA, XVII SIMPÓSIO BRASILEIRO SOBRE FATORES HUMANOS EM SISTEMAS COMPUTACIONAIS.. 2018.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2º Melhor artigo, Simpósio Brasileiro de Sistemas Colaborativos.. 2017.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Best Full Research Paper - 19th Symposium on Virtual and Augmented Reality, Symposium on Virtual and Augmented Reality - Sociedade Brasileira de Computação.. 2017.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1º lugar entre os melhores trabalhos, na categoria Artigo completo no Congresso Regional sobre Tecnologias na Educação (Ctrl+E), Universidade Federal do Rio Grande do Norte.. 2016.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>3º lugar entre os melhores trabalhos, na categoria Artigo completo no Congresso Regional sobre Tecnologias na Educação (Ctrl+E), Universidade Federal do Rio Grande do Norte.. 2016.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Menção Honrosa - Trilha de Artes e Design - XV Simpósio Brasileiro de Jogos e Entretenimento Digital, Sociedade Brasileira de Computação.. 2016.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Best Paper Award, 4th Workshop on Parallel Programming Models.. 2015.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>6o lugar no Prêmio Artes Digitais e Aplicativos Educacionais do 4o Simpósio Hipertexto e Tecnologias na Educação, Universidade Federal de Pernambuco.. 2012.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Aprovado em concurso para professor adjunto da UECE - Curso: sistemas de informação, UECE/FUNECE.. 2012.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1o lugar na categoria artigo Completo do XVII Workshop de Informática na Escola, Sociedade Brasileira de Computação... 2011.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Vencedor Nacional da XVIII Exposição de Pesquisa Experimental em Comunicação, categoria: Produção Editorial e Transdisciplinar em Comunicação, modalidade: Website (avulso), Intercom.. 2011.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1o lugar na categoria artigo Completo do XX Simpósio Brasileiro de Informática na Educação, Sociedade Brasileira de Computação... 2009.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Aprovado em concurso público para analista de tecnologia da informação do SERPRO - Serviço Federal de Processamento de Dados, SERPRO - Cespe.. 2009.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Integrante da equipe "UECE - Posso Ajudar?", menção honrosa na final mundial do ACM ICPC, Association for Computing Machinery.. 2009.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Integrante da equipe "UECE - Posso Ajudar?", medalhista de prata e 5º colocada na seletiva brasileira para o ACM ICPC, Sociedade Brasileira de Computação.. 2008.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1o lugar na categoria artigo Completo do XIII Workshop de Informática na Escola, Sociedade Brasileira de Computação... 2007.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Certificação em Desenvolvimento C++, Nível Avançado, Brainbench.. 2007.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Integrante da equipe "UECE - Die aphthe schmerzen", medalhista de bronze e 8º colocada na seletiva brasileira para o ACM ICPC, Sociedade Brasileira de Computação.. 2007.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>2º Lugar PP/11 - Publicidade Digital, Intercom - Sociedade Brasileira de Estudos Interdisciplinares da Comunicação.. 2006.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Aprovado em concurso público para o cargo de analista de tecnologia da informação da Dataprev - Empresa de Tecnologia e Informações da Previdência Social, Dataprev - Cespe.. 2006.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Integrante da equipe "UECE - Randomic Programming", 23º colocada na seletiva brasileira para o ACM ICPC, Sociedade Brasileira de Computação.. 2006.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>V Prêmio Ceará de Cinema e Vídeo - Categoria Pesquisa Teórica, Secretaria de Cultura do Estado do Ceará - SECULT.. 2006.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1º lugar na categoria ?Produção Extra-curricular? da 5º mostra de Publicidade, Universidade de Fortaleza.. 2005.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>2º lugar na categoria ?Peças Isoladas? da 5º mostra de Publicidade, Universidade de Fortaleza.. 2005.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Integrante da equipe "UECE - log(n), 18º colocada na seletiva brasileira para o ACM ICPC, Sociedade Brasileira de Computação.. 2005.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Paped (Programa de Apoio a Pesquisa em Educação a Distância, linha 2 - Objetos de Aprendizagem),, CAPES-MED/SEED... 2005.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PAPED - Programa de Apoio a Educação a Distância, MEC/CAPES.. 2005.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/5012576140529904">George Allan Menezes Gomes</a>.</font></td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>3o. Melhor Demo, SBBD.. 2004.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Integrante da equipe "UECE - log(n)", 20º colocada na seletiva brasileira para o ACM ICPC, Sociedade Brasileira de Computação.. 2004.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Paped (Programa de Apoio a Pesquisa em Educação a Distância, linha 2 - Objetos de Aprendizagem), CAPES-MED/SEED.. 2004.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>PAPED - Programa de Apoio a Educação a Distância, MEC/CAPES.. 2004.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PAPED - Programa de Apoio a Educação a Distância, MEC/CAPES.. 2003.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Rumos Itaú Cultural Pesquisa 2003, Instituto Itaú Cultural.. 2003.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1o lugar no Concurso de Trabalhos de Iniciação Científica, Universidade Federal do Ceará.. 2002.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>1o lugar no Concurso de Trabalhos de Iniciação Científica, Universidade Federal do Ceará.. 2001.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PAPED - Programa de Apoio à Pesquisa em Educação a Distância (R$3.500,00), CAPES - Fundação Coordenação de Aperfeiçoamento de Pessoal de Nível Superior.. 1998.<br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

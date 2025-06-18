@@ -1,0 +1,39 @@
+nodedef> name VARCHAR, idLattes VARCHAR, label VARCHAR, rotulo VARCHAR, lat DOUBLE, lon DOUBLE, collaborationRank DOUBLE, producaoBibliografica DOUBLE, artigoEmPeriodico DOUBLE, livro DOUBLE, capituloDeLivro DOUBLE, trabalhoEmCongresso DOUBLE, resumoExpandido DOUBLE, resumo DOUBLE, posDoutorado DOUBLE, dutorado DOUBLE, mestrado DOUBLE, ic DOUBLE, color VARCHAR
+0,2610619567290943,Antonio Jose Melo Leite Junior,[Sem rotulo],,,1.1966829,122,47,0,5,45,5,20,0,0,1,7,'10,110,164'
+1,4467706783113621,Carlos Eduardo Brito Novais,[Sem rotulo],,,0.79889834,14,1,0,6,6,0,1,0,0,0,0,'10,110,164'
+2,3037263625761342,Ernesto Trajano de Lima Neto,[Sem rotulo],,,1.2787657,36,6,0,0,25,2,3,0,0,0,0,'10,110,164'
+3,4427578264303416,Gabriel Antoine Louis Paillard,[Sem rotulo],,,1.1627945,71,13,0,2,35,13,8,0,1,4,2,'10,110,164'
+4,5012576140529904,George Allan Menezes Gomes,[Sem rotulo],,,0.934101,22,7,0,1,6,6,2,0,0,0,0,'10,110,164'
+5,9848407021720705,Henrique Barbosa Silva,[Sem rotulo],,,0.24434984,7,0,2,2,3,0,0,0,0,0,0,'10,110,164'
+6,8556816688689358,Henrique Sergio Lima Pequeno,[Sem rotulo],,,0.6659988,16,4,0,1,9,1,1,0,0,0,6,'10,110,164'
+7,4277758788188363,Inga Freire Saboia,[Sem rotulo],,,0.6592977,24,10,0,6,4,0,4,0,0,0,0,'10,110,164'
+8,1001172700194924,José Aires de Castro Filho,[Sem rotulo],,,2.3920267,354,71,6,48,176,36,17,0,19,41,58,'10,110,164'
+9,0022110232147076,José Gilvan Rodrigues Maia,[Sem rotulo],,,0.5246241,85,20,1,5,46,12,1,0,1,7,0,'10,110,164'
+10,8761933941200089,Maria de Fátima Costa de Souza,[Sem rotulo],,,0.99635106,53,9,1,4,26,8,5,0,0,0,0,'10,110,164'
+11,3731017260116598,Marília Soares Mendes,[Sem rotulo],,,0.15,46,5,0,12,19,6,4,0,0,1,9,'10,110,164'
+12,3102406452063651,Rafael Augusto Ferreira do Carmo,[Sem rotulo],,,0.83289707,38,6,0,1,29,1,1,0,0,1,0,'10,110,164'
+13,9322311013034336,Raquel Santiago Freire,[Sem rotulo],,,1.3132123,67,10,0,8,35,2,12,0,1,2,0,'10,110,164'
+edgedef> node1 VARCHAR, node2 VARCHAR, weight DOUBLE
+0,2,1.0
+0,3,1.0
+0,4,8.0
+0,6,1.0
+0,12,3.0
+1,7,3.0
+1,12,1.0
+2,3,12.0
+2,6,1.0
+2,8,1.0
+2,9,1.0
+2,12,3.0
+3,12,4.0
+4,6,2.0
+4,9,1.0
+5,6,1.0
+6,8,1.0
+6,9,1.0
+8,9,4.0
+8,10,30.0
+8,13,44.0
+9,10,1.0
+10,13,3.0

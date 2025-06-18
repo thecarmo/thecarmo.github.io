@@ -1,0 +1,229 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>ppgsmd</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>ppgsmd</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Trabalho de conclusão de curso de graduação'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2014,
+2],
+[2015,
+1],
+[2020,
+2],
+[2022,
+6],
+[2023,
+2],
+[2024,
+9],
+[2025,
+12]]}]});
+        });
+        </script>
+        
+                <h3>Trabalho de conclusão de curso de graduação</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 34<br>
+                    
+                    
+                    <div id="dv-year-2025"><h3 class="year">2025</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Agatha Lindemberg Araújo dos Santos. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Bianka Costa de Oliveira. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Bruno Nóbrega Noronha. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Daniel Cardeal Nogueira dos Santos. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Davi Girão Oliveira. <b>Conteúdos Digitais na Primeira Infância: Critérios de Seleção para um Consumo Consciente</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4580502642241951">Priscila Barros David</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>José Matheus de Lima Alvino. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Levi Martins de Andrade. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Rebeka Melo Peres. <b>Guia de Estilos para EaD: Princiípios Visuais para Interfaces Consistentes e Acessíveis</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4580502642241951">Priscila Barros David</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Roney Christian Macedo Chaves. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Samay de Oliveira Pessoa. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Vanderson Lima Gomes. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Vinícius Correia Cardoso. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FRANCISCA CRISTIANA RODRIGUES ARAUJO. <b>NARRATIVA DIGITAL PARA ESTUDANTES NO TRANSTORNO DO ESPECTRO AUTISTA: UM MAPEAMENTO SISTEMÁTICO</b>. Trabalho de Conclusão de Curso (Graduação em Sistema de Informação) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7309983834512161">Amanda Drielly Pires Venceslau</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Gabriel Vasconcelos da Silva. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Isabelle Reinbold. <b>Investigação da correlação entre UES-Br e IMI-Teq-Br em jogos digitais e aplicações gamificadas</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Jamyle Layla Teles. <b>Investigação da correlação entre o Self-Assessment Manekim e Medidas Psicofisiológicas de Emoção</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Jaqueline Portela Da Silva Do Nascimento. <b>Suporte Visual Digital para estudantes com Transtorno do Espectro Autista: Um Mapeamento Sistemático da Literatura</b>. Trabalho de Conclusão de Curso (Graduação em Sistema de Informação) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7309983834512161">Amanda Drielly Pires Venceslau</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>JOSE FLAVIO SAMPAIO NETO. <b>Divulgação científica para promoção do uso consciente e equilibrado das mídias digitais</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Mariana Rangel. <b>Investigação da correlação entre o Self-Assessment Manekim e User Engagement Scale (UES-BR)</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Pedro Felipe Araújo Cavalcante de Oliveira. <b>A definir</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2880668102587861">Leonardo Oliveira Moreira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>RACHEL VIRGINIA RODRIGUES DE CARVALHO. <b>Uma plataforma para conscientização de jovens e adolescentes sobre vício em tecnologia</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Ageu Oliveira da Costa. <b>Enriquecimento Semântico de Serviços no contexto do Observatório de Dados Abertos dos Sertões de Crateús</b>. Trabalho de Conclusão de Curso (Graduação em Sistema de Informação) - Universidade Federal do Ceará, . In&iacute;cio: 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7309983834512161">Amanda Drielly Pires Venceslau</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Antônia Stéfanne Sousa Alves. <b>Requisitos não Funcionais para Internet of Health Things: Uma Perspectiva da Indústria</b>. Trabalho de Conclusão de Curso (Graduação em Sistema de Informação) - Universidade Federal do Ceará, . In&iacute;cio: 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7309983834512161">Amanda Drielly Pires Venceslau</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BEATRIZ FERREIRA MARTINS. <b>SMD0077 - TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CAIQUE SAMPAIO DE ARAUJO. <b>TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>JOAO BOSCO VIANA RIBEIRO. <b>TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LIVIA CARNEIRO DE LIMA. <b>TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LUCAS IERE DE SOUZA BEZERRA. <b>TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>RODRIGO VASCONCELOS AGUIAR MEIRELLES. <b>TRABALHO DE CONCLUSÃO DE CURSO</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Filipe Rodrigues de Aquino. <b>A produção de animação digital e discussão do processo criati</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2020.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7282584890816961">Georgia da Cruz Pereira</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Gabriela Ferreira Coutinho. <b>Chatbots e Uncanny Valley: um estudo de caso sobre o uso de chatbots</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2020.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7282584890816961">Georgia da Cruz Pereira</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GUILHERME DA SILVA BRAGA. <b>TRATAMENTO TÉCNICO EM GRAVAÇÃO E EDIÇÃO AUDIOVISUAL PARA PRODUÇÃO DE VIDEOAULAS PARA EAD DO CENTRO DE TECNOLOGIA DA UFC</b>. Trabalho de Conclusão de Curso (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . In&iacute;cio: 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antônio Márcio Albuquerque Almeida. <b>Desenvolvimento do Hardware de Uma Lousa Interativa</b>. Trabalho de Conclusão de Curso (Graduação em Engenharia de Computação) - Universidade Federal do Ceará, . In&iacute;cio: 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9671291450823171">Clemilson Costa dos Santos</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Raimundo Farrapo Pinto Júnior. <b>Desenvolvimento de Aplicativo para Processamento de Imagens em Lousa Interativa</b>. Trabalho de Conclusão de Curso (Graduação em Engenharia de Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. In&iacute;cio: 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9671291450823171">Clemilson Costa dos Santos</a>.</font></i></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:34:53<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

@@ -1,0 +1,1005 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Trabalhos completos publicados em anais de congressos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1991,
+2],
+[1992,
+1],
+[1997,
+1],
+[1998,
+1],
+[1999,
+3],
+[2000,
+4],
+[2001,
+8],
+[2002,
+11],
+[2003,
+13],
+[2004,
+12],
+[2005,
+13],
+[2006,
+16],
+[2007,
+15],
+[2008,
+24],
+[2009,
+19],
+[2010,
+20],
+[2011,
+14],
+[2012,
+21],
+[2013,
+16],
+[2014,
+17],
+[2015,
+19],
+[2016,
+32],
+[2017,
+22],
+[2018,
+16],
+[2019,
+12],
+[2020,
+19],
+[2021,
+13],
+[2022,
+10],
+[2023,
+9],
+[2024,
+14],
+[2025,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Trabalhos completos publicados em anais de congressos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 398<br>
+                    
+                    
+                    <div id="dv-year-2025"><h3 class="year">2025</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Lima, Lucas Vasconcelos ; CASTRO FILHO, J. A. ; BARRETO, Daisyane Carneiro ; CASTRO, J. B. ; SOUZA, M. F. C. ; CARDOSO, L. A. B. ; MAIA, D. L.. <b>Artificial Intelligence Literacy and STEAM Education: A Framework for EFL Preservice Teacher</b>. Em: <font color=#330066>Society for Information Technology & Teacher Education International Conference</font>, v. 1, p. 1-9, 2025. <a href="http://dx.doi.org/10.1007/978-3-030-69657-3_10" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AGUIAR, LUCAS ; PAIXAO, MATHEUS ; CARMO, RAFAEL ; SOARES, EDSON ; LEAL, ANTONIO ; FREITAS, MATHEUS ; GAMA, ELIAKIM. <b>Multi-language Software Development in the LLM Era: Insights from Practitioners? Conversations with ChatGPT</b>. Em: <font color=#330066>ESEM '24: ACM / IEEE International Symposium on Empirical Software Engineering and Measurement</font>, p. 489, 2024. <a href="http://dx.doi.org/10.1145/3674805.3690755" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>AGUIAR, SOFIA SOUSA ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; CHICCA JUNIOR, NATAL ANACLETO. <b>Análise do papel do design de botões na criação de interfaces intuitivas para dispositivos móveis</b>. Em: <font color=#330066>Anais do XV Congresso Brasileiro de Pesquisa e Desenvolvimento em Design P&D Design</font>, 2024. <a href="http://dx.doi.org/10.29327/5457226.1-100" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>ALVES, JOÃO VICTOR BARROSO ; GONÇALVES, YANNA TORRES ; SILVA, HENRIQUE BARBOSA. <b>Use of ChatBots in Programming Education: A Scoping Review</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação</font>, p. 1744-1755, 2024. <a href="http://dx.doi.org/10.5753/sbie.2024.242473" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>BEZERRA, ELLEN LACERDA C. ; FREIRE, RAQUEL S. ; Castro Filho, José Aires de ; HITZSCHKY, RAYSSA A. ; CARVALHO, RODRIGO LACERDA. <b>A produção de mídias digitais como prática acadêmica: um estudo acerca da aprendizagem no Ensino Superior</b>. Em: <font color=#330066>XIII Congresso Brasileiro de Informática na Educação (CBIE)</font>, v. 1, p. 34-22, 2024. <a href="http://dx.doi.org/10.5753/wie.2024.241908" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>BEZERRA, E. L. C. ; HITZSCHKY, R. A. ; FREIRE, R. S. ; CASTRO FILHO, J. A.. <b>A perspectiva dos estudantes acerca das metodologias ativas em uma componente curricular no Ensino Superior</b>. Em: <font color=#330066>Congresso Nacional de Educação (CONEDU)</font>, 2024. <a href="http://dx.doi.org/10.1007/978-3-030-69657-3_10" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO, SHIRLEY DE ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; CHICCA JUNIOR, NATAL ANACLETO. <b>Avaliação da atualidade das diretrizes de usabilidade propostas por Jakob Nielsen</b>. Em: <font color=#330066>Anais do XV Congresso Brasileiro de Pesquisa e Desenvolvimento em Design P&D Design</font>, 2024. <a href="http://dx.doi.org/10.29327/5457226.1-105" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREIRE, R.S. ; Bezerra, Ellen Lacerda Carvalho ; CASTRO FILHO, J. A.. <b>TECNOLOGIAS E METODOLOGIAS ATIVAS: EXPERIÊNCIAS DE APRENDIZAGEM NO ENSINO SUPERIOR</b>. Em: <font color=#330066>XXII - Encontro Nacional de Didática e Práticas de Ensino</font>, v. 1, p. 2-13, 2024.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>HITZSCHKY, RAYSSA A. ; FREIRE, RAQUEL S. ; Castro Filho, José Aires de. <b>Práticas pedagógicas com Recursos Educacionais Digitais (RED) de Língua Portuguesa: reflexões para as vivências em sala de aula nos anos iniciais do Ensino Fundamental</b>. Em: <font color=#330066>Workshop em Estratégias Transformadoras e Inovação na Educação</font>, v. 1, p. 1-9, 2024. <a href="http://dx.doi.org/10.5753/wetie.2024.245438" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>OLIVEIRA, C. F. ; FRANCO, ARTUR O. R. ; DA SILVA, JOSÉ WELLINGTON FRANCO ; MAIA, JOSÉ GILVAN RODRIGUES. <b>A Natural Language Text to Role-Playing Game Animation Generator</b>. Em: <font color=#330066>International Conference on Computational Processing of Portuguese (PROPOR)</font>, p. 483-491, 2024.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>PORTO, PEDRO BURGOS MONTEIRO ; LEITE JUNIOR, ANTONIO JOSE MELO ; GOMES, GEORGE ALLAN MENEZES ; CHICCA JUNIOR, NATAL ANACLETO. <b>Avaliação de usabilidade estendendo o sus com perguntas abertas: um estudo de caso</b>. Em: <font color=#330066>Anais do XV Congresso Brasileiro de Pesquisa e Desenvolvimento em Design P&D Design</font>, 2024. <a href="http://dx.doi.org/10.29327/5457226.1-524" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SALES, JAMILE RODRIGUES ; CASTRO, MICKAEL PEREIRA ; NOVAIS, CARLOS EDUARDO BRITO ; CARMO, RAFAEL AUGUSTO FERREIRA DO. <b>Desenvolvimento de um infográfico descritivo acerca do método de espaçamento de caracteres tipográficos de tracy sob a óptica de uma sequência pictórica de procedimento (SPPs)</b>. Em: <font color=#330066>Anais do XV Congresso Brasileiro de Pesquisa e Desenvolvimento em Design P&D Design</font>, 2024. <a href="http://dx.doi.org/10.29327/5457226.1-477" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SILVA, BRUNO C. DA ; FREITAS, LUCAS M. ; MAIA, JOSÉ G. R. ; VIANA, WINDSON. <b>Identifying patterns and affordances in location-based games: The practices of Niantic</b>. Em: <font color=#330066>Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 13-24, 2024. <a href="http://dx.doi.org/10.5753/sbgames.2024.240141" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SIQUEIRA, L. M. R. C. ; ARRUDA, J. S. ; CASTRO FILHO, J. A.. <b>INOVAÇÃO NO ENSINO DA CONTABILIDADE: TECNOLOGIAS DIGITAIS E METODOLOGIAS ATIVAS NO DESENVOLVIMENTO DA HABILIDADE PARA TOMADA DE DECISÕES</b>. Em: <font color=#330066>XXII - Encontro Nacional de Didática e Práticas de Ensino</font>, v. 1, p. 14-24, 2024.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SOUZA, DANILO DO CARMO DE ; SOUZA, MARIA SILVANIA MARQUES XAVIER DE ; GUEDES, DAVI FRANCKLINO ; FERREIRA, Dayany Barros ; CASTRO, JUSCILEIDE BRAGA DE ; Castro Filho, José Aires de. <b>O Instagram como ferramenta para a aprendizagem de Estatística: uma experiência com estudantes do 8º ano do Ensino Fundamental</b>. Em: <font color=#330066>Workshop de Informática na Escola</font>, v. 1, p. 233-242, 2024. <a href="http://dx.doi.org/10.5753/wie.2024.242691" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ANDRADE, JOAO P. B. ; COSTA, L. F. ; FERNANDES, L. S. ; REGO, P. A. L. ; GILVAN R. MAIA, JOSE. <b>Dog Face Recognition Using Deep Features Embeddings</b>. Em: <font color=#330066>BRACIS 2023</font>, v. 1, p. 125-139, 2023.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARBOSA, P. L. S. ; DAMAZIO, G. N. D. O. ; VIANA, W. C. ; CARMO, RAFAEL. <b>O sucesso não é apenas uma questão de sorte: um mapeamento sistemático sobre técnicas de análise do Enade da área de Computação</b>. Em: <font color=#330066>Simpósio Brasileiro de Educação em Computação</font>, 2023. <a href="http://dx.doi.org/10.5753/educomp.2023.228185" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>BARBOSA, PEDRO LUIS SARAIVA ; CARVALHO, WINDSON VIANA DE ; CARMO, RAFAEL. <b>Testes Adaptativos de preparação para o Enade em cursos de Computação</b>. Em: <font color=#330066>Anais Estendidos do Simpósio Brasileiro de Educação em Computação</font>, p. 34, 2023. <a href="http://dx.doi.org/10.5753/educomp_estendido.2023.229107" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>BARBOSA, ÍCARO S. ; VIDAL, CRETO A. ; C. NETO, JOAQUIM BENTO ; L. JÚNIOR, ANTÔNIO JOSÉ M. ; GOMES, GEORGE ALLAN M.. <b>Proposing an architecture for developing tactical shooter games employing Virtual Reality</b>. Em: <font color=#330066>Anais Estendidos do Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 293, 2023. <a href="http://dx.doi.org/10.5753/sbgames_estendido.2023.234057" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Bezerra, Ellen Lacerda Carvalho ; HITZSCHKY, R. A. ; DIAS, E. N. ; FREIRE, R. S. ; CASTRO FILHO, J. A.. <b>Estratégias Didático-pedagógicas na Utilização de Recursos Educacionais Digitais (RED) de Língua Portuguesa no Contexto do Ensino Remoto Emergencial (ERE)</b>. Em: <font color=#330066>CONGRESSO SOBRE TECNOLOGIAS NA EDUCAÇÃO (CTRL+E)</font>, v. 1, p. 61-70, 2023. <a href="http://dx.doi.org/10.5753/ctrle.2023.231676" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FRANCO, ARTUR DE OLIVEIRA DA ROCHA ; DE SOUZA, THIAGO IACHILEY ARAÚJO ; FILHO, PAULO DE TARSO PASSOS DA COSTA ; DA SILVA, JOSÉ WELLINGTON FRANCO ; MAIA, JOSÉ GILVAN RODRIGUES ; DE CASTRO, MIGUEL FRANKLIN. <b>RPG Creature Design: Cross-System Analysis and Conversion</b>. Em: <font color=#330066>SBGames 2023: 22nd Brazilian Symposium on Games and Digital Entertainment</font>, p. 96, 2023. <a href="http://dx.doi.org/10.1145/3631085.3631332" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MELLO, RUI R. ; PAILLARD, GABRIEL A. L. ; DINIZ, P. C. ; FRANCA, FELIPE M. G.. <b>GSink - A Runtime for Gamma Programs and its CGRA Mapping Proposal</b>. Em: <font color=#330066>2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)</font>, 2023. <a href="http://dx.doi.org/10.1109/IPDPSW59300.2023.00076" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SILVA FILHO, FRANCISCO ROMES DA ; PAILLARD, GABRIEL ANTOINE LOUIS ; CARMO, RAFAEL AUGUSTO FERREIRA DO ; LIMA, ERNESTO TRAJANO DE ; BONFIM, MICHEL SALES. <b>Classificação do Diálogo Freireano em Mensagens de Fóruns de Discussão: Uma Análise de Desempenho do TF-IDF e o BERT para Sentenças</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação (SBIE)</font>, p. 1477-1488, 2023. <a href="http://dx.doi.org/10.5753/sbie.2023.235298" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SOUSA, F. R. C. ; CARMO, RAFAEL ; LIMA NETO, E. T. ; PAILLARD, G.. <b>Uso de Aprendizado de Maquina em Fóruns de Ambientes Virtuais de Aprendizagem: Uma Revisão Sistemática de Literatura, 2023</b>. p. 1477-1488, 2023.</td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AGUIAR, L. A. ; CRUZ, L. A. ; SILVA, T. L. C. ; CARMO, RAFAEL A.F ; PAIXAO, M. H. E.. <b>Large-scale translation to enable response selection in low resource languages: A covid-19 chatbot experiment</b>. Em: <font color=#330066>XXXVII Simpósio Brasileiro de Bancos de Dados</font>, p. 203-2015, 2022.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ANDRADE, JOÃO P. B. ; BARBOSA, RENAN A. ; BEZERRA, GABRIEL ; LIMA, FRANCISCO I. S. ; DA SILVA, MAURO R. C. ; REGO, PAULO A. L. ; MAIA, JOSÉ G. R. ; TRINTA, FERNANDO A. M.. <b>Sistema Baseado em Microsserviços para Identificação Automática de Impressões Digitais</b>. Em: <font color=#330066>Anais Estendidos do Simpósio Brasileiro de Engenharia de Sistemas Computacionais</font>, p. 86-91, 2022. <a href="http://dx.doi.org/10.5753/sbesc_estendido.2022.228146" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FARRAPO, HYUAN P. ; FILHO, ROMULO F. F. ; MAIA, JOSE G. R. ; SERAFIM, PAULO B. S.. <b>DRLeague: a Novel 3D Environment for Training Reinforcement Learning Agents</b>. Em: <font color=#330066>2022 21st Brazilian Symposium on Computer Games and Digital Entertainment (SBGames)</font>, p. 1-6, 2022. <a href="http://dx.doi.org/10.1109/SBGAMES56371.2022.9961113" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FERNANDES, N. ; Viana, W. ; JÚNIOR, JOSÉ. <b>Adaptando o Interactions 500 para ensinar Química Orgânica a alunos surdos e ouvintes: um relato de experiencia</b>. Em: <font color=#330066>SBGames 2022</font>, 2022.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FRANCO, ARTUR O. R. ; Franco, Wellington ; MAIA, JOSE G. R. ; FRANKLIN, MIGUEL. <b>Generating Rooms using Generative Grammars and Genetic Algorithms</b>. Em: <font color=#330066>2022 21st Brazilian Symposium on Computer Games and Digital Entertainment (SBGames)</font>, p. 1-6, 2022. <a href="http://dx.doi.org/10.1109/SBGAMES56371.2022.9961112" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Franco, Wellington ; FRANCO, ARTUR O. R. ; AVILA, CAIO VIKTOR ; CABRAL, LUCAS ; MAIA, GILVAN ; PINHEIRO, VLADIA ; VIDAL, VANIA ; MACHADO, JAVAM. <b>ExQuestions: An Expanded Factual Corpus for Question Answering over Knowledge Graphs</b>. Em: <font color=#330066>2022 IEEE 16th International Conference on Semantic Computing (ICSC)</font>, p. 235-242, 2022. <a href="http://dx.doi.org/10.1109/icsc52841.2022.00046" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>ROCHA, P. H. G. ; SOUZA, A. B. ; MAIA, JOSÉ GILVAN RODRIGUES ; MATTOS, F. L. C. L. ; SILVA, F. A. ; REGO, PAULO A. L.. <b>Avaliação da Predição do Tempo de Vida do Enlace no Processo de Offloading Computacional em VANETs</b>. Em: <font color=#330066>VI Workshop de Computação Urbana (VI CoUrb)</font>, p. 1-14, 2022.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SILVA, B. C. ; FREITAS, L. ; MAIA, JOSÉ GILVAN RODRIGUES ; CARVALHO, W. V.. <b>Analisando a narrativa de ambiente transumana em jogo</b>. Em: <font color=#330066>SBGames</font>, p. 1, 2022.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SOUZA, DANILO DO CARMO DE ; VASCONCELOS, MARISA LIMA DE ; GARCIA, PEDRO JORGE RODRIGUES ; CASTRO, JUSCILEIDE BRAGA DE ; CASTRO FILHO, JOSE AIRES DE ; OLIVEIRA, RAYSSA MELO DE. <b>Entre tabelas e gráficos: a compreensão de estudantes do Ciclo de Alfabetização acerca de conceitos Estatísticos a partir da resolução de problemas</b>. Em: <font color=#330066>Anais do Encontro Nacional de Educação Matemática</font>, v. 1, 2022. <a href="http://dx.doi.org/10.29327/1137060.14-35" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>VENCESLAU, A. D. P. ; VIDAL, V. M. P. ; ANDRADE, R. M. C. ; MAIA, JOSÉ GILVAN RODRIGUES ; DA SILVA, JOSÉ WELLINGTON FRANCO. <b>SeAct: Semantic Adaptive Segmentation of Sensor Data Streams for Human Activity Recognition</b>. Em: <font color=#330066>XXXVII Simpósio Brasileiro de Bancosde Dados</font>, v. 37, p. 317-329, 2022.</td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; FREIRE, R. S. ; NASCIMENTO, G. M.. <b>O reino de Aljabar: o desafio da balança: Um Recurso Educacional Digital para favorecer o desenvolvimento do pensamento algébrico</b>. Em: <font color=#330066>CONGRESSO BRASILEIRO DE INFORMÁTICA NA EDUCAÇÃO CONCURSO APPS.EDU - PROTÓTIPO</font>, v. 1, p. 197-204, 2021. <a href="http://dx.doi.org/10.5753/wcbie.2021.218536" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>COSTA, L. F. ; FERNANDES, L. S. ; ANDRADE, JOAO P. B. ; REGO, P. A. L. ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Deep Convolutional Features for Fingerprint Indexing</b>. Em: <font color=#330066>BRACIS 2021: Brazilian Conference on Intelligent Systems</font>, p. 223-237, 2021.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DANTAS, P. F. ; MAIA, JOSÉ GILVAN RODRIGUES ; CARVALHO, W. V.. <b>Point and Control it!: Using Computer Vision for Service Discovery to Control Smart Objects</b>. Em: <font color=#330066>WebMedia '21: Brazilian Symposium on Multimedia and the Web</font>, p. 153-160, 2021.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FERNANDES, L. S. ; ANDRADE, JOAO P. B. ; COSTA, L. F. ; SERAFIM, PAULO BRUNO S. ; REGO, P. A. L. ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Robust Fingerprint Singular Point Detection using a Single-Stage CNN for Object Detection</b>. Em: <font color=#330066>IWSSIP 2021</font>, p. 1-12, 2021.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FONETELS, F. R. ; George Allan Menezes Gomes ; LEITE, ANTONIO JOSÉ MELO ; CHICCA JUNIOR, N. A. ; Rafael Augusto Ferreira do Carmo. <b>Balanceamento em jogos para dispositivos moveis: estudo de caso do jogo Clash Royale</b>. Em: <font color=#330066>XX Brazilian Symposium on Computer Games and Digital Entertainment - SBGames</font>, 2021.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>HITZSCHKY, R. A. ; ARRUDA, J. S. ; CASSIANO, A. T. V. ; SIQUEIRA, L. M. R. C. ; CASTRO FILHO, J. A.. <b>Análise de planejamentos pedagógicos e o uso de um Repositório Educacional Digital: possibilidades para o ensin</b>. Em: <font color=#330066>VI Congresso sobre Tecnologias na Educação</font>, v. 1, p. 285-294, 2021.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Tiago Caula de Oliveira Maia ; Rafael Augusto Ferreira do Carmo ; George Allan Menezes Gomes ; CHICCA JUNIOR, N. A. ; LEITE, ANTONIO JOSÉ MELO. <b>Transferência Neural de Estilo: homem e maquina criando o inesperado</b>. Em: <font color=#330066>XX Brazilian Symposium on Computer Games and Digital Entertainment - SBGames</font>, 2021.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MARQUES, C. J. F. ; DUARTE FILHO, R. E. ; MUNGUBA, Marilene Calderaro da Silva ; JÚNIOR, JOSÉ. <b>PROCESSO DE DESENVOLVIMENTO DE GAME PARA DIVULGAÇÃO DA CULTURA SURDA ? RELATO DE EXPERIÊNCIA</b>. Em: <font color=#330066>IV CONGRESSO INTERNACIONAL DE EDUCAÇÃO INCLUSIVA</font>, 2021.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>MATOS, J. V. ; George Allan Menezes Gomes ; LEITE, ANTONIO JOSÉ MELO ; Rafael Augusto Ferreira do Carmo ; CHICCA JUNIOR, N. A.. <b>Proposta de metodologia para a criação de cenários 3D para jogos digitais</b>. Em: <font color=#330066>XX Brazilian Symposium on Computer Games and Digital Entertainment - SBGames</font>, 2021.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO BRITO; COUTINHO, SOLANGE GALVÃO. <b>TFC - O desenvolvimento de uma fonte tipográfica digital como ferramenta de estudo de caligrafia</b>. Em: <font color=#330066>I Seminário de Pesquisa PPGDesign</font>, p. 60, 2021. <a href="http://dx.doi.org/10.5151/isspppgdesign-06" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>PINHEIRO, EMERSON B. ; VIDAL, CRETO A. ; NETO, JOAQUIM B. CAVALCANTE ; LEITE, ANTONIO J. MELO ; GOMES, GEORGE A. M. ; DA S. BARBOSA, ICARO. <b>RealShooting: Expanding the experience of point-and-click target shooting games</b>. Em: <font color=#330066>2021 20th Brazilian Symposium on Computer Games and Digital Entertainment (SBGames)</font>, p. 144, 2021. <a href="http://dx.doi.org/10.1109/sbgames54170.2021.00026" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>RAULINO, N. ; SABOIA, INGA ; NUNES, C. ; LIMA, G. ; LOPES, L.. <b>We are not alone: AGNES, developing a prototype to support communication between schools and student transgender women</b>. Em: <font color=#330066>IHC '21: XX Brazilian Symposium on Human Factors in Computing Systems</font>, v. 1, p. 1-523, 2021. <a href="http://dx.doi.org/10.4018/978-1-7998-2088-8.ch011" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SANTOS, V. E. C. ; DAVID, P. B. ; SILVA, T. L. C. ; CARMO, R. A. F. <b>Representação da Interação em Fóruns de Discussão On-line: uma Revisão Sistemática Integrativa</b>. Em: <font color=#330066>SIMPÓSIO BRASILEIRO DE INFORMÁTICA NA EDUCAÇÃO</font>, 2021.</td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Avila, Caio Viktor S. ; SILVA, J. W. F. ; MAIA, JOSÉ GILVAN RODRIGUES ; Vidal, Vania M. P.. <b>A Framework for Building Template-Based IQA Chatbots for Enterprise Knowledge Graphs</b>. Em: <font color=#330066>NLDB 2020: Natural Language Processing and Information Systems</font>, p. 60-72, 2020.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BICA, F. S. L. ; MAIA, JOSÉ GILVAN RODRIGUES ; FRANCO, A. O. R.. <b>Uma Análise da Representatividade Feminina nos Esportes Eletrônicos</b>. Em: <font color=#330066>XIX - SBGames - Simpósio Brasileiro de Jogos de Computador e Entretenimento Digital</font>, p. 486-495, 2020.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>COUTINHO, EMANUEL F. ; NETO, MAURÍCIO M. ; ABREU, ANTONIO WELLIGTON ; MOREIRA, LEONARDO O. ; BEZERRA, CARLA I. M. ; PAILLARD, GABRIEL ; DE SOUZA, JOSÉ NEUMAN. <b>Modeling blockchain e-health systems</b>. Em: <font color=#330066>EATIS 2020: 10th Euro American Conference on Telematics and Information Systems</font>, p. 1-8, 2020. <a href="http://dx.doi.org/10.1145/3401895.3401917" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DE CASTRO, JUSCILEIDE BRAGA ; DE FREITAS, FRANCISCO YOURI MIRANDA ; RUFINO, LIDYA DE LIMA MONTEIRO ; SOUSA, JOYCE DA SILVA ; SOUZA, NATHAN ; MEDEIROS, MÁRCIA DUARTE ; SOUZA, MARIA DE FÁTIMA ; DE CASTRO FILHO, JOSÉ AIRES. <b>Ilha das Operações: Um Recurso Educacional Digital com Múltiplas Representações para a Compreensão do Campo Multiplicativo</b>. Em: <font color=#330066>Congresso sobre Tecnologias na Educação</font>, v. 1, p. 668-664, 2020. <a href="http://dx.doi.org/10.5753/ctrle.2020.11448" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DE MELLO JUNIOR, RUI RODRIGUES ; DE ARAÚJO, LEANDRO SANTIAGO ; DUTRA, DIEGO LEONEL CADETTE ; PAILLARD, GABRIEL ANTOINE LOUIS ; DE AMORIM, CLÁUDIO LUIS ; FRANÇA, Felipe Maia Galvão. <b>Fluid computing</b>. Em: <font color=#330066>EATIS 2020: 10th Euro American Conference on Telematics and Information Systems</font>, p. 1-8, 2020. <a href="http://dx.doi.org/10.1145/3401895.3401932" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>DE SOUSA PAULA, PATRICIA ; SARMENTO, WELLINGTON W. FERREIRA ; PAILLARD, GABRIEL A. LOUIS ; DE CASTRO, MIGUEL FRANKLIN. <b>Using swarm intelligence in unmanned aerial vehicles for unknown location fixed target search</b>. Em: <font color=#330066>EATIS 2020: 10th Euro American Conference on Telematics and Information Systems</font>, p. 1-8, 2020. <a href="http://dx.doi.org/10.1145/3401895.3401931" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FRANCO, ARTUR O. R. ; SOARES, FELIPE F. ; NETO, ALOISIO V. LIRA ; DE MACEDO, JOSE A. F. ; REGO, PAULO A. L. ; GOMES, FERNANDO A. C. ; MAIA, JOSE G. R.. <b>Vehicle Re-Identification by Deep Feature Embedding and Approximate Nearest Neighbors</b>. Em: <font color=#330066>2020 International Joint Conference on Neural Networks (IJCNN)</font>, p. 1-8, 2020. <a href="http://dx.doi.org/10.1109/IJCNN48605.2020.9207150" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>HITZSCHKY, RAYSSA ARAÚJO ; ARRUDA, JULIANA SILVA ; CASSIANO, ANTÔNIA TATICLÉ VIEIRA ; LIMA, CINTIA ARRUDA ; SIQUEIRA, LILIANE MARIA RAMALHO DE CASTRO ; FILHO, JOSÉ AIRES DE CASTRO. <b>Formação docente e artefatos digitais: análise de Recursos Educacionais Digitais (RED) e a exploração de um repositório educacional digital</b>. Em: <font color=#330066>Workshop de Informática na Escola</font>, v. 1, p. 369-378, 2020. <a href="http://dx.doi.org/10.5753/cbie.wie.2020.369" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LIMA, T. L. P. ; TABOSA, D. B. ; VIANA, W. C. ; DUARTE, P. A. S. ; CARMO, RAFAEL A.F. <b>A Generative Approach for Android Sensor-based Applications</b>. Em: <font color=#330066>Simpósio Brasileiro de Sistemas Multimídia e Web - WebMedia 2020</font>, 2020.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MAIA, T. C. O. ; CARMO, RAFAEL A.F ; CHICCA JUNIOR, N. A. ; LEITE JUNIOR, A. J. M.. <b>Análise da transferência de estilos de obras de arte aplicadas em jogos digitais</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Jogos e Entretenimento Digital - SBGames</font>, 2020.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MEDEIROS, ALDISIO G. ; ANDRADE, JOAO P. B. ; SERAFIM, PAULO B. S. ; SANTOS, ALEXANDRE M. M. ; MAIA, JOSE G. R. ; TRINTA, FERNANDO A. M. ; DE MACEDO, JOSE A. F. ; FILHO, PEDRO P. R. ; REGO, PAULO A. L.. <b>A Novel Approach for Automatic Enhancement of Fingerprint Images via Deep Transfer Learning</b>. Em: <font color=#330066>2020 International Joint Conference on Neural Networks (IJCNN)</font>, p. 1-8, 2020. <a href="http://dx.doi.org/10.1109/ijcnn48605.2020.9206836" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MONTEIRO, A. J. ; CAVALCANTI, C. G. C. S. ; LIMA, E. T. ; CORDEIRO NETO, J. F. ; COELHO, I. C. B. ; ANTOINE LOUIS PAILLARD, GABRIEL ; GOMES, G. A. M. ; GOMES JUNIOR, F. G. ; PEQUENO, H. S. L. ; CASTRO, M. F. ; CARMO, RAFAEL A.F ; MAIA, R. P.. <b>O programa Aedes em Foco como elemento de combate a arboviroses</b>. Em: <font color=#330066>Anais Principais do Simpósio Brasileiro de Computação Aplicada à Saúde</font>, p. 238-249, 2020. <a href="http://dx.doi.org/10.5753/sbcas.2020.11517" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>OLIVEIRA, B. P. ; FRANCO, A. O. R. ; SILVA, J. W. F. ; GOMES, Fernando Antônio de Carvalho ; MAIA, JOSÉ GILVAN RODRIGUES. <b>A Framework for Metroidvania Games</b>. Em: <font color=#330066>Simpósio Brasileiro de Games e Entretenimento Digital</font>, p. 836-844, 2020.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>ROLIM, T. V. ; Avila, Caio Viktor S. ; ARRUDA JUNIOR, N. M. ; SILVA, J. W. F. ; MAIA, JOSÉ GILVAN RODRIGUES ; OLIVEIRA, A. M. B. ; ANDRADE, L. O. M. ; Vidal, Vania M. P.. <b>Um Enfoque Incremental para Construção do Grafo de Conhecimento do SUS</b>. Em: <font color=#330066>XX Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)</font>, p. 72-83, 2020.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SANTOS, A. M. M. ; SERAFIM, P. B. S. ; FRANCO, A. O. R. ; CARMO, RAFAEL A.F ; MAIA, J. G. R.. <b>Simplificando o Balanceamento de Atributos em Jogos do Gênero RPG</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Jogos e Entretenimento Digital - SBGames</font>, 2020.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SANTOS, A. M. M. ; SERAFIM, PAULO BRUNO S. ; FRANCO, A. O. R. ; CARMO, R. A. F. ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Simplificando o balanceamento de atributos em RPGs eletrônicos</b>. Em: <font color=#330066>XIX - SBGames - Simpósio Brasileiro de Jogos de Computador e Entretenimento Digital</font>, p. 93-101, 2020.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SANTOS, CLEMILSON COSTA DOS ; PAILLARD, GABRIEL ; MOREIRA, LEONARDO OLIVEIRA ; SILVA FILHO, FRANCISCO ROMES DA ; COUTINHO, EMANUEL F.. <b>Uma Análise Qualitativa sobre Atividades Remotas em Disciplinas no Período de Isolamento Social</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação</font>, p. 292-301, 2020. <a href="http://dx.doi.org/10.5753/cbie.sbie.2020.292" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>SOARES, FELIPE ; FERNANDES, LUCAS ; DA ROCHA, ATSLANDS ; REGO, PAULO ; MAIA, JOSÉ ; DE SOUZA, JOSÉ. <b>Avaliação de Desempenho de Computadores Raspberry Pi com Algoritmos para o Reconhecimento Automático de Placas Veiculares</b>. Em: <font color=#330066>Simpósio Brasileiro de Engenharia de Sistemas Computacionais</font>, p. 33-40, 2020. <a href="http://dx.doi.org/10.5753/sbesc_estendido.2020.13088" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Tiago Caula de Oliveira Maia ; Rafael Augusto Ferreira do Carmo ; CHICCA JUNIOR, N. A. ; LEITE, ANTONIO JOSÉ MELO. <b>Análise da Transferência Neural de Estilos de Obras de Arte Aplicadas em Jogos Digitais</b>. Em: <font color=#330066>SBGames 2020</font>, p. 30-39, 2020.</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARAUJO, PEDRO ; VIANA, WINDSON ; VERAS, NECIO ; FARIAS, EDER JACQUES ; Castro Filho, José Aires de. <b>Exploring Students Perceptions and Performance in Flipped Classroom Designed with Adaptive Learning Techniques: A Study in Distributed Systems Courses</b>. Em: <font color=#330066>XXX Simpósio Brasileiro de Informática na Educação (Brazilian Symposium on Computers in Education)</font>, v. 1, p. 219-228, 2019. <a href="http://dx.doi.org/10.5753/cbie.sbie.2019.219" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ARRUDA, JULIANA ; Castro Filho, José Aires de ; SIQUEIRA, LILIANE MARIA RAMALHO CASTRO ; HITZSCHKY, RAYSSA ARAÚJO. <b>Tecnologias digitais e a prática docente: Como as metodologias ativas podem transformar a formação de professores</b>. Em: <font color=#330066>XXV Workshop de Informática na Escola</font>, v. 1, p. 1429-1433, 2019. <a href="http://dx.doi.org/10.5753/cbie.wie.2019.1429" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DE MELLO, RUI ; ARAUJO, LEANDRO ; ALVES, TIAGO ; MARZULO, LEANDRO ; PAILLARD, GABRIEL ; FRANCA, FELIPE. <b>Exploring the Equivalence between Dynamic Dataflow Model and Gamma - General Abstract Model for Multiset mAnipulation</b>. Em: <font color=#330066>2019 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)</font>, p. 809, 2019. <a href="http://dx.doi.org/10.1109/IPDPSW.2019.00133" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>HITZSCHKY, R. A. ; ARRUDA, J. S. ; LIMA, C. A. ; SIQUEIRA, L. M. R. C. ; CASTRO FILHO, J. A.. <b>Utilização de Recursos Educacionais Digitais (RED) em Aulas de Língua Portuguesa nos Anos Finais do Ensino Fundamental: Contribuições e Desafios</b>. Em: <font color=#330066>IV Congresso sobre Tecnologias na Educação (Ctrl+E 2019)</font>, v. 1, p. 30-39, 2019.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>HITZSCHKY, RAYSSA ; FREIRE, R. S. ; JÚNIOR, F. G. G ; CASTRO FILHO, J. A.. <b>Recurso Educacional Digital (RED) Revista Digital da Criança e o estudo de gêneros jornalísticos</b>. Em: <font color=#330066>VIII Congresso Brasileiro de informática na Educação</font>, p. 1156, 2019.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LIMA, AFONSO MATHEUS SOUSA ; MENDES, MARILIA SOARES ; CRUZ, LÍVIA ALMADA. <b>Enrichment of dictionaries to improve the automatic classification of feelings in postings related to the use of systems</b>. Em: <font color=#330066>the XV Brazilian Symposium</font>, p. 1, 2019. <a href="http://dx.doi.org/10.1145/3330204.3330219" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>OLIVEIRA, HISMAEL ; ARRUDA, ALEXANDRE ; Mendes, Marilia. <b>Identificação Automática de Postagens Relacionadas ao Uso Através de Modelos de Aprendizagem Profunda</b>. Em: <font color=#330066>XVI Encontro Nacional de Inteligência Artificial e Computacional</font>, p. 587, 2019. <a href="http://dx.doi.org/10.5753/eniac.2019.9317" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PAILLARD, GABRIEL; FRANCA, FELIPE M. G. ; LAVAULT, Christian. <b>A Distributed Wheel Sieve Algorithm</b>. Em: <font color=#330066>2019 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)</font>, p. 619, 2019. <a href="http://dx.doi.org/10.1109/IPDPSW.2019.00107" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SERAFIM, PAULO BRUNO S. ; MEDEIROS, ALDISIO G. ; REGO, PAULO A. L. ; GILVAN R. MAIA, JOSE ; TRINTA, FERNANDO A. M. ; MAIA, MARCIO E. F. ; DE MACEDO, JOSE ANTONIO F. ; NETO, ALOISIO V. LIRA. <b>A Method based on Convolutional Neural Networks for Fingerprint Segmentation</b>. Em: <font color=#330066>2019 International Joint Conference on Neural Networks (IJCNN)</font>, p. 1, 2019. <a href="http://dx.doi.org/10.1109/IJCNN.2019.8852236" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SILVA, PALOMA BISPO DOS SANTOS ; SILVA, THIAGO HELLEN OLIVEIRA DA ; Mendes, Marília Soares ; FURTADO, Maria Elizabeth Sucupira. <b>Temporal analysis of posts related to use</b>. Em: <font color=#330066>the 18th Brazilian Symposium</font>, p. 1, 2019. <a href="http://dx.doi.org/10.1145/3357155.3358482" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUSA, HANNA ALMEIDA ; DA SILVA, MARIA AURICÉLIA ; DE CASTRO FILHO, JOSÉ AIRES. <b>Produção e Ilustração de Textos com Suporte Digital na Educação Infantil</b>. Em: <font color=#330066>Congresso sobre Tecnologias na Educação</font>, v. 1, p. 164-173, 2019. <a href="http://dx.doi.org/10.5753/ctrle.2019.8887" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SOUSA, J. S. ; MONTEIRO, L. L. ; SOUZA, A. N. S. ; SOUZA, D. C. ; CASTRO, J. B. ; MEDEIROS, M. D. ; SOUZA, MARIA DE FATIMA C. DE ; CASTRO FILHO, José Aires de. <b>Divertix: um recurso educacional digital para a aprendizagem da Estatística nos anos iniciais do Ensino Fundamental</b>. Em: <font color=#330066>IV Congresso sobre Tecnologias na Educação</font>, 2019.</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARAUJO, PEDRO ; VIANA, WINDSON ; VERAS, NECIO ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aprendizagem Adaptativa em Aulas Invertidas de Sistemas Distribuídos: um estudo de caso apoiado no G Suite</b>. Em: <font color=#330066>XXIX Simpósio Brasileiro de Informática na Educação (Brazilian Symposium on Computers in Education)</font>, v. 1, p. 328-337, 2018. <a href="http://dx.doi.org/10.5753/cbie.sbie.2018.328" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ARRUDA, J. ; SIQUEIRA, L. M. R. C. ; CASTRO FILHO, J. A. ; SOUZA, J. L.. <b>REFLEXOS DO USO DAS METODOLOGIAS ATIVAS PARA O DESENVOLVIMENTO DA CIDADANIA PLANETÁRIA EM DOCENTES DE ÁREAS INTERDISCIPLINARES</b>. Em: <font color=#330066>Encontro Internacional sobre Gestão Ambiental e Meio Ambiente (ENGEMA)</font>, v. 1, p. 1, 2018.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>ARRUDA, JULIANA ; FILHO, JOSÉ AIRES DE CASTRO ; SIQUEIRA, LILIANE MARIA RAMALHO CASTRO ; HITZSCHKY, RAYSSA ; BEZERRA, ELLEN. <b>Atividades interativas com o uso de tecnologias digitais como mediadoras da aprendizagem no ensino fundamental</b>. Em: <font color=#330066>XXIV Workshop de Informática na Escola</font>, v. 1, p. 440-450, 2018. <a href="http://dx.doi.org/10.5753/cbie.wie.2018.440" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>BARBOSA, M. F. V. ; RAMOS, B. S. ; FARRAPO, H. P. ; OLIVEIRA, L. R. C. ; LIMA, L. W. S. ; FREITAS, C. R. G. ; SOUZA, MARIA DE FATIMA C. DE ; SILVA, C. L. O. ; PEIXOTO, J. P. ; FARIAS, V. E. S.. <b>Utilizando mecânicas de jogo para dinamizar o aprendizado da língua Esperanto</b>. Em: <font color=#330066>VII Congresso Brasileiro de Informática na Educação</font>, 2018.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CARLOS LOUREIRO, ROBSON ; DE LIMA, LUCIANA ; ALVES CRUZ, ELIFRÂNIO ; GUILHERME PEREIRA DE MIRANDA, JOÃO ; IZABELLA SOMBRA DE SANTIAGO, ANTONIA ; ANTOINE LOUIS PAILLARD, GABRIEL ; AUGUSTO FERREIRA DO CARMO, RAFAEL. <b>UTILIZAÇÃO DE TÉCNICAS DE MINERAÇÃO DE DADOS E ESTATÍSTICA PARA MELHORIA DA GESTÃO DO PROCESSO DE AVALIAÇÃO DE ATORES EM EDUCAÇÃO SEMIPRESENCIAL</b>. Em: <font color=#330066>24º CIAED Congresso Internacional ABED de Educação a Distância</font>, 2018. <a href="http://dx.doi.org/10.17143/ciaed/XXIVCIAED.2018.7735" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>HITZSCHKY, R. A. ; LIMA, C. A. ; ARRUDA, J. S. ; SIQUEIRA, L. M. R. C. ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aprendizagem Móvel e o Uso de Aplicativos Educacionais no Ensino Fundamental: Possibilidades para a Formação Docente</b>. Em: <font color=#330066>III Congresso sobre Tecnologias na Educação</font>, v. 1, p. 323-335, 2018.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>HITZSCHKY, RAYSSA ; ARRUDA, CINTIA ; ARRUDA, JULIANA ; SOUZA, DANILO DE ; SIQUEIRA, LILIANE MARIA RAMALHO CASTRO ; FILHO, JOSÉ AIRES DE CASTRO. <b>A utilização de recursos educacionais digitais no ambiente escolar: da formac¿a¿o continuada a¿ vive¿ncia tecnolo¿gica</b>. Em: <font color=#330066>XXIV Workshop de Informática na Escola</font>, v. 1, p. 568-577, 2018. <a href="http://dx.doi.org/10.5753/cbie.wie.2018.568" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>JR, ANTONIO MELO; SANTOS, EMANUELE ; VIDAL, CRETO ; ROCHA, CLEILTON. <b>Empregando Análise Visual e Sensemaking no Ensino de Predictive Suffix Trees</b>. Em: <font color=#330066>XXIX Simpósio Brasileiro de Informática na Educação (Brazilian Symposium on Computers in Education)</font>, p. 1043, 2018. <a href="http://dx.doi.org/10.5753/cbie.sbie.2018.1043" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>MESQUITA, E. R. ; MELO, J. M. ; FERREIRA, R. F. ; CINTRA, S. I. B. ; VALE, V. C. ; SOUZA, MARIA DE FATIMA C. DE ; SILVA, C. L. O. ; PEIXOTO, J. P. ; FARIAS, V. E. S.. <b>O jogo Gestus como aplicação de primeiro contato com LIBRAS</b>. Em: <font color=#330066>VII Congresso Brasileiro de Informática na Educação</font>, p. 302-309, 2018.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>NASCIMENTO, KARLA ANGÉLICA SILVA DO ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aprendizagem Colaborativa Móvel: superando os obstáculos e abraçando as oportunidades</b>. Em: <font color=#330066>VII Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 1013-1021, 2018. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2018.1013" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO B.; MOREIRA, EDUARDO O. ; COUTINHO, SOLANGE. <b>O desenvolvimento de um framework descritivo de ductus caligráfico</b>. Em: <font color=#330066>13º Congresso Pesquisa e Desenvolvimento em Design</font>, v. 6, p. 2419, 2018. <a href="http://dx.doi.org/10.5151/ped2018-3.3_aco_55" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>PAIVA, F. G. R. M. ; FRANCO, A. O. R. ; MENDONÇA JÚNIOR, Glaudiney Moreira ; MAIA, J. G. R.. <b>Analyzing Player Profiles in Collectible Card Games</b>. Em: <font color=#330066>f SBGames 2018</font>, v. 1, p. 1-8, 2018.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SANTOS, C. C. ; PAILLARD, G. A. L. ; COUTINHO, E. F. ; MOREIRA NETO, M. ; MOREIRA, L. O. ; TRAJANO DE LIMA, ERNESTO. <b>Intelligent Environments Applied to Precision Agriculture</b>. Em: <font color=#330066>6th International Workshop on ADVANCEs in ICT Infrastructures and Services (ADVANCE'2018)</font>, p. 35-42, 2018.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SANTOS, E. Z. L. ; MOREIRA, L. O. ; COUTINHO, E. F. ; MAIA, J. G. R.. <b>Assessing Socioeconomic Issues of the Brazilian e-Sports Scene</b>. Em: <font color=#330066>SBGames 2018</font>, v. 1, p. 1-9, 2018.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>MORAIS, CAROLINA ; FILHO, JOSÉ AIRES DE CASTRO ; FREIRE, Raquel Santiago. <b>Instagram e educação: a aprendizagem significativa de língua estrangeira em contextos não-formais de ensino</b>. Em: <font color=#330066>VII Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 906-915, 2018. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2018.906" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SILVA, THIAGO HELLEN OLIVEIRA DA ; FERREIRA, MICAEL ; JULIANI, JEFERSON ; JÚNIOR, GABRIEL FONSÊCA DE OLIVEIRA ; Mendes, Marilia. <b>Projetando uma aplicação para apoiar o ensino de inglês a partir de uma experiência de uso</b>. Em: <font color=#330066>XXIX Simpósio Brasileiro de Informática na Educação (Brazilian Symposium on Computers in Education)</font>, p. 348, 2018. <a href="http://dx.doi.org/10.5753/cbie.sbie.2018.348" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARRUDA, JULIANA ; SIQUEIRA, LILIANE MARIA RAMALHO CASTRO ; FILHO, JOSÉ AIRES DE CASTRO ; BRITO, ALINNE ; HITZSCHKY, RAYSSA. <b>Tecnologias digitais e o processo de protagonismo estudantil no Ensino Fundamental</b>. Em: <font color=#330066>XXIII Workshop de Informática na Escola</font>, p. 578, 2017. <a href="http://dx.doi.org/10.5753/cbie.wie.2017.578" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BASTOS, A. S. ; GOMES, R. F. ; SANTOS, C. C. ; MAIA, J. G. R.. <b>Assessing the Experience of Immersion in Electronic Games</b>. Em: <font color=#330066>19th Symposium on Virtual and Augmented Reality</font>, v. 1, p. 146-154, 2017.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CARMO, RAFAEL A.F; KANG, S. M. ; SILVA, R.. <b>Visualization of Topic-Sentiment Dynamics in Crowdfunding Projects</b>. Em: <font color=#330066>Advances in Intelligent Data Analysis XVI. IDA 2017</font>, v. 10584, p. 40-51, 2017.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CARVALHO, A. O. P. ; BENFATTI, X. D. ; SILVA, Henrique Barbosa. <b>Avaliação educacional como componente curricular na formação de professores: um estudo documental a partir dos projetos pedagógicos dos cursos de pedagogia</b>. Em: <font color=#330066>VII Congresso Internacional em Avaliação Educacional</font>, v. 1, 2017.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CASTRO, J. B. ; COSTA, K. L. ; CASTRO FILHO, JOSÉ AIRES. <b>A CRIAÇÃO DE VÍDEOS COMO PRODUÇÃO DE CONHECIMENTO NA FORMAÇÃO INICIAL</b>. Em: <font color=#330066>VIII Congreso Iberoamericano de Educación Matemática</font>, v. 1, p. 1-10, 2017.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>COSTA, V. R. ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Historical Representation and Game Mechanics: A Case Study on WWII</b>. Em: <font color=#330066>XVI Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, v. 1, p. 1-10, 2017.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>DA SILVA, THIAGO HELLEN O. ; FREITAS, LAVÍNIA MATOSO ; Mendes, Marília Soares. <b>Beyond traditional evaluations</b>. Em: <font color=#330066>the XVI Brazilian Symposium</font>, v. 16, p. 1-148, 2017. <a href="http://dx.doi.org/10.1145/3160504.3160548" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>GOMES, GEORGE A.M.; SANTOS, EMANUELE ; VIDAL, CRETO A.. <b>Interactive Visualization of Traffic Dynamics Based on Trajectory Data</b>. Em: <font color=#330066>2017 30th SIBGRAPI Conference on Graphics</font>, p. 111, 2017. <a href="http://dx.doi.org/10.1109/sibgrapi.2017.21" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LEITE, ANTONIO JOSE MELO; SANTOS, EMANUELE ; VIDAL, Creto Augusto ; MACEDO, JOSE ANTONIO FERNANDES DE. <b>Visual Analysis of Predictive Suffix Trees for Discovering Movement Patterns and Behaviors</b>. Em: <font color=#330066>2017 30th SIBGRAPI Conference on Graphics</font>, p. 103, 2017. <a href="http://dx.doi.org/10.1109/sibgrapi.2017.20" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MAIA, D. L. ; FILHO, JOSÉ AIRES DE CASTRO. <b>Produção e compartilhamento de vídeos por smartphones: experiência em formação de professoras</b>. Em: <font color=#330066>VIII Congreso Iberoamericano de Educación Matemática</font>, v. 1, p. 1-10, 2017.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Mendes, Marília Soares; FURTADO, ELIZABETH SUCUPIRA. <b>UUX-Posts</b>. Em: <font color=#330066>the 8th Latin American Conference</font>, p. 1, 2017. <a href="http://dx.doi.org/10.1145/3151470.3151471" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MURAKAMI, LUIZ ; JUNIOR, ANTONIO JOSÉ MELO ; SANTOS, CLEMILSON COSTA DOS ; MOTA, KAROL ; LIMA, ERNESTO TRAJANO DE ; MOREIRA, FELIPE ; REINALDO, HUGO ACOSTA. <b>Arduino no curso de administração</b>. Em: <font color=#330066>VI Congresso Brasileiro de Informática na Educação</font>, p. 392, 2017. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2017.392" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>OLIVEIRA, D. C. ; FURTADO, E. ; MENDES, MARILIA S.. <b>MASSVA: Modelo de Avaliação de Sistemas Sociais sob a ótica dos Valores humanos nas postagens dos usuários</b>. Em: <font color=#330066>Simpósio Brasileiro de Sistemas Colaborativos</font>, 2017.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>OLIVEIRA, D. C. ; MENDES, Marilia ; FURTADO, E.. <b>Uma Investigação da Relação entre Valores Humanos e a Intenção Emocional do Usuário em suas postagens no Twitter</b>. Em: <font color=#330066>Simpósio Brasileiro sobre Fatores Humanos em Sistemas Computacionais (IHC 2017).</font>, v. 2039, p. 58-69, 2017.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>OLIVEIRA, D. C. ; MOREIRA NETO, M. ; COUTINHO, EMANUEL F. ; PAILLARD, G. A. L. ; LIMA, ERNESTO T. ; MOREIRA, LEONARDO O.. <b>An Autonomic System for Energy Cost Reduction in Computer Labs</b>. Em: <font color=#330066>5th International Workshop on ADVANCEs in ICT INfrastructures and Services (ADVANCE 2017)</font>, 2017.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Osmundo, Maria Lidiana Ferreira ; SANTOS, J. B. ; FREIRE, R. S. ; CASTRO FILHO, JOSÉ AIRES ; SOUZA FILHO, F. A.. <b>METODOLOGIAS ATIVAS E ENSINO HÍBRIDO: POR UMA NOVA APRENDIZAGEM DE HIDROLOGIA</b>. Em: <font color=#330066>XXII Simpósio Brasileiro de Recursos Hídricos</font>, v. 1, p. 1-7, 2017.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SANTOS, A. M. M. ; FRANCO, A. O. R. ; MAIA, J. G. R. ; GOMES, F. A. C. ; CASTRO, Miguel Franklin de. <b>A Methodology Proposal for MMORPG Content Expansion Analysis</b>. Em: <font color=#330066>XVI Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, v. 1, p. 1-10, 2017.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>SILVA, J. W. F. ; SOUZA, Cidcley Teixeira de ; SOUZA, Maria de Fátima Costa de. <b>Proposta de Repositório para o Versionamento de Objetos de Aprendizagem Customizáveis</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação</font>, 2017.</td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>SILVA, JOSE WALLISON F. DA ; SOUZA, CIDCLEY T. DE ; SOUZA, MARIA DE FATIMA C. DE. <b>CLOVeR: An Optimized Repository for Customizable Learning Objects</b>. Em: <font color=#330066>2017 IEEE 17th International Conference on Advanced Learning Technologies (ICALT)</font>, p. 76, 2017. <a href="http://dx.doi.org/10.1109/icalt.2017.114" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Silva, Maria Auricélia da ; CASTRO FILHO, JOSÉ AIRES. <b>Professores, laptops e trabalho colaborativo: perspectivas de formação</b>. Em: <font color=#330066>II Congresso sobre Tecnologias na Educação (Ctrl+E 2017)</font>, v. 1, p. 261-272, 2017.</td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Silva, Maria Auricélia da ; FILHO, JOSE ALOISIO MACEDO ; FILHO, JOSÉ AIRES DE CASTRO. <b>Histórias Fantásticas: produção de textos com suporte digital na Educação Infantil</b>. Em: <font color=#330066>XXIII Workshop de Informática na Escola</font>, p. 1060-1068, 2017. <a href="http://dx.doi.org/10.5753/cbie.wie.2017.1060" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Silva, Maria Auricélia da ; FILHO, JOSÉ AIRES DE CASTRO. <b>Colaborar e Aprender com Suporte Digital: possibilidades para a escola contemporânea</b>. Em: <font color=#330066>VI Congresso Brasileiro de Informática na Educação</font>, p. 574-583, 2017. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2017.574" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARAÚJO, MARIA C. C. ; SILVA, ANTÔNIO R. S. ; DARIN, TICIANNE G. R. ; DE CASTRO, EVERARDO L. ; Andrade, Rossana M. C. ; DE LIMA, ERNESTO T. ; SÁNCHEZ, JAIME ; DE C. FILHO, JOSÉ AIRES ; VIANA, WINDSON. <b>Design and usability of a braille-based mobile audiogame environment</b>. Em: <font color=#330066>the 31st Annual ACM Symposium</font>, v. 1, p. 232-238, 2016. <a href="http://dx.doi.org/10.1145/2851613.2851701" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ARRUDA, JULIANA ; SIQUEIRA, LILIANE MARIA RAMALHO CASTRO ; FILHO, JOSÉ AIRES DE CASTRO. <b>O uso de tecnologias digitais na facilitação da emergência de zonas de desenvolvimento proximal em sala de aula</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 771-780, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.771" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CARVALHO, R. L. ; CASTRO FILHO, J. A. ; MAIA, D. L.. <b>CONHECIMENTO MATEMÁTICO NA FORMAÇÃO INICIAL DE PROFESSORES PARA O ENSINO DE ESTRUTURAS MULTIPLICATIVAS</b>. Em: <font color=#330066>XII Encontro Nacional de Educação Matemática (ENEM)</font>, v. 1, p. 1-12, 2016.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, D. C. ; MEDEIROS, D. M. ; SOUZA, M. S. M. X. ; DIAS, A. C. A. M. ; Castro Filho, José Aires de. <b>ANÁLISE DE DESEMPENHO E DE ESTRATÉGIAS DE ESTUDANTES DO 6° ANO DO ENSINO FUNDAMENTAL EM SITUAÇÕES DE PROPORÇÃO SIMPLES</b>. Em: <font color=#330066>XII Encontro Nacional de Educação Matemática (ENEM)</font>, v. 1, p. 1-12, 2016.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>COUTINHO, E. F. ; PAILLARD, G. A. L. ; MOREIRA, L. O. ; TRAJANO DE LIMA, ERNESTO. <b>Expandindo uma Arquitetura para HPC em Nuvens Computacionais Utilizando Conceitos de Computação Autonômica</b>. Em: <font color=#330066>VI Workshop de Sistemas Distribuídos Autonômicos (WOSIDA2016)</font>, p. 3-8, 2016.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>COUTINHO, EMANUEL F. ; GOMES, GEORGE ALLAN M. ; JOSE, M. L. ANTONIO. <b>Applying design thinking in disciplines of systems development</b>. Em: <font color=#330066>2016 8th Euro American Conference on Telematics and Information Systems (EATIS)</font>, p. 1, 2016. <a href="http://dx.doi.org/10.1109/eatis.2016.7520123" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>COUTINHO, EMANUEL ; MOREIRA, LEONARDO ; PAILLARD, GABRIEL ; LIMA, ERNESTO TRAJANO DE. <b>Análise do Sentimento de Mensagens de Chats em uma Turma de Graduação de um Curso de Educação à Distância</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, p. 1019, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.1019" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>DE ALMEIDA, RUBENS H. P. ; MELLO, RUI R. ; PAILLARD, GABRIEL A. L. ; FRANÇA, FELIPE M. G.. <b>A GPU-based implementation for the gamma multiset rewriting paradigm</b>. Em: <font color=#330066>the 31st Annual ACM Symposium</font>, v. II, p. 1225-1230, 2016. <a href="http://dx.doi.org/10.1145/2851613.2851719" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>DE SOUSA PAULA, PATRICIA ; DE CASTRO, MIGUEL FRANKLIN ; PAILLARD, GABRIEL A. LOUIS ; SARMENTO, WELLINGTON W. F.. <b>A swarm solution for a cooperative and self-organized team of UAVs to search targets</b>. Em: <font color=#330066>2016 8th Euro American Conference on Telematics and Information Systems (EATIS)</font>, p. 1, 2016. <a href="http://dx.doi.org/10.1109/EATIS.2016.7520118" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>FARIAS, V. A. E. ; SOUSA, F. R. C. ; MAIA, JOSE G. R. ; GOMES, J. P. P. ; MACHADO, J. C.. <b>Elastic Provisioning for Cloud Databases with Uncertainty Management</b>. Em: <font color=#330066>31st ACM/SIGAPP Symposium on Applied Computing (SAC 2016)</font>, p. 390-397, 2016.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>FILHO, CICERO BANDEIRA LIMA ; FILHO, JOSÉ AIRES DE CASTRO. <b>Análise de uma Proposta Metodológica para Uso das Tecnologias Digitais no Ambiente Escolar</b>. Em: <font color=#330066>XXII Workshop de Informática na Escola</font>, v. 1, p. 427-435, 2016. <a href="http://dx.doi.org/10.5753/cbie.wie.2016.427" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>FILHO, CICERO BANDEIRA LIMA ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aprendizagem Colaborativa Mediada pelo Squeak</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 781-790, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.781" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>FREIRE, R. S. ; SILVA, C. M. R. ; GIRAO, A. L. ; BRITO, M. A. F. ; HITZSCHKY, R. A. ; LIMA, C. A. ; SANTOS JUNIOR, F. A. B. ; LIMA FILHO, J. N. ; CAVALCANTE, J. E. L. ; CASTRO FILHO, J. A.. <b>Quantium: um objeto de aprendizagem sobre o uso da linguagem em gêneros textuais emergentes</b>. Em: <font color=#330066>Concurso Integrado de Desenvolvimento de Soluções de Tecnologia e Objetos de Aprendizagem para a Educação ? Apps.Edu - CBIE/2016</font>, v. 1, p. 273-279, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.273" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>FREITAS, J. T. ; TRAJANO DE LIMA, E. ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Using Audio for Player Interaction in HTML5 Games</b>. Em: <font color=#330066>XV Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 118-126, 2016.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>HERBENIO, C. S. ; MOREIRA, LEONARDO O. ; COUTINHO, EMANUEL F. ; PAILLARD, GABRIEL A. L. ; LIMA, ERNESTO T. ; SOUSA, FLAVIO R. C.. <b>StoryMotion: A collaborative recommendation tool for storytelling through photos</b>. Em: <font color=#330066>2016 8th Euro American Conference on Telematics and Information Systems (EATIS)</font>, p. 1-8, 2016. <a href="http://dx.doi.org/10.1109/eatis.2016.7520098" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>HOLANDA, FRANCISCA ; ARAUJO, GABRIEL ; RABELO, HIAGO ; SOUSA, BRENO ; PEREIRA, GEORGIA ; FILHO, JOSÉ AIRES DE CASTRO. <b>Jovem Detetive</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 296-303, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.296" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; ALMEIDA, F. T. ; MURAKAMI, L. C.. <b>Maker Activities: an experience in the business admninistration course</b>. Em: <font color=#330066>XI International GUIDE Conference</font>, 2016.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Lima, Mixilene Sales Santos ; LIMA, Lavina Lúcia Vieira ; NETO, CLODOMIR SILVA LIMA ; FILHO, JOSÉ AIRES DE CASTRO. <b>Experiência de aprendizagem móvel: o uso do WhatsApp no Ensino Fundamental</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 820-829, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.820" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Lima, Mixilene Sales Santos ; NASCIMENTO, KARLA ANGÉLICA SILVA DO ; NETO, CLODOMIR SILVA LIMA ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aplicativo de Desenho do Google Drive: uma análise com foco na aprendizagem colaborativa com suporte computacional</b>. Em: <font color=#330066>XXII Workshop de Informática na Escola</font>, v. 1, p. 387-396, 2016. <a href="http://dx.doi.org/10.5753/cbie.wie.2016.387" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>MARANHAO, D. M. ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Assessing Emergence and Progression in Games</b>. Em: <font color=#330066>XV Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 1-8, 2016.</td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>MARANHAO, D. M. ; MENDONÇA JÚNIOR, Glaudiney Moreira ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Towards a Comprehensive Model for Analysis and Definition of Game Mechanics</b>. Em: <font color=#330066>XV Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 1-8, 2016.</td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>MARINHO, CARLOS ; MOREIRA, LEONARDO ; COUTINHO, EMANUEL ; PAILLARD, GABRIEL ; LIMA, ERNESTO TRAJANO DE. <b>Experiências no Uso da Metodologia Coding Dojo nas Disciplinas Básicas de Programação de Computadores em um Curso Interdisciplinar do Ensino Superior</b>. Em: <font color=#330066>Workshops do Congresso Brasileiro de Informática na Educação</font>, p. 1097, 2016. <a href="http://dx.doi.org/10.5753/cbie.wcbie.2016.1097" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>MATOS, D. R. ; PAILLARD, G. A. L. ; CASTRO, M. F.. <b>A Distributed Coverage Node Scheduling Algorithm for Dense Wireless Sensor Networks</b>. Em: <font color=#330066>XXXIV Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos</font>, 2016.</td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>NASCIMENTO, KARLA ANGÉLICA SILVA DO ; FILHO, JOSÉ AIRES DE CASTRO. <b>Dispositivos móveis na educação: ensinando e aprendendo em diferentes contextos</b>. Em: <font color=#330066>XXVII Simpósio Brasileiro de Informática na Educação</font>, v. 1, p. 1225-1234, 2016. <a href="http://dx.doi.org/10.5753/cbie.sbie.2016.1225" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO BRITO ; CARMO, RAFAEL AUGUSTO FERREIRA DO. <b>Espaçamento de caracteres: Verificação da conformidade do método de Tracy em fontes sem serifa</b>. Em: <font color=#330066>11º Congresso Internacional de Design da Informação e 11º Congresso Nacional de Iniciação Científica em Design | CIDI+CONGIC 2023</font>, p. 414, 2016. <a href="http://dx.doi.org/10.5151/cidiconcic2023-27_652379" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO BRITO; MIRANDA, EVA ROLIM. <b>ENSINO DE CALIGRAFIA CANÔNICA NO BRASIL: ANÁLISE DO MATERIAL DIDÁTICO E TÉCNICAS UTILIZADAS EM CURSOS INTRODUTÓRIOS</b>. Em: <font color=#330066>12º Congresso Brasileiro de Pesquisa e Desenvolvimento em Design</font>, p. 2631, 2016. <a href="http://dx.doi.org/10.5151/despro-ped2016-0225" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>PINHEIRO, EMERSON B. ; GOMES, GEORGE A.M. ; MELO L., ANTONIO J. ; COUTINHO, EMANUEL F. ; VIDAL, CRETO A. ; NETO, JOAQUIM BENTO C.. <b>Requirements for Development of a Low Cost Portable Simulator for Shooting Skill Training</b>. Em: <font color=#330066>2016 XVIII Symposium on Virtual and Augmented Reality (SVR)</font>, p. 234, 2016. <a href="http://dx.doi.org/10.1109/svr.2016.47" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>SABOIA, I. F.; Forte, J.A. ; Pinto, P.I.C. ; Marcílio, K.P.. <b>Interfaces Web De Sites Direcionados A Designers: Consistência, Padrões e Percepções</b>. Em: <font color=#330066>TISE - XXI Congreso Internacional de Informática Educativa</font>, v. 12, 2016.</td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>SABOIA, I. F.; OSTERNE, A. L. ; ROCHA, E. T. ; BESSA, I. S. F. ; NOVAIS, C. E. B.. <b>Kandinsky e a Narrativa Através das Cores de League of Legends</b>. Em: <font color=#330066>Slat Jogos - 1º Simpósio Latino-americano de jogos</font>, v. 1, p. 114-121, 2016.</td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>SILVA FILHO, J. R. ; MACHADO, L. R. M. ; CHICCA JUNIOR, N. A. ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Character Design: a new Process and its Application in a Trading Card Gam</b>. Em: <font color=#330066>XV Simpósio Brasileiro de Jogos e Entretenimento Digital</font>, p. 1-9, 2016.</td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>Silva, Maria Auricélia da ; FILHO, JOSÉ AIRES DE CASTRO. <b>Trabalho Colaborativo com Suporte Digital: uma experiência de formação docente</b>. Em: <font color=#330066>XXII Workshop de Informática na Escola</font>, v. 1, p. 766-775, 2016. <a href="http://dx.doi.org/10.5753/cbie.wie.2016.766" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>BRITO, M. A. F. ; HITZSCHKY, R. A. ; MARINHO, C. S. S. ; LIMA, C. A. ; SANTOS JUNIOR, F. A. B. ; SOUZA, M. S. M. X. ; GIRAO, A. L. ; SILVA, C. M. R. ; SOUZA, M. F. C. ; MEDEIROS, M. D. ; CASTRO FILHO, J. A.. <b>Ambiente Athena: da concepção à utilização de recursos educacionais digitais granulares</b>. Em: <font color=#330066>Concurso Integrado de Desenvolvimento de Soluções de Tecnologia e Objetos de Aprendizagem para a Educação ? Apps.Edu - CBIE/2016</font>, v. 1, p. 265-272, 2016.</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA, D. M. ; LEITE JÚNIOR, ANTONIO JOSÉ MELO ; MURAKAMI, L. C.. <b>O emprego da técnica de animação por recorte digital para a criação de personagens de jogos digitais</b>. Em: <font color=#330066>Simpósio Brasileiro de Games e Entretenimento Digital - 2015</font>, 2015.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Castro Filho, José Aires de. <b>APRENDIZAGEM DA MATEMÁTICA NA ERA DA CIBERCULTURA</b>. Em: <font color=#330066>4º SIMPÓSIO INTERNACIONAL DE PESQUISA EM EDUCAÇÃO MATEMÁTICA</font>, v. 1, p. 3412-3420, 2015.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Cavalcante , Andrea Pinheiro Paiva ; CASTRO FILHO, J. A.. <b>MULTILETRAMENTOS E O USO DO LAPTOP EM SALA DE AULA: POSSIBILIDADES DE COMUNICAÇÃO NAS CULTURAS JUVENIS</b>. Em: <font color=#330066>37ª Reunião Nacional da Anped</font>, v. 1, p. 1-18, 2015.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>COUTINHO, Emanoel F. ; GOMES, GEORGE A. M. ; LEITE JUNIOR, Antônio José Melo. <b>Aplicação de Design Thinking em Disciplinas de Oficina de Desenvolvimento de Sistemas</b>. Em: <font color=#330066>VIII Fórum de Educação em Engenharia de Software (FEES 2015)</font>, p. 72-77, 2015.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DAVID, PRISCILA BARROS ; LIMA, ERNESTO TRAJANO DE ; MENDES, FRANCISCO ARQUIMEDES GADELHA. <b>Uma Ontologia de Domínio para a Análise do Diálogo Freireano em Fóruns de Discussão da Educação a Distância</b>. Em: <font color=#330066>XXVI Simpósio Brasileiro de Informática na Educação</font>, p. 1082-1091, 2015. <a href="http://dx.doi.org/10.5753/cbie.sbie.2015.1082" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FEITOSA, VICTOR R. M. ; MAIA, JOSE G. R. ; MOREIRA, LEONARDO O. ; GOMES, GEORGE A. M.. <b>GameVis: Game Data Visualization for the Web</b>. Em: <font color=#330066>2015 14th Brazilian Symposium on Computer Games and Digital Entertainment (SBGames)</font>, p. 176-185, 2015. <a href="http://dx.doi.org/10.1109/SBGames.2015.21" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FRANCO, A. O. R. ; MESQUITA NETO, J. A. ; MAIA, J. G. R. ; GOMES, F. A. C.. <b>An Interactive Storytelling Model for Non-Player Characters on Electronic RPGs</b>. Em: <font color=#330066>XIV Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGames)</font>, p. 33-41, 2015.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>JUNIOR, RUI R. MELLO ; ALMEIDA, RUBENS H.P. DE ; FRANCA, FELIPE M.G. ; PAILLARD, GABRIEL A.L.. <b>A Parallel Implementation of Data Fusion Algorithm Using Gamma</b>. Em: <font color=#330066>2015 International Symposium on Computer Architecture and High Performance Computing Workshop (SBACPADW)</font>, p. 109, 2015. <a href="http://dx.doi.org/10.1109/sbac-padw.2015.25" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Lima, Mixilene Sales Santos ; LIMA NETO, C. S. ; CASTRO FILHO, J. A.. <b>Aprendizagem móvel no Ensino Fundamental</b>. Em: <font color=#330066>III Workshop de Tecnologias Móveis na Educação</font>, v. 1, p. 826-835, 2015.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MAIA, D. L. ; SILVA, F. W. L. ; BATISTA, P. C. S. ; CASTRO FILHO, J. A.. <b>ANÁLISE DOS TIPOS DE PROBLEMAS MULTIPLICATIVOS PROPOSTOS POR PROFESSORAS QUE ENSINAM MATEMÁTICA</b>. Em: <font color=#330066>http://sipemat4.com.br/ocs/index.php/sipemat4/sipemat4</font>, v. 1, p. 2224-2235, 2015.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Marcílio, K.P. ; Pinto, P.I.C. ; Forte, J.A. ; CARVALHO, R. P. ; SABOIA, I. F.. <b>Brado! Seja ouvido</b>. Em: <font color=#330066>7th Latin American Conference on Human Computer Interaction</font>, p. 36-40, 2015.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Melo, Maria Bernadete Oriá de ; Bezerra, Ellen Lacerda Carvalho ; Castro Filho, José Aires de. <b>A utilização do laptop educacional na contação de história</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação</font>, v. 1, p. 310-319, 2015.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Aprendizagem móvel e suas tecnologias: uma revisão sistemática da literatura</b>. Em: <font color=#330066>III Workshop de Tecnologias Móveis na Educação</font>, v. 1, p. 721-730, 2015.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>PAILLARD, G. A. L. ; COUTINHO, E. F. ; TRAJANO DE LIMA, ERNESTO ; MOREIRA, L. O.. <b>An Architecture Proposal for High Performance Computing in Cloud Computing Environments</b>. Em: <font color=#330066>4th International Workshop on ADVANCEs in ICT INfrastructures and Services (ADVANCE 2015)</font>, p. 14-20, 2015.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>PINTO, P. I. C. ; MESSIAS, T. F. A. ; CARVALHO, W. V. ; LEITE JÚNIOR, ANTONIO JOSÉ MELO ; MELO FILHO, A. A. ; FURTADO, I. P. B.. <b>Desenvolvimento e avaliação do uso de hipervídeos para o auxílio ao ensino de Anatomia humana</b>. Em: <font color=#330066>21st Brazilian Symposium on Multimedia and the Web</font>, 2015.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SANTANA, E. R. S. ; Lautert, Síntria Labres ; CASTRO FILHO, J. A.. <b>OBSERVATÓRIO DA EDUCAÇÃO EM REDE E AS ESTRUTURAS MULTIPLICATIVAS NA EDUCAÇÃO BÁSICA</b>. Em: <font color=#330066>4º SIMPÓSIO INTERNACIONAL DE PESQUISA EM EDUCAÇÃO MATEMÁTICA</font>, v. 1, p. 3357-3368, 2015.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SILVA, LUIS FERNANDO M S ; VALERIO, JULIAN ; VIANA, WINDSON ; SANTOS, ALYSSON DINIZ DOS ; TRINTA, FERNANDO ; FILHO, ANTÔNIO ALDO MELO ; MELO, ANTONIO. <b>Avaliação do uso de realidade aumentada e gamificação para o treinamento de habilidades em laparoscopia</b>. Em: <font color=#330066>XXVI Simpósio Brasileiro de Informática na Educação</font>, p. 627, 2015. <a href="http://dx.doi.org/10.5753/cbie.sbie.2015.627" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Silva, Maria Auricélia da ; CASTRO FILHO, J. A.. <b>Trabalho Colaborativo com Suporte do Laptop: parceria entre professores e alunos</b>. Em: <font color=#330066>III Workshop de Tecnologias Móveis na Educação</font>, v. 1, p. 815-824, 2015.</td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Souza, Walézia Lopes Vasconcelos de ; BARBOSA, Jaiane Ramos ; CASTRO FILHO, J. A.. <b>Projeto Colaborativo Sem Fronteiras Ponte Atlântica Brasil e Portugal: Uma Experiência de Utilização do Laptop como Ferramenta Educacional</b>. Em: <font color=#330066>III Workshop de Tecnologias Móveis na Educação</font>, v. 1, p. 796-805, 2015.</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARBOSA, Jaiane Ramos ; Silva, Maria Auricélia da ; CASTRO FILHO, J. A.. <b>Projeto Ficção Cientifica: mito ou realidade? Trabalhando Gênero Textual de Forma Colaborativa</b>. Em: <font color=#330066>II Workshop Sobre Tecnologias Móveis Na Educação</font>, v. 10, p. 1-10, 2014.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO, J. ; OSMUNDO, M. L. F. ; ARRUDA, J. S. ; FREIRE, R. S. ; MELO, B. O.. <b>Projeto Edigital: Da formação à vivência pedagógica e as contribuições da tecnologia digital</b>. Em: <font color=#330066>Encontro Nacional de Didática e Prática de Ensino (ENDIPE)</font>, 2014.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Cavalcante , Andrea Pinheiro Paiva ; CASTRO FILHO, J. A.. <b>Criação de saberes mediados pelo laptop educacional em uma escola UCA</b>. Em: <font color=#330066>II Workshop Sobre Tecnologias Móveis Na Educação</font>, v. 1, p. 1-10, 2014.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>COUTINHO, EMANUEL FERREIRA ; PAILLARD, GABRIEL ; DE SOUZA, JOSÉ NEUMAN. <b>Performance analysis on scientific computing and cloud computing environments</b>. Em: <font color=#330066>the 7th Euro American Conference</font>, p. 1, 2014. <a href="http://dx.doi.org/10.1145/2590651.2590656" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; MURAKAMI, L. C.. <b>Design Thinking e Jogos Sérios: uma análise do método de desenvolvimento</b>. Em: <font color=#330066>X Seminário de Jogos Eletrônicos</font>, 2014.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Medeiros, Marcia ; CASTRO FILHO, J. A.. <b>ELECTRONICS GAMES AND IDENTITY: A BAKHTINIAN ANALYSIS OF SUBJECTIVE PROCESSES INVOLVED IN THE ACT OF CHOOSING AVATARS</b>. Em: <font color=#330066>7th International Conference on Game and Entertainment</font>, v. 1, p. 157-164, 2014.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MENDES, MARILIA S.; Furtado, Elizabeth. <b>Analysis of pre-patterns in the specification of the interaction design for Digital TV</b>. Em: <font color=#330066>2014 XL Latin American Computing Conference (CLEI)</font>, p. 1, 2014. <a href="http://dx.doi.org/10.1109/CLEI.2014.6965149" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Mendes, Marília S.; FURTADO, E.. <b>DIRCE - Design of Interaction and Elicitation of Requirements Focusing on the Communication and Exploration of Ideas: Experiences of Use in Content Creation Systems for Digital Television</b>. Em: <font color=#330066>WORLDCOMP'14 - The 2014 World Congress in Computer Science</font>, p. 360-369, 2014.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Mendes, Marília S.; FURTADO, E.. <b>The DIRCE approach for Requirements Elicitation and Design of Interaction in innovative systems</b>. Em: <font color=#330066>XL Conferencia Latinoamericana en Informática (CLEI 2014)</font>, 2014. <a href="http://dx.doi.org/10.1109/CLEI.2014.6965150" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Mendes, Marília S.; FURTADO, ELIZABETH S. ; de Castro, Miguel F.. <b>Do users write about the system in use?</b>. Em: <font color=#330066>the 7th Euro American Conference</font>, p. 1, 2014. <a href="http://dx.doi.org/10.1145/2590651.2590654" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MOREIRA, LEONARDO O. ; FARIAS, VICTOR A. E. ; SOUSA, FLAVIO R. C. ; SANTOS, GUSTAVO A. C. ; MAIA, JOSE G. R. ; MACHADO, JAVAM C.. <b>Towards improvements on the quality of service for multi-tenant RDBMS in the cloud</b>. Em: <font color=#330066>2014 IEEE 30th International Conference on Data Engineering Workshops (ICDEW)</font>, p. 162, 2014. <a href="http://dx.doi.org/10.1109/ICDEW.2014.6818322" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MURAKAMI, L. C. ; JÚNIOR, JOSÉ ; SABINO, R. F. S. ; ALMEIDA, D. M.. <b>Design Thinking como metodologia alternativa para o desenvolvimento de jogos sérios</b>. Em: <font color=#330066>XIX Conferência Internacional sobre Informática na Educação</font>, 2014.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>OLIVEIRA, SUZANA M. F. DE ; VIDAL, CRETO A. ; NETO, JOAQUIM B. CAVALCANTE ; CARVALHO, LAISE L. DE ; MAIA, JOSE G. R.. <b>Cloth Simulation with Triangular Mesh Adaptivity</b>. Em: <font color=#330066>2014 27th SIBGRAPI Conference on Graphics</font>, p. 235, 2014. <a href="http://dx.doi.org/10.1109/SIBGRAPI.2014.20" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>PEQUENO, H. S. L. ; AVILA, R. L. F. ; CRUZ, E. A. ; ALEXANDRE, M. ; TRAJANO DE LIMA, E. ; CASTRO, M. F.. <b>Uma Análise de Interação em Fóruns de EAD</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação</font>, p. 1203-1212, 2014.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>PINHEIRO, T. S. M. ; PINHEIRO, A. C. M. ; GIRAO, A. E. M. ; MATTOS, F. L. C. L. ; BORGES NETO, H. ; FREIRE, R. S.. <b>Dificuldades e possibilidades na Formação contínua de professores</b>. Em: <font color=#330066>Encontro Nacional de Didática e Prática de Ensino (ENDIPE)</font>, 2014.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SANTOS, J. B. ; Lima, Demetrius Abreu ; LIMA, Lavina Lúcia Vieira ; CASTRO FILHO, J. A. ; SOUZA, Maria de Fátima Costa de. <b>Redesign e LIBRAS: Pela Educação e Acessibilidade Digital de Alunos Surdos</b>. Em: <font color=#330066>V Computer on the Beach</font>, v. 1, p. 446-448, 2014.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SILVA, A. R. S. ; FACANHA, A. R. ; Carvalho, Windson Viana ; CASTRO FILHO, J. A. ; SANCHEZ, J.. <b>Especificação e desenvolvimento de um ambiente educativo móvel para a prática da escrita Braille</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação (SBIE 2014)</font>, v. 1, p. 431-440, 2014.</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Castro, Juscileide ; BARRETO, Antônio Luiz de Oliveira ; CASTRO FILHO, J. A.. <b>INTERPRETANDO E CONSTRUINDO GRÁFICOS DE BARRAS E DE SETORES A PARTIR DE OBJETOS DE APRENDIZAGEM</b>. Em: <font color=#330066>3º SIPEMAT - Simpósio Internacional de Pesquisa em Educação Matemática</font>, v. 1, p. 1-10, 2013.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>COUTINHO, E. F. ; PAILLARD, GABRIEL A. L.. <b>Aplicacões de Computação de Alto Desempenho e Computação em Nuvem na Disciplina de Desenvolvimento de Aplicações Distribuídas</b>. Em: <font color=#330066>Workshop sobre Educação em Arquitetura de Computadores (WEAC 2013)</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DA SILVA, MARIA AURICÉLIA ; BARBOSA, Jaiane Ramos ; FILHO, JOSÉ AIRES DE CASTRO. <b>Aprendendo e Ensinando Colaborativamente com o Suporte do Laptop Educacional</b>. Em: <font color=#330066>Worshops do II Congresso Brasileiro de Informática na Educação</font>, v. 1, 2013. <a href="http://dx.doi.org/10.5753/CBIE.WCBIE.2013.630" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DAVID, P. B. ; FREIRE, R. S.. <b>A abordagem freireana na formaçao online de professores-tutores</b>. Em: <font color=#330066>Conferência Internacional sobre Informática na Educação</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DAVID, P. B. ; FREIRE, R. S. ; LIMA, J. G. M. <b>Dialogicidade na formação online de professores de português</b>. Em: <font color=#330066>X Congresso Brasileiro de Ensino Superior a Disância</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>DE CASTRO, JUSCILEIDE BRAGA ; Pontes, Renata Lopes Jaguaribe ; CAVALCANTE, ANDREA PINHEIRO PAIVA ; FILHO, JOSÉ AIRES DE CASTRO. <b>O Uso do Blog em Projetos Colaborativos a partir do Laptop Educacional</b>. Em: <font color=#330066>Worshops do II Congresso Brasileiro de Informática na Educação</font>, v. 1, 2013. <a href="http://dx.doi.org/10.5753/CBIE.WCBIE.2013.695" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>DE MELO, MARIA BERNADETE O. ; LIMA, MIXILENE S. S. ; NASCIMENTO, KARLA ANGÉLICA S. ; FILHO, JOSÉ AIRES DE CASTRO. <b>Tecnologia Móvel: Relato de Experiência na Formação de Gestores</b>. Em: <font color=#330066>Worshops do II Congresso Brasileiro de Informática na Educação</font>, v. 1, 2013. <a href="http://dx.doi.org/10.5753/CBIE.WCBIE.2013.755" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FEITOSA, R. G. F. ; ESMERALDO, G. A. R. M. ; LACERDA, Y. A. ; OLIVEIRA, P. T. G. ; CARMO, RAFAEL A.F ; GONÇALVES, E. J. T. ; SOUZA, J. T. ; CAMPOS, G. A. L.. <b>Combinando Lógica Fuzzy, Algoritmos Genéticos e Redes Neurais Artificiais para Apoio à Negociação em Continuos Double Auction</b>. Em: <font color=#330066>CBSoft</font>, p. 79-88, 2013.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; MURAKAMI, L. C. ; REINALDO, H. O. A.. <b>Development of serious games: Development of Design or Design of Development?</b>. Em: <font color=#330066>Games of Late Modernity</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MURAKAMI, L. C. ; LEITE JUNIOR, A. J. M. ; REINALDO, H. O. A.. <b>Jogos Digitais e Administração: Aprendizagem Possível?</b>. Em: <font color=#330066>IV Encontro de Ensino e Pesquisa em Administração e Contabilidade</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MURAKAMI, L. C. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; REINALDO, H. O. A.. <b>Jogos digitais e Administração: Aprendizagem Possível?</b>. Em: <font color=#330066>IV Encontro de Ensino e Pesquisa em Administração e Contabilidade</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>OLIVEIRA, MARIA TATIANE LIMA DE ; DO NASCIMENTO, KARLA ANGÉLICA SILVA ; FILHO, JOSÉ AIRES DE CASTRO. <b>OS IMPACTOS AMBIENTAIS DA PONTA SERRA REGISTRO DAS ATIVIDADES COM O AUXÍLIO DO LAPTOP EDUCACIONAL</b>. Em: <font color=#330066>Worshops do II Congresso Brasileiro de Informática na Educação</font>, v. 1, 2013. <a href="http://dx.doi.org/10.5753/CBIE.WCBIE.2013.685" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SANTOS, A. D. ; CARVALHO, W. V. ; LEITE JUNIOR, A. J. M. ; MENDONCA JUNIOR, G. ; SOUZA JUNIOR, H. C.. <b>Inserção de técnicas de Gamificação e Realidade Aumentada para auxílio no ensino de Medicina</b>. Em: <font color=#330066>Workshop on Virtual</font>, 2013.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SANTOS, G. A. C. ; MAIA, J. G. R. ; MOREIRA, L. O. ; SOUSA, F. R. C. ; MACHADO, J. C.. <b>Scale-Space Filtering for Workload Analysis and Forecast</b>. Em: <font color=#330066>IEEE International Conference on Cloud Computing</font>, p. 677-684, 2013.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SARMENTO, W. W. ; PAILLARD, G. A. L. ; LIMA, W. S. ; K. F. Rabelo, Ba. ; TORRES, A. B. B. ; GOMES, H. O. O. ; COSTA, P. M. B. ; PEQUENO, M.. <b>extMobilisTTS: Uma Arquitetura de Aplicação Móvel para Suporte a Fóruns usando Text-to-Speech em Ambientes Virtuais de Aprendizagem</b>. Em: <font color=#330066>31º Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos</font>, p. 1068-1075, 2013.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SILVA, A. R. S. ; CASTRO FILHO, José Aires de ; CARVALHO, W. V. ; SOUZA, Maria de Fátima Costa de ; FACANHA, A. R.. <b>Proposta de um modelo preditivo para avaliação da acessibilidade em softwares educativos: um estudo de caso sobre o ?Menino Curioso?</b>. Em: <font color=#330066>Congreso Internacional de Informática Educativa (TISE)</font>, v. 9, p. 308-316, 2013.</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ABREU, K. F ; FREIRE, R. S. ; DAVID, P. B.. <b>A Autonomia na Formação de Professores-Tutores de Espanhol Como LE</b>. Em: <font color=#330066>VII Congresso Brasileiro de Hispanistas</font>, 2012.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARBOSA, Jaiane Ramos ; Lima, Mixilene Sales Santos ; OSMUNDO, L. ; Silva, Maria Auricélia da ; FREIRE, R. S. ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A.. <b>RELATO DE EXPERIÊNCIA DE UM PROJETO COLABORATIVO INTITULADO SEM FRONTEIRAS: PONTE ATLÂNTICA BRASIL E PORTUGAL</b>. Em: <font color=#330066>Simpósio Hipertexto e Tecnologias na Educação</font>, v. 1, p. 1-17, 2012.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO, J. ; CASTRO FILHO, J. A. ; FREIRE, R. S. ; SOUZA, M. F. C. ; MESQUITA, O. A. ; GOMES, T. A. ; FERNANDES, Alisandra. C. ; CARMO, Y. M.. <b>Adaptação de material didático para web: A experiência do primeiro aprender digital</b>. Em: <font color=#330066>I Congresso Brasileiro de Recursos Digitais na Educação</font>, p. 1-9, 2012.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Castro, Juscileide ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Formação de Professores de Matemática: (Re)Construindo a Concepção do Uso da Tecnologia</b>. Em: <font color=#330066>3º Simpósio Internacional de Pesquisa em Educação Matemática ? SIPEMAT</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Castro, Juscileide ; SOUZA, Maria de Fátima Costa de ; Luiz, Atílio Gomes ; CASTRO FILHO, J. A.. <b>Localização de Recursos Educacionais Digitais Americanos para o Ensino de Matemática no Contexto Brasileiro</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Castro, Juscileide ; CASTRO FILHO, J. A.. <b>Projeto Um Mundo de Informações: Integração de tecnologias digitais ao currículo escolar</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>JUNIOR, ANTONIO JOSE MELO LEITE ; GOMES, George Allan Menezes ; JUNIOR, NATAL ANACLETO CHICCA ; SANTOS, ALYSSON DINIZ DOS ; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento ; GATTASS, Marcelo. <b>System Model for Shooting Training Based on Interactive Video, Three-Dimensional Computer Graphics and Laser Ray Capture</b>. Em: <font color=#330066>2012 14th Symposium on Virtual and Augmented Reality (SVR)</font>, v. 1, p. 254-260, 2012. <a href="http://dx.doi.org/10.1109/svr.2012.12" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>JUNIOR, ANTONIO JOSE MELO LEITE; GOMES, GEORGE ALLAN MENEZES ; JUNIOR, NATAL ANACLETO CHICCA ; SANTOS, ALYSSON DINIZ DOS ; VIDAL, Creto Augusto ; CAVALCANTE-NETO, JOAQUIM BENTO ; GATTASS, MARCELO. <b>System Model for Shooting Training Based on Interactive Video, Three-Dimensional Computer Graphics and Laser Ray Capture</b>. Em: <font color=#330066>2012 14th Symposium on Virtual and Augmented Reality (SVR)</font>, p. 254, 2012. <a href="http://dx.doi.org/10.1109/svr.2012.12" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LEMOS, F. D.A. ; CARMO, RAFAEL A.F ; VIANA, W. C. ; ANDRADE, R. M.C.. <b>Improving photo recommendation with context awareness</b>. Em: <font color=#330066>The 18th Brazilian Symposium on Multimedia and the Web - WebMedia '12</font>, 2012. <a href="http://dx.doi.org/10.1145/2382636.2382704" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Lima Filho, Cícero Bandeira ; CASTRO FILHO, J. A. ; Campos, Arliene Santisteban. <b>O Ensino de Ciências em Escolas UCA</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>LIMA, Lavina Lúcia Vieira ; Muniz, Rita de Fátima ; Lima, Demetrius Abreu ; Maia, Dennys Leite ; Lima, Mixilene Sales Santos ; BARBOSA, Jaiane Ramos ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A.. <b>A Gente Faz História: Tecnologias Digitais e Trocas Culturais entre Alunos Brasileiros e Americanos em uma Escola UCA</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Lima, Mixilene Sales Santos ; Osmundo, Maria Lidiana Ferreira ; LIMA, Lavina Lúcia Vieira ; FREIRE, Raquel Santiago ; BARBOSA, Jaiane Ramos ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A.. <b>Aprendizagem em Projetos de Trocas Culturais com Uso de Laptops Educacionais</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Mesquita, Ofélia Alencar ; CASTRO FILHO, J. A.. <b>A construção de conteúdos Educacionais Digitais 2.0 sob enfoque da múltipla autoria</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-11, 2012.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Muniz, Rita de Fátima ; Muniz, Sheyla Maria ; LIMA, Lavina Lúcia Vieira ; Silva, Maria Auricélia da ; CASTRO FILHO, J. A.. <b>Raízes do Nordeste: a experiência do uso dos laptops educacionais no trabalho com projeto multidisciplinar</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Desafios para utilização de Atividades Colaborativas em Sala de Aula: um exemplo com o Google Maps</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 121-141, 2012.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Pontes, Renata Lopes Jaguaribe ; NASCIMENTO, K. A. S. ; Correia, Antônio Luiz Cardoso ; CASTRO FILHO, J. A.. <b>Utilização do Laptop Educacional no Projeto Investigando Doenças</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SARMENTO, W. W. ; PAULA, P. ; FILHO, P. ; PAILLARD, G. A. L. ; SOUZA, J. N. ; G. C. Barroso ; PEQUENO, M.. <b>u-Lab: uma arquitetura baseada em Computação Ubíqua para Laboratórios, utilizando Redes de Sensores Sem-Fio e de Identificação por Rádio Frequência</b>. Em: <font color=#330066>6th Euro American Conference on Telematics and Information Systems</font>, p. 260-266, 2012. <a href="http://dx.doi.org/10.1145/2261605.2261644" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Silva, Maria Auricélia da ; NASCIMENTO, K. A. S. ; Santos, Luciano Ribeiro dos ; CASTRO FILHO, J. A.. <b>APRENDENDO TRIGONOMETRIA COM O LAPTOP EDUCACIONAL E O SOFTWARE GEOGEBRA</b>. Em: <font color=#330066>3º SIPEMAT - Simpósio Internacional de Pesquisa em Educação Matemática</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Silva, Maria Auricélia da ; Santos, Luciano Ribeiro dos ; NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>O Laptop Educacional no Ensino de Trigonometria</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; ANDRADE, R. M. C.. <b>Customização Guiada: uma estratégia orientada a modelos para a produção de objetos de aprendizagem</b>. Em: <font color=#330066>Concurso de Teses e Dissertações em Informática na Educação</font>, v. 1, p. 1-10, 2012.</td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; ANDRADE, R. M. C.. <b>Ampliando a Autonomia Docente com o Uso de Objetos de Aprendizagem Customizáveis</b>. Em: <font color=#330066>Congresso Brasileiro de Informática na Educação (CBIE 2012)</font>, v. 1, p. 1-10, 2012.</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Albuquerque, Aparecida Maria Costa ; FERNANDES, Alisandra Cavalcante ; Castro Filho, José Aires de. <b>Investigando Práticas Educativas Com O Uso De Computadores Na Escola: Uma Abordagem Construcionista Ou Instrucionista?</b>. Em: <font color=#330066>décimo sétimo Workshop de Informática na Escola</font>, v. 1, p. 1324-1333, 2011.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARRETO, Antônio Luiz de Oliveira ; Castro, Juscileide ; Castro Filho, José Aires de. <b>Teoremas-em-ação na compreensão do conceito de funções</b>. Em: <font color=#330066>XIII Conferência Interamericana de Educação Matemática</font>, v. 1, p. 1-11, 2011.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DARIN, T. G. R. ; NOVAIS, C. E. B.. <b>Prática do Design de Interação em uma experiência conjunta entre as disciplinas de IHC, Design de Interfaces e Semiótica</b>. Em: <font color=#330066>Workshop sobre o Ensino de IHC</font>, 2011.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FREIRE, R. S.; DAVID, P. B. ; OLIVEIRA, F. K.. <b>Dialogicidade na Formação Online de Professores de Matemática</b>. Em: <font color=#330066>XXII Simpósio Brasileiro de Informática na Educação</font>, 2011.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FREITAS, F. G. ; SILVA, T. G. N. ; CARMO, R. A. F ; BRASIL, M. M. A. ; SOUZA, J. T.. <b>Branch-And-Bound Aplicado na Seleção Multiobjetiva de Requisitos de Software com Dependência</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2011.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LIMA, Lavina Lúcia Vieira ; Lima, Lucas Vasconcelos ; BARRETO, Daisyane Carneiro ; FERNANDES, Alisandra Cavalcante ; Castro Filho, José Aires de. <b>Interações multiculturais mediadas por computador: as percepções de dois participantes sobre o projeto Nossos Lugares no Mundo</b>. Em: <font color=#330066>I Workshop sobre formação e experiências educacionais no projeto Um Computador por Aluno (UCA)</font>, v. 1, p. 1924-1934, 2011.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; Lautert, Síntria Labres ; Castro Filho, José Aires de. <b>Sequência didática para desenvolver conceitos algébricos: um estudo de intervenção</b>. Em: <font color=#330066>XIII Conferência Interamericana de Educação Matemática</font>, v. 1, p. 1-12, 2011.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; Lima, Mixilene Sales Santos ; FREIRE, Raquel Santiago ; Castro Filho, José Aires de. <b>Um olhar sobre as atividades dos Laboratórios de Informática Educativa das escolas municipais de Fortaleza</b>. Em: <font color=#330066>XXII Simpósio Brasileiro de Informática na Educação</font>, v. 1, p. 1256-1263, 2011.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; Castro Filho, José Aires de ; Salgueiro, Geny Lucia ; Sales, Selma Bessa. <b>Um olhar sobre a formação docente do programa UCA em uma escola municipal de Fortaleza</b>. Em: <font color=#330066>décimo sétimo Workshop de Informática na Escola</font>, v. 1, p. 1448-1457, 2011.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; Melo, Maria Bernadete Oriá de ; Silva, Maria Auricélia da ; BARBOSA, Jaiane Ramos ; Castro Filho, José Aires de. <b>Programa UCA no Estado do Ceará: Caminhos Percorridos, Lições Aprendidas</b>. Em: <font color=#330066>décimo sétimo Workshop de Informática na Escola</font>, v. 1, p. 1207-1215, 2011.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>PEQUENO, M. C. ; LIMA, H. ; PEQUENO, H. S. L. ; PEQUENO, P. A. L. ; BARONE, N. M. ; LOUREIRO, R. C. ; SILVA, H. ; SARMENTO, W. W. F.. <b>Avaliação de Conteúdos Educacionais Digitais: o modelo do Instituto UFC Virtual</b>. Em: <font color=#330066>Segunda edição do Simpósio Brasileiro de Informática na Educação e do décimo sétimo Workshop de Informática na Escola</font>, 2011.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Pontes, Renata Lopes Jaguaribe ; Castro Filho, José Aires de. <b>O uso do blog como ferramenta de ensino-aprendizagem por professores participantes do Projeto Um Computador por Aluno (UCA)</b>. Em: <font color=#330066>décimo sétimo Workshop de Informática na Escola</font>, v. 1, p. 1478-1487, 2011.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Pontes, Renata Lopes Jaguaribe ; NASCIMENTO, K. A. S. ; Viana, Katyúscia Mota ; Castro Filho, José Aires de. <b>Reflexões sobre a formação docente do Projeto Um Computador por Aluno (UCA) em uma escola estadual da cidade de Fortaleza</b>. Em: <font color=#330066>I Workshop sobre formação e experiências educacionais no projeto Um Computador por Aluno (UCA)</font>, v. 1, 2011.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de ; Andrade, Rossana M. C. ; Castro Filho, José Aires de. <b>Guided Customization for Learning Objects</b>. Em: <font color=#330066>International Symposium on Open Educational Resources: Issues for Globalization and Localization</font>, v. 1, p. 105-126, 2011.</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Albuquerque, Aparecida Maria Costa ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A.. <b>Integração da Tecnologia Educacional ao Currículo Escolar: Uma Análise, a partir do Planejamento Pedagógico Implementado em Escolas Públicas</b>. Em: <font color=#330066>II Seminário Web Currículo</font>, v. 1, p. 1-16, 2010.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARBOSA, Jaiane Ramos ; FERNANDES, Alisandra Cavalcante ; LIMA, Lavina Lúcia Vieira ; FREIRE, Raquel Santiago ; Souza, Shirliane Matos ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Objetos de Aprendizagem: análise de seu uso em uma sala de aula do ensino fundamental</b>. Em: <font color=#330066>WIE ? XVI Workshop Sobre Informática na Escola</font>, v. 1, p. 1117-1126, 2010.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>BARROS FILHO, Edgar Marçal de ; Júlio Wilson Ribeiro ; Luciana Lima ; LEITE JUNIOR, A. J. M. ; Rossana Maria Andrade. <b>THE USE OF MOBILE DEVICES TO ASSIST MEANINGFUL LEARNING IN SPATIAL GEOMETRY</b>. Em: <font color=#330066>IADIS International Conference - Mobile Learning 2010</font>, v. 1, p. 1-4, 2010.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>BARROS FILHO, Edgar Marçal de ; Luciana Lima ; LEITE JUNIOR, A. J. M. ; Rossana Maria Andrade ; Júlio Wilson Ribeiro. <b>Da Elicitação de Requisitos ao Desenvolvimento de Aplicações de Mobile Learning em Matemática</b>. Em: <font color=#330066>XXI SBIE: Simpósio Brasileiro de Informática na Educação</font>, p. 1-11, 2010.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CARMO, R. A. F; FREITAS, F. G. ; SOUZA, J. T.. <b>Empowering Simultaneous Feature and Instance Selection in Classification Problems through the Adaptation of Two Selection Algorithms</b>. Em: <font color=#330066>International Conference on Machine Learning and Applications</font>, 2010. <a href="http://dx.doi.org/10.1109/ICMLA.2010.121" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO FILHO, J. A.; Guedes, Francisca Danielle. <b>A seleção de objetos educacionais digitais por professores participantes do curso O uso das tecnologias digitais educacionais a partir da reflexão sobre critérios pedagógicos</b>. Em: <font color=#330066>XXI Simpósio Brasileiro de Informática na Educação</font>, v. 1, p. 1-10, 2010.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Castro-Filho, J. A. ; FREIRE, R. S. ; FERNANDES, Alisandra Cavalcante. <b>Development of Early Algebra Concepts Through The Use of Digital Learning Objects</b>. Em: <font color=#330066>34th conference of the International Group for the Psychology of Mathematics Education</font>, v. 2, p. 257-262, 2010.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MATOS, Cicero J. R. ; SOUZA, Maria de Fátima Costa de ; FERNANDES, Alisandra Cavalcante ; LIMA, Lavina Lúcia Vieira ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Avaliando Objetos de Aprendizagem a partir de Testes Pedagógicos</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 1-10, 2010.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>COUTINHO, D. P. ; FREITAS, F. G. ; CARMO, R. A. F ; MAIA, C. L. B. ; SOUZA, J. T.. <b>Uma Abordagem Multi-Objetiva para o Problema da Alocação de Equipes</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>DAVID, Priscila Barros ; CASTRO FILHO, J. A.. <b>Sistema de Análise de Interações Contingentes Aplicado a um Chat Pedagógico</b>. Em: <font color=#330066>XXI Simpósio Brasileiro de Informática na Educação</font>, v. 1, p. 1-10, 2010.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>FEITOSA, R. G. F. ; CARMO, R. A. F ; GONÇALVES, E. J. T. ; CAMPOS, G. A. L. ; SOUZA, J. T. ; OLIVEIRA, P. T. G.. <b>Algoritmo Genético Aplicado a um Agente para a Seleção de Leilões do Tipo CDA do TAC</b>. Em: <font color=#330066>Workshop on Autonomous Software Systems</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Professores, Alunos e Computadores: O Uso de Objeto de Aprendizagem nas Séries Iniciais do Ensino Fundamental</b>. Em: <font color=#330066>II Seminário Web Currículo</font>, v. 1, p. 1-16, 2010.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>LIMA, Lavina Lúcia Vieira ; Souza, Shirliane Matos ; BARBOSA, Jaiane Ramos ; Silva, Leonira Morais ; FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Me perdi e me achei no Brasil: Multiculturalismo e produção colaborativa de conteúdos digitais na escola</b>. Em: <font color=#330066>WIE ? XVI Workshop Sobre Informática na Escola</font>, v. 1, p. 1197-1204, 2010.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>LINHARES, G. R. M. ; FREITAS, F. G. ; CARMO, R. A. F ; MAIA, C. L. B. ; SOUZA, J. T.. <b>Aplicação do Algoritmo Grasp Reativo para o Problema do Próximo Release</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Lisboa. Rafaela ; FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares. ; MATOS, Italo ; Hermínio Borges Neto. <b>Requisitos para Elaboração e Integração de Conteúdos com Recursos da TV Digital Brasileira aplicados em Experiências de Aprendizado</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação (SBIE)</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Mesquita, Ofélia Alencar ; Pontes, Renata Lopes Jaguaribe ; CASTRO FILHO, J. A.. <b>AVALIAÇÃO DE ASPECTOS HIPERMIDIÁTICOS NOS MATERIAIS DIDÁTICOS PARA A EDUCAÇÃO A DISTÂNCIA EM REDE</b>. Em: <font color=#330066>IV Colóquio Internacional Educação e Contemporaneidade</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SILVA, L. M. ; SOUZA, Maria de Fátima Costa de ; FERNANDES, A. C. ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante. <b>Avaliando a Potencial Contribuição de um Objeto de Aprendizagem no Ensino de Química</b>. Em: <font color=#330066>Workshop sobre Informática na Escola</font>, 2010.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>SILVA, Wendley Souza ; Linhares, Andréa Carneiro ; PAILLARD, G. A. L.. <b>Liga Acadêmica da Engenharia da Computação</b>. Em: <font color=#330066>XXXVIII Congresso Brasileiro de Educação em Engenharia - Cobenge</font>, v. 01, p. 01-06, 2010.</td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; ANDRADE, R. M. C.. <b>Desenvolvendo Objetos de Aprendizagem Utilizando Modelos Arquiteturais</b>. Em: <font color=#330066>Congresso Latinoamericano de Objetos de Aprendizagem (LACLO)</font>, v. 1, p. 324-333, 2010.</td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Ventura, Paula Patrícia Barbosa ; CASTRO FILHO, J. A.. <b>Relações Sociais em Comunidades Virtuais de Aprendizagem</b>. Em: <font color=#330066>WIE ? XVI Workshop Sobre Informática na Escola</font>, v. 1, p. 1235-1244, 2010.</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Albuquerque, Aparecida Maria Costa ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A. ; FREIRE, Raquel Santiago. <b>MAPEAR INFORMAÇÕES, ANALISAR PRÁTICAS E CONSTRUIR SABERES: UMA EXPERIÊNCIA NO LABORATÓRIO DE INFORMÁTICA EDUCATIVA</b>. Em: <font color=#330066>19o Encontro de Pesquisa Educacional do Norte e Nordeste (EPENN)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARRETO, Antônio Luiz de Oliveira ; CAMELO, Lorena Silva ; FERNANDES, Alisandra Cavalcante ; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A.. <b>Investigando a contribuição do software educativo winplot para a compreensão do conceito de função</b>. Em: <font color=#330066>XX Simpósio Brasileiro de Informática na Educação (SBIE 2009)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>BARROS FILHO, Edgar Marçal de ; Júlio Wilson Ribeiro ; Luciana Lima ; LEITE JUNIOR, A. J. M. ; Rossana Maria Andrade ; J A Valente. <b>Uso de Dispositivos Móveis para Auxiliar a Aprendizagem Significativa na Geometria Espacial</b>. Em: <font color=#330066>XV Workshop sobre Informática na Escola</font>, p. 1-10, 2009.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>BARROS FILHO, Edgar Marçal de ; Luciana Lima ; LEITE JUNIOR, A. J. M. ; Júlio Wilson Ribeiro ; WINDSON, V. ; Rossana Maria Andrade. <b>Utilização de Dispositivos Móveis com Ambientes Tridimensionais como Ferramenta para Favorecer o Ensino de Hardware</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação 2009</font>, p. 1-10, 2009.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DAVID, Priscila Barros ; CASTRO FILHO, J. A.. <b>Dialogicidade em práticas interativas da área de exatas</b>. Em: <font color=#330066>XX Simpósio Brasileiro de Informática na Educação (SBIE 2009)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A. ; FREIRE, Raquel Santiago ; Medeiros, Marcia. <b>Tecnologia na escola: análise de um modelo de implementação</b>. Em: <font color=#330066>19o Encontro de Pesquisa Educacional do Norte e Nordeste (EPENN)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; BARBOSA, Jaiane Ramos ; LIMA, Lavina Lúcia Vieira ; CASTRO FILHO, J. A.. <b>Análise do Uso de Objetos de Aprendizagem com Professores do Ensino Fundamental</b>. Em: <font color=#330066>XVII Workshop de Informática na Escola</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; LIMA, Lavina Lúcia Vieira ; BARBOSA, Jaiane Ramos ; LIMA, L. M. Q. de ; Castro, Juscileide ; Lima, Luciana ; CASTRO FILHO, J. A.. <b>Interligando Mundos, Conhecimento e Cultura: Uma experiência on line entre alunos do Ensino Fundamental do Brasil x Japão</b>. Em: <font color=#330066>X ENCUENTRO INTERNACIONAL VIRTUAL EDUCA</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; SOUZA, Maria de Fátima Costa de ; Medeiros, Marcia ; CASTRO FILHO, J. A.. <b>Modelo para Qualidade de Objetos de Aprendizagem: da sua Concepção ao Uso em Sala de Aula</b>. Em: <font color=#330066>XX Simpósio Brasileiro de Informática na Educação (SBIE 2009)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Tecnologia na Escola: Um modelo de Implementação a partir da Formação de Professores</b>. Em: <font color=#330066>XVII Workshop de Informática na Escola</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; CASTRO FILHO, J. A. ; BARRETO, Antônio Luiz de Oliveira ; CAMELO, Lorena Silva ; FERNANDES, Alisandra Cavalcante ; PEQUENO, Mauro Cavalcante. <b>Implementação de Objetos de Aprendizagem no Ensino de Matemática</b>. Em: <font color=#330066>X Encuentro internacional Virtual Educa Argentina 2009</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MAIA, C. L. B. ; CARMO, R. A. F ; FREITAS, F. G. ; CAMPOS, G. A. L. ; SOUZA, J. T.. <b>A Multi-Objective Approach for the Regression Test Case Selection Problem</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>Uma metodologia para o projeto da interação utilizando técnicas de Prototipação da Experiência e Pré-patterns</b>. Em: <font color=#330066>Latin American Conference on Human-Computer Interaction (CLIHC 09)</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>PEQUENO, H. S. L.; GOMES, H. O. O. ; ABREU, L. ; PEQUENO, P. A. L. ; SARMENTO, W. W. F.. <b>Integrando uma Ferramenta de Web Conferência a um Ambiente Virtual de Aprendizagem</b>. Em: <font color=#330066>I Encontro Internacional do Sistema Universidade Aberta do Brasil</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>PEQUENO, H. S. L.; PEQUENO, P. A. L. ; PESSOA, O. de F. ; BRAGA, L. C. ; SOUSA, M. de F. ; BARONE, N. M.. <b>Transição Didática para a Construção de Materiais Didáticos em EAD</b>. Em: <font color=#330066>I Encontro Internacional do Sistema Universidade Aberta do Brasil</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SOUZA, Claudenice de Freitas ; CASTRO FILHO, J. A.. <b>SABERES DOCENTES EM EAD: A PRÁTICA TUTORIAL EM AMBIENTES VIRTUAIS DE APRENDIZAGEM</b>. Em: <font color=#330066>19o Encontro de Pesquisa Educacional do Norte e Nordeste (EPENN)</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>TORRES, F. C. ; SOUZA, J. T. ; CARMO, R. A. F ; PADUA, C. I. P. S. E. ; MATEUS, G. R.. <b>A New Approach to the Software Release Planning</b>. Em: <font color=#330066>Simpósio Brasileiro de Engenharia de Software</font>, 2009.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Ventura, Paula Patrícia Barbosa ; CASTRO FILHO, J. A.. <b>Elementos Formadores de uma Comunidade Virtual de Aprendizagem</b>. Em: <font color=#330066>XVII Workshop de Informática na Escola</font>, v. 1, 2009.</td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Ventura, Paula Patrícia Barbosa ; CASTRO FILHO, J. A.. <b>Análise das interações virtuais em comunidades virtuais de aprendizagem: um enfoque da sociologia clássica</b>. Em: <font color=#330066>X ENCUENTRO INTERNACIONAL VIRTUAL EDUCA</font>, 2009.</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARRETO, Antônio Luiz de Oliveira ; CASTRO FILHO, J. A.. <b>O estudo de funções mediado por um objeto de aprendizagem</b>. Em: <font color=#330066>II SIMPÓSIO INTERNACIONAL DE PESQUISA E EDUCAÇÃO MATEMÁTICA - SIPEMAT</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CARMO, R. A. F; CAMPOS, G. A. L. ; SOUZA, J. T.. <b>EasyMeta: A Framework of Metaheuristics for Mono-Objective Optimization Problems</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; SANTOS, Marcelo Câmara dos ; BITTAR, Marilena. <b>Desafios para a pesquisa em educação matemática na sala de aula</b>. Em: <font color=#330066>II SIMPÓSIO INTERNACIONAL DE PESQUISA E EDUCAÇÃO MATEMÁTICA - SIPEMAT</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, J. A.; FREIRE, Raquel Santiago ; FERNANDES, Alisandra Cavalcante ; LEITE, Monalisa de Abreu. <b>Quando objetos digitais são efetivamente para aprendizagem: o caso da matemática</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 583-592, 2008.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DAVID, Priscila Barros ; CASTRO FILHO, J. A.. <b>Interações contingentes em um Ambiente Virtual de Aprendizagem</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 380-389, 2008.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; SIQUEIRA, Raquel Almeida Ferreira ; CASTRO FILHO, J. A. ; VASCONCELOS, Francisco Herbert Lima. <b>Análise de Parâmetros Etnomatemáticos e Multiculturais na Caracterização de Objetos de Aprendizagem Digitais para o Ensino de Matemática</b>. Em: <font color=#330066>IX CONGRESO IBEROAMERICANO DE INFORMATICA EDUCATIVA</font>, v. 1, p. 1-6, 2008.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; LIMA, Lavina Lúcia Vieira ; CASTRO FILHO, J. A. ; SIQUEIRA, Raquel Almeida Ferreira. <b>Objetos de aprendizagem na escola</b>. Em: <font color=#330066>XIV Workshop de Informática na Escola / XXVIII Reunião Anual da Sociedade Brasileira de Computação (SBC)</font>, p. 127-136, 2008.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FERNANDES, G. G. ; CASTRO FILHO, J. A.. <b>Avaliação da Usabilidade da Interface Humano Computador de Ambientes Virtuais de Educação (Ave)</b>. Em: <font color=#330066>II Workshop de Ambientes de Apoio à Aprendizagem de Algoritmos e Programação - WA4P - XIX SBIE</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FREIRE, Raquel Santiago ; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A.. <b>Iniciação a álbebra e a utilização de objetos de aprendizagem</b>. Em: <font color=#330066>II SIMPÓSIO INTERNACIONAL DE PESQUISA E EDUCAÇÃO MATEMÁTICA - SIPEMAT</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; SEVERO, A. P.. <b>A Importância da Imagem no Processo de Imersão do Usuário em Jogos Eletrônicos</b>. Em: <font color=#330066>VII Symposium on Computer Games and Digital Entertainment</font>, p. 1-10, 2008.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>LIMA, Lavina Lúcia Vieira ; BARBOSA, Jaiane Ramos ; CASTRO FILHO, J. A.. <b>POR UMA VÍRGULA: APLICAÇÃO DE UM OBJETO DE APRENDIZAGEM DE LÍNGUA PORTUGUESA NA ESCOLA</b>. Em: <font color=#330066>2o Simpósio Hipertexto e Tecnologias na Educação</font>, v. 1, 2008.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; Lautert, Síntria Labres ; CASTRO FILHO, J. A.. <b>Análise do uso de um objeto de aprendizagem digital no ensino de álgebra</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 95-104, 2008.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>MAIA, C. L. B. ; CARMO, R. A. F ; CAMPOS, G. A. L. ; SOUZA, J. T.. <b>A Reactive GRASP Approach for the Regression Test Case Priorization</b>. Em: <font color=#330066>Simpósio Brasileiro de Pesquisa Operacional</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Medeiros, Marcia ; FERNANDES, Alisandra Cavalcante ; Severiano, Maria de Fatima ; CASTRO FILHO, J. A.. <b>Jogos de simulação e subjetividade: a experiência de poder/controle entre jovens jogadores de The Sims 2</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 400-409, 2008.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Morais, Márcia de Oliveira ; Lima, Marta Maria Costa ; Silva, Maria Auricélia da ; CASTRO FILHO, J. A. ; ROCHA, Betânia Tenório Soares da ; VIANA JÚNIOR, Gerardo Silveira. <b>O ENSINO DA ARTE ATRAVÉS DE PROJETOS COLABORATIVOS COM SUPORTE DE UM AMBIENTE VIRTUAL</b>. Em: <font color=#330066>XIV Workshop de Informática na Escola / XXVIII Reunião Anual da Sociedade Brasileira de Computação (SBC)</font>, p. 196-204, 2008.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>NASCIMENTO, Maria do Socorro Pinheiro ; Silva, Maria Auricélia da ; VIANA JÚNIOR, Gerardo Silveira ; ROCHA, Betânia Tenório Soares da ; SOUZA, Claudenice de Freitas ; Ventura, Paula Patrícia Barbosa ; PAULA, Daniele Facundo de ; CASTRO FILHO, J. A.. <b>SOCRATES - Sistema Colaborativo de Apoio à Educação On- Line</b>. Em: <font color=#330066>III Workshop de Arquiteturas Pedagógicas para Suporte à Educação à Distância mediada pela Internet - XIX SBIE</font>, 2008.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>OLIVEIRA, Eliana Moreira de ; SALES, Gilvandenys Leite ; FERNANDES, Alisandra Cavalcante ; VASCONCELOS, Francisco Herbert Lima ; CASTRO FILHO, J. A.. <b>A compreensão de modelos Físicos e Matemáticos através da construção pedagógica de objetos de aprendizagem interativos</b>. Em: <font color=#330066>IX CONGRESO IBEROAMERICANO DE INFORMATICA EDUCATIVA</font>, v. 1, p. 1-5, 2008.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>PAILLARD, G.; RAVELOMANANA, V.. <b>Limit Theorems for Degree of Coverage and Lifetime in Large Sensor Networks</b>. Em: <font color=#330066>IEEE INFOCOM 2008 IEEE Conference on Computer Communications</font>, p. 2011-2019, 2008. <a href="http://dx.doi.org/10.1109/INFOCOM.2008.266" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>SALES, Gilvandenys Leite ; Barroso, Giovanni Cordeiro ; CASTRO FILHO, J. A. ; Mattos, Carlos ; Bonetti, Allyson. <b>Indicadores de aprendizagem Learning Vectors: uma aplicação em fóruns do ambiente virtual MOODLE</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 340-349, 2008.</td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>SOUZA, J. T. ; CARMO, R. A. F ; CAMPOS, G. A. L.. <b>A novel approach for integrating feature and instance selection</b>. Em: <font color=#330066>International Conference on Machine Learning and Cybernetics</font>, v. 1, p. 374-379, 2008. <a href="http://dx.doi.org/10.1109/ICMLC.2008.4620434" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; RAMALHO, G. L.. <b>On Rhythmic Pattern Extraction in Bossa Nova Music</b>. Em: <font color=#330066>9th International Conference on Music Information Retrieval</font>, p. 641-646, 2008.</td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; AMARAL , Lucas Lopes do ; SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A. ; Barroso, Giovanni Cordeiro. <b>Redes de Petri Colorida no desenvolvimento de objetos de aprendizagem: uma análise das propriedades comportamentais do modelo LOCPN</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Informática na Educação (SBIE)</font>, v. 1, p. 613-622, 2008.</td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; FERNANDES, Alisandra Cavalcante ; OLIVEIRA, Eliana Moreira de ; SALES, Gilvandenys Leite ; SIQUEIRA, Raquel Almeida Ferreira ; RODRIGUES, Herik Zednik ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>AVALIAÇÃO SÓCIO-INTERACIONISTA APLICADA AO CONTEXTO DA EAD EM CURSOS DE GRADUAÇÃO SEMI-PRESENCIAIS MEDIADO POR UM AMBIENTE VIRTUAL DE APRENDIZAGEM</b>. Em: <font color=#330066>XIV Workshop de Informática na Escola / XXVIII Reunião Anual da Sociedade Brasileira de Computação (SBC)</font>, p. 77-86, 2008.</td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Yáskara Fernandes ; Pedro Fernandes ; PAILLARD, G. A. L. ; Milton Mendes ; Maria Perkusich ; Angelo Perkusich. <b>Gerenciamento de QoS para Banco de Dados em tempo-Real em Sistemas Embarcados</b>. Em: <font color=#330066>Euro American Association on Telematics and Information Systems</font>, 2008.</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CARVALHO, Ana Lisse ; MENDES, Marilia Soares. ; FURTADO, Maria Elizabeth Sucupira ; PINHEIRO, Plácido. <b>Avaliação de Projetos de Interação para Aplicações de TVD Móvel utilizando Multicritério</b>. Em: <font color=#330066>XXXIX Symposium of the Brazilian Operational Research Society (XXXIX SBPO)</font>, 2007.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>OBJETOS DE APRENDIZAGEM E SUA UTILIZAÇÃO NO ENSINO DE MATEMÁTICA</b>. Em: <font color=#330066>IX ENCONTRO NACIONAL DE EDUCAÇÃO MATEMÁTICA</font>, v. 01, 2007.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>A INFLUÊNCIA DO CONTEXTO DE PRODUÇÃO NA EMERGÊNCIA DE VARIAÇÕES INTERNAS EM GÊNEROS TEXTUAIS DIGITAIS</b>. Em: <font color=#330066>II ENCONTRO NACIONAL SOBRE HIPERTEXTO</font>, v. 01, 2007.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Daniela, Flávia ; VASCONCELOS, Francisco Herbert Lima ; Reis, Ederclinger M. ; Freitas, M. Dulce Brito R. ; CASTRO FILHO, J. A. ; Lucena, Marisa ; Chiabante, Lúcia. <b>INCLUSÃO SÓCIO-DIGITAL: UMA ANÁLISE DO PROJETO KHOUSE</b>. Em: <font color=#330066>XXVII Congrresso do SBC</font>, v. 01, p. 216-223, 2007.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DAVID, Priscila Barros ; Silva, Andréa Soares Rocha da ; SOUZA, Claudenice de Freitas ; VIANA JÚNIOR, Gerardo Silveira ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante ; Ventura, Paula Patrícia Barbosa ; Maia, Silvânia Maria. <b>AVALIAÇÃO DA APRENDIZAGEM EM EDUCAÇÃO A DISTÂNCIA NUMA PERSPECTIVA SÓCIO-INTERACIONISTA</b>. Em: <font color=#330066>XVIII Simpósio Brasileiro de Informática na Educação</font>, v. 01, 2007.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Crianças de séries iniciais pensando em álgebra: uma comparação entre o uso de ambientes computacionais e manipulativos</b>. Em: <font color=#330066>IX ENEM - Encontro Naconal de Educação Matemática.</font>, v. 01, 2007.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LOTIF, J. ; LEITE JUNIOR, A. J. M. ; MACIEL, R. H.. <b>Proposta de metodologia para avaliação da eficácia de informações visuais de segurança para emergências de incêndio em aeroportos</b>. Em: <font color=#330066>3rd Information Design International Conference</font>, 2007.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; Macêdo, Ana Angélica Mathias ; CASTRO FILHO, J. A.. <b>AVALIAÇÃO DE UM OBJETO DE APRENDIZAGEM COM BASE NAS TEORIAS COGNITIVAS</b>. Em: <font color=#330066>XXVII Congrresso do SBC</font>, v. 01, p. 330-338, 2007.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>MAIA, J. G. R.; GOMES, Fernando Antônio de Carvalho ; SOUZA, O.. <b>Automatic Eye Localization in Color Images</b>. Em: <font color=#330066>XX Brazilian Symposium on Computer Graphics and Image Processing</font>, 2007.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SALES, Gilvandenys Leite ; OLIVEIRA, Eliana Moreira de ; CRUZ, Marcos M. ; OLIVEIRA, Clara Feijó de ; CHAVES, Dayane de S. ; CASTRO FILHO, J. A. ; FERNANDES, Alisandra Cavalcante ; MELO, Bergson Rodrigo Siqueira de. <b>CONSTRUINDO OBJETOS DE APRENDIZAGEM DE MATEMÁTICA E FÍSICA PARA AUXILIAR NA COMPREENSÃO DE MODELOS FÍSICOS</b>. Em: <font color=#330066>XXVII Congrresso do SBC</font>, v. 01, 2007.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Silva, Maria Auricélia da ; Ventura, Paula Patrícia Barbosa ; SOUZA, Claudenice de Freitas ; CASTRO FILHO, J. A. ; VIANA JÚNIOR, Gerardo Silveira ; ROCHA, Betânia Tenório Soares da. <b>CRIAÇÃO E ACOMPANHAMENTO DE PROJETOS COLABORATIVOS NO AMBIENTE SOCRATES</b>. Em: <font color=#330066>XXVII Congrresso do SBC</font>, v. 01, p. 305-313, 2007.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SOARES, Pedro Pseligmann ; MENDES, Marilia Soares. ; VASCONCELOS, Patrícia Freitas Campos de ; MACEDO, Daniel ; FURTADO, Maria Elizabeth Sucupira. <b>. CUICA Uma Ferramenta para Suportar a convergência da TV Digital com a WEB a partir de uma Análise de possíveis Situações de Uso</b>. Em: <font color=#330066>Conferencia Latinoamericana de Informática</font>, 2007.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; SOUZA, Maria de Fátima Costa de ; SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Uma Proposta de Reestruturaçao do Processo de Criaçao de Objetos de Aprendizagem para o Ensino de Física com a Utilizaçao da Modelagem Exploratória</b>. Em: <font color=#330066>XVII Simpósio Nacional de Ensino de Física</font>, 2007.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; MELO, Bergson Rodrigo Siqueira de ; SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>UMA ANÁLISE DO USO DE OBJETOS DE APRENDIZAGEM COMO FERRAMENTA DE MODELAGEM EXPLORATÓRIA APLICADA AO ENSINO DE FÍSICA QUÂNTICA</b>. Em: <font color=#330066>XXVII Congrresso do SBC</font>, v. 01, p. 322-329, 2007.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; SALES, Gilvandenys Leite ; MELO, Bergson Rodrigo Siqueira de ; SILVA, Verônica Maria Lavor ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>UMA ANÁLISE DO USO DE OBJETO DE APRENDIZAGEM COMO FERRAMENTA DE MODELAGEM EXPLORATÓRIA APLICADA AO ENSINO DE FÍSICA QUÂNTICA</b>. Em: <font color=#330066>XVII Simpósio Nacional de Ensino de Física</font>, 2007.</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DAVID, Priscila Barros ; CASTRO FILHO, J. A. ; SPINILLO, Alina Galvão ; SIQUEIRA, Raquel Almeida Ferreira. <b>GÊNEROS ASSÍNCRONOS: INSTRUMENTOS DE INTERAÇÃO EM AMBIENTES VIRTUAIS DE APRENDIZAGEM</b>. Em: <font color=#330066>XII Workshop de Informática na Escola</font>, v. 1, p. 206-214, 2006.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DAVID, Priscila Barros ; SPINILLO, Alina Galvão ; CASTRO FILHO, J. A.. <b>ESCRITA E ORALIDADE EM DIFERENTES LISTAS DE DISCUSSÃO</b>. Em: <font color=#330066>XXI JORNADA NACIONAL DE ESTUDOS LINGÜÍSTICOS</font>, v. 1, p. 1279-1287, 2006.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Desenvolvendo conceitos algébricos no ensino fundamental com o auxílio de um Objeto de Aprendizagem</b>. Em: <font color=#330066>XII Workshop de Informática na Escola</font>, v. 1, p. 156-163, 2006.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE, Monalisa de Abreu ; CASTRO FILHO, J. A.. <b>Aprendizagem de conceitos matemáticos e interação entre pares durante o uso de um objeto de aprendizagem</b>. Em: <font color=#330066>XII Workshop de Informática na Escola</font>, v. 1, p. 59-67, 2006.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>MAIA, J. G. R.; CAVALCANTE-NETO, Joaquim Bento ; VIDAL, Creto Augusto. <b>Transformation Semantics: An Efficient Approach for Collision Detection</b>. Em: <font color=#330066>XIX Simpósio Brasileiro de Computação Gráfica</font>, v. 1, p. 94-101, 2006.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAIA, J. G. R.; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento. <b>Uma Estratégia Eficiente para a Detecção de Colisões Exatas Usando a Semântica de Transformações</b>. Em: <font color=#330066>VIII Symposium on Virtual Reality</font>, v. 1, p. 361-372, 2006.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>PROPOSTA DE UMA ARQUITETURA PARA ACESSO MÓVEL A SERVIÇOS DE TELEVISÃO DIGITAL</b>. Em: <font color=#330066>XII Encontro de Iniciação à Pesquisa</font>, 2006.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PEQUENO, Henrique ; CASTRO, Miguel Franklin de ; MAIA, J. G. R. ; CAMPELO, Luiz David ; SARMENTO, Wellington F. ; NEUMAN, Jose ; GOMES, Fernando Antônio de Carvalho. <b>A DTV Interactive Application Development Framework</b>. Em: <font color=#330066>13th International Conference on Telecommunications</font>, v. 1, p. 1-6, 2006.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; SILVA, Cassandra Ribeiro de Oliveira e ; VIEIRA, Rafael Siqueira Telles. <b>Quantum: Um Software Aplicado na Aprendizagem de Conceitos Básicos da Física Moderna e Contemporânea</b>. Em: <font color=#330066>Congresso Nacional de Ambientes Hipermídia para Aprendizagem</font>, v. 1, p. 1-10, 2006.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SARMENTO, W. W. F. ; PEQUENO, H. S. L. ; CASTRO, M. F. ; SOUZA, J. N.. <b>Ubiquitous Education by Integrating Mobile Applications to a Learning Management System</b>. Em: <font color=#330066>13th International Conference on Telecommunications</font>, v. 1, p. 6-10, 2006.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A.. <b>FASE : Uma ferramenta para Automatização do Processo de Avaliação de Software</b>. Em: <font color=#330066>VIII Congresso Iberoamericano Informática Educativa</font>, p. 1-6, 2006.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; AMARAL, L. L. ; GOMES, T. A. ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante. <b>Uma Proposta de Reestruturação do Processo de Criação de Objetos de Aprendizagem do Projeto Rived</b>. Em: <font color=#330066>I Encontro Técnico dos Programas Mídias na Educação e Rived</font>, 2006.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; Barreto, Daisyane C. ; BARRETO, N. C. ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante. <b>ARQUITETURA DE ESCADAS: Um Objeto de Aprendizagem para exploração dos conceitos de semelhança de triângulos, proporcionalidade e teorema de Tales</b>. Em: <font color=#330066>I Encontro Técnico dos Programas Mídias na Educação e Rived</font>, 2006.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, José Aires de. <b>FASE: Uma Ferramenta para Automatização do Processo de Avaliação de Software. In: VIII Congresso Iberoamericano de Informática Educativa, 2006, San Jose</b>. Em: <font color=#330066>VIII Congresso Iberoamericano de Informática Educativa</font>, 2006.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; MADSEN, S. T. ; DAHIA, M. ; WIDMER, G. ; RAMALHO, G. L.. <b>Extracting Patterns from Brazilian Guitar Accompaniment Data</b>. Em: <font color=#330066>1st European Workshop on Intelligent Technologies for Cultural Heritage Exploitation</font>, p. 50-54, 2006.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>VASCONCELOS, Francisco Herbert Lima ; SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Uma análise do uso de Objeto de Aprendizagem como Ferramenta de Modelagem Aplicada ao Ensino de Física</b>. Em: <font color=#330066>I Encontro Internacional de Inovações Pedagógicas</font>, 2006.</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; LOPES, Ligiane de Castro ; SOUZA, Claudenice de Freitas ; LEITE, Monalisa de Abreu ; PEQUENO, Mauro Cavalcante. <b>E-Mail and Group-List as a Tool for Introducing Teachers to Technology</b>. Em: <font color=#330066>SITE 2005 - Society for Information Technology and Teacher Education</font>, p. 2494-2498, 2005.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; LOUREIRO, R. C. ; PAULA, P. S. ; SARMENTO, W. W. F. ; PEIXOTO, L. E. ; PEQUENO, H. S. L. ; ROCHA, Betânia Tenório Soares da ; VIANA JÚNIOR, Gerardo Silveira. <b>Portal Humanas: Um ambiente colaborativo para criação de projetos e comunidades virtuais para a área de Humanidades</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação</font>, v. 1, p. 254-264, 2005.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; MACÊDO, Laécio Nobre de ; LEITE, Monalisa de Abreu ; FREIRE, Raquel Santiago. <b>Cartas Interativas: desenvolvendo o pensamento algébrico mediado por um software educativo.. In: XXV Congresso da Sociedade Brasileira de Computação, 2005, São Leopoldo</b>. Em: <font color=#330066>Workshop de Informática na Escola - WIE/SBC 2005</font>, p. 2763-2770, 2005.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE, Monalisa de Abreu ; CASTRO FILHO, J. A.. <b>REFLEXÕES ACERCA DA INTEGRAÇÃO DE TECNOLOGIAS NA ESCOLA E FORMAÇÃO DE PROFESSORES</b>. Em: <font color=#330066>XVII ENCONTRO DE PESQUISA EDUCACIONAL DO NORDESTE</font>, 2005.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LOTIF, J. ; MACIEL, R. H. ; SAMPAIO, A. S. ; LEITE JUNIOR, A. J. M.. <b>Testing Outdoor Displays</b>. Em: <font color=#330066>CybErg 2005. The Fourth International Cyberspace Conference on Ergonomics</font>, 2005.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>Inserção de Texto em Televisão Digital</b>. Em: <font color=#330066>XI Encontro de Iniciação à Pesquisa</font>, 2005.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PAILLARD, G. A. L. <b>A fully distributed prime numbers generation using the wheel sieve</b>. Em: <font color=#330066>Parallel and Distributed Computing and Networks</font>, p. 651-656, 2005.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; LAVAULT, Christian. <b>A Distributed Prime Sieving Algorithm based on Scheduling by Multiple Edge Reversal</b>. Em: <font color=#330066>International Symposium on Parallel and Distributed Computing</font>, p. 139-146, 2005.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; SILVA, Cassandra Ribeiro de Oliveira e. <b>Recursos Educacionais Informatizados para a Aprendizagem da Física Moderna e Contemporânea</b>. Em: <font color=#330066>V Encontro de Pesquisa e Pós-Graduação - CEFET/CE</font>, v. 1, 2005.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, José Aires de. <b>Professor X Software Educativo: a difícil tarefa de escolher</b>. Em: <font color=#330066>VI Encuentro Internacional sobre Educación</font>, 2005.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, José Aires de ; SOUZA, Cidcley Teixeira de. <b>A Software Evaluation Approach Based on Vergnaud's Conceptual Fields Theory</b>. Em: <font color=#330066>The 5th IEEE International Conference on Advanced Learning Technologies</font>, v. 1, p. 75-76, 2005.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; MADSEN, S. T. ; DAHIA, M. ; WIDMER, G. ; RAMALHO, G. L.. <b>Extracting Patterns from Guitar Accompaniment Data: Some Experimental Results</b>. Em: <font color=#330066>X Simpósio Brasileiro de Computação Musical</font>, p. 154-163, 2005.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>VIANA JÚNIOR, Gerardo Silveira ; CASTRO FILHO, J. A.. <b>Avaliação de Software para o Ensino de Música: Reconhecendo a Singularidade do Discurso Musical</b>. Em: <font color=#330066>Workshop de Informática na Escola - WIE/SBC 2005</font>, p. 2558-2566, 2005.</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. ; FREIRE, R. S. ; BEZERRA, E. L. C. ; ARRUDA, J. S. ; CARVALHO, A. B. G. P. ; SIQUEIRA, L. M. R. C.. <b>Desfios e perspectivas para utilização de tecnologias digitais e inovações Pedagógicas no Ensino Superior</b>. Em: <font color=#330066>Encontro Nacional de Didática e Práticas de Ensino</font>, 2004.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; BARRÊTO, Marcília Chagas ; GOMES, Alex Sandro. <b>COMPETÊNCIAS MATEMÁTICAS DE ALUNOS DE PRIMEIRO E SEGUNDO CICLOS EM SITUAÇÕES ADITIVAS E MULTIPLICATIVAS</b>. Em: <font color=#330066>VIII Encontro Nacional de Educação Matemática - VIII Enem</font>, v. 1, p. 1-21, 2004.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DAHIA, M. ; SANTANA, H. ; TRAJANO DE LIMA, ERNESTO ; SANDRONI, C. ; RAMALHO, G. L. ; CABRAL, G.. <b>Using patterns to generate rhythmic accompaniment for guitar</b>. Em: <font color=#330066>First Sound and Music Computing Conference (SMC'04)</font>, p. 111-115, 2004.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DJEROUROU, Fayçal ; LAVAULT, Christian ; PAILLARD, G. A. L. ; RAVELOMANANA, Vlady. <b>Assigning codes in a random wireless network</b>. Em: <font color=#330066>11th - IEEE INTERNATION CONFERENCE ON TELECOMMUNICATIONS</font>, v. 3124, p. 348-353, 2004.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FREIRE, Raquel Santiago ; CABRAL, Bárbara de Sena ; CASTRO FILHO, J. A.. <b>Estratégias e erros utilizados na resolução de problemas algébricos</b>. Em: <font color=#330066>VIII Encontro Nacional de Educação Matemática - VIII Enem</font>, v. 1, p. 1-15, 2004.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAIA, J. G. R.; CAVALCANTE-NETO, Joaquim Bento ; VIDAL, Creto Augusto. <b>CRAbGE: Uma Arquitetura para Motores Gráficos Customizáveis, Expansíveis e Portáveis para Aplicações de Realidade Virtual</b>. Em: <font color=#330066>Workshop de Teses e Dissertações do VII Symposium on Virtual Reality</font>, 2004.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PITOMBEIRA, D. K. D. ; BRITO, R. W. C. ; MENDES, Marilia Soares. ; AMORIM, D. C. C. ; ALMEIDA FILHO, M. P. ; OLIVEIRA, W. A. ; SILVA, W. B. ; CARVALHO, T. L. E. ; BRAINER, A. ; MENDONCA, N. C.. <b>PDM - Palm Database Manager</b>. Em: <font color=#330066>Simposio Brasileiro de Banco de Dados</font>, 2004.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SILVA, Francisca Lúcia Quitéria da ; CASTRO FILHO, J. A.. <b>RESOLUÇÃO DE PROBLEMAS COMO METODOLOGIA PARA APRENDER MATEMÁTICA</b>. Em: <font color=#330066>VIII Encontro Nacional de Educação Matemática - VIII Enem</font>, v. 1, p. 1-15, 2004.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante. <b>Uma Abordagem Semi-Automática para a Avaliação Comparativa de Software Educacional de Matemática</b>. Em: <font color=#330066>XV - SBIE - Simpósio Brasileiro de Informática na Educação</font>, v. 2, p. 178-187, 2004.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; DAHIA, M. ; SANTANA, H. ; RAMALHO, G. L.. <b>Automatic Discovery of Right Hand Fingering in Guitar Accompaniment</b>. Em: <font color=#330066>International Computer Music Conference (ICMC'04)</font>, p. 722-725, 2004.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>VIDAL, C. A. ; SANTOS, Emanuele Marques dos ; OSORIO, H. O. ; LEITE JUNIOR, ANTONIO JOSÉ MELO. <b>Virtual Reality in Language Learning: The VRTourist Project</b>. Em: <font color=#330066>XII International Conference on Computers in Education</font>, p. 265-272, 2004.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>VIDAL, Creto Augusto ; GOMES, George Allan Menezes ; MENDONÇA-JUNIOR, Glaudiney Moreira ; GOMES, Humberto Ovídio Osório ; CAVALCANTE-NETO, Joaquim Bento. <b>Uma Ferramenta de Autoria de Ambientes Virtuais Adaptável a Diferentes Motores Gráficos</b>. Em: <font color=#330066>SVR 2004 - VII Symposium on Virtual Reality 2004</font>, 2004.</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DAHIA, M. ; SANTANA, H. ; TRAJANO DE LIMA, ERNESTO ; RAMALHO, G. L.. <b>Generating Rhythmic Accompaniment for Guitar: The Cyber-Joao Case Study</b>. Em: <font color=#330066>IX Simpósio Brasileiro de Computação Musical</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; LEITE, Monalisa de Abreu ; FREIRE, Raquel Santiago ; PAZ, I. V. P.. <b>Balança Interativa: um software para o ensino da álgebra</b>. Em: <font color=#330066>XVI EPENN - Encontro de Pesquisa Educacional do Norte e Nordeste</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; VIDAL, Creto Augusto ; SANTOS, Emanuele Marques dos ; ALMENDRA, Camilo Camilo ; BORGES, Vládia Maria. <b>A Tour Guide Course using Collaborative Virtual Environments</b>. Em: <font color=#330066>Simpósio Brasileiro de Informática na Educação 2003</font>, p. 658-667, 2003.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LOPES, Ligiane de Castro ; SOUZA, Claudenice de Freitas ; CASTRO FILHO, J. A.. <b>Listas de Discussão como uma ferramenta para aprendizagem colaborativa</b>. Em: <font color=#330066>XVI Encontro de Pesquisa Educacional do Norte e Nordeste</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>MAIA, J. G. R.; CAVALCANTE NETO, J. B. ; VIDAL, Creto Augusto. <b>CRAbGE: Um Motor Gráfico Customizável, Expansível e</b>. Em: <font color=#330066>VI Symposium on Virtual Reality</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>PAILLARD, G. A. L.; LAVAULT, Christian. <b>Le crible de la roue en distribué</b>. Em: <font color=#330066>MAJECSTIC 2003</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PEQUENO, M. C. ; SILVA, C. L. O. ; PINHO, G. O. E. ; PEQUENO, H. S. L. ; BRAGA, L. C. ; PAULA, P. S. ; LOUREIRO, R. C. ; SARMENTO, W. W. F.. <b>VIDEOCONFERÊNCIA: A EXPERIÊNCIA DA FORMAÇÃO DE GESTORES DE NOVAS TECNOLOGIAS DA INFORMAÇÃO E COMUNICAÇÃO</b>. Em: <font color=#330066>XXIII Congresso da Sociedade Brasileira de Computação</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SANTANA, H. ; DAHIA, M. ; TRAJANO DE LIMA, ERNESTO ; RAMALHO, G. L.. <b>VexPat: An Analysis Tool for the Discovery of Musical Patterns</b>. Em: <font color=#330066>IX Simpósio Brasileiro de Computação Musical</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; SOUZA, Cidcley Teixeira de. <b>Álgebra de Processos na Especificação Semântica de Arquitetura de Software</b>. Em: <font color=#330066>XXIX Conferência Latino-Americana de Informática</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; GUIGUE, Didier ; COSTA, E. B. ; SANTOS, K. ; GOMES, C. M. N. ; ALMEIDA, H. O. ; CAVALCANTI JÚNIOR, N. L.. <b>SOS: A Tool for the Automatic Segmentation of Musical Flows</b>. Em: <font color=#330066>IX Simpósio Brasileiro de Computação Musical</font>, p. 2867-2874, 2003.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Vasconcelos, N. P. ; FREIRE, R. S. ; Castro-Filho, J. A.. <b>Desempenho em Problemas de Estruturas Aditivas e Multiplicativas</b>. Em: <font color=#330066>XVI EPENN - Encontro de Pesquisa Educacional do Norte e Nordeste</font>, 2003.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>VIDAL, Creto Augusto ; ALMENDRA, Camilo Camilo ; LEITE JUNIOR, A. J. M. ; SANTOS, Emanuele Marques dos ; CAMPELO, Davi. <b>A Web System for Managing and Accessing NVEs Using CORBA</b>. Em: <font color=#330066>6th Symposium on Virtual Reality</font>, p. 297-307, 2003.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>VIDAL, Creto Augusto ; SANTOS, Emanuele Marques dos ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; BORGES, Vládia Maria. <b>Collaborative Virtual Environments for Language Learning</b>. Em: <font color=#330066>6th Symposium on Virtual Reality</font>, p. 309-320, 2003.</td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMENDRA, Camilo Camilo ; VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; SANTOS, Emanuele Marques dos. <b>Integração de Aplicações de Realidade Virtual em Rede a Ambientes de Aprendizado na Web - Um estudo de caso</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, p. 65-77, 2002.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CAMPELO, F. J. ; SANTOS, A. J. O. DOS ; CASTRO FILHO, J. A.. <b>O Uso de Java-applets em Programas Educativos</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1097-1101, 2002.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, Alex Sandro ; CASTRO FILHO, J. A. ; GITIRANA, V. ; SPINILLO, Alina Galvão ; ALVES, M. ; MELO, M. ; XIMENES, J.. <b>Avaliação de software educativo para o ensino de matemática</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1065-1071, 2002.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; VIDAL, Creto Augusto ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos. <b>Um ambiente virtual compartilhado voltado para entretenimento</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LEITE, Monalisa de Abreu ; NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Balança Interativa: um software para auxiliar o desenvolvimento do raciocínio algébrico</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1073-1077, 2002.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>PEQUENO, M. C. ; LOUREIRO, R. C. ; SARMENTO, W. W. F. ; PAULA, P. S. ; PEQUENO, H. S. L. ; SILVA, C. L. O.. <b>Desenvolvimento de um Ambiente Virtual de Aprendizagem</b>. Em: <font color=#330066>6 Congresso Iberoamericano</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>RODRIGUES, Maria Andréia Formico ; MAIA, J. G. R. ; MENDONÇA, Nabor das Chagas. <b>Simulação de Procedimentos Médicos Usando Java e Tecnologias da Web</b>. Em: <font color=#330066>II Workshop de Informática Médica</font>, v. II, 2002.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>RODRIGUES, Maria Andréia Formico ; MAIA, J. G. R. ; MENDONÇA, Nabor das Chagas ; CHAVES, Francisco Edvan. <b>Uma Ambiente Interiativo Distribuído Para a Simulação de Procedimentos Cirúrgios</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, p. 179-190, 2002.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SOUZA, Cidcley Teixeira de ; SOUZA, Maria de Fátima Costa de. <b>An Algebraic Approach for Specifying Reconfigurable Systems</b>. Em: <font color=#330066>International Information Technology Symposium</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SOUZA, Claudenice de Freitas ; LOPES, Ligiane de Castro ; CASTRO FILHO, J. A.. <b>LISTA DE DISCUSSÃO: INVESTIGANDO NOVAS FORMAS DE INTERAÇÃO</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 914-921, 2002.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUZA, Claudenice de Freitas ; LOPES, Ligiane de Castro ; CASTRO FILHO, J. A.. <b>Lista de discussão como um ambiente didático de interação</b>. Em: <font color=#330066>XI ENDIPE - Encontro Nacional de Didática e Prática de Ensino</font>, 2002.</td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere. <b>Interactive Diagrams: Investigating Java-Applets for Learning Mathematics</b>. Em: <font color=#330066>VII Workshop de Informática na Escola</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; LEITE, Monalisa de Abreu ; GOMES, Alex Sandro. <b>Listas de discussão como ferramentas pedagógicas para a formação de professores em informática educativa</b>. Em: <font color=#330066>XV Encontro de Pesquisa Educacional do Norte e Nordeste</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GROSSKOPF, G. ; GUIGUE, Didier ; TRAJANO DE LIMA, ERNESTO. <b>Modern harmony: timbre instead of harmonic functions? Tracing or building new functionalities through the use of the GMT music analysis tools</b>. Em: <font color=#330066>International Theoretical Conference 'Compositional principles</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; ALMENDRA, Camilo Camilo. <b>Construção de Sistemas de Realidade Virtual Semi-Imersiva voltados para Educação</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 258-269, 2001.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>A Distributed Implementation of Structured Gamma</b>. Em: <font color=#330066>International Conference on Parallel and Distributed Systems</font>, p. 445-450, 2001.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>Uma Proposta de um Escalonador para Gamma</b>. Em: <font color=#330066>II Workshop em Sistemas Computacionais de Alto Desempenho</font>, p. 47-54, 2001.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo. <b>Beremiz - Integrando o Mathematica a um Ambiente Virtual em Rede</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 238-248, 2001.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>VDL - Distributed Virtual Reality in Distance Education</b>. Em: <font color=#330066>Projects Evaluation Workshop in Informatics in Education</font>, p. 100-110, 2001.</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>A Formação de Professores para o uso de novas tecnologias para o ensino de matemática</b>. Em: <font color=#330066>I Seminário Internacional de Pesquisa em Educação Matemática</font>, v. 1, p. 205-210, 2000.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere. <b>Discussing technology, classroom practice, curriculum, and content knowledge with teachers</b>. Em: <font color=#330066>V Congresso Ibero-americano de Informática Educativa</font>, 2000.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; GUIGUE, Didier ; FERNEDA, E.. <b>Automatic Segmentation of Musical Flows: a Rational Agents Approach</b>. Em: <font color=#330066>XX Congresso Nacional da Sociedade Brasileira de Computação</font>, v. 1, 2000.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos. <b>Uma Proposta de Integração de Ferramentas Externas a Ambientes Virtuais através de Simulóides e de Aplicações Mediadoras</b>. Em: <font color=#330066>3rd Brazilian Workshop on Virtual Reality</font>, p. 131-142, 2000.</td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; WILHELM, Jennifer ; MELETIOU, M.. <b>Using Interactive Diagrams as a Means to Promote Deeper Content Knowledge by Students and Teachers</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; WILHELM, Jennifer ; CONFREY, Jere. <b>Motion detectors in the school:Teachers making sense of rate of change and motion</b>. Em: <font color=#330066>Twenty-first Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 2, p. 703-708, 1999.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>WILHELM, Jennifer ; CONFREY, Jere ; CASTRO FILHO, J. A. ; MALONEY, A.. <b>Interactive diagrams to address key student conceptions in mathematics</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology (M/SET)</font>, 1999.</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Klavierstück XI de Stockhausen: uma imensa melodia de timbres</b>. Em: <font color=#330066>XI Encontro Anual da ANPPOM - Associação Nacional de Pesquisa e Pós-Graduação em Música.</font>, p. 286-291, 1998.</td></tr>
+            </table></div><div id="dv-year-1997"><h3 class="year">1997</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; MALONEY, A.. <b>Interactive diagrams: A new learning tool</b>. Em: <font color=#330066>Nineteenth Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 1, p. 579-584, 1997.</td></tr>
+            </table></div><div id="dv-year-1992"><h3 class="year">1992</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; ESCRIDELLI, S. ; OLIVEIRA, S. ; CARVALHO, V.. <b>LOGO na pré-escola</b>. Em: <font color=#330066>III Simpósio Brasileiro de Informática Educativa (SBIE)</font>, v. 1, p. 83-90, 1992.</td></tr>
+            </table></div><div id="dv-year-1991"><h3 class="year">1991</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; OLIVEIRA, S. ; CARVALHO, W. ; SCRIDELLI, S.. <b>Uma experiência com o uso de LOGO na pré-escola</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 191-205, 1991.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GITIRANA, V. ; CASTRO FILHO, J. A. ; OLIVEIRA, S.. <b>Passo-a-Passo - Compilador Gráfico para o Ambiente LOGO do MSX</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 119-121, 1991.</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

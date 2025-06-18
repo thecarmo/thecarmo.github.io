@@ -1,0 +1,467 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>ppgsmd</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>ppgsmd</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de produção bibliográfica'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1990,
+1],
+[1991,
+3],
+[1992,
+1],
+[1993,
+7],
+[1994,
+12],
+[1995,
+5],
+[1996,
+4],
+[1997,
+6],
+[1998,
+17],
+[1999,
+15],
+[2000,
+15],
+[2001,
+34],
+[2002,
+49],
+[2003,
+45],
+[2004,
+59],
+[2005,
+73],
+[2006,
+89],
+[2007,
+91],
+[2008,
+111],
+[2009,
+107],
+[2010,
+104],
+[2011,
+93],
+[2012,
+138],
+[2013,
+125],
+[2014,
+130],
+[2015,
+166],
+[2016,
+230],
+[2017,
+231],
+[2018,
+176],
+[2019,
+148],
+[2020,
+177],
+[2021,
+188],
+[2022,
+130],
+[2023,
+156],
+[2024,
+157],
+[2025,
+20]]}]});
+        });
+        </script>
+        
+                <h3>Total de produção bibliográfica</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 3124<br>
+                    
+                    <center>Página: <a href="PB-0.html">1</a> &nbsp;<a href="PB-1.html">2</a> &nbsp;<a href="PB-2.html">3</a> &nbsp;<b>4</b> &nbsp;</center>
+                    <div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>8. &nbsp;</td> <td>GROSSKOPF, G. ; GUIGUE, Didier ; TRAJANO DE LIMA, ERNESTO. <b>Modern harmony: timbre instead of harmonic functions? Tracing or building new functionalities through the use of the GMT music analysis tools</b>. Em: <font color=#330066>International Theoretical Conference 'Compositional principles</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; ALMENDRA, Camilo Camilo. <b>Construção de Sistemas de Realidade Virtual Semi-Imersiva voltados para Educação</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 258-269, 2001.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; VIDAL, Creto Augusto. <b>Uma Proposta para a Criação de Ambientes Virtuais Compartilhados de Realidade Virtual em Rede Através de Sistemas Distribuídos</b>. Em: I Encontro de Pós-Graduação e Pesquisa da Unifor, 2001. Anais do I Encontro de Pós-Graduação e Pesquisa da Unifor, 2001. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>LOUREIRO, RC. <b>VDL - Distributed Virtual Reality In Distance Education. ProTeM-CC Informatics in Education. 1ed.Brasilia</b>. Em: . : Brasilia. 2001.v. 1, p. 100-110. </td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; SARMENTO, W. W. F.. <b>Laboratório de Produção para Educação a Distância</b>. Em: MARTINS Onilza e POLAK, Ymiracy. (Org.). PCurso de Formação em Educação a Distância ? UNIREDE. Curitiba. : Laboratório de Produção em EAD. 2001..</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; SARMENTO, W. W. F. ; SILVA, C. L. O. <b>Oficina nº4 - Internet In: Laboratório de Produção para Educação a Distância ed.Curitiba</b>. Em: <font color=#330066>Laboratório de Produção para Educação a Distância ed.Curitiba</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; VIDAL, C. A.. <b>Desenvolvimento de um Ambiente Virtual de Aprendizagem - Da Imaginação Ideativa a Materialização da Virtualidade</b>. Em: <font color=#330066>VII Workshop de Informática na Escola - XXI Congresso da Sociedade Brasileira de Computação</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>VDL - Distributed Virtual Reality In Distance Education</b>. Em: <font color=#330066>Projects Evaluation Workshop in Informatics in Education</font>, p. 100-110, 2001.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>MATTOS, F. L. C. L.; BORGES NETO, H.. <b>Desenvolvimento de uma metodologia pedagógica para auxílio na formação de professores universitários no contexto de um sistema computacional multiagentes</b>. Em: <font color=#330066>XV EPENN - Encontro de Pesquisa Educacional das Regiões Norte e Nordeste</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>MATTOS, F. L. C. L.; FURTADO, E. ; VASCO, J. J. F. ; HOLANDA FILHO, R.. <b>Um sistema de aprendizagem colaborativa de didática utilizando cenários. Revista Brasileira de Informática na Educação</b>. <font color=#330066>Revista Brasileira de Informática na Educação</font>. v. 8, p. 52-61, issn: 1414-5685, 2001.</td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>MENDONÇA JUNIOR, G. M. ; GOMES, George Allan Menezes. <b>Realidade Virtual na Educação: Um Estudo de Caso</b>. Em: VI Semana Universitária da Universidade Estadual do Ceará, 2001, Fortaleza. Anais VI Semana Universitária da Universidade Estadual do Ceará, 2001. </td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>A Distributed Implementation of Structured Gamma</b>. Em: <font color=#330066>International Conference on Parallel and Distributed Systems</font>, p. 445-450, 2001.</td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>Uma Proposta de um Escalonador para Gamma</b>. Em: <font color=#330066>II Workshop em Sistemas Computacionais de Alto Desempenho</font>, p. 47-54, 2001.</td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>PEQUENO, M. C. ; HARRIMAN, Cátia Luzia Silva ; LOUREIRO, Robson Carlos ; PEQUENO, Henrique Sérgio ; SARMENTO, W. W. F.. <b>Oficina nº4 - Internet</b>. Em: Universidade Federal do Paraná. (Org.). Laboratório de Produção para Educação a Distância. Curitiba: Ed.Curitiba. : Editora da Universidade Federal do Paraná. 2001..</td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>PEQUENO, M. C. ; SILVA, C. L. O. ; PEQUENO, H. S. L. ; LOUREIRO, R. C. ; SARMENTO, W. W. F.. <b>Oficina nº4 - Internet In: Laboratório de Produção para Educação a Distância</b>. Em: Universidade Federal do Paraná. (Org.). Curso de formação em EAD-UNIREDE: Laboratório de produção para Educação a Distância. 2001..</td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>REZENDE, N. <b>A.. Arbol</b>. 2001. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>REZENDE, N. A. <b>A INDUSTRIALIZAÇÃO DA ANIMAÇÃO 3D. R. Cient. Fac. Lour</b>. Filho - v.1, n.1, 2001, FORTALEZA-CE, p. 86-89, 01 mar. 2001. </td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Roazzi, Antonio ; CASTRO FILHO, J. A.. <b>O Desenvolvimento da Noção de Tempo como Integração da Distância e da Velocidade</b>. <font color=#330066>Psicologia: Reflexão e Crítica (UFRGS. Impresso)</font>. v. 14, n. 2, p. 497-503, issn: 0102-7972, 2001. <a href="http://dx.doi.org/10.1590/S0102-79722001000300006" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>SANTOS, Emanuele Marques dos ; VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; ALMENDRA, Camilo Camilo. <b>Ensino de Matemática em Ambiente de Realidade Virtual</b>. Em: XXIV CNMAC - Congresso Nacional de Matemática Aplicada e Computacional, 2001. Revista do IEEE América Latina, 2001. </td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo. <b>Beremiz - Integrando o Mathematica a um Ambiente Virtual em Rede</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 238-248, 2001.</td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>SARMENTO, W. W. F. <b>Tecnologia e Educação</b>. 2001. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>SILVA, C. L. O. <b>Avaliação Técnico-Pedagógica das Teleaulas de Língua Portuguesa da 8a. Série do Sistema de Telensino do Ceará - O Caso da 2a. Região de Fortaleza</b>. 2001. Dissertação de Mestrado</td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos ; COSTA FILHO, João Carlos ; OLIVEIRA, Joaquim Pedro. <b>Realidade Virtual: a nova fronteira do ensino a distância</b>. Revista de Ciência e Tecnologia - Pesquisas FUNCAP, p. 29-31, 01 maio 2001. </td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>Distributed Virtual Reality in Distance Education - Could It Be a Way Out of Exclusion?</b>. Em: VI International Conference on Computers in Education, 2001, Seoul. Proceedings of the 6th International Conference on Computers in Education, 2001. </td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro ; COSTA FILHO, João Carlos. <b>A Virtual Environment for Distance Learning</b>. Em: IFIP. (Org.). Computers in Education. Dordrecht. : Kluwer Academic Publishers. 2001..</td></tr>
+            
+            <tr valign="top"><td>33. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro ; COSTA FILHO, João Carlos. <b>Semi-Immersive Virtual Reality Cooperative Environment for Distance Learning</b>. Em: Workshop of Computer Collaborative Education 2001 - World Conference in Computers in Education 2001, 2001, Copenhague. Seventh IFIP World Conference on Computers in Educatio - Book of Abstracts, p. 95-95, 2001. </td></tr>
+            
+            <tr valign="top"><td>34. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>VDL-Distributed Virtual Reality in Distance Education</b>. Em: Comissão do ProTem-CC/CNPq. (Org.). ProTeM-CC 2001 Informatics in Education. 2001..</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>A Formação de Professores para o uso de novas tecnologias para o ensino de matemática</b>. Em: <font color=#330066>I Seminário Internacional de Pesquisa em Educação Matemática</font>, v. 1, p. 205-210, 2000.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere. <b>Discussing technology, classroom practice, curriculum, and content knowledge with teachers</b>. Em: <font color=#330066>V Congresso Ibero-americano de Informática Educativa</font>, 2000.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CONFREY, Jere ; CASTRO FILHO, J. A. ; WILHELM, Jennifer. <b>Implementation Research as a Means to Link Systemic Reform and Applied Psychology in Mathematics Education</b>. <font color=#330066>Educational Psychologist</font>. v. 35, n. 3, p. 179-191, issn: 0046-1520, 2000.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>GOMES, George Allan Menezes; MENDONÇA JÚNIOR, G. M. ; VIDAL, Creto Augusto. <b>AVAL Chat 3D: Um Estudo de Caso de Ambiente de Realidade Virtual Multiusuário</b>. 2000. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>MATTOS, F. L. C. L.; FURTADO, E. ; VIEIRA, F. H. S. ; SILVA, M. M.. <b>Auxílio à Solução de Problemas no Processo de Ensino através de Cenários e do Contador de Histórias</b>. Em: <font color=#330066>XI Simpósio Brasileiro de Informática na Educação</font>, 2000.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>GOMES, George Allan Menezes; MENDONÇA JUNIOR, G. M.. <b>AVAL Chat 3D: Um Estudo de Caso de Ambiente de Realidade Virtual Multiusuário</b>. Em: V Semana Universitária da Universidade Estadual do Ceará, 2000, Fortaleza. Anais da V Semana Universitária da Universidade Estadual do Ceará, 2000. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Uma Introdução a Sistemas Operacionais e seus Aspectos Gerais</b>. Em: II ENCOINFO, 2000, Palmas. II ENCOINFO. Palmas: Instituto Luterano de Ensino Superior, p. 95-100, 2000. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Um exemplo de heurística: algoritmos genéticos</b>. Em: II ENCOINFO, 2000, Palmas. II ENCOINFO. Palmas: Instituto Luterano de Ensino Superior, p. 131-134, 2000. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Introdução ao Paralelismo e seus Aspectos Gerais</b>. Em: II Sempesq, 2000, Aracaju. II Semana de Pesquisa, 2000. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SILVA, C. L. O. <b>Marcuse e A Felicidade do Eros Libertado</b>. Em: BARRETO, José Anchieta Esmeraldo; MOREIRA, Rui Verlaine. (Org.). Razão e Fé do Carvoeiro. Fortaleza. : Casa José de Alencar. 2000..</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Pesquisa em Inteligência Artificial e Música</b>. Em: V Conhecimento em Debate, 2000, João Pessoa. V Conhecimento em Debate - Programaão - Resumos, p. 84-84, 2000. </td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; GUIGUE, Didier ; FERNEDA, E.. <b>Segmentação Automática de Fluxos Musicais: uma Abordagem via Agentes Racionais</b>. <font color=#330066>Revista Eletrônica de Musicologia (Ed. Portuguesa)</font>. v. V, n. 2, p. 3, issn: 1415-952X, 2000.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; GUIGUE, Didier ; FERNEDA, E.. <b>Automatic Segmentation of Musical Flows: a Rational Agents Approach</b>. Em: <font color=#330066>XX Congresso Nacional da Sociedade Brasileira de Computação</font>, v. 1, 2000.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>VIANA, Windson. <b>Programação Orientada a Objetos para Análise de Estruturas. Nº-0105</b>. Em: Encontro Universitário de Iniciação à Pesquisa. UFC, 2000, Fortaleza-CE, Novembro. XIX Encontro Universitário de Iniciação à Pesquisa. UFC, 2000. </td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos. <b>Uma Proposta de Integração de Ferramentas Externas a Ambientes Virtuais através de Simulóides e de Aplicações Mediadoras</b>. Em: <font color=#330066>3rd Brazilian Workshop on Virtual Reality</font>, p. 131-142, 2000.</td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; WILHELM, Jennifer ; MELETIOU, M.. <b>Using Interactive Diagrams as a Means to Promote Deeper Content Knowledge by Students and Teachers</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; WILHELM, Jennifer ; CONFREY, Jere. <b>Motion detectors in the school:Teachers making sense of rate of change and motion</b>. Em: <font color=#330066>Twenty-first Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 2, p. 703-708, 1999.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, George Allan Menezes. <b>Desenvolvimento e implementação da meta-heurística Tabu Search: uma aplicação do MATLAB</b>. Em: IV Semana Universitária da Universidade Estadual do Ceará, 1999, Fortaleza. Anais da IV Semana Universitária da Universidade Estadual do Ceará, 1999. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LOUREIRO, RC. <b>Um ambiente Integrado de Aprendizagem Interoperativa</b>. <font color=#330066>Anais do IV Infoeducar</font>. v. v-1, p. www.virtual.ufc, 1999.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C.. <b>Projeto Virtual Distance Learning</b>. Em: <font color=#330066>WISE 99</font>, v. 1, p. 1-1, 1999.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LOUREIRO, Robson Carlos ; SARMENTO, W. W. F.. <b>Um Ambiente Integrado de Aprendizagem Interoperativa</b>. Em: <font color=#330066>INFOEDUCAR</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MATTOS, F. L. C. L. <b>Desenvolvimento de uma metodologia de ensino de didática da informática no contexto de um sistema tutorial inteligente</b>. Em: <font color=#330066>I Workshop Internacional Sobre Informática Educativa - WISE '99</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MENDONÇA-JUNIOR, G. M. <b>Animação Comportamental</b>. Em: Semana Univesitária da Universidade Estadual do Ceará, 1999, Fortaleza. Anais da IV Semana Universitária da Universidade Estadual do Ceará, 1999. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>PEQUENO, M. C. ; SARMENTO, W. W. F.. <b>Preparação de Cursos em Ambiente WEB</b>. Em: Universidade Federal do Ceará. (Org.). II Escola de Informática da SBC - Edição Nordeste. Fortaleza: Ed.Fortaleza. : Editora da UFC. 1999..</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>RIOS, Mara Franklin; Silva, Fernando W. ; Goncalves, Luiz M. G ; Oliveira, Antonio A. F.. <b>An Architecture for Animated Agent Simulation</b>. Em: Brazilian Symposium on Computer Graphics, Image Processing and Computer Vision., 1999, Campinas. SIBGRAPI '99 - XII Brazilian Symposium on Computer Graphics, Image Processing and Computer Vision, 1999. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SARMENTO, W. W. F. <b>AVA-NECAD Ambiente Virtual de Aprendizado do NECAD/UECE</b>. 1999. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SARMENTO, W. W. F. <b>Projeto VDL - Virtual Distance Learning</b>. 1999. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SARMENTO, W. W. F. <b>Um Ambiente Integrado de Aprendizagem Interoperativa</b>. 1999. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro. <b>Um Ambiente Cooperativo Multiusuário baseado em Realidade Virtual voltado para a Educação a Distância</b>. Em: 2o Workshop Brasileiro de Realidade Virtual, 1999, São Carlos, SP. Anais do 2o Workshop Brasileiro de Realidade Virtual, p. 233-234, 1999. </td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>WILHELM, Jennifer ; CONFREY, Jere ; CASTRO FILHO, J. A. ; MALONEY, A.. <b>Interactive diagrams to address key student conceptions in mathematics</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology (M/SET)</font>, 1999.</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LOUREIRO, RC. <b>Uma aula de Pesquisa</b>. Tribuna do Ceará, 31 jul. 1998. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LOUREIRO, RC. <b>OS FEUDOS DA TECNOLOGIA</b>. Tribuna do Ceara, 24 jun. 1998. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LOUREIRO, RC. <b>Estimulo para Mudar</b>. Tribuna do Ceará, 17 jun. 1998. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LOUREIRO, RC. <b>Projetos Interoperativos</b>. Tribuna do Ceara, 10 jun. 1998. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LOUREIRO, RC. <b>Porque mudar de paradigma</b>. Tribuna do Ceara, 03 jun. 1998. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LOUREIRO, RC. <b>Softwares Educativos</b>. Tribuna do Ceara, 27 maio 1998. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LOUREIRO, RC. <b>EAD e PROJEAD</b>. Tribuna do Ceara, 20 maio 1998. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>LOUREIRO, RC. <b>Softwares e Escola</b>. Tribuna do Ceara, 13 maio 1998. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LOUREIRO, RC. <b>Informática na Educação</b>. Tribuna do Ceara, 06 maio 1998. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>LOUREIRO, RC. <b>Um ambiente Integrado de Aprendizagem Interoperativa</b>. Em: <font color=#330066>INFOEDUCAR</font>, v. 1, p. 1-2, 1998.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>LOUREIRO, RC; GURGEL, T. ; PEQUENO, M. C.. <b>Informática Educativa: Uma Possibilidade de Interoperação no Ensino a Distância e Presencial</b>. Em: <font color=#330066>IV Congresso Iberoamericano de Informática educacional</font>, 1998.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>RIOS, Mara Franklin. Aplicações da Computação Gráfica - Reconhecimento de Imagens e Texturas. <b>In: III Semana Universitária da UECE, 1998, Fortaleza. Anais da III Semana Universitária da UECE</b>. v. 1, 1998. </td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SARMENTO, W. W. F. <b>Computadores e Educação</b>. 1998. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SARMENTO, W. W. F. <b>Sociedade Digitalizada</b>. 1998. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Klavierstück XI de Stockhausen: uma imensa melodia de timbres</b>. Em: <font color=#330066>XI Encontro Anual da ANPPOM - Associação Nacional de Pesquisa e Pós-Graduação em Música.</font>, p. 286-291, 1998.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Klavierstück XI de Stockhausen: uma imensa melodia de timbres</b>. Em: VI Encontro de Iniciação Científica da UFPB, 1998, João Pessoa. VI Encontro de Iniciação Científica da UFPB - RESUMOS - Ciências Humanas e Sociais Aplicadas. João Pessoa: Gráfica e Editora Santa Clara, v. 3, p. 157-157, 1998. </td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>VASCONCELOS, W. W. M. P. ; BESSA, J. J. F. ; LIMA, M. R. L. ; MENDONÇA-JUNIOR, G. M.. <b>Aspectos Computacionais da Prova Automática de Teoremas e Seu Ensino</b>. Em: III Semana Universitária da UECE, 1998, Fortaleza. Anais do VIII Encontro de Iniciação Científica, v. 1, p. 15, 1998. </td></tr>
+            </table></div><div id="dv-year-1997"><h3 class="year">1997</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; MALONEY, A.. <b>Interactive diagrams: A new learning tool</b>. Em: <font color=#330066>Nineteenth Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 1, p. 579-584, 1997.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CAVALCANTE, A.P.P. <b>Programa de Geração de Renda - Manual de Capacitação. Curitiba: Pastoral da Criança</b>. 1997. Coordenação Editorial</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; GURGEL, T.. <b>Informática Educativa - O Caminho do desenvolvimento de projetos</b>. Em: <font color=#330066>II Encontro Norte-Nordeste de Teleinformática na Educação</font>, 1997.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Marçal, E. ; LEITE JUNIOR, A. J. M. ; VIDAL, C. A.. <b>Atualizando Dicas Visuais para Coerencia Local e Global na WEB</b>. <font color=#330066>Revista Brasileira de Informática na Educação</font>. v. 1, n. 1, p. 101-102, issn: 1414-5685, 1997.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>RIOS, Mara Franklin. Tecnologias Internet para Educação à Distância: Experiências com Teoria dos Autômatos e Linguagens Formais. <b>In: II Semana Universitária da UECE, 1997, Fortaleza. Anais da II Semana Universitária da UECE</b>. v. 1, 1997. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; Marçal, E.. <b>Uma Nova Metodologia de Ensino através da WEB Aplicada ao Estudo da Computação Gráfica</b>. Em: INFOSOL 97 - Congresso e Feira de Informática e Telecomunicações, 1997. Anais do INFOSOL 97 - Congresso e Feira de Informática e Telecomunicações, 1997. </td></tr>
+            </table></div><div id="dv-year-1996"><h3 class="year">1996</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>O Computador na Aprendizagem Escolar: Fundamentos Teóricos e Aplicações</b>. <font color=#330066>Revista de Educação. AEC</font>. v. 25, n. 99, p. 19-34, issn: 0104-0537, 1996.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LOUREIRO, RC. <b>Filosofia da Ciência</b>. <font color=#330066>Cadernos de Pos-Graduacao em Educacao, Arte e Historia da Cultura</font>. v. 1, n. 1, p. 1-1, issn: 1519-776X, 1996.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LOUREIRO, RC; FRANCELINO, F. A. ; MEDEIROS NETO, J. ; BRAGA, M. M. S. C. ; MAIA FILHO, O. N.. <b>A episteme do seculo XXI, a estratégia histórica</b>. Em: Porf. jaques Terrien. (Org.). cadernos do pós graduaçào em Educação - Mestrado e Doutorado. 01ed.Fortaleza. : grafica da Universidade. 1996.v. 06, p. 24-43. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>OLIVEIRA, A. A. <b>O carteiro é poeta</b>. Boletim do Instituto Freudiano de Psicanálise, Salvador, p. 5-5, 01 fev. 1996. </td></tr>
+            </table></div><div id="dv-year-1995"><h3 class="year">1995</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>A Porcentagem no Contexto Escolar: Estratégias Utilizadas pelos Alunos</b>. <font color=#330066>Temas em Psicologia (Ribeirão Preto)</font>. v. 3, n. 1, p. 33-45, issn: 1413-389X, 1995.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>The Percentage in the School Context</b>. Em: 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995, Recife. Proceedings of the 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; ROAZZI, A. ; SANTOS, A. R. R.. <b>A Developmental Study of Time as Integration of Distance and Velocity</b>. Em: 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995, Recife. Proceedings of the 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), v. 1, p. 220-220, 1995. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LOUREIRO, RC. <b>Informática Educativa</b>. Em: Congresso e Feira de Informática e Telecomunicações, 1995, Fortaleza. INFOSOL 95 Congresso e Feira de Informática e Telecomunicações. Fortaleza: ASSESPRO, v. `01, p. 17-17, 1995. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>REZENDE, N. A.; GATTASS, M.. <b>PREGO-Um Editor Gráfico de Objetos Procedurais</b>. Em: <font color=#330066>VIII Simpósio Brasileiro de Computação Gráfica e Processamento de Imagens</font>, 1995.</td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>A compreensão de Porcentagem no Contexto Escolar</b>. Em: 17a. Reunião anual da ANPED (Associação Nacional de Pós-Graduação em Educação), 1994, Caxambu. Anais da 17a. Reunião anual da ANPED (Associação Nacional de Pós-Graduação em Educação). Caxambu: ANPED, v. 1, p. 96-97, 1994. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>A Porcentagem no Contexto Escolar: Estratégias Usadas pelos alunos</b>. Em: XXIV Reunião Anual da Sociedade Brasileira de Psicologia, 1994, Ribeirão Preto. Anais da XXIV Reunião Anual da Sociedade Brasileira de Psicologia, v. 1, p. 52-52, 1994. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LIMA, Luciana de. <b>O Desenvolvimento das Operações Matemáticas através da utilização da Máquina de Post</b>. 1994. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LIMA, Luciana de. <b>Implementação da Máquina de Post</b>. 1994. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LIMA, Luciana de. <b>O desenvolvimento de algoritmos em alunos de 1o grau menor, a partir da Máquina de Post</b>. 1994. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LIMA, Luciana de. <b>O Computador de papel</b>. 1994. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>O Desenvolvimento das operações matemáticas através da utilização da Máquina de Post</b>. Em: XIII Encontro Universitário de Iniciação à Pesquisa, 1994, Fortaleza, 1994. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>Implementação da Máquina de Post</b>. Em: XIII Encontro Universitário de Iniciação à Pesquisa, 1994, Fortaleza, 1994. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>O desenvolvimento de algoritmos em alunos de 1o. grau menor, a partir da Máquina de Post</b>. Em: XIII Encontro Universitário de Iniciação à Pesquisa, 1994, Fortaleza, 1994. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>O Computador de Papel</b>. Em: Seminário Interdisciplinar Prof. Gervásio Gurgel Bastos, 1994, Fortaleza, 1994. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>ROAZZI, A. ; CASTRO FILHO, J. A. ; SANTOS, A. R. R.. <b>O tempo como integração da Distância e da Velocidade</b>. <font color=#330066>Psicologia. Teoria e Pesquisa</font>. v. 10, n. 1, p. 49-60, issn: 0102-3772, 1994.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SILVA, C. L. O. <b>Teleducação: Educação-Comunicação?</b>. 1994. Monografia de fim de curso</td></tr>
+            </table></div><div id="dv-year-1993"><h3 class="year">1993</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Contribuições da Psicologia na Aprendizagem Escolar</b>. <font color=#330066>Revista de Educação. AEC</font>. v. 23, n. 91, p. 20-36, issn: 0104-0537, 1993.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LIMA, Luciana de. <b>A Solução do problema do orçamento familiar utilizando programação linear</b>. 1993. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LIMA, Luciana de. <b>Relação professor-aluno: perspectiva do discente</b>. 1993. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LIMA, Luciana de. <b>O computador de papel</b>. 1993. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>Relação Professor-aluno: perspectiva do discente</b>. Em: XII Encontro Universitário de Iniciação à Pesquisa, 1993, Fortaleza, 1993. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LIMA, Luciana de; BORGES NETO, Hermínio. <b>O Computador de Papel</b>. Em: XII Encontro Universitário de Iniciação à Pesquisa, 1993, Fortaleza, 1993. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LIMA, Luciana de; JORGE, Luquésio Petrola de Melo. <b>A Solução do Problema do Orçamento Familiar utilizando Programação Linear</b>. Em: II Encontro de Iniciação à Docência, 1993, Fortaleza, 1993. </td></tr>
+            </table></div><div id="dv-year-1992"><h3 class="year">1992</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; ESCRIDELLI, S. ; OLIVEIRA, S. ; CARVALHO, V.. <b>LOGO na pré-escola</b>. Em: <font color=#330066>III Simpósio Brasileiro de Informática Educativa (SBIE)</font>, v. 1, p. 83-90, 1992.</td></tr>
+            </table></div><div id="dv-year-1991"><h3 class="year">1991</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; OLIVEIRA, S. ; CARVALHO, W. ; SCRIDELLI, S.. <b>Uma experiência com o uso de LOGO na pré-escola</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 191-205, 1991.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GITIRANA, V. ; CASTRO FILHO, J. A. ; OLIVEIRA, S.. <b>Passo-a-Passo - Compilador Gráfico para o Ambiente LOGO do MSX</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 119-121, 1991.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>REZENDE, N. A.; MATOS, H. ; WEBER, W.. <b>Uma Extensão do Método dos Tableauz para Tratamento da Negação por Falha Finita</b>. Em: <font color=#330066>VII Simpósio Brasileiro de Inteligência artificial</font>, 1991.</td></tr>
+            </table></div><div id="dv-year-1990"><h3 class="year">1990</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>OLIVEIRA, S. ; GITIRANA, V. ; CASTRO FILHO, J. A.. <b>Charadas - Uma atividade com o LOGO</b>. Em: I Jornada Alagoana de Informática na Educação, 1990, Alagoas. Anais da I Jornada Alagoana de Informática na Educação, v. 1, 1990. </td></tr>
+            </table></div><div id="dv-year-*itens sem ano"><h3 class="year">*itens sem ano</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Darin, T. G. R. <b>Jogos sérios: desenvolver habilidades cognitivas pode ser divertido!</b>. Horizontes, .</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>JAGUARIBE, D. R. <b>Curso de Excel com VBA. 2022. (Curso de curta duração ministrado/Extensão)</b>. 0. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>JAGUARIBE, D. R. <b>Curso de AutoCAD. 2020. (Curso de curta duração ministrado/Extensão)</b>. 0. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>JAGUARIBE, D. R. <b>Curso de AutoCAD. 2019. (Curso de curta duração ministrado/Extensão)</b>. 0. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>JUNQUEIRA, EDUARDO. <b>Atividade escolar remota não é EaD</b>. Jornal O Povo, Fortaleza, .</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Marçal, E. <b>Uma Introdução ao Mobile Java 3D</b>. WebMobile, .</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>PEREIRA, G. C. <b>Uma Paris nada romântica</b>. Jornal O Povo, .</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PEREIRA, G. C. <b>Homenagem a professor assassinado</b>. Jornal O Povo, .</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>PEREIRA, G. C. <b>O prazer das verdinhas</b>. Jornal O Povo, .</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>PEREIRA, G. C. <b>Sabedor de muitas histórias</b>. Jornal O Povo, .</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>VASCONCELOS, F. H. L. <b>63 Alunos são Formados em Projeto de Inclusão Digital</b>. Jornal O Povo - Jornal Impresso ? Domingo, 12 de Março de 2006, .</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:34:53<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

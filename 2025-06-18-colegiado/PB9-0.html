@@ -1,0 +1,247 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Demais tipos de produção bibliográfica'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2003,
+1],
+[2004,
+1],
+[2005,
+1],
+[2016,
+5],
+[2017,
+16],
+[2018,
+14],
+[2021,
+5]]}]});
+        });
+        </script>
+        
+                <h3>Demais tipos de produção bibliográfica</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 43<br>
+                    
+                    
+                    <div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LIMA, A. V. S. ; MENDES, MARILIA S.. <b>UMA EXPERIÊNCIA EM ANALISAR TESTES COM USUÁRIOS ENVOLVENDO O GOOGLE ASSISTANT</b>. 2021. Encontros Universitários - Universidade Federal do Cearáo</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LIMA, J. V. ; MENDES, MARILIA S.. <b>PROJETO DE UM SISTEMA DE INTERAÇÃO POR VOZ</b>. 2021. encontros Universitários - Universidade Federal do Ceará</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>RAMOS, G. M. ; MENDES, MARILIA S.. <b>RELATO DE EXPERIÊNCIA NA CONSTRUÇÃO DE UMA INTERFACE DE VOZ</b>. 2021. encontros Universitários - Universidade Federal do Cearáo</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SARAIVA, L. S. ; MENDES, MARILIA S.. <b>ANÁLISE DOS PROBLEMAS DE USABILIDADE NO GOOGLE ASSISTANT</b>. 2021. Encontros Universitários - Universidade Federal do Ceará</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>SOUSA, I. R. ; MENDES, MARILIA S.. <b>AVALIA O DA EXPERI NCIA DE USO EM APLICATIVOS DE COMPRAS DURANTE A PANDEMIA DO COVID-19</b>. 2021. Encontros Universitários - Universidade Federal do Ceará</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BATISTA, R. D. S. ; MENDES, MARILIA S.. <b>UMA EXPERIÊNCIA DE APOIO À COORDENAÇÃO DO CURSO</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>COSTA, R. L. ; Mendes, Marilia S.. <b>UMA EXPERIÊNCIA PRÁTICA EM UMA ÁREA MULTIDISCIPLINAR: APERFEIÇOANDO E REPASSANDO CONHECIMENTOS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DE LIMA ROCHA, ANNA ISABELLY ; MENDES, Marilia. <b>EXPERIÊNCIA DE PARTICIPAÇÃO EM UM PROJETO VOLTADO PARA ACESSIBILIDADE</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DE LIMA ROCHA, ANNA ISABELLY ; Mendes, Marília Soares. <b>MAPEAMENTO SISTEMÁTICO DE SOFTWARES PARA O ENSINO DE LÍNGUAS ESTRANGEIRAS PARA DEFICIENTES VISUAIS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FERREIRA, M. M. ; MENDES, Marilia. <b>EXPERIÊNCIA DE ESTÁGIO EM UM PROJETO DE EXTENSÃO</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FREITAS, L. M. ; MENDES, Marilia. <b>UMA REVISÃO SISTEMÁTICA SOBRE GERAÇÃO AUTOMÁTICA DE PERSONAS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LIMA, A. M. S. ; MENDES, Marilia ; ALMADA, L.. <b>ENRIQUECIMENTO DE DICIONÁRIOS PARA ANALISADORES LÉXICOS UTILIZANDO A MÉTRICA TF-IDF</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MORAES, G. M. S. ; MENDES, Marilia Soares.. <b>O PERFIL DO ALUNO INGRESSANTE NO CURSO DE CIÊNCIA DA COMPUTAÇÃO</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>OLIVEIRA JUNIOR, G. F. ; MENDES, Marilia. <b>DESENVOLVENDO UM SOFTWARE EDUCATIVO PARA CRIANÇAS DO MUNICÍPIO DE RUSSAS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>OLIVEIRA, L. R. A. ; MENDES, MARILIA S.. <b>APLICATIVOS EDUCATIVOS PARA DEFICIENTES VISUAIS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SANTOS, A. A. A. ; MENDES, Marilia. <b>EXPERIÊNCIAS OBTIDAS PELO PROJETO ENGLISH KINGDOM</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SILVA, P. B. S. ; MENDES, Marilia. <b>ANÁLISE TEMPORAL DE POSTAGENS RELACIONADAS AO USO DO SISTEMA DE GERENCIAMENTO ACADÊMICO SIGAA</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SILVA, T. H. O. ; FREITAS, L. M. ; COSTA, R. L. ; MENDES, Marilia. <b>ANALISANDO TÉCNICAS PARA AVALIAÇÃO DA QUALIDADE DE USO EM UM SISTEMA DE SAÚDE</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SOARES, I. F. ; MENDES, MARILIA S.. <b>INCLUSÃO DE NOVAS FUNCIONALIDADES EM UMA FERRAMENTA DE EXTRAÇÃO DE POSTAGENS DE SISTEMAS SOCIAIS</b>. 2018. III Encontros Universitários - Campus Russas</td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARBOSA, E. F. ; MENDES, MARILIA S.. <b>PROJETO DE APLICATIVOS MOBILE PARA CRIANÇAS AUTISTAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CARVALHO, M. A. ; MENDES, MARILIA S.. <b>ALTERAÇÃO DA MATRIZ CURRICULAR DO CURSO DE CIÊNCIA DA COMPUTAÇÃO</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREITAS, L. M. ; MENDES, MARILIA S.. <b>ESTUDO SOBRE USIXML</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>JULIANI, J. S. ; MENDES, MARILIA S.. <b>ESTUDO DA PERSONALIDADE DOS USUÁRIOS PARA AVALIAÇÃO DE SISTEMAS SOCIAIS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LIMA, A. M. S. ; MENDES, MARILIA S. ; ALMADA, L.. <b>CRIAÇÃO DE DICIONÁRIOS PARA O ANALISADOR LÉXICO SENTISTRENGTH</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MACIEL, H. B. ; MENDES, MARILIA S.. <b>PROJETO E DESENVOLVIMENTO DE SISTEMAS ACESSÍVEIS PARA O MUNICÍPIO DE RUSSAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MOURA, E. A. ; MENDES, MARILIA S.. <b>APOIO NO APRENDIZADO DE BANCO DE DADOS</b>. 2017. ii Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>NASCIMENTO, F. L. ; MENDES, MARILIA S.. <b>PARTICIPAÇÃO FEMININA NO CURSO CIÊNCIA DA COMPUTAÇÃO DO CAMPUS DE RUSSAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>OLIVEIRA JUNIOR, G. F. ; SILVA, T. H. O. ; MENDES, MARILIA S.. <b>IHC NA PRÁTICA ­ DESENVOLVENDO PRODUTOS CENTRADOS NOS USUÁRIOS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>OLIVEIRA, F. D. R. ; MENDES, MARILIA S.. <b>ESTUDO SOBRE MINERAÇÃO DE DADOS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>OLIVEIRA, I. R. M. ; MENDES, MARILIA S.. <b>UM ESTUDO SOBRE ANOTAÇÃO EM PAPÉIS SEMÂNTICOS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SILVA, P. B. S. ; MENDES, MARILIA S. ; ARRUDA, A. M.. <b>IDENTIFICAÇÃO AUTOMÁTICA DE POSTAGENS RELACIONADAS AO USO DE SISTEMAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SILVA, T. H. O. ; JULIANI, J. S. ; FERREIRA, M. M. ; MENDES, MARILIA S.. <b>PRÁTICAS DE IHC ? PROTOTIPANDO UMA APLICAÇÃO PARA CRIANÇAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SILVA, T. H. O. ; MENDES, MARILIA S.. <b>EVOLUÇÃO DA UUX­POSTS ? UMA FERRAMENTA DE AVALIAÇÃO TEXTUAL DE SISTEMAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SOUSA, I. R. ; MENDES, MARILIA S.. <b>O PERFIL DO ALUNO INGRESSANTE DO CURSO DE CIÊNCIA DA COMPUTAÇÃO DO CAMPUS DA UFC EM RUSSAS</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>VIANA, M. C. C. ; MENDES, MARILIA S.. <b>METODOLOGIA PARA O APRENDIZADO DE PRÉ­CÁLCULO</b>. 2017. II Encontros Universitários - Campus Russas</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA, L. A. ; MENDES, MARILIA S.. <b>Uma experiência de mineração de dados em postagens de Sistemas Sociais</b>. 2016. i Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LIMA, A. M. S. ; SILVA, P. B. S. ; ALMADA, L. ; MENDES, MARILIA S.. <b>Classificação de opinião em postagens relacionadas ao uso</b>. 2016. I Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>OLIVEIRA, A. I. M. ; MENDES, MARILIA S.. <b>Estudo e melhorias em uma ferramenta de extração de postagens de Sistemas Sociais</b>. 2016. I Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>PINHEIRO, V. M. S. ; MENDES, MARILIA S.. <b>EXPERIÊNCIA DE APOIO À COORDENAÇÃO DO CURSO</b>. 2016. I Encontros Universitários - Campus Russas</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>SILVA, T. H. O. ; FREITAS, L. M. ; MENDES, MARILIA S.. <b>Uma experiência de avaliação textual do Spotify</b>. 2016. I Encontros Universitários - Campus Russas</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; VIDAL, Creto Augusto. <b>CRAbCVE ? Uma Arquitetura Para Viabilização de CVEs através da Internet</b>. 2005. Dissertação de Mestrado</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; LAVAULT, Christian. <b>A SMER-based distributed prime sieving algorithm. Villetaneuse: LIPN</b>. 2004. Relatorio de pesquisa</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Le crible de la roue en distribué</b>. 2003. Pôster</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

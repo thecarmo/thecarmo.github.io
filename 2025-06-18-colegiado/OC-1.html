@@ -1,0 +1,837 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>ppgsmd</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>ppgsmd</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de orientações concluídas'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1993,
+3],
+[1994,
+4],
+[1999,
+10],
+[2000,
+7],
+[2001,
+11],
+[2002,
+27],
+[2003,
+18],
+[2004,
+11],
+[2005,
+17],
+[2006,
+33],
+[2007,
+28],
+[2008,
+34],
+[2009,
+31],
+[2010,
+37],
+[2011,
+54],
+[2012,
+75],
+[2013,
+52],
+[2014,
+51],
+[2015,
+55],
+[2016,
+65],
+[2017,
+104],
+[2018,
+128],
+[2019,
+90],
+[2020,
+55],
+[2021,
+86],
+[2022,
+78],
+[2023,
+67],
+[2024,
+62],
+[2025,
+23]]}]});
+        });
+        </script>
+        
+                <h3>Total de orientações concluídas</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 1316<br>
+                    
+                    <center>Página: <a href="OC-0.html">1</a> &nbsp;<b>2</b> &nbsp;</center>
+                    <div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>10. &nbsp;</td> <td>CARMEM LUCIA N. SANTIAGO. <b>Leitura, uma atividade de prazer?</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Caroline Brito dos Reis. <b>Produção do Programa CASa Aberta</b>. (Comunicação Social - Jornalismo) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Davi Antunes de Araújo Gurgel. <b>JOGO DA FORCA VIRTUAL: UM JOGO SÉRIO VOLTADO AO EDUTAINMENT</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Diego Virginio da Penha. <b>O Uso de Experimentos de Baixo Custo no Ensino de Eletricidade Básica</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Douglas Peixoto. <b>ContextPicasa: integrando anotação contextual ao Google Picasa</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Dêmora Bruna Cunha de Sousa. <b>Aprendizagem colaborativa em rede</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Dêmora Bruna Cunha de Sousa. <b>UMA SOLUÇÃO GRÁFICA PARA A VALIDAÇÃO DE TAGS NO CONTEXTPICASA</b>. (Bacharelado em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7388836998087457">Ticianne de Gois Ribeiro Darin</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Edna Egídia Muniz de Sousa Braga. <b>Os desafios do gestor escolar na busca da disciplina dos alunos da Escola de Ensino Fundamental Francisco José de Sousa.</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Elilia Silva Rocha. <b>Comparação de Ambientes Virtuais de Aprendizagem utilizados no contexto da Computação Ubíqua Aplicada a Educação</b>. (Graduação em Ciência da Computação) - Faculdade Lourenço Filho, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>FRANCISCA EVELINE DOS SANTOS. <b>A importância do gestor escolar frente à construção da escola inclusiva.</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Francisco Anderson Castro Brandão. <b>UM ESTUDO DE CASO SOBRE A CUSTOMIZAÇÃO E JOGOS EDUCACIONAIS EMPREGANDO XML</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Francisco Halyson Ferreira Gomes. <b>O uso do Ambiente Virtual de Aprendizagem SÓCRATES como ferramenta metodológica para o Ensino de Física.</b>. (Aperfeiçoamento/Especialização em Especialização em Ensino de Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Harley Passos Beserra. <b>Caracterização do Perfil do Professor de Física: Um Estudo de Caso na Rede Pública do Ceará</b>. (Aperfeiçoamento/Especialização em Especialização em Ensino de Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>Henrique Souza Vasconcelos. <b>Web Embarcada para Redes de Sensores Sem Fio para Monitoramento e Atuação Remota em Sistema de Irrigação Agrícola.</b>. (Graduação em Engenharia da Computação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9671291450823171">Clemilson Costa dos Santos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Jacqueline Nogueira Santiago Moraes. <b>Dificuldades de aprendizagem na interpretação textual dos alunos do 6º ano do Ensino Fundamental II.</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>José Moreira Lacerda Neto. <b>Colaboração em rede e aprendizagem escolar</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>João Bosco Ferreira Filho. <b>Enriquecimento Semântico de Linhas de Produto de Software</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2011.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Julyana Lourenço Nobre. <b>A Célula de Comunicação da UFC Virtual no desenvolvimento de portais digitais de conteúdo</b>. (Comunicação Social) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>Katryne Fernandes Rabelo. <b>DESIGN E USABILIDADE NO DESENVOLVIMENTO DO SOLAR 2.0</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>Lucas Falcão de Nantua Bessa. <b>A-Tagger: Um Aplicativo Android para a Geração de Anotação Contextual de Fotos</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, PIBIC UFC-V. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>Mailton Lima. <b>A importância do Portal DTIC na Formação de Professores da UFC</b>. (Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td><a href="http://lattes.cnpq.br/5157637741225656">Maria Aparecida Costa de Albuquerque</a>. <b>USO E INTEGRAÇÃO DA TECNOLOGIA DIGITAL AO CURRÍCULO ESCOLAR: UMA ANÁLISE DAS PRÁTICAS DESENVOLVIDAS EM UMA ESCOLA PÚBLICA DA REDE MUNICIPAL DE FORTALEZA</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>MARIA DAS GRAÇAS CORDEIRO. <b>Valores no cotidiano da escola infantil.</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>33. &nbsp;</td> <td>Mixilene Sales Santos Lima. <b>Nossos lugares no mundo: uma experiência online de trocas culturais no ensino fundamental</b>. (Graduação em Pedagogia) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>34. &nbsp;</td> <td>Mixilene Sales Santos Lima. <b>Aprendizagem colaborativa em rede no Programa Um Computador por Aluno</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>35. &nbsp;</td> <td>Márcio César Matos de Freitas. <b>Monitoria da disciplina Produção Publicitária em Rádio</b>. (Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>36. &nbsp;</td> <td>Mário César Matos de Freitas. <b>Propagar-se: uma experiência de metalinguagem radiofônica</b>. (Comunicação Social) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>37. &nbsp;</td> <td>Mário Matos. <b>CASa Aberta Por uma Aprendizagem Significativa pelo Rádio</b>. (Graduação em Comunicação Social) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>38. &nbsp;</td> <td>Paulo André Lima Pequeno. <b>Uma contribuição para a análise do suporte à Web 2.0 em Ambientes Virtuais de Aprendizagem que utilizam Código Aberto</b>. (Graduação em Ciência da Computação) - Faculdade Lourenço Filho, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>39. &nbsp;</td> <td>Paulo Ricardo Barboza Gomes. <b>Análise do Desempenho Discente Em um Ambiente Virtual de Aprendizagem: Um Estudo de Caso com a Introdução de Modelos Multilineares</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>40. &nbsp;</td> <td>Paulo Roberto Teixeira de Araújo. <b>O programa de Formação Docente da UFC e os bolsistas do CASa Aberta</b>. (Comunicação Social) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>41. &nbsp;</td> <td>Paulo Roberto Teixeira de Araújo. <b>Produção do Programa CASa Aberta</b>. (Jornalismo) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>42. &nbsp;</td> <td>PEDRINA DA ROCHA VASCONCELOS. <b>A inclusão social: um desafio à sociedade, à gestão escolar</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>43. &nbsp;</td> <td>RAIMUNDA IRACILDA BARBOSA. <b>Dificuldade de aprendizagem na leitura e escrita da turma de 5º ano da escola de Ensino Fundamental Francisco Ferreira Siqueira.</b>. (Aperfeiçoamento/Especialização em Especialização em Gestão Escolar) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>44. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>. <b>Desenvolvimento de conceitos algébricos por professores dos anos iniciais do Ensino Fundamental</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>45. &nbsp;</td> <td>Raíssa Benevides Veloso. <b>As ações da Célula de Comunicação do Instituto UFC Virtual na Feira das Profissões</b>. (Comunicação Social) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>46. &nbsp;</td> <td>Robson da Gama Silva. <b>Uma Análise do Desempenho dos Alunos do Curso de Licenciatura em Física na Modalidade Semipresencial da UFC/UAB</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>47. &nbsp;</td> <td>Samuel Rocha de Almeida de Oliveira. <b>APRENDIZAGEM SIGNIFICATIVA DO CONCEITO DE DINÂMICA: ESTUDO DAS DIFICULDADES DE ALUNOS DO ENSINO MÉDIO AO UTILIZAR UM OBJETO DE APRENDIZAGEM</b>. (Graduação em Licenciatura em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>48. &nbsp;</td> <td>Samuel Rocha de Almeida de Oliveira. <b>Aprendizagem Significativa do Conceito de Dinâmica: Estudo das Dificuldades de alunos do Ensino Médio ao utilizar um Objeto de Aprendizagem</b>. (Graduando em Licenciatura em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>49. &nbsp;</td> <td>Sandoval Marques Monteiro Júnior. <b>O Uso de um Software como Objeto de Aprendizagem para o Ensino de Eletrodinâmica</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>50. &nbsp;</td> <td>Sara Aragão de Almeida Cavalcante. <b>Sound branding: a construção sonora do conceito de marca</b>. (Graduação em Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>51. &nbsp;</td> <td>Sara Aragão de Almeida Cavalcante. <b>Sound branding: a construção sonora do conceito de marca</b>. (Graduação em Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>52. &nbsp;</td> <td>Stelamaris de Oliveira Paiva. <b>Integração da Internet e Mapas Conceituais na Construção de Conceitos Biológicos</b>. (Graduando em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>53. &nbsp;</td> <td>Welton da Silva Lima. <b>Atividades de Modelagem Computacional Aplicadas ao Ensino de Física: Um Estudo de Caso com a Implementação de Aplicativos em MatLab</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>54. &nbsp;</td> <td>WILLIAM DE ARAÚJO DIAS. <b>QUIZ VIRTUAL ? EXEMPLIFICANDO O USO ALTERNATIVO DE JOGOS ELETRÔNICOS</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>André Luis Pitombeira. <b>Anotação Contextual no Picasa</b>. (Ciência da Computação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Andréa Cyntia Freitas Medeiros. <b>Jogos Matemáticos Educacionais: Um Estudo de Caso com o Material Cuisinaire</b>. (Aperfeiçoamento/Especialização em Especialização em Docência nos Anos Iniciais) - Universidade Estadual do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Brena Collyer de Aguiar. <b>INCLUSÃO DO DOCENTE NO USO DAS TIC PARA EDUCAÇÃO_PARCERIAS NECESSÁRIAS</b>. (Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Carlos Alberto Batista de queiroz filho. <b>QR Code ? Ubiquidade com códigos 2D</b>. (Aperfeiçoamento/Especialização em Especialização em Tecnologia da Informação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Carlos Chagas Cavalcante Freire. <b>Intervenção Pedagógica no Ensino de Física com Atividades Didáticas Mediadas por um Objeto de Aprendizagem</b>. (Aperfeiçoamento/Especialização em Especialização em Ensino de Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASEMIRO DE MEDEIROS CAMPOS E ANA VALÉRIA MELO JUCÁ. <b>GESTÃO DA QUALIDADE: O TRABALHO PEDAGÓGICO DA OUVIDORIA DO INSTITUTO UFC VIRTUAL DA UNIVERSIDADE FEDERAL DO CEARÁ - UFC</b>. (Graduando em Sistemas e Mídias Digitais) - Instituto UFC Virtual, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Dean Dias de Almeida. <b>O Uso de Mapas Conceituais para o Ensino: Um Estudo de Caso na Avaliação de Conceitos de Física</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Dora Moreira. <b>Produção do Programa Semanal CASa Aberta</b>. (Comunicação Social - Jornalismo) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Evanildo Melo Lima Júnior. <b>DA ECOLOGIA À CITOLOGIA - OBJETO DE APRENDIZAGEM E TEORIA DE AUSUBEL APLICADOS AO CONTEXTO DA CAATINGA</b>. (Graduação em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Fabiano Tavares da Silva. <b>NS2MAPS: ambiente de simulação web para redes sem fio</b>. (Graduação em Ciência da Computação) - Universidade Estadual do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Francisco das Chagas Abreu e Cunha. <b>Avaliação de Recursos Digitais para o Ensino de Física: Uma Visão de Professores de Física da Rede Pública de Ensino</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Francisco José dos Santos. <b>Uma Análise Multivariada da Aprendizagem em Cursos Semipresenciais: Um estudo de caso da Avaliação em Fóruns de Física em um Ambiente Virtual de Aprendizagem</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3713032970984293">Gerardo S. Viana Júnior</a>. <b>Formação Musical de Professores em Ambientes Virtuais de Aprendizagem</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Germano de Oliveira Ribeiro. <b>Avaliação pedagógica de objetos de aprendizagem no ensino de Geografia na Visão dos professores</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Gisa Carvalho. <b>Produção do Programa Semanal CASa Aberta</b>. (Comunicação Social - Jornalismo) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Hamilton Victor da Silva Júnior. <b>Atividades Práticas no Ensino de Física: O Uso de Objetos de Aprendizagem Como Recurso Pedagógico no Ensino de Eletricidade</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Heuziwanne Tavares Leite Andrade. <b>O uso de Objetos de Aprendizagem para a promoção da Aprendizagem Significativa no Ensino de Biologia</b>. (Graduação em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Iara Gomes de Moura. <b>Mídia, deficiência e inclusão: o caso do programa radiofônico Todos os Sentidos</b>. (Graduação em Comunicação Social) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Isabela Monteiro de Oliveira. Comunicação para jovens na TV: um estudo de caso do Prog. <b>Jovial da TV Assembleia</b>. (Graduação em Comunicação Social) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>jaiane Ramos Barbosa. <b>Análise do uso de Objetos de Aprendizagem com saliências Culturais no Ambiente Escolar</b>. (Graduação em Pedagogia) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Jaiane Ramos Barbosa. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS: DESENVOLVIMENTO E USO NO AMBIENTE ESCOLAR</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Jorge Luiz Coelho Domingos. <b>Uma Análise do Processo de Modelagem Computacional Apliacada ao Ensino de Tópicos de Mecânica Teórica com o Uso de Software Modellus</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>José Fagner Santos Sousa. <b>Intervenção Pedagógica no Ensino de Física com Atividades Didáticas Mediada por um Objeto de Aprendizagem em Transformações Termodinâmicas</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>João Marcelo Uchôa de Alencar. <b>Um Ambiente de Execução Peer-to-peer para Escalonamento Dinâmico de Workﬂows em Grades Computacionais</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2010.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>João Vaz Gadelha de Aguiar. <b>Uma Avaliação Discente do Uso do Software Stellarium no Ensino Introdutório de Astronomia</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Márcio Moreira dos Santos Filho. <b>Monitoria da disciplina Produção Publicitária em Rádio</b>. (Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Márcio Moreira dos Santos Filho. <b>Ouvindo, fazendo e aprendendo: a experimentação na aula de rádio</b>. (Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>Natália Said de Castro. <b>Evangelização Midiática: Estudo de Caso do Programa Tempo de Viver da Rádio Shalom AM</b>. (Graduação em Comunicação Social) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>Neimar Sousa Pinto Pereira. <b>Tecnologia da Informação e da Comunicação nos cursos de Ciências Contábeis: as disciplinas semipresenciais nas instituições de ensino superior de São Luís - MA</b>. Dissertação (Mestrado em Administração e Controladoria) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8478923669299994">Fernando Lincoln Carneiro Leão Mattos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4580502642241951">Priscila Barros David</a>. <b>Interações contingentes em ambientes virtuais de aprendizagem</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>Rafael Montenegro Assunção. <b>Potencialidades de Modelos Computacionais Tridimensionais: Uma Análise Comparativa na Visualização de Modelos Anatômicos Humanos Bidimensionais em Atlas</b>. (Graduação em Bacharelado em Ciências Biológicas) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>Rogério Fonteles Castro. <b>Física: Epistemologia e Ensino</b>. (Aperfeiçoamento/Especialização em Especialização em Ensino de Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>33. &nbsp;</td> <td>Romulo Gadelha de Moura Lima. <b>Um Sistema de Monitoramento Remoto para Grids Computacionais</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>34. &nbsp;</td> <td>Stelamaris de Oliveira Paiva. <b>INTERNET E MAPAS CONCEITUAIS: A INTEGRAÇÃO DE TECNOLOGIAS PARA A CONSTRUÇÃO DE CONCEITOS BIOLÓGICOS</b>. (Graduação em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>35. &nbsp;</td> <td>Ticiano Rodrigues Moraes Alves. <b>A Utilização das TIC's no Ensino: Uma Análise Descritiva dos Fóruns de Alunos da Disciplinas de Física Introdutoria I do Curso Semi-Presencial de Química</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>36. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7629250804076666">Vera Márcia Fereira Barreto</a>. <b>Educação empresarial: práticas interventivas educacionais nas micro e pequenas empresas e sua importância no gerenciamento dos negócios</b>. Dissertação (Mestrado em Administração e Controladoria) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8478923669299994">Fernando Lincoln Carneiro Leão Mattos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>37. &nbsp;</td> <td>Waltercarlos Rodrigues dos Santos. <b>Dascargas Elétricas Atmosféricas: Desvendando este Fenômeno e o Introduzindo no Ensino de Eletricidade</b>. (Aperfeiçoamento/Especialização em Especialização em Ensino de Física) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7603694713928142">alisandra cavalcante fernandes</a>. <b>objetos de aprendizagem na escola: estudo de um modelo de implementação</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Alyson Machado Lacerda. <b>Imagens de registro no Youtube.com: reinvenções do cotidiano e o jovem urbano de Fortaleza</b>. (Aperfeiçoamento/Especialização em Audiovisual em meios eletrônicos) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Antônio Lisboa Menezes Neto. <b>Curta de Animação 3D: As loucas aventuras de J, o muito macho.</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2213206371526231">Claudenice de Freitas Souza</a>. <b>A prática docente em ambientes virtuais de aprendizagem: saberes necessários ao professor - tutor na educação à distância</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Davi de Castro Rocha. <b>Blog 2 Business: Uma análise do blog Camiseteria enquanto blog corporativo</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Eduardo Benevides Couto. <b>A publicidade na web: e o banner, morreu?</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Elizabeth Santiago Bustamante. <b>Aplicando Reuso de Software no Desenvolvimento de Objetos de Aprodizagem</b>. (Graduação em Ciência da Computação) - Universidade Estadual do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Frederico Alekhine Chaves Garcia. <b>Aprendizagem significativa do conceito biológico de verme no ensino médio</b>. (Graduação em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Frederico Alekhine Chaves Garcia. <b>DIFICULDADES DE ALUNOS DO ENSINO MÉDIO AO ESTABELECER RELAÇÕES CONCEITUAIS NA BIOLOGIA</b>. (Graduando em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Frederico Alekhine Chaves Garcia. <b>APRENDIZAGEM SIGNIFICATIVA DE CONCEITOS BIOLÓGICOS NO ENSINO MÉDIO</b>. (Graduando em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Gilles Passos Ribeiro Sampaio. <b>Desenvolvimento de vídeo em animação 3D: Uma abordagem técnica do processo de produção de personagens e cenários</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Henrique Moura Nobre. <b>As Diretrizes de Usabilidade Funcionam? - Um Estudo de Caso sobre a Eficácia das diretrizes de Usabilidade</b>. (Aperfeiçoamento/Especialização em Curso de Especialização em Design Gráfico) - Faculdade Sete de Setembro, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Jeckson Ney Alves Camelo. <b>A UTILIZAÇÃO DE ALGORITMOS MATEMÁTICOS NA OPERAÇÃO DE DIVISÃO DE NÚMEROS NATURAIS</b>. (Aperfeiçoamento/Especialização em Ensino de Matemática) - Universidade Estadual do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>José Clidenor da Silva. <b>Inserção de Tópicos de Física Moderna Mediadas Pelo Computador: Uma Proposta Metodológica de Ensino Experimental Com Recursos Digitais</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>João Carlos de Oliveira. <b>Programa de Nivelamento em Física para Cursos de Engenharia da UFC em Sobral</b>. (Engenharia Elétrica) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9671291450823171">Clemilson Costa dos Santos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Lilia Mokhneche. <b>Annotation contextuelle de photos à l'aide de dispositifs mobiles</b>. Dissertação (Mestrado em Master 2 - DCISS Double Compétence) - Université Pierre-Mendès-France - Grenoble II, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2741856107159943">Luiz Antônio de Oliveira Barreto</a>. <b>A Análise da Compreensão do Conceito de Função Mediada por Ambientes Computacionais</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Mairton Cavalcante Romeu. <b>Proposta de Criação e Implementação de um Centro de Educação a Distância para Operadores de Telecomunicações (CEAD-TELECOM) com uso do Backbone Proprietário</b>. (Aperfeiçoamento/Especialização em Especialização em Educação a Distância) - Serviço Nacional de Aprendizagem Comercial - CE, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Marcus Vinícius Pinheiro Lopes. <b>Caracterização Pedagógica do Ensino Semi-Presencial da Universidade Federal do Ceará: Um Estudo de Caso da Disciplina de Física introdutória I</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Martoni de Castro Sá Filho. <b>Planejamento do site M&Z Química Fina</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Mayara Patrícia Viana de Matos. <b>MODALIDADES DIDÁTICAS E APRENDIZAGEM SIGNIFICATIVA DO CONCEITO BIOLÓGICO DE PROTEÍNA NO ENSINO MÉDIO</b>. (Graduação em Licenciatura em Ciências Biológicas) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Odílio Coimbra da Rocha Neto. <b>Proposta de Software para Monitoramento e Controle de Sistema de Irrigação através de Redes de Sensores Sem Fio</b>. (Graduação em Agronomia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9671291450823171">Clemilson Costa dos Santos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7436456163727979">Ofélia Alencar de Mesquita</a>. <b>A Avaliação do Processo de Elaboração dos Materiais Didáticos para a Educação a Distância em Rede</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td><a href="http://lattes.cnpq.br/0626524930808526">Paula Patrícia Barbosa Ventura</a>. <b>Comunidades de Aprendizagem em Cursos a Distância: investigando as relações sociais em ambientes virtuais</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientadores: <a href="http://lattes.cnpq.br/7443323966791424">Eduardo Santos Junqueira Rodrigues</a>, <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></i></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Renata Vieira Rios. <b>SOFTWARE LIVRE NO MERCADO AUDIOVISUAL PROFISSIONAL</b>. (Aperfeiçoamento/Especialização em Design Digital) - Faculdade Integrada do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8593302689592847">Neil Armstrong Rezende</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Teófilo Bezerra Dutra. <b>Reconhecimento de Gestos Utilizando um Apontador Laser em Sequências de Video</b>. (Graduação em Ciência da Computação) - Universidade Estadual do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Thomaz Edson Veloso da Silva. <b>Uma Proposta de Parametrização de Tecnologias Digitais Para a Educação Baseada em Teorias Pedagógicas: Um Estudo de Caso com o Objeto de Aprendizagem Desafio Eletrizante</b>. (Graduação em Licenciatura Em Física) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0512183585660835">Francisco Herbert Lima Vasconcelos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>Vanessa Ingrid da Costa Cardoso. <b>O USO DE SOFTWARE NO AMBIENTE DA EDUCAÇÃO A DISTÂNCIA</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>Vanessa Ingrid da Costa Cardoso. <b>OS EFEITOS DA TECNOLOGIA NA SOCIEDADE: UMA ANÁLISE COMPORTAMENTAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>Wilson Alves Teixeira Júnior. <b>Personagens Virtuais como Elementos de Interface Gráfica de Objetos de Aprendizagem</b>. (Aperfeiçoamento/Especialização em Curso de Especialização em Design Gráfico) - Faculdade Sete de Setembro, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>Érica Coutinho. <b>A IMPORTÂNCIA DA INFORMÁTICA EDUCATIVA NA FORMAÇÃO DOPEDAGOGO</b>. (Pedagogia) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Ana Tomácia Moreira de Freitas. <b>Estudo sobre a Utilização de Videoconferência no Processo de Educação a Distância do Ceará</b>. (Graduação em Ciência da Computação) - Faculdade Lourenço Filho, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Anderson Dourado Cunha. <b>Projeto DREAM: Uma Solução Aberta para DRM</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>ANDRÉ PRADO PERETTI. <b>AVA 2.0: AMBIENTES VIRTUAIS DE APRENDIZAGEM PARA A WEB 2.0</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Brenda Góes Alves. <b>Comércio Eletrônico</b>. (Graduação em Comunicação Social) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Bruno Gomes Parente. <b>Apresentação de metodologia para desenvolvimento de websites</b>. (Graduação em Comunicação Social) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Céline DEFAUT, Perrine LEVALLOIS, Tianyi HAN. <b>Visualisation spatiotemporelle de photos prises par des utilisateurs nomades</b>. Dissertação (Mestrado em Master 2 - DCISS Double Compétence) - Université Pierre-Mendès-France - Grenoble II, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Daniel Régis de Façanha Cirino. <b>Ferramentas de Autoria de Aplicações em TV Digital</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Deise Magalhães Pequeno. <b>Comunicação Corporativa e Projeto Instrucional - uma proposta para empresas</b>. (Graduação em comunicação social) - Universidade Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Felipe Castro Kehdi. <b>Adverquiz: um estudo de caso sobre a animação gráfica presente em advergames desenvolvidos em Flash</b>. (Graduação em Comunicação Social) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Feng Gao. <b>A Register of SmartPhone Descriptions for Dynamic Adaptation of Pervasive Services</b>. Dissertação (Mestrado em Ciência da Computação) - Université Joseph Fourrier, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Francisco Herbert Lima Vasconcelos. <b>Objetos de Aprendizagem Digitais como Ferramenta de Modelagem Computacional Aplicados ao Ensino de Física</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Fábio Oliveira Guimarães. <b>DESENVOLVIMENTO DE JOGOS EDUCATIVOS PARA DISPOSITIVOS MÓVEIS UTILIZANDO TECNOLOGIA JAVA</b>. (Graduação em Ciência da Computação) - Faculdade Lourenço Filho, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4278906426912439">GILDÁSIO GUEDES FERNANDES</a>. <b>AVALIAÇÃO ERGONÔMICA DA INTERFACE HUMANO COMPUTADOR DE AMBIENTES VIRTUAIS DE APRENDIZAGEM</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Igor Sousa Osterno. <b>Abordagens analíticas e experimentais para o desenvolvimento de sistemas distribuídos: protocolos e middleware para redes de sensores e resolução de problemas numéricos</b>. (Graduando em Engenharia da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Isabela Purcaru. <b>Entre a Coluna e o Blog, o repórter Eliomar</b>. (Graduação em Jornalismo) - Faculdade 7 de Setembro - FA7, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Iuri Sales Ferreira. <b>Adverquiz: análise e estudo sobre implementação de advergames</b>. (Graduação em Comunicação Social) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Josilene Lima Barbosa. <b>Tecnologias para Ambientes Virtuais de Aprendizagem</b>. (Graduação em Ciencia da Computação) - FACULDADE LOURENÇO FILHO, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7706674770409286">Glaudiney Moreira Mendonça Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>João T. Guimarães; Paulo Fernandes Junior; Victor Fontenele. <b>Desenvolvimento de Videogame RPG em 1ª pessoa</b>. (Graduação em Design) - Universidade Salvador, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Jônatas Holanda Nogueira de Aquino. <b>Jogos Ubíquos X Jogos Pervasivos</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>LEONARDO FERNANDES DE ANDRADE. <b>UM ESTUDO SOBRE A INTEGRAÇÃO DE APLICAÇÕES MÓVEIS A SISTEMAS LEGADOS UTILIZANDO AS TECNOLOGIAS JAVA MICRO EDITION, JAVA ENTERPRISE EDITION E EXTENSIBLE MARKUP LANGUAGE</b>. (Graduação em Curso de Sistemas de Informação) - Faculdade 7 de Setembro, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Liane Araújo Nobre. <b>Promoção e Educação em Saúde através do Rádio no Município de Barroquinha - Ceará, no período de Julho de 2005 a Dezembro de 2006</b>. (Aperfeiçoamento/Especialização em Especialização em Vigilância Sanitária) - Escola de Saúde Pública do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Lucas Cardoso Saunders. <b>A nova era do forró no Ceará: um estudo de caso da Banda Mastruz com Leite</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>Marieta Rios Nogueira de Freitas. <b>A IMAGEM COMO FERRAMENTA DE APRENDIZAGEM NA EDUCAÇÃO A DISTÂNCIA: UMA ANÁLISE DAS IMAGENS QUE COMPÕEM A DISCIPLINA DE INTRODUÇÃO A COMPUTAÇÃO</b>. (Aperfeiçoamento/Especialização em Curso de Design Digital) - Faculdade Integrada do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Mario Jorge Filho. <b>"A Vida do Alvinegro" ou um caso de Radio Jornalismo Apaixonado</b>. (Graduação em Jornalismo) - Faculdade 7 de Setembro - FA7, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Michelle Cronemberger Sousa. <b>Ética Hacker e Direito Virtual</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Márcio Santana dos Santos. <b>Como entender o gênero fantástico no cinema e os seus limites entre o real e a ficção?</b>. (Aperfeiçoamento/Especialização em Especialização em Cinema: Expressão e Análise) - Universidade Católica do Salvador, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Nathália Cardoso Maciel. <b>Uma nova trilha para o rádio:como as canções-jingles representam a situação do veículo hoje e que perspectivas elas apontam para o seu futuro digital</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>Paula Marques de Carvalho. <b>Análise de Usabilidade do Ambiente NetTeacher com Base na Abordagem de Steve Krug</b>. (Aperfeiçoamento/Especialização em Curso de Especialização em Design Gráfico) - Faculdade Sete de Setembro, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>Roberta de Aguiar Varela Cordeiro. <b>A Rádio Pitaguary apresenta Histórias do Além</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>Robson Franklin Vieira Silva. <b>SIGA - Sistema de Informação para o Gerenciamento da Alocação de Água</b>. Orientação de outra natureza - Fundação Cearense de Meteorologia e Recursos Hídricos, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7706674770409286">Glaudiney Moreira Mendonça Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>Talissa Teixeira Ladeia. <b>A perda de espaço do herói para o anti-herói no cinema contemporâneo</b>. (Aperfeiçoamento/Especialização em Especialização em Cinema: Expressão e Análise) - Universidade Católica do Salvador, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>Thiago Nogueira de Castro. <b>SIGA - Sistema de Informação para o Gerenciamento da Alocação de Água</b>. Orientação de outra natureza - Fundação Cearense de Meteorologia e Recursos Hídricos, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7706674770409286">Glaudiney Moreira Mendonça Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>33. &nbsp;</td> <td>Verônica Maria Lima Silva. <b>Abordagens analíticas e experimentais para o desenvolvimento de sistemas distribuídos: protocolos e middleware para redes de sensores e resolução de problemas numéricos</b>. (Graduando em Engenharia da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>34. &nbsp;</td> <td>Ítalo Gadelha Monteiro. <b>Adverquiz: um estudo sobre game de sign de advergames</b>. (Graduação em Comunicação Social) - Universidade de Fortaleza, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Adriana Morais da Silva. <b>A Influência do Regime Militar no Rádio Cearense no Período de 1964 a 1968</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Ana Faria Braga; Ana Elisa Gomes Matos Vieira. <b>Anorexia nervosa: o que a psicanálise tem a nos ensinar sobre isso</b>. (Graduação em Psicologia) - Faculdade de Tecnologia e Ciências, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Ana Laura Curci Felix Martins; Fernanda Conceição Alves. <b>Aqui se vende o estilo de vida: um olhar sobre a telenovela sob a ótica de um grupo de adolescentes na construção de suas identidades</b>. (Graduação em Psicologia) - Faculdade de Tecnologia e Ciências, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Bianca Telles Wirtzbiki. <b>Análise Comparativa entre E-Commerce, T-Commerce e M-Commerce</b>. (Graduação em Administração de Empresas) - Universidade Estadual do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Brenda Lyra Guedes ; Nathália Cardoso Maciel. O amor que tu me tinhas era pouco e . <b>se acabou?</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Brenda Lyra Guedes;Nathália Cardoso Maciel. O AMOR QUE TU ME TINHAS ERA POUCO E . <b>SE ACABOU? UMA REFLEXÃO SONORA DA INFÂNCIA CONTEMPORÂNEA</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Clayson Sandro Francisco de Sousa Celes. <b>Objetos de Aprendizagem em TV Digital</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Daniel Parente. <b>DISCO FEITO EM CASA: O IMPACTO DAS NOVAS TECNOLOGIAS DE PRODUÇÃO E DISTRIBUIÇÃO MUSICAL NA INDÚSTRIA FONOGRÁFICA BRASILEIRA</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Daniel Souza Amazonas. <b>Desenvolvimento de Jogos 3D em Java com a Utilização do Motor Gráfico Irrlicht</b>. (Graduação em Ciencia da Computação) - FACULDADE LOURENÇO FILHO, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7706674770409286">Glaudiney Moreira Mendonça Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Edson José Dias Machado Filho. <b>Multimídia de apresentação do Desenbahia</b>. (Graduação em Design) - Universidade Salvador, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Iuri Sales. <b>DOSES BINAURAIS</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Lavina Lúcia Vieira Lima. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS: DESENVOLVIMENTO E USO NO AMBIENTE ESCOLAR</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Laís Leal Valadares. <b>A complexidade das relações amorosas na contemporaneidade</b>. (Graduação em Psicologia) - Faculdade de Tecnologia e Ciências, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Mateus Ribeiro Lima. <b>Broadscast em Sistemas de TV Móvel: Uma Análise Comparativa</b>. (Graduação em Telemática) - Instituto Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Natasha Carneiro Barreto. <b>Relações entre Comunicação e Educação em Objetos de Aprendizagem</b>. (Graduação em comunicação social) - Universidade Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Natasha Carneiro Barreto. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS</b>. (Graduando em comunicação social) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Nathália Cardoso Maciel; Yohanna Maia. <b>Rádio e juventude: uma experiência no Selo Unicef</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Nilson Fonseca Miranda. <b>Internet e Software Educativo no Ensino de Química</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Priscilla Gleyvi Teixeira Benigno. <b>Análise do Programa Alô Alô Brasil e sua importância para a comunidade de Itapipoca</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>. <b>Ambientes Computacionais para o desenvolvimento do pensamento algébrico no Ensino Fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Roberto Luis de Moura Freire; Tais Peixoto Tavares. <b>Impacto das tecnologias da informação nos relacionamentos interpessoais na contemporaneidade</b>. (Graduação em Psicologia) - Faculdade de Tecnologia e Ciências, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>ROBERTO WALLACE DE MENDONÇA SILVA. <b>ESTUDO COMPARATIVOENTRE AS FERRAMENTAS MACROMEDIA FIREWORKS E ADOBE PHOTOSHOP CS2 NO DESENVOLVIMENTO DE LAYOUTS DE SITES NA CIDADE DE FORTALEZA</b>. (Graduação em Sistemas de Informação) - Sociedade de Ensino Superior do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8593302689592847">Neil Armstrong Rezende</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>Sabine Aquino; Rafaela Andrade. <b>ANÁLISE RADIOFÔNICA: CLASSIFICAÇÃO INDICATIVA UMA NOVA FORMA DE CUIDAR?</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Tatiana Castro Mota. <b>Rádio Cultura do Sertão: Identidade, Voz e vez da Juventude do Semi-Árido</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Tatiana Castro Mota. <b>Rádio Cultura do Sertão: a voz e a vez da juventude no semi-árido .</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Ticiana Lourena Nascimento Lima. <b>COMO RESGUARDAR A INFÂNCIA DO MUNDO ADULTO</b>. (Jornalismo) - Universidade de Fortaleza, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Valessa Cristiane Paiano. <b>Investigando ferramentas síncronas e assíncronas na interação em educação a distância</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>Wellington Gabriel Freitas de Oliveira. <b>Interatividade na Educação a Distância pela Internet: uma análise sobre a interatividade em ferramentas que auxiliam atividades pedagógicas na plataforma educativa Moodle</b>. (Graduação em Comunicação Social) - Universidade Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7443323966791424">Eduardo Santos Junqueira Rodrigues</a>.</font></td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Adriano Augusto Cordeiro e Souza. <b>Desenvolvimento de Webgames com o Emprego da Plataforma Macromedia Flash</b>. (Graduando em Sistemas de Informação) - Faculdade Sete de Setembro, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Alana Oliveira, Jacqueline Barbosa, Livia M. Santiago. <b>TANGRAN: fazendo geometria em mídias digitais e analógicas</b>. (Licenciatura em Matemática) - Centro Federal de Educação Tecnológica do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Alana Paula A. Freitas e Alana Souza de Oliveira. <b>Tradução dos principais arquivos do software GeoGebra</b>. (Licenciatura Matemática) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Alana Paula Araújo Freitas, Alana Souza de Oliveira. <b>Geogebra: um software de geometria, cálculo e álgebra</b>. (Graduando em Licenciatura Matemática) - Universidade Federal do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Alana Paula Araújo Freitas, Alana Souza de Oliveira. <b>Fazendo atividades interativas em Matemática com o GeoGebra</b>. (Licenciatura em Matemática) - Centro Federal de Educação Tecnológica do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2967595851995266">Luciana de Lima</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>André Luiz Vieira de Brito. <b>O Jornal Escolar e o Protaqonismo do Jovem na Escola: Um Estudo de Caso do Projeto Clube do Jornal</b>. (Graduação em Jornalismo) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Celso André Nóbrega da Costa. <b>Análise da Publicidade da Rádio Dom Bosco</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>DANTAS; Ive F. <b>Entrando numa fria: Animação 3d</b>. Social Com Habilitação Em Cinema e Vídeo) - Faculdade de Tecnologia e Ciências, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Diana Aderaldo Silveira de Oliveira. <b>Por uma cultura de paz: a não violência nas ondas do rádio</b>. (Graduação em Jornalismo) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Emmanuel Joca Nolêto. <b>Educação a Distância em Sistemas Web Acessíveis</b>. (Graduação em Ciencia da Computação) - FACULDADE LOURENÇO FILHO, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/7706674770409286">Glaudiney Moreira Mendonça Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Francisco Tiago Costa Moreira;Paula Marques de Carvalho. <b>Conversa com o autor: uma ferramenta de incentivo a leitura</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Gessiane da Silva Nascimento; Paulo Maurício Santos de Jesus. <b>João e Maria: Animação Stop-motion</b>. Social Com Habilitação Em Cinema e Vídeo) - Faculdade de Tecnologia e Ciências, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Hellen Benedito Simão. <b>Nas nuvens - Desenho animado no estilo mangá</b>. Social Com Habilitação Em Cinema e Vídeo) - Faculdade de Tecnologia e Ciências, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Igor Rocha Leitão. <b>Nas Garras da Patrulha- Análise da linguagem no programa da TV Diário</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>JOSÉ DIÓGENES PORTELA ALENCAR. <b>UM ESTUDO DE FERRAMENTAS GRÁFICAS APLICADAS À ESTAMPARIA</b>. (Graduação em Sistemas de Informação) - Sociedade de Ensino Superior do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8593302689592847">Neil Armstrong Rezende</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Karla Figueiredo Moreira. <b>Mulheres no rádio: a ausência nos programas esportivos cearenses</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>LEONARDO LOPES CAMARGO. <b>O USO DA COMPUTAÇÃO GRÁFICA COMO FERRAMENTA PEDAGÓGICA NA EDUCAÇÃO DO ENESINO MÉDIO</b>. (Graduação em Sistemas de Informação) - Sociedade de Ensino Superior do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8593302689592847">Neil Armstrong Rezende</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>LÍRIO, Antônio Daniel. <b>Autoração do DVD Agência Neural Soluções Midiáticas</b>. (Graduação em Comunicação Social com Habilitação em Hipermídia) - Instituto Mantenedor de Ensino Superior da Bahia, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Mara Silva e Nogueira. <b>Estudo de Caso: A Publicidade na Rádio Cultura dos Inhamuns</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Maria de Fátima Costa de Souza. <b>Um Ambiente de de Apoio à Avaliação de Software Educativo</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2006.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Mirna Nogueira Diógenes Riedel e Yohanna Nogueira Maia. <b>Produção de Spots da Rádio Gentileza</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td><a href="http://lattes.cnpq.br/8909410628237524">monalisa de abreu leite</a>. <b>Processos de mediação de conceitos algébricos durante o uso de um objeto de aprendizagem</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>Nathália Cardoso Maciel, Fco. Serpa Júnior e Fco. Maia. <b>Programa do Mução: Humor na Publicidade ou Publicidade no Humor ?</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Paula Marques de Carvalho. <b>Rádio na internet nas instituições de ensino superior: um espaço de experimentação, educação e comunicação.</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Paula Marques de Carvalho; Tiago Costa Moreira e Tatiana Cas. <b>Educandos ou educadores? A experiência de uma Oficina no Mundo Unifor</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Paulo Afonso de Moraes Lima Neto. <b>O Jingle e a Comunicação</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>REIS, Lidiane; NETO, Otacílio. <b>A cidade e as Memórias pela Mídia Digital - Elevador Lacerda: as cidades, pessoas e memórias (CD-ROM)</b>. (Graduação em Comunicação Social com Habilitação em Hipermídia) - Instituto Mantenedor de Ensino Superior da Bahia, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>28. &nbsp;</td> <td>RENATA VIEIRA RIOS. <b>UM ESTUDO SOBRE SOFTWARE LIVRE EM PRODUÇOES PROFISSIONAIS NA ÁREA DE COMPUTAÇÃO GRÁFICA</b>. (Graduação em Sistemas de Informação) - Sociedade de Ensino Superior do Ceará, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8593302689592847">Neil Armstrong Rezende</a>.</font></td></tr>
+            
+            <tr valign="top"><td>29. &nbsp;</td> <td>ROCHA NETO, Airan ; QUEIROGA, Maria Irismar. <b>Projeto de criação do site da Banda Potência Musical</b>. (Graduação em Comunicação Social com Habilitação em Hipermídia) - Instituto Mantenedor de Ensino Superior da Bahia, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>30. &nbsp;</td> <td>SILVA JUNIOR, Bonifácio. <b>Alf Tatto - Site</b>. (Graduação em Comunicação Social com Habilitação em Hipermídia) - Instituto Mantenedor de Ensino Superior da Bahia, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>31. &nbsp;</td> <td>SÁ JUNIOR, Alex Souza de. <b>Projeto para Videogame: Entre Mundos - A Batalha dos deuses</b>. (Graduação em Comunicação Social com Habilitação em Hipermídia) - Instituto Mantenedor de Ensino Superior da Bahia, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>32. &nbsp;</td> <td>Tereza Suyane Alves de França. <b>Estudo de Caso da Rádio Difusora de São Miguel - RN</b>. (Graduação em Jornalismo) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>33. &nbsp;</td> <td>Thiago Arcoverde; Aline Pedrosa; Leonardo Lima Ribeiro. <b>Rádio Gentileza e sua inserção na Indústria Cultural</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alessandrea Oliveira. <b>A identidade da juventude nos jornais estudantis: análise dos jornais produzidos por adolescentes que participam do projeto Clube do Jornal</b>. (Graduação em Jornalismo) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Fco Tiago Costa Moreira, Tatiana Castro Mota e Paula Marques. <b>Rádio Gentileza: A Educomunicação e a interdisciplinaridade na web</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3713032970984293">Gerardo Viana Júnior</a>. <b>avaliação de software para o ensino de música: reconhecendo a singularidade do conhecimento musical</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Gilvandenys Leite Sales. <b>Quantum: um Software para Aprendizagem dos Conceitos da Física Moderna e Contemporânea</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Laryssa Frota. <b>Publicidade nas Rádios Comunitárias: estudo de caso da Rádio Comunitária Edson Queiroz</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Laécio Nobre de Macedo. <b>O DESENVOLVIMENTO DO RACIOCINIO ALGÉBRICO COM O AUXÍLIO DE FERRAMENTAS INTERATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>LIMA, Rodrigo; PITANGUEIRA JUNIOR, Osmário. <b>Desenvolvimento de game de ação com temática regional: Sangue, Suor e Cachaça</b>. (Graduação em Comunicação Social Com Habilitação Em Hipermídia) - Faculdade de Tecnologia e Ciências, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MAIA, Mariano; PAIXÃO, Everton, CRUZ, Fernando. <b>Caminhos de uma mente misteriosa: O Jogo (videogame)</b>. (Graduação em Comunicação Social Com Habilitação Em Hipermídia) - Faculdade de Tecnologia e Ciências, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Margarida Maria Accioly de Carvalho. <b>Didática e Motivação no Ensino</b>. (Graduação em Pedagogia) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8478923669299994">Fernando Lincoln Carneiro Leão Mattos</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Maria de Fátima Costa de Souza. <b>Uma Metodologia de Apoio à Seleção de Software Educativo de Matemática</b>. (Aperfeiçoamento/Especialização em Especialização Em Educação Matemática) - Universidade Estadual do Ceará, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MELO, Maurício Dantas. <b>O Patinho Feio: Animação em 3d</b>. (Graduação em Comunicação Social Com Habilitação Em Hipermídia) - Faculdade de Tecnologia e Ciências, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>raquel almeida ferreira siqueira. <b>ANÁLISE DAS LINGUAGENS UTILIZADAS EM UM FÓRUM VIRTUAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Renata Benevides. <b>Um Estudo da Paixão pelo Futebol no Contexto do Rádio Cearense</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Rosalyn Chaves de Araújo. <b>Estudo sobre Tecnologias de Componentes Distribuídos Utilizadas no Desenvolvimento de Aplicações em Três Camadas</b>. (Graduação em Telemática) - Centro Federal de Ensino Tecnológico do Ceará, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1015561507843037">Wellington Wagner Ferreira Sarmento</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>soraia gadelha carolino. <b>FORMAÇÃO DE PROFESSORES PARA O USO DAS TIC´S NA EDUCAÇÃO:DA INSERÇÃO DO PROFESSOR À PRÁTICA PEDAGÓGICA</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SOUZA, Bruno André Leite de. <b>Website Grupo Cultural Olodum</b>. (Graduação em Comunicação Social Com Habilitação Em Hipermídia) - Faculdade de Tecnologia e Ciências, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8343393957854863">Adriano Anunciação Oliveira</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Vandalina Julião Coutinho de Alencar. <b>Ambientes virtuais de Educação: o caso Unifor Online</b>. (Graduação em Pedagogia) - Universidade de Fortaleza, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8478923669299994">Fernando Lincoln Carneiro Leão Mattos</a>.</font></td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Bárbara de Sena Cabral. <b>ESTRATÉGIAS E ERROS IDENTIFICADOS NA RESOLUÇÃO DE PROBLEMAS ALGÉBRICOS.</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Cynthia Matielli Diniz Mateus dos Santos. <b>Jovens como protagonistas de sua própria história: Projeto Casa Grande</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Edla Helena Salles de Brito. <b>Link: um novo formato de publicidade no rádio cearense</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Fabricio Lemos. Implementação de Um Framework de Persistência de Objetos em Aplicações para Dispositivos Móveis. XXIII Encontro Universitário de Iniciação à Pesquisa. <b>UFC, Fortaleza, CE, 01-02 de julho de 2004.</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Pet Computação. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4329634354246496">Francisca Lúcia Quitéria da Silva</a>. <b>Resolução de problemas como metodologia para aprender matemática</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Iandecy Gomes de Sousa. <b>Rádio na Internet: AM do Povo, primeira emissora do Ceará a ingressar na Rede</b>. (Graduação em Jornalismo) - Universidade de Fortaleza, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Joao ALmeida Neto Furtado. Um Analisador de Amostras de Desempenho de Algoritmos Criptográficos para Dispositivos Móveis. XXIII Encontro Universitário de Iniciação à Pesquisa. <b>UFC, Fortaleza, CE, 01-02 de julho de 2004.</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Pet Computação. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Laécio N de Macêdo. <b>USO DE UM AMBIENTE INFORMATIZADO PARA DESENVOLVER CONCEITOS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Laécio N de Macêdo. <b>DESENVOLVENDO CONCEITOS ALGÉBRICOS COM O AUXÍLIO DE UM AMBIENTE INFORMATIZADO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Lúcio Flávio Arruda Pontes Filho. <b>Superlativo Programa do Alan: o trem bala não pára, nem a pau e nem a bala</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Regina Santos Young. <b>A construção da identidade na educação online</b>. (Graduação em Pedagogia) - Universidade de Fortaleza, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8478923669299994">Fernando Lincoln Carneiro Leão Mattos</a>.</font></td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antonio Ximenez Aragão Junior. <b>O Uso do Laboratório de Informática da Biblioteca Central do campus do ITAPERI pela Comunidade de Graduação da UECE</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Arinne Maurício Oliveira. <b>Pegadinha do Mução: risos, humor e o grotesco no rádio</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Barbara de Sena Cabral. <b>ESTRATÉGIAS ENCONTRADAS DURANTE A ANÁLISE DA RESOLUÇÃO DE PROBLEMAS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Bárbara de Sena Cabral. <b>Estratégias Encontradas durante a análise de resolução de problemas algébricos</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Carlos Eduardo Araújo Vieira. Análise de desempenho para algoritmos de segurança utilizados em dispositivos móveis. XXII Encontro Universitário de Iniciação à Pesquisa. <b>UFC, Fortaleza, CE, 10-12 de novembro de 2003.</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Pet Computação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1744732999336375">Windson Viana de Carvalho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>FÓRUM DE DISCUSSÃO: RECURSO VIRTUAL UTILIZADO COMO SUPORTE A EDUCAÇÃO PRESENCIAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Fernanda Ieda de Oliveira. <b>A publicidade na radionovela cearense</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Francisco Raphael Bezerra Ribeiro. <b>RESTAURADOR: um software para auxiliar na investigação em informática educativa.</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Francisco Raphael Bezerra Ribeiro. <b>Cartas Interativas: Um software auxiliar no desenvolvimento de conceitos algébricos</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Gisele Schappo. <b>Fórum de Discussão: Recurso virtual usado como suporte à Educação presencial</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Ikram Aby Faraj Linhares. <b>A Informática Educativa na Escola de Ensino Fundamental</b>. (Aperfeiçoamento/Especialização em Comunidades Virtuais de Aprendizagem) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2462245257053946">Cátia Luzia Oliveira da Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Juscelino Chaves Sales. <b>O Uso da Educação a Distância para O Ensino de História e Geografia: Estudo e Análise de Websites</b>. (Aperfeiçoamento/Especialização em Comunidades Virtuais de Aprendizagem) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2462245257053946">Cátia Luzia Oliveira da Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Luiz Otoni Queiroz dos Santos. <b>Propostas de ferramentas Conceituais para Formação de recursos Humanos em tecnologia com Enfoque na Promoção de Comunidades Virtuais</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Maria Tereza Nunes Ramos. <b>Os Teens na Mídia Rádio</b>. (Publicidade e Propaganda) - Universidade de Fortaleza, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>INVESTIGANDO O DESEMPENHO DOS ALUNOS DO 2 CICLO EM RESOLUÇÃO DE PROBLEMAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Raimunda de Sousa Carneiro. <b>A Inserção da Informática na Escola Pública - Um Estudo de Caso</b>. (Aperfeiçoamento/Especialização em Comunidades Virtuais de Aprendizagem) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2462245257053946">Cátia Luzia Oliveira da Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Silvana Tabosa Salomão. <b>Uma Home Page como Coadjuvante do Ensino Presencial em Curso de Inglês</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Sâmia Monteiro Aragão. <b>A Construção do conhecimento lógico-matemático na escola</b>. (Aperfeiçoamento/Especialização em Especialização Em Planejamento do Ensino e Avaliaç) - Universidade Federal do Ceará, . 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>CARTAS INTERATIVAS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>CLASSIFICAÇÃO DE APPLETS EDUCATIVOS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Amaury Ferreira Lima Junior. <b>AVALIAÇÃO DE SOFTWARE EDUCACIONAIS DE MATEMÁTICA DE ACORDO COM A TEORIA DOS CAMPOS CONCEITUAIS: O CASO DA ÁLGEBRA</b>. (Aperfeiçoamento/Especialização em Especialização Em Educação Matemática) - Universidade Estadual do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Ana Carolina Boaventura Barreto Cavalcante. <b>Segmentação de mercado: Máxi Rádio 95,5</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Betania Tenorio Soares da Rocha. <b>RELAÇÕES ENTRE INFORMÁTICA EDUCATIVA E PSICOPEDAGOGIA</b>. (Aperfeiçoamento/Especialização em Especialização Em Psicopedagogia) - Universidade Federal do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>LISTA DE DISCUSSÃO: INVESTIGANDO NOVAS FORMAS DE INTERAÇÃO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>LISTA DE DISCUSSÃO: Um ambiente virtual de aprendizagem complementar ao ensino presencial</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Francisco Jodevan Campelo. <b>O USO DE JAVA-APPLETS EM PROGRAMAS EDUCATIVOS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Gisele Schappo. <b>ANÁLISE DOS ERROS COMETIDOS POR ALUNOS DO 1º CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Gisele Schappo. <b>ERROS COMETIDOS POR ALUNOS DO PRIMEIRO E SEGUNDO CICLO EM QUESTÕES DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Ingrid Louback de Castro Moura. <b>CONHECIMENTO DE PROFESSORES ACERCA DE PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Ingrid Louback de Castro Moura. <b>DESEMPENHO DOS PROFESSORES DO ENSINO FUNDAMENTAL EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Juliana Arruda. <b>O COMPUTADOR COMO INSTRUMENTO MEDIADOR NO PROCESSO DE ENSINO-APRENDIZAGEM DE CONCEITOS ALGÉBRICOS</b>. (Aperfeiçoamento/Especialização em Especialização Em Psicopedagogia) - Universidade Federal do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Karla Angélica Silva do Nascimento. <b>As Dimensões Técnica, Pedagógica e de Conteúdo na Formação de Professores no Uso do Computador para o Ensino da Matemática</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Federal do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Kerley Leite Martins. <b>TEORIAS DE APRENDIZAGEM E AVALIAÇÃO DE SOFTWARE EDUCATIVO</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Federal do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Leyla Araújo. <b>Entraves e Possibilidades do uso de propostas metodológicas no ensino da Matemática</b>. (Aperfeiçoamento/Especialização em Especialização Em Educação Matemática) - Universidade Estadual do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Ligiane de Castro Lopes. <b>INVESTIGANDO O USO DA LISTA DE DISCUSSÃO COMO UM AMBIENTE INOVADOR DE APRENDIZAGEM</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Marcus Henrique Linhares Ponte Filho. <b>ERROS COMETIDOS POR ALUNOS DO 2º CICLO EM ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>DO PENSAMENTO ARITMÉTICO AO ALGÉBRICO COM O AUXÍLIO DE UM SOFTWARE EDUCATIVO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>O USO DE UM SOFTWARE EDUCATIVO PARA TRABALHAR CONCEITOS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>21. &nbsp;</td> <td>Monalisa de Abreu Leite. <b>INVESTIGANDO A PASSAGEM DO PENSAMENTO ARITMÉTICO AO PENSAMENTO ALGÉBRICO COM O AUXÍLIO DE UM SOFTWARE EDUCATIVO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>22. &nbsp;</td> <td>Monalisa de Abreu Leite. <b>CORREIO ELETRÔNICO, LISTAS DE DISCUSSÃO E FORMAÇÃO DE PROFESSORES EM INFORMÁTICA EDUCATIVA.</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>23. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>DESEMPENHO DE ALUNOS DO 2O CICLO NAS ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>24. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>RESULTADOS DE UMA AVALIAÇÃO DE ALUNOS DO I E II CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>25. &nbsp;</td> <td>Priscila Barros David. <b>POSSIBILIDADES EDUCATIVAS DA INTERNET</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Federal do Ceará, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>26. &nbsp;</td> <td>Raquel Santiago Freire. <b>DESEMPENHO DE ALUNOS DO 1o CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MUTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>27. &nbsp;</td> <td>Tiago Cid Timbó. <b>Submarino Amarelo:comunicação para a cidadania infantil</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alessandra Barreto Melo. <b>Um Estudo de Proposta para um Escalonador para Gamma</b>. (Graduação em Ciência da Computação) - Universidade Tiradentes, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Elke Mendonça. <b>Di ? Glauber A Homenagem</b>. (Graduação em Comunicação Social - Jornalismo) - Universidade Federal do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0552099245346620">Ismael Pordeus Bezerra Furtado</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Hugo Gonçalves Valença Alcantara. <b>Uma implementação para um jogo de xadrez</b>. (Graduação em Ciência da Computação) - Universidade Tiradentes, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Ilina Mamede. <b>O testemunhal no Programa da Samantha Marques</b>. (Graduação em Publicidade e Propaganda) - Universidade de Fortaleza, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/6013088230083785">Andrea Pinheiro Paiva Cavalcante</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Joacillo Albuquerque Cavalcante. <b>A experiencia da utilização da internet na rede de ensino Tony -= uso de projetos educativos</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>João Luiz Saraiva de Souza Bento. <b>O Computador na Educação: A experiência na escola 7 de setembro</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Leão João Dehon Costa. <b>O computador na educação: um estudo de caso</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Luiz Luciano Menezes de Arruda Filho. <b>Ambientes Virtuais de aprendizagem utilizados no apoio à telemática</b>. (Aperfeiçoamento/Especialização em Educação) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Michelle Pires Cabra. As ações de informatização da escola publica do Ceará modificaram a prática do professor e do alunpo. <b>As experiências do PROINFO-Ce</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Paulo Calheiros da Silva Junior. <b>Técnicas de Criptografia</b>. (Graduação em Ciência da Computação) - Universidade Tiradentes, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Pedro Afonso Magalhães. <b>Computador como Instrumento de ensino através de softwares educativos</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2001.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>Concepção de um Micromundo para o ensino dos conceitos de fração, equivalência de frações e operações com frações</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Ana Cristina de Oliveira Rodrigues. <b>Trajetória da Informática nas Escolas Públicas Estaduais do Ceará</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Cosme Norberto Távora Neto. <b>A quebra do paradigma Educacional utilizando a informatica em projetos pedagógicos</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Francisco Luiz Oliveira Nepomuceno. <b>Contribuições do NTE para escolas publicas da região do CREDE 07</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Maria Cristina Parente Pessoa. O aprendizado do aluno tem ganhos com o uso do computador: a experiência da escola de ensino fundamental e médio profa. <b>Maria da Conceição Porfirio Teles</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>Diagramas Interativos: Novas Tecnologias para o Ensino de Matemática</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Paulo Peixoto Vieira. <b>Gestão Administrativa: Uma proposta de gestão centrada em projetos e realizações</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Elisabeth G Pereira. <b>A Informática na Prática de Educadores</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Francisco Augusto Furtado Milhome. <b>Redençaõ - A liberdade começa aqui - a internet como meio de comunicação</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Francisco de Sales Leite Soares. <b>Processo de Implantação da Informatica Educativa na Escola de Ensino Fundamental Antonio Bezerra Monteiro - Juazeiro do Norte - Ceará</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Francisco Mauro de Sousa. <b>PROCALING - Projeto de Capacitação na Lingua Inglesa</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Isabel Cristina Marques de Andrade. <b>Arte educação e informatica</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Kalina I G dos Santos. <b>A informatica educativa como enriquecedora no processo de ensino aprendizagem no CREDE 01</b>. (Aperfeiçoamento/Especialização em Educação) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Lilia Sales Cabral. <b>A experiencia da implantação de uso de projetos na informatica educativa no ensino médio de Canindé</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Maria Flaviana Bezerra Morais. <b>Uma perspectiva de abordagem do conhecimento de biologia utilizando a tecnologia de informatica educativa e metodologia de projetos</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Ricardo Eugênio Lima. <b>A pedagogia dos projetos, Interdisciplinaridade e informática educativa nas escolas Russas</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática Educativa) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Roberta Ferreira Menezes. <b>Língua Inglesa - uma necessidade na sociedade tecnológica, quando o não saber gera ingenuidade - uma visão crítica</b>. (Aperfeiçoamento/Especialização em Especialização Em Comunidades Virtuais de Aprendiz) - Universidade Estadual do Ceará, . 1999.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0813145478267268">Robson Carlos Loureiro</a>.</font></td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Adailma Freire Campelo. A Resolução de Problemas de Probabilidade nas Séries Iniciais do 1o. <b>Grau</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Ana Maria de Oliveira Freitas. <b>A Informática na Educação Especial</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática na Educação) - Universidade Federal do Ceará, . 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Gustavo Gonçalves Pires Neto. <b>O uso de Softwares para Investigação de Conceitos Científicos e Matemáticos</b>. (Graduando em Engenharia Elétrica) - Universidade Federal do Ceará, Universidade Federal do Ceará. 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Maria Lúcia Barbosa. <b>Proposta de Aplicação do Computador na Educação Especial</b>. (Aperfeiçoamento/Especialização em Especialização Em Informática na Educação) - Universidade Federal do Ceará, . 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-1993"><h3 class="year">1993</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antonia Mayra Oliveira de Paiva. <b>Regras Utilizadas por Crianças para Realizar Julgamentos de Tempo em Função da Distância e da Velocidade</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 1993.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Fátima Rejane de Melo. <b>A COMPREENSÃO DE HISTÓRIAS EM CRIANÇAS</b>. (Aperfeiçoamento/Especialização em Especialização Em Planejamento Educacional) - Universidade Federal do Ceará, . 1993.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Roberto Sérgio Barbosa dos Santos. <b>Modificações na Tarefa de Conservação e as Implicações para a Teoria de Piaget</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 1993.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:34:53<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

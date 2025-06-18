@@ -1,0 +1,355 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Iniciação científica'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1993,
+2],
+[1994,
+2],
+[2000,
+2],
+[2002,
+18],
+[2003,
+7],
+[2004,
+3],
+[2005,
+2],
+[2006,
+1],
+[2007,
+2],
+[2008,
+2],
+[2010,
+1],
+[2011,
+7],
+[2012,
+5],
+[2013,
+5],
+[2014,
+1],
+[2015,
+3],
+[2016,
+8],
+[2017,
+4],
+[2018,
+2],
+[2019,
+2],
+[2020,
+2],
+[2021,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Iniciação científica</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 82<br>
+                    
+                    
+                    <div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Gabriel Marques do Nascimento. <b>Desenvolvimento de narrativas interativas gamificadas para conteúdos de Matemática no Ensino Médio</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Carlos Matheus da Silva Sousa. <b>Desenvolvimento de recursos educacionais digitais para conteúdos de Língua Portuguesa e Matemática nos anos iniciais do ensino fundamental</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2020.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Isadora Bruno Leite. <b>Desenvolvimento de recursos educacionais digitais gamificados para conteúdos de Língua Portuguesa e Matemática nos anos iniciais do ensino fundamental</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2020.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AMANDA LIMA MENDES. <b>Desenvolvimento de recursos educacionais digitais para conteúdos de Língua Portuguesa e Matemática nos anos iniciais do ensino fundamental</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2019.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>João Victor de Alencar Pascoal. <b>Desenvolvimento de recursos educacionais digitais para conteúdos de Língua Portuguesa e Matemática nos anos iniciais do ensino fundamental</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2019.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antonio Nathan Serra Souza. <b>Quantium: Um Objeto de Aprendizagem para o Ensino de Gêneros Textuais Digitais</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Lídya de Lima Monteiro. <b>Desenvolvimento de recursos educacionais digitais para conteúdos de Língua Portuguesa e Matemática nos anos iniciais do ensino fundamental</b>. (Graduando em Matemática) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Francisco Douglas Rodrigues de Oliveira. <b>Sem título definido</b>. (Graduando em Engenharia de Software) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2017.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ISAAC RAHEL MARTIM OLIVEIRA. <b>Sem título definido</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará em Russas, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2017.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Jeferson da Silva Juliani. <b>Sem título definido</b>. (Graduando em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2017.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Paloma B. S. Silva. <b>Sem título definido</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2017.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AFONSO MATHEUS SOUSA LIMA. <b>Sem título definido</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará - Campus Russas, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Antônio Igor Mendes de Oliveira. <b>Sem título definido</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Carlos Eduardo Rodrigues da Silva. <b>Sem título definido</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Carlos Sergio da Silva Marinho. <b>UM ESTUDO SOBRE O DOMÍNIO DAS ESTRUTURAS MULTIPLICATIVAS NO ENSINO FUNDAMENTAL</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Felipe Gomes Rufino Moura Paiva. <b>Práticas colaborativas em rede com o suporte da tecnologia móvel na escola</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Lavínia Matoso Freitas. <b>Sem título definido</b>. (Graduando em Engenharia de Software) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Leon Araújo Almeida. <b>Sem título definido</b>. (Graduando em Engenharia de Software) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Rayssa Araújo Hitzschky. <b>Práticas colaborativas em rede com o suporte da tecnologia móvel na escola</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Arthur Brito de Araújo Costa. <b>Práticas colaborativas em rede com o suporte da tecnologia móvel na escola</b>. (Graduando em Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Cintia Arruda Lima. <b>UM ESTUDO SOBRE O DOMÍNIO DAS ESTRUTURAS MULTIPLICATIVAS NO ENSINO FUNDAMENTAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MARIA SILVANIA MARQUES XAVIER DE SOUZA. <b>UM ESTUDO SOBRE O DOMÍNIO DAS ESTRUTURAS MULTIPLICATIVAS NO ENSINO FUNDAMENTAL</b>. (Graduando em Matemática) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MARIA LIDIANA FERREIRA OSMUNDO. <b>Práticas colaborativas em rede com o suporte da tecnologia móvel na escola</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2014.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Bruno de Melo Carvalho. <b>UMA PROPOSTA PARA LOUSAS DIGITAIS INTERATIVAS COM HARDWARE DE BAIXO CUSTO</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Francisco Jarlisson Moreira de Matos. <b>UMA ANÁLISE DO ALGORITMO DE ESCALONAMENTO LARGEST GANG FIRST SERVED COM TÉCNICAS DE MIGRAÇÃO PARA ALOCAÇÃO DE RECURSOS EM UM AMBIENTE DISTRIBUÍDO</b>. Iniciação Científica - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Francisco Jarlisson Moreira de Matos. <b>UMA ANÁLISE DOS ALGORITMOS DE ESCALONAMENTO DE GRUPO COM MECANISMOS DE MIGRAÇÃO PARA REDUÇÃO DE FRAGMENTAÇÃO EM UM AMBIENTE DISTRIBUÍDO</b>. Iniciação Científica - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Lucas Gonçalves de Moura Leite. <b>ANÁLISE DO ALGORITMO DE ESCALONAMENTO ADAPTED FIRST COME FIRST SERVED COM TÉCNICAS DE MIGRAÇÃO EM UM AMBIENTE DISTRIBUÍDO</b>. Iniciação Científica - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Marcelo Bruno de Almeida Veras. <b>INTEGRAÇÃO ARDUINO-KINECT: CAPTURANDO O MOVIMENTO HUMANO E REPRODUZINDO-O EM UM AVATAR FÍSICO</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Chesley Braga Chaves. <b>ESTUDO DE ALGORITMOS DE ESCALONAMENTO DE GRUPO PARA AMBIENTE COMPUTACIONAL DISTRIBUÍDO</b>. (Graduando em Engenharia de Teleinformática) - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Francisca Renata Santos Castro. <b>Colaboração em rede e aprendizagem escolar</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Francisco Jarlisson Moreira de Matos. <b>COMPOSIÇÃO E ANÁLISE DE UM AMBIENTE DISTRIBUÍDO DE GRID COMPUTING</b>. (Graduando em Engenharia de Teleinformática) - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Lucas Gonçalves de Moura Leite. <b>ESTUDO DE ALGORITMOS DE ESCALONAMENTO DE GRUPO PARA AMBIENTE COMPUTACIONAL DISTRIBUÍDO</b>. (Graduando em Engenharia de Teleinformática) - Universidade Federal do Ceará, Coordenadoria de Planejamento e Avaliação de A.. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Sibele Silva Castro. <b>Colaboração em rede e aprendizagem escolar</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Bruno de Melo Carvalho. <b>UMA SOLUÇÃO DE BAIXO CUSTO PARA A CAPTURA DE DISPAROS EM SIMULADORES DE TIRO BASEADOS EM REALIDADE VIRTUAL</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Davi Antunes de Araújo Gurgel. <b>JOGO DA FORCA VIRTUAL: UM JOGO SÉRIO VOLTADO AO EDUTAINMENT</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Dêmora Bruna Cunha de Sousa. <b>Aprendizagem colaborativa em rede</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Francisco Anderson Castro Brandão. <b>UM ESTUDO DE CASO SOBRE A CUSTOMIZAÇÃO E JOGOS EDUCACIONAIS EMPREGANDO XML</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>José Moreira Lacerda Neto. <b>Colaboração em rede e aprendizagem escolar</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Mixilene Sales Santos Lima. <b>Aprendizagem colaborativa em rede no Programa Um Computador por Aluno</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>WILLIAM DE ARAÚJO DIAS. <b>QUIZ VIRTUAL ? EXEMPLIFICANDO O USO ALTERNATIVO DE JOGOS ELETRÔNICOS</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Jaiane Ramos Barbosa. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS: DESENVOLVIMENTO E USO NO AMBIENTE ESCOLAR</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Igor Sousa Osterno. <b>Abordagens analíticas e experimentais para o desenvolvimento de sistemas distribuídos: protocolos e middleware para redes de sensores e resolução de problemas numéricos</b>. (Graduando em Engenharia da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Verônica Maria Lima Silva. <b>Abordagens analíticas e experimentais para o desenvolvimento de sistemas distribuídos: protocolos e middleware para redes de sensores e resolução de problemas numéricos</b>. (Graduando em Engenharia da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Lavina Lúcia Vieira Lima. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS: DESENVOLVIMENTO E USO NO AMBIENTE ESCOLAR</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Natasha Carneiro Barreto. <b>OBJETOS DE APRENDIZAGEM COM SALIÊNCIAS CULTURAIS</b>. (Graduando em comunicação social) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Adriano Augusto Cordeiro e Souza. <b>Desenvolvimento de Webgames com o Emprego da Plataforma Macromedia Flash</b>. (Graduando em Sistemas de Informação) - Faculdade Sete de Setembro, . 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Laécio Nobre de Macedo. <b>O DESENVOLVIMENTO DO RACIOCINIO ALGÉBRICO COM O AUXÍLIO DE FERRAMENTAS INTERATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>raquel almeida ferreira siqueira. <b>ANÁLISE DAS LINGUAGENS UTILIZADAS EM UM FÓRUM VIRTUAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Bárbara de Sena Cabral. <b>ESTRATÉGIAS E ERROS IDENTIFICADOS NA RESOLUÇÃO DE PROBLEMAS ALGÉBRICOS.</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Laécio N de Macêdo. <b>USO DE UM AMBIENTE INFORMATIZADO PARA DESENVOLVER CONCEITOS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Laécio N de Macêdo. <b>DESENVOLVENDO CONCEITOS ALGÉBRICOS COM O AUXÍLIO DE UM AMBIENTE INFORMATIZADO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Barbara de Sena Cabral. <b>ESTRATÉGIAS ENCONTRADAS DURANTE A ANÁLISE DA RESOLUÇÃO DE PROBLEMAS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Bárbara de Sena Cabral. <b>Estratégias Encontradas durante a análise de resolução de problemas algébricos</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>FÓRUM DE DISCUSSÃO: RECURSO VIRTUAL UTILIZADO COMO SUPORTE A EDUCAÇÃO PRESENCIAL</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Francisco Raphael Bezerra Ribeiro. <b>RESTAURADOR: um software para auxiliar na investigação em informática educativa.</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Francisco Raphael Bezerra Ribeiro. <b>Cartas Interativas: Um software auxiliar no desenvolvimento de conceitos algébricos</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Gisele Schappo. <b>Fórum de Discussão: Recurso virtual usado como suporte à Educação presencial</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>INVESTIGANDO O DESEMPENHO DOS ALUNOS DO 2 CICLO EM RESOLUÇÃO DE PROBLEMAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2003.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>CARTAS INTERATIVAS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>CLASSIFICAÇÃO DE APPLETS EDUCATIVOS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>LISTA DE DISCUSSÃO: INVESTIGANDO NOVAS FORMAS DE INTERAÇÃO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Claudenice de Freitas Souza. <b>LISTA DE DISCUSSÃO: Um ambiente virtual de aprendizagem complementar ao ensino presencial</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Francisco Jodevan Campelo. <b>O USO DE JAVA-APPLETS EM PROGRAMAS EDUCATIVOS</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Gisele Schappo. <b>ANÁLISE DOS ERROS COMETIDOS POR ALUNOS DO 1º CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Gisele Schappo. <b>ERROS COMETIDOS POR ALUNOS DO PRIMEIRO E SEGUNDO CICLO EM QUESTÕES DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Ingrid Louback de Castro Moura. <b>CONHECIMENTO DE PROFESSORES ACERCA DE PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Ingrid Louback de Castro Moura. <b>DESEMPENHO DOS PROFESSORES DO ENSINO FUNDAMENTAL EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Ligiane de Castro Lopes. <b>INVESTIGANDO O USO DA LISTA DE DISCUSSÃO COMO UM AMBIENTE INOVADOR DE APRENDIZAGEM</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Marcus Henrique Linhares Ponte Filho. <b>ERROS COMETIDOS POR ALUNOS DO 2º CICLO EM ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>DO PENSAMENTO ARITMÉTICO AO ALGÉBRICO COM O AUXÍLIO DE UM SOFTWARE EDUCATIVO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>O USO DE UM SOFTWARE EDUCATIVO PARA TRABALHAR CONCEITOS ALGÉBRICOS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Monalisa de Abreu Leite. <b>INVESTIGANDO A PASSAGEM DO PENSAMENTO ARITMÉTICO AO PENSAMENTO ALGÉBRICO COM O AUXÍLIO DE UM SOFTWARE EDUCATIVO</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Monalisa de Abreu Leite. <b>CORREIO ELETRÔNICO, LISTAS DE DISCUSSÃO E FORMAÇÃO DE PROFESSORES EM INFORMÁTICA EDUCATIVA.</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>DESEMPENHO DE ALUNOS DO 2O CICLO NAS ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>Nádia Pinto de Vasconcelos. <b>RESULTADOS DE UMA AVALIAÇÃO DE ALUNOS DO I E II CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Raquel Santiago Freire. <b>DESEMPENHO DE ALUNOS DO 1o CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS E MUTIPLICATIVAS</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Ministério da Educação. 2002.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Alex José Oliveira dos Santos. <b>Concepção de um Micromundo para o ensino dos conceitos de fração, equivalência de frações e operações com frações</b>. (Graduando em Ciência da Computação) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Marta Jeanne Alves da Silveira. <b>Diagramas Interativos: Novas Tecnologias para o Ensino de Matemática</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2000.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Adailma Freire Campelo. A Resolução de Problemas de Probabilidade nas Séries Iniciais do 1o. <b>Grau</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Gustavo Gonçalves Pires Neto. <b>O uso de Softwares para Investigação de Conceitos Científicos e Matemáticos</b>. (Graduando em Engenharia Elétrica) - Universidade Federal do Ceará, Universidade Federal do Ceará. 1994.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-1993"><h3 class="year">1993</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antonia Mayra Oliveira de Paiva. <b>Regras Utilizadas por Crianças para Realizar Julgamentos de Tempo em Função da Distância e da Velocidade</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 1993.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Roberto Sérgio Barbosa dos Santos. <b>Modificações na Tarefa de Conservação e as Implicações para a Teoria de Piaget</b>. (Graduando em Pedagogia) - Universidade Federal do Ceará, . 1993.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

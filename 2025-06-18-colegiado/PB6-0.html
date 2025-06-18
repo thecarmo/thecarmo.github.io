@@ -1,0 +1,345 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Resumos publicados em anais de congressos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1990,
+1],
+[1994,
+2],
+[1995,
+2],
+[1997,
+1],
+[1998,
+1],
+[1999,
+2],
+[2000,
+5],
+[2001,
+6],
+[2002,
+20],
+[2003,
+3],
+[2004,
+1],
+[2005,
+1],
+[2006,
+5],
+[2009,
+3],
+[2010,
+5],
+[2011,
+1],
+[2012,
+1],
+[2014,
+2],
+[2016,
+2],
+[2017,
+1],
+[2018,
+4],
+[2019,
+1],
+[2020,
+1],
+[2021,
+1],
+[2024,
+2]]}]});
+        });
+        </script>
+        
+                <h3>Resumos publicados em anais de congressos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 74<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CARNEIRO, ANA CESARINA DE OLIVEIRA ; PAILLARD, GABRIEL ANTOINE LOUIS ; ARAÚJO NETO, JOÃO BATISTA DE ; VIDAL, CRETO AUGUSTO ; CAVALCANTE NETO, JOAQUIM BENTO ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; GOMES, GEORGE ALLAN MENEZES. <b>Virtual Reality in Astronomical Education: Improving the Understanding of Eclipses with Interactive Simulations</b>. Em: Anais Estendidos do Simpósio de Realidade Virtual e Aumentada, 2024, Brasil. Anais Estendidos do XXVI Simpósio de Realidade Virtual e Aumentada (SVR Estendido 2024), p. 29, 2024. <a href="http://dx.doi.org/10.5753/svr_estendido.2024.244743" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>MENDES, DIEGO CARACAS ; RODRIGUES, EDSON COELHO ; Barbosa, Ícaro da Silva ; NETO, JOAQUIM BENTO CAVALCANTE ; VIDAL, Creto Augusto ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; GOMES, GEORGE ALLAN MENEZES. <b>A Case Study on FPS Game Customization Based on Asset Replacement for Child Appropriateness</b>. Em: Anais Estendidos do Simpósio de Realidade Virtual e Aumentada, 2024, p. 19, 2024. <a href="http://dx.doi.org/10.5753/svr_estendido.2024.244706" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SANTOS, EMANUELE ; NETO, JOSÉ F. DE QUEIROZ ; GOMES, GEORGE A. M. ; LEITE JUNIOR, ANTONIO JOSÉ M. ; CAVALCANTE NETO, JOAQUIM BENTO ; VIDAL, Creto Augusto ; SILVA, TICIANA L. COELHO DA ; MACEDO, JOSE ANTONIO F.. <b>Visual Analytics Research at Universidade Federal do Ceará</b>. Em: Anais Estendidos da Conference on Graphics, Patterns and Images, 2021, Brasil. Anais Estendidos da XXXIV Conference on Graphics, p. 248, 2021. <a href="http://dx.doi.org/10.5753/sibgrapi.est.2021.20048" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SABOIA, INGA; ALMEIDA, ANA ; SOUSA, PEDRO ; PERNENCAR, CLÁUDIA. <b>Dietitians and Nutritionists Behaviour on Social Media: A Scoping Literature Review</b>. Em: 13th International Conference on Health Informatics, 2020, Valletta. Proceedings of the 13th International Joint Conference on Biomedical Engineering Systems and Technologies, p. 530, 2020. <a href="http://dx.doi.org/10.5220/0008988305300538" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M.. <b>Estratégias de gamificação: quando ?perder peso? é ganhar</b>. Em: 23º Congresso de Obesidade, 2019, Coimbra. Textos dos resumos apresentados e premiados no congresso, Comunicações Orais e Posters, 2019. </td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DE LIMA ROCHA, ANNA ISABELLY ; Mendes, Marília Soares ; MARQUES, ANNA BEATRIZ DOS S.. <b>A Systematic Mapping on Software for Teaching Foreign Languages for Visually Impaired Users</b>. Em: the 17th Brazilian Symposium, 2018, Belem. Proceedings of the 17th Brazilian Symposium on Human Factors in Computing Systems - IHC 2018. New York: ACM Press, p. 1, 2018. <a href="http://dx.doi.org/10.1145/3274192.3274236" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PAILLARD, GABRIEL; COUTINHO, EMANUEL F. ; MOREIRA, LEONARDO O.. <b>Uma Proposta para o Desenvolvimento de Aplicações Orientada a Equipes Interdisciplinares</b>. Em: III Workshop sobre Aspectos Sociais, Humanos e Econômicos de Software, 2018, Natal. Anais do Workshop sobre Aspectos Sociais, Humanos e Econômicos de Software (WASHES). Porto Alegre: Sociedade Brasileira de Computação (SBC), 2018. <a href="http://dx.doi.org/10.5753/washes.2018.3477" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M.. <b>Online opinion leaders and Weight loss: a literature review based model</b>. Em: Proceedings of the 4th IPLeiria?s International Health Congress, 2018, v. 18, 2018. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SABOIA, INGA FREIRE; ALMEIDA, ANA MARGARIDA ; Pernencar, Claudia ; VELOSO, ANA ISABEL. <b>Gamification strategies in weight control applications, where ¿losing (weight) is winning¿</b>. Em: 2018 IEEE 6th International Conference on Serious Games and Applications for Health (SeGAH), 2018, Vienna. 2018 IEEE 6th International Conference on Serious Games and Applications for Health (SeGAH), p. 1, 2018. <a href="http://dx.doi.org/10.1109/SeGAH.2018.8401375" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SILVA, T. H. O. ; MENDES, MARILIA S. ; Furtado, Elizabeth. <b>UUX-Posts - Uma ferramenta de apoio à avaliação da usabilidade e experiência de uso em sistemas por textos dos usuários</b>. Em: XVI Brazilian Symposium on Human Factors in Computer Systems Proceedings, 2017, Joinville. Extended Proceedings of the 16th Brazilian Symposium on Human Factors in Computing Systems. Joinville, v. 16, p. 82-83, 2017. </td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA, RUBENS H.P. DE ; MELLO, RUI R. ; PAILLARD, G. A. L. ; FRANÇA, FELIPE M. G.. <b>The Gamma multiset rewriting paradigm: a parallel approximate computing framework</b>. Em: Workshop on Approximate Computing, 2016, Pittsburgh. Proc. of AC16, p. 1-2, 2016. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARBOSA, KHERLIANNE DE SÁ ; NOVAIS, CARLOS EDUARDO BRITO ; PEREIRA, GEORGIA DA CRUZ. <b>A RETÓRICA TIPOGRÁFICA NOS TEMPOS DA WEB</b>. Em: 12º Congresso Brasileiro de Pesquisa e Desenvolvimento em Design, 2016, Belo Horizonte. Blucher Design Proceedings, p. 403, 2016. <a href="http://dx.doi.org/10.5151/despro-ped2016-0035" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COUTINHO, EMANUEL F. ; MOREIRA, LEONARDO O. ; PAILLARD, GABRIEL A. L. ; MAIA, JOSÉ G. R.. <b>How to deploy a virtual learning environment in the cloud?</b>. Em: the 7th Euro American Conference, 2014, p. 1, 2014. <a href="http://dx.doi.org/10.1145/2590651.2590675" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DAVID, P. B. ; FREIRE, R. S. ; NETO, E. T. L. ; PAILLARD, G. A. L. ; VIANA, W. ; MENDES, F. A. G.. <b>Análise da Afetividade em Fóruns Virtuais: Construção de uma Ontologia de Domínio</b>. Em: Conferência Internacional sobre Informática na Educação, 2014, Fortaleza. XVIII Conferência Internacional sobre Informática na Educação, 2014. </td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEMOS, F. D.A. ; CARMO, R. A. F ; VIANA, W. C. ; ANDRADE, R. M.C.. <b>Towards a Context-Aware Photo Recommender System</b>. Em: ACM Recommender Systems, 2012, Dublin. CARS 2012 Workshop, 2012. </td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SILVA, R. G. ; SILVA, T. E. V. ; FERREIRA, F. E. F. R. ; GOMES, P. R. B. ; SANTOS, F. J. ; RIBEIRO, G. O. ; ROMEU, M. C. ; PEQUENO, H. S. L. ; VASCONCELOS, F. H. L.. <b>Caracterização e Análise do Desempenho Discente em um Curso de Licenciatura em Física Obtido na Avaliação de Atividades em um Ambiente Virtual</b>. Em: Encontro de Físicos do Norte e Nordeste (EFNN), 2011, Mossoró. Caracterização e Análise do Desempenho Discente em um Curso de Licenciatura em Física Obtido na Avaliação de Atividades em um Ambiente Virtual, 2011. </td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Davi Antunes de Araújo Gurge ; LEITE JUNIOR, A. J. M.. <b>UM ESTUDO DE CASO SOBRE O DESENVOLVIMENTO DE JOGOS CORPORATIVOS</b>. Em: XIX Encontro de Iniciação à Docência, UFC, 2010, Fortaleza. Anais do XIX Encontro de Iniciação à Docência, v. 1, 2010. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LAVOR, C. ; Antonio Mucherino ; Leo Liberti ; MACULAN, N. ; Bonates, T.O. ; PAILLARD, G. A. L.. <b>Discretization of the Molecular Distance Geometry Problem by defining artificial orderings on the molecule</b>. Em: 24th European Conference on Operational Research, 2010, Lisboa. 24th European Conference on Operational Research, 2010. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>Creation of pre-patterns in a system of content creation for digital television</b>. Em: European Conference on Interactive Television, 2010, Tampere. Proceedings of the 8th international interactive conference on Interactive TV&Video. New York, NY, USA: ACM, p. 175-178, 2010. <a href="http://dx.doi.org/10.1145/1809777.1809813" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SILVA JÚNIOR, José Nunes da ; Pinto, Y.T.T ; LEITE JUNIOR, A. J. M.. <b>Desenvolvimento de um Software Educativo para Utilização no ensino de Química Geral - Soluções</b>. Em: X Encontro de Iniciação à Docência - UNIFOR, 2010, Fortaleza. Anais do X Encontro de Iniciação à Docência - UNIFOR, 2010. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Victor Ramon Maia Feitosa ; LEITE JUNIOR, A. J. M.. <b>UMA PROPOSTA DE METODOLOGIA DE DESIGN DE INTERFACES GRÁFICAS PARA JOGOS DIGITAIS</b>. Em: XIX Encontro de Iniciação à Docência, UFC, 2010, Fortaleza. Anais do XIX Encontro de Iniciação à Docência, 2010. </td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MUNGUBA, Marilene Calderaro da Silva ; Maria Teresa Moreno Valdes ; LEITE JUNIOR, A. J. M.. <b>Aprendizagem Estratégica: jogo eletrônico na mediação da educação nutricional da criança</b>. Em: The Fifth International Congress of Qualitative Inquiry, 2009, Urbana-Champaign, p. 369-369, 2009. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Oliveira, T. T ; MUNGUBA, Marilene Calderaro da Silva ; LEITE JUNIOR, A. J. M.. <b>Jogo Eletrônico Mediando a Inclusão de Pessoas com Deficiência Intelectual no Mundo do Trabalho</b>. Em: Segundo Congresso Muito Especial de Tecnologia Assistiva e Inclusão Social das Pessoas com Deficiência de Pernambuco, 2009, Olinda. Segundo Congresso Muito Especial de Tecnologia Assistiva e Inclusão Social das Pessoas com Deficiência de Pernambuco, 2009. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Perdigão, F.A. ; MUNGUBA, Marilene Calderaro da Silva ; LEITE JUNIOR, A. J. M.. <b>Jogo Eletrônico - Ferramentas de Mediação da Estruturação da Rotina Escolar de Crianças com Transtorno de Déficit de Atenção e Hiperatividade</b>. Em: Segundo Congresso Muito Especial de Tecnologia Assistiva e Inclusão Social das Pessoas com Deficiência de Pernambuco, 2009, Olinda. Segundo Congresso Muito Especial de Tecnologia Assistiva e Inclusão Social das Pessoas com Deficiência de Pernambuco, 2009. </td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AMARAL , Lucas Lopes do ; GOMES, Thiago de Albuquerque ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Um Aprimoramento do Modelo de Processo de Criação de Objetos de Aprendizagem do Projeto Rived</b>. Em: Workshop sobre Informática na Escola, 2006, Campo Grande. Anais do XXVI Congresso da Sociedade Brasileira de Computação, v. 1, p. 373-376, 2006. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; ROCHA, Betânia Tenório Soares da ; SOUZA, Claudenice de Freitas ; VIANA JÚNIOR, Gerardo Silveira ; SARMENTO, Wellington W. Fereira ; PAULA, Patrícia de Souza. <b>SOCRATES ? Sistema On-Line para Criação de Projetos e Comunidades</b>. Em: XVII Simpósio Brasileiro de Informática na Educação, 2006, Brasília. XVII Simpósio Brasileiro de Informática na Educação, v. 1, p. 1-1, 2006. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; MUNGUBA, Marilene Calderaro da Silva ; MAGALHÃES, Wladimir Capelo. <b>Dieta Irada: Como uma equipe interdisciplinar vence o desafio de criar um videogame para educação nutriional infantil</b>. Em: 58a. Reunião Anual da SBPC, 2006, Florianópolis, SC. Anais da 58a. Reunião Anual da SBPC, 2006. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>OLIVEIRA, Eliana Moreira de ; SALES, Gilvandenys Leite ; CASTRO FILHO, J. A. ; MACÊDO, Laécio Nobre de ; FREIRE, Raquel Santiago. <b>Gangorra Interativa: um objeto de aprendizagem para os conceitos de grandezas inversamente proporcionais</b>. Em: XII Workshop sobre Informática na Escola, 2006, Campo Grande. XII Workshop de Informática na Escola - WIE/SBC 2006, Campo Grande (MS). Anais da SBC-2006, v. 1, p. 365-368, 2006. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>SOARES, Pedro Pseligmann ; MENDES, Marilia Soares. ; FURTADO, Maria Elizabeth Sucupira. <b>An Architecture Proposal for Integrating Digital Television and Mobile Devices</b>. Em: Workshop CHI2006, 2006, Montreal. Investigating New User Experience Challenges In ITV: Mobility & Sociability, 2006. </td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>SIQUEIRA, Raquel Almeida Ferreira ; CASTRO FILHO, J. A. ; DAVID, Priscila Barros ; SOUZA, Claudenice de Freitas. <b>Fórum Virtual Como um Gênero Textual Emergente</b>. Em: V Encontro de Pesquisa e Pós-Graduação - CEFET/CE, 2005, Fortaleza. Anais do V Encontro de Pesquisa e Pós-Graduação - CEFET/CE. Fortaleza: CEFET/CE, v. 1, p. 1-1, 2005. </td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>OLIVEIRA, Eliana Moreira de ; SALES, Gilvandenys Leite ; CASTRO FILHO, J. A.. <b>UM MODELO DE AVALIAÇÃO PARA SOFTWARE EDUCACIONAL E SUA APLLICAÇÃO AO SOFTWARE BALANÇA</b>. Em: IV ENCONTRO DE PESQUISA E PÓS-GRADUAÇÃO - IV ENPPG - CEFET-CE, 2004, Fortaleza. Anais do IV ENCONTRO DE PESQUISA E PÓS-GRADUAÇÃO - IV ENPPG - CEFET-CE. Fortaleza: Imprensa Universitária da UFC, v. 1, p. 55-55, 2004. </td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. S.; Leite, M. A. ; Cabral, B. S. ; PASCHOAL, I. V. A. ; Castro-Filho, J. A.. <b>Estratégias Encontradas durante atividades com software e manipulativos</b>. Em: II Jornada de Educação Matemática do Ceará, 2003, Fortaleza. A Formação Pedagógica do Professor de Matemática, 2003. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO. <b>Construção de Cursos em EaD - A Necessidade Multidisciplinar</b>. Em: IV Seminário de Educação a Distância, 2003, Fortaleza. Anais do IV Seminário de Educação a Distância, 2003. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SILVA JÚNIOR, José Nunes da ; LEITE JUNIOR, A. J. M. ; MAGALHÃES, Wladimira Capelo. <b>CD-ROM como material didático no ensino de Química Orgânica</b>. Em: 26a. Reunião Anual da Sociedade Brasileira de Química, 2003, Poços de Caldas. 26a. Reunião Anual da Sociedade Brasileira de Química - Livro de Resumos, 2003. </td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; MOURA, Ingrid Louback de Castro. <b>CONHECIMENTO DOS PROFESSORES DE MATEMÁTICA ACERCA DE PROBLEMAS DE ESTRUTURAS ADITIVAS E MULTIPLICATIVAS</b>. Em: I SIMPÓSIO DE PESQUISADORES EM EDUCAÇÃO MATEMÁTICA DO NORDESTE, 2002, Natal. Anais do I SIMPÓSIO DE PESQUISADORES EM EDUCAÇÃO MATEMÁTICA DO NORDESTE, 2002. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; SCHAPPO, G. ; PONTE FILHO, M. H. L.. <b>ANÁLISE DOS PRINCIPAIS ERROS COMETIDOS POR ALUNOS DO 1º E 2º CICLO EM PROBLEMAS DE ESTRUTURAS ADITIVAS</b>. Em: I SIMPÓSIO DE PESQUISADORES EM EDUCAÇÃO MATEMÁTICA DO NORDESTE, 2002, Natal. Anais do I SIMPÓSIO DE PESQUISADORES EM EDUCAÇÃO MATEMÁTICA DO NORDESTE, 2002. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, R. S. <b>Resultados de uma avaliação dos alunos do 1o. ciclo em estruturas aditivas e multiplicativas</b>. Em: VIII Encontro de Iniciação à Pesquisa, 2002, Fortaleza. Anais do VIII Encontro de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FREIRE, R. S. <b>Desempenho de alunos do 1o. ciclo em problemas de estruturas aditivas e multiplicativas</b>. Em: XX Encontro Universitário de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XX Encontro Universitário de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FREIRE, R. S. <b>A escolha profissional de alunos pré-universitários - um paralelo entre escola pública e particular</b>. Em: XX Encontro Universitário de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XX Encontro Universitário de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FREIRE, R. S. <b>Estudo de caso: Conceito de Avaliação dos Professores de um Colégio Particular de Fortaleza</b>. Em: XXI Encontro Universitário de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XXI Encontro Universitário de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREIRE, R. S.; Cabral, B. S.. <b>Estratégias encontradas durante análise da resolução de problemas algébricos</b>. Em: XXII Encontro Universitário de Iniciação à Pesquisa da Universidade Federal do Ceará, 2002, Fortaleza. Anais do XXII Encontro Universitário de Iniciação à Pesquisa da Universidade Federal do Ceará, 2002. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FREIRE, R. S.; Vasconcelos, N. P.. <b>Resultados de uma avaliação de alunos do I e II ciclo em problemas de estruturas aditivas e multiplicativas</b>. Em: XXI Encontro Universitário de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XXI Encontro Universitário de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>VASCONCELOS, N. P. ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Avaliação do desempenho de alunos do 1o. e 2o. ciclo em problemas de estruturas aditivas e multiplicativas</b>. Em: I Jornada de Educação Matemática do Ceará, 2002, Fortaleza. Anais da I Jornada de Educação Matemática do Ceará, 2002. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>GUIGUE, Didier ; BARBOSA, A. C. ; TRAJANO DE LIMA, ERNESTO ; FABÍOLA, P.. <b>Musicologia e computação: apresentação das pesquisas realizadas no GMT</b>. Em: VI CCHLA Conhecimento em debate, 2002, João Pessoa. CCHLA Conhecimento em debate - Resumos. João Pessoa: Universidade Federal da Paraíba, p. 74-75, 2002. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; PARENTE, C. S. ; SOUZA, J. M. B.. <b>Memórias do comércio cearense - Um Estudo de Caso do Desenvolvimento de Aplicações Multimídia em CD-ROM</b>. Em: II Encontro de Pós-Graduação e Pesquisa da Unifor, 2002. </td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; SILVA, D. J. L.. <b>Interfaces Inteligentes como Elemento de Interação Homem-Máquina</b>. Em: II Encontro de Pós-Graduação e Pesquisa da Unifor, 2002, Fortaleza. Anais do II Encontro de Pós-Graduação e Pesquisa da Unifor, 2002. </td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>MAIA, J. G. R.; VIDAL, Creto Augusto ; RODRIGUES, Maria Andréia Formico. <b>Jota 3D, Um Sistema de Visualização Tridimensional em Java</b>. Em: XX Encontro de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XX Encontro de Iniciação à Pesquisa. Fortaleza, 2002. </td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SCHAPPO, G. ; PONTE FILHO, M. H. L. ; CASTRO FILHO, J. A.. <b>Erros cometidos por alunos do 1° e 2 ° ciclo em problemas de estruturas aditivas</b>. Em: I JORNADA DE EDUCAÇÃO MATEMÁTICA DO CEARÁ, 2002, Fortaleza. Anais da I JORNADA DE EDUCAÇÃO MATEMÁTICA DO CEARÁ, 2002. </td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SILVEIRA, M. J. ; FREIRE, R. S.. <b>O uso de um software educativo para trabalhar conceitos algébricos</b>. Em: XXI Encontro Universitário de Iniciação à Pesquisa, 2002, Fortaleza. Anais do XXI Encontro Universitário de Iniciação à Pesquisa, 2002. </td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Geração de Especificações Algébricas a partir de Statecharts</b>. Em: XI Encontro de Iniciação Científica da UECE, 2002, Fortaleza. XI Encontro de Iniciação Científica da UECE, 2002. </td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Uma teoria de Bissimulação para o Cálculo Rpi</b>. Em: XI Encontro de Iniciação Científica da UECE, 2002, Fortaleza. XI Encontro de Iniciação Científica da UECE, 2002. </td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Especificação Algébrica Simplificada de Handover em Redes Celulares</b>. Em: Anais do XI Encontro de Iniciação Científica da UECE, 2002, Fortaleza. Anais do XI Encontro de Iniciação Científica da UECE, 2002. </td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>Ensinando Matemática Através de Exemplos</b>. Em: XI Encontro de Iniciação Científica da UECE, 2002, Fortaleza. XI Encontro de Iniciação Científica da UECE, 2002. </td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>FREIRE, Raquel Santiago ; VASCONCELOS, N. P. ; CASTRO FILHO, J. A.. <b>Desempenho de Alunos do 1o. e 2o. ciclo em problemas de estruturas aditivas e multiplicativas</b>. Em: I Simpósio de Pesquisadores de Educação Matemática do Nordeste, 2002, Natal. Anais do I Simpósio de Pesquisadores de Educação Matemática do Nordeste, 2002. </td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Novas Tecnologias e o ensino de função, taxa de variação e acumulação</b>. Em: VII Encontro Nacional de Educação Matemática - VII Enem, 2001, Rio de Janeiro. Anais do VII Encontro Nacional de Educação Matemática, 2001. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Balança Interativa: um ambiente para auxiliar o progresso das operações aritméticas para a álgebra</b>. Em: VII Workshop de Informática na Escola, XXI Congresso da Sociedade Brasileira da Computação., 2001, Fortaleza. Anais do VII Workshop de Informática na Escola, 2001. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; VIDAL, Creto Augusto. <b>Uma Proposta para a Criação de Ambientes Virtuais Compartilhados de Realidade Virtual em Rede Através de Sistemas Distribuídos</b>. Em: I Encontro de Pós-Graduação e Pesquisa da Unifor, 2001. Anais do I Encontro de Pós-Graduação e Pesquisa da Unifor, 2001. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SANTOS, Emanuele Marques dos ; VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; ALMENDRA, Camilo Camilo. <b>Ensino de Matemática em Ambiente de Realidade Virtual</b>. Em: XXIV CNMAC - Congresso Nacional de Matemática Aplicada e Computacional, 2001. Revista do IEEE América Latina, 2001. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>Distributed Virtual Reality in Distance Education - Could It Be a Way Out of Exclusion?</b>. Em: VI International Conference on Computers in Education, 2001, Seoul. Proceedings of the 6th International Conference on Computers in Education, 2001. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro ; COSTA FILHO, João Carlos. <b>Semi-Immersive Virtual Reality Cooperative Environment for Distance Learning</b>. Em: Workshop of Computer Collaborative Education 2001 - World Conference in Computers in Education 2001, 2001, Copenhague. Seventh IFIP World Conference on Computers in Educatio - Book of Abstracts, p. 95-95, 2001. </td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; MENDONÇA JUNIOR, G. M.. <b>AVAL Chat 3D: Um Estudo de Caso de Ambiente de Realidade Virtual Multiusuário</b>. Em: V Semana Universitária da Universidade Estadual do Ceará, 2000, Fortaleza. Anais da V Semana Universitária da Universidade Estadual do Ceará, 2000. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Uma Introdução a Sistemas Operacionais e seus Aspectos Gerais</b>. Em: II ENCOINFO, 2000, Palmas. II ENCOINFO. Palmas: Instituto Luterano de Ensino Superior, p. 95-100, 2000. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Um exemplo de heurística: algoritmos genéticos</b>. Em: II ENCOINFO, 2000, Palmas. II ENCOINFO. Palmas: Instituto Luterano de Ensino Superior, p. 131-134, 2000. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>PAILLARD, G. A. L. <b>Introdução ao Paralelismo e seus Aspectos Gerais</b>. Em: II Sempesq, 2000, Aracaju. II Semana de Pesquisa, 2000. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Pesquisa em Inteligência Artificial e Música</b>. Em: V Conhecimento em Debate, 2000, João Pessoa. V Conhecimento em Debate - Programaão - Resumos, p. 84-84, 2000. </td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes. <b>Desenvolvimento e implementação da meta-heurística Tabu Search: uma aplicação do MATLAB</b>. Em: IV Semana Universitária da Universidade Estadual do Ceará, 1999, Fortaleza. Anais da IV Semana Universitária da Universidade Estadual do Ceará, 1999. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro. <b>Um Ambiente Cooperativo Multiusuário baseado em Realidade Virtual voltado para a Educação a Distância</b>. Em: 2o Workshop Brasileiro de Realidade Virtual, 1999, São Carlos, SP. Anais do 2o Workshop Brasileiro de Realidade Virtual, p. 233-234, 1999. </td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Klavierstück XI de Stockhausen: uma imensa melodia de timbres</b>. Em: VI Encontro de Iniciação Científica da UFPB, 1998, João Pessoa. VI Encontro de Iniciação Científica da UFPB - RESUMOS - Ciências Humanas e Sociais Aplicadas. João Pessoa: Gráfica e Editora Santa Clara, v. 3, p. 157-157, 1998. </td></tr>
+            </table></div><div id="dv-year-1997"><h3 class="year">1997</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; Marçal, E.. <b>Uma Nova Metodologia de Ensino através da WEB Aplicada ao Estudo da Computação Gráfica</b>. Em: INFOSOL 97 - Congresso e Feira de Informática e Telecomunicações, 1997. Anais do INFOSOL 97 - Congresso e Feira de Informática e Telecomunicações, 1997. </td></tr>
+            </table></div><div id="dv-year-1995"><h3 class="year">1995</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>The Percentage in the School Context</b>. Em: 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995, Recife. Proceedings of the 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; ROAZZI, A. ; SANTOS, A. R. R.. <b>A Developmental Study of Time as Integration of Distance and Velocity</b>. Em: 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), 1995, Recife. Proceedings of the 19th Annual Conference of the International Group for the Psychology of Mathematical Education (PME 19), v. 1, p. 220-220, 1995. </td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>A compreensão de Porcentagem no Contexto Escolar</b>. Em: 17a. Reunião anual da ANPED (Associação Nacional de Pós-Graduação em Educação), 1994, Caxambu. Anais da 17a. Reunião anual da ANPED (Associação Nacional de Pós-Graduação em Educação). Caxambu: ANPED, v. 1, p. 96-97, 1994. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CARRAHER, D. W.. <b>A Porcentagem no Contexto Escolar: Estratégias Usadas pelos alunos</b>. Em: XXIV Reunião Anual da Sociedade Brasileira de Psicologia, 1994, Ribeirão Preto. Anais da XXIV Reunião Anual da Sociedade Brasileira de Psicologia, v. 1, p. 52-52, 1994. </td></tr>
+            </table></div><div id="dv-year-1990"><h3 class="year">1990</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>OLIVEIRA, S. ; GITIRANA, V. ; CASTRO FILHO, J. A.. <b>Charadas - Uma atividade com o LOGO</b>. Em: I Jornada Alagoana de Informática na Educação, 1990, Alagoas. Anais da I Jornada Alagoana de Informática na Educação, v. 1, 1990. </td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

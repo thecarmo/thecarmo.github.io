@@ -1,0 +1,393 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Softwares sem registro de patente'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1994,
+1],
+[1998,
+1],
+[2000,
+1],
+[2001,
+4],
+[2002,
+1],
+[2003,
+2],
+[2004,
+6],
+[2005,
+4],
+[2006,
+4],
+[2007,
+2],
+[2008,
+12],
+[2009,
+15],
+[2010,
+7],
+[2011,
+1],
+[2012,
+7],
+[2013,
+3],
+[2014,
+7],
+[2015,
+2],
+[2018,
+11],
+[2019,
+5],
+[2020,
+2],
+[2021,
+1],
+[2023,
+1]]}]});
+        });
+        </script>
+        
+                <h3>Softwares sem registro de patente</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 100<br>
+                    
+                    
+                    <div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COSTA, J. <b>E. ; ROCHA, F. B. N. ; NASCIMENTO, G. M. ; CASTRO FILHO, J. A. ; MAIA, J. G. R. ; OLIVEIRA, C. F. ; MESQUITA, J. N. S. ; GARCIA, P. J. R. ; FRANCO, A. O. R. . A jornada da Mel</b>. 2023.</td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; FREIRE, R. S. ; NASCIMENTO, G. M.. <b>O reino de Aljabar: o desafio da balança</b>. 2021.</td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. <b>B. ; MEDEIROS, M. D. ; SOUZA, Maria de Fátima Costa de ; SOUSA, J. S. ; MONTEIRO, L. L. ; FREITAS, F. Y. M. ; DE C. FILHO, JOSÉ AIRES ; GOMES JUNIOR, F. G. ; LEITE JR, A. J. M. . Ilha das Operações</b>. 2020.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO, J. B. ; MEDEIROS, M. D. ; SOUZA, Maria de Fátima Costa de ; SOUSA, J. S. ; RUFINO, L. L. M. ; CASTRO FILHO, José Aires de. <b>Chocomática: treinamento</b>. 2020.</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, M. F. C. ; MEDEIROS, M. D. ; MONTEIRO, L. L. ; SOUSA, J. S. ; DE C. FILHO, JOSÉ AIRES . É o Bicho 2.0</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, M. F. C. ; MEDEIROS, M. D. ; SOUSA, J. S. ; MONTEIRO, L. L. ; SOUZA, D. C. ; CASTRO FILHO, J. A. . Divertix</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. ; MONTEIRO, L. L. ; SOUSA, J. S. ; CASTRO FILHO, José Aires de . É o Bicho 2.0</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. ; MONTEIRO, L. L. ; SOUSA, J. S. ; CASTRO FILHO, José Aires de . Ilha das operações</b>. 2019.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. ; MONTEIRO, L. L. ; SOUSA, J. S. ; CASTRO FILHO, José Aires de . Divertix</b>. 2019.</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; MONTEIRO, L. L. ; CASTRO FILHO, J. A. . Meu Álbum Geométrico</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; MONTEIRO, L. L. ; CASTRO FILHO, J. A. . Brincando com a formas</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO, J. <b>B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. ; MONTEIRO, L. L. ; SOUSA, J. S. ; CASTRO FILHO, José Aires de . Meu álbum geométrico</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO, J. B. ; SOUZA, Maria de Fátima Costa de ; MEDEIROS, M. D. ; MONTEIRO, L. L. ; SOUSA, J. S. ; CASTRO FILHO, José Aires de. <b>Brincando com as Formas</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FREIRE, R. <b>S. ; FIGUEIREDO, M. V. C. ; HITZSCHKY, R. A. ; SOUSA, D. C. ; CASTRO FILHO, J. A. . De olho na Lista</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FREIRE, R. <b>S. ; FIGUEIREDO, M. V. C. ; HITZSCHKY, R. A. ; SOUSA, D. C. ; CASTRO FILHO, J. A. . Fábulas Animadas</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREIRE, R. <b>S.; HITZSCHKY, RAYSSA ; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; CASTRO FILHO, J. A. . De olho na Lista</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FREIRE, R. <b>S.; FIGUEIREDO, M.V,C ; HITZSCHKY, RAYSSA ; SOUSA, D. C. ; CASTRO FILHO, J. A. . Fábulas animadas</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FREIRE, R. <b>S.; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; HITZSCHKY, RAYSSA ; CASTRO FILHO, J. A. . Qual é o seu pedido?</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>FREIRE, R. S.; HITZSCHKY, RAYSSA ; FIGUEIREDO, M.V,C ; SOUSA, D. C. ; CASTRO FILHO, J. A.. <b>Revista Digital da Criança</b>. 2018.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>FREIRE, R. S.; SOUSA, D. C. ; FIGUEIREDO, M.V,C ; HITZSCHKY, RAYSSA ; CASTRO FILHO, J. A.. <b>Aventura no Mundo dos Quadrinhos</b>. 2018.</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PAIVA JUNIOR, O. R. ; NOVAIS, C. E. B.. <b>Fonte Digital Trajes Fatais</b>. 2015.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SILVA, L. E. ; PAIVA, F. G. M. ; CASTRO FILHO, J. A. ; CASTRO, J. B. ; FORTE, A. H. ; BARGUIL, S.. <b>Esquadrão Graphics: em repórter por um dia</b>. 2015.</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. <b>E. B.; OLIVEIRA, A. T. ; MOURAO, M. A. ; MEDEIROS, C. P. ; CHAVES JUNIOR, J. R. . Fonte Digital Ariadne</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. <b>E. B.; CARNEIRO, M. P. G. ; LIMA, N. T. C. ; EDUARDO, V. M. . Fonte Digital Soberba</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. <b>E. B.; BICA, F. S. L. ; LUZ FILHO, A. C. S. ; ALVES, M. F. . Fonte Digital Shicoo</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>NOVAIS, C. <b>E. B.; OLIVEIRA, A. S. ; DIAS, A. K. F. ; OLIVEIRA FILHO, P. S. B. ; MARTINS, J. P. A. . Fonte Digital Unai</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NOVAIS, C. E. B.; CARMO, R. A. ; CASTRO, S. S. ; ROCHA, L. R.. <b>Fonte Digital Gary Script</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>NOVAIS, C. E. B.; NEGROMONTE, A. P. ; SILVA, D. M. ; ALENCAR, D. C. ; ALMEIDA, R. B.. <b>Fonte Digital R Judas Sans</b>. 2014.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>NOVAIS, C. E. B.; OLIVEIRA, D. S. M. ; LIMA, D. A. ; PAIVA JUNIOR, O. R. ; ALMEIDA, R. L. A.. <b>Fonte Digital CiberGótica</b>. 2014.</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; MURAKAMI, L. <b>C. ; SABINO, R. F. S. ; ALMEIDA, D. M. . Dan Ki</b>. 2013.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; VERAS, M. B. A.. <b>Tabletop de baixo custo</b>. 2013.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, Antônio José Melo ; GOMES, George Allan Menezes ; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento. <b>VShooter</b>. 2013.</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FREIRE, R. <b>S.; Castro-Filho, J. A. . Fábrica de Tirinhas</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. <b>S.; CASTRO FILHO, J. A. . Fábulas</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, Raquel Santiago ; CASTRO FILHO, J. <b>A. . Tirinhas</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; CARVALHO, B. M.. <b>Lousa Virtual - captura e processamento</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; MURAKAMI, L. <b>C. ; SABINO, R. F. S. . Angry Clients</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de. <b>CLO Studio</b>. 2012.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; FREIRE, R. <b>S. ; CASTRO FILHO, José Aires de . Fabrica de Tirinhas</b>. 2012.</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Castro Filho, José Aires de; FREIRE, Raquel Santiago ; SOUZA, Maria de Fátima Costa de ; Mesquita, Ofélia Alencar. <b>Primeiro, Aprender Digital!</b>. 2011.</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; Souza, Shirliane Matos ; LIMA, Lavina Lúcia Vieira ; BARBOSA, Jaiane Ramos . Brincando no Brasil</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GOMES, Fernando Antônio de Carvalho ; SOUZA, O. ; MAIA, J. G. R. ; NOGUEIRA FILHO, J. V. ; REGO, P. A. L.. <b>Ginga CDN (Demux e Renderer de Mídias)</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, A. J. M. <b>Memoria do Empreendedor Sebrae</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, A. J. M. <b>Trilha do Empreendedor Sebrae</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LEITE JUNIOR, A. J. M. <b>Quiz do Empreendedor Sebrae</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAIA, J. <b>G. R.. CRAb Graphics Engine</b>. 2010.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Munguba, Marilene ; NOVAIS, C. <b>E. B. ; PONTES, A. G. O. ; LIMA JUNIOR, R. B. ; CRUZ, L. A. ; LIMA, M. F. . Memolibras</b>. 2010.</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARRETO, A. <b>L. O ; FREIRE, R. S. ; PEQUENO, M. C ; SOUZA, M. F. C. ; CAMELO, L. S. ; GOMES, T. A. . Desafio Empresarial</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CAMELO, L. <b>S. ; FERNANDES, A. C. ; FREIRE, R. S. ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante . Numeros Multiplos</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CAMELO, L. <b>S. ; FERNANDES, Alisandra Cavalcante ; FREIRE, R. S. ; SOUZA, M. F. C. ; CASTRO FILHO, J. A. ; PEQUENO, M. C . Números Múltiplos</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CAMELO, Lorena Silva ; BARRETO, Antônio Luiz de Oliveira ; CASTRO FILHO, J. A. ; FREIRE, R. S. ; FERNANDES, Alisandra Cavalcante ; SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante. <b>Grande Prêmio Funcional</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CAMELO, Lorena Silva ; FERNANDES, Alisandra Cavalcante ; FREIRE, Raquel Santiago ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, J. <b>A. ; PEQUENO, Mauro Cavalcante . Números Múltiplos</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; BARRETO, Antônio Luiz de Oliveira ; FREIRE, R. S. ; PEQUENO, M. C. ; SOUZA, Maria de Fátima Costa de ; FERNANDES, Alisandra Cavalcante ; CAMELO, Lorena Silva ; GOMES, Thiago de Albuquerque . Desafio Empresarial</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>CASTRO FILHO, J. <b>A. ; FREIRE, R. S. ; SOUZA, M. F. C. ; PEQUENO, M. C . Construtura RIVED</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>CASTRO FILHO, J. A. ; FERNANDES, Alisandra Cavalcante ; FREIRE, R. S. ; PEQUENO, M. C. <b>Conhecendo o universo 2008</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>CASTRO FILHO, J. A.; Anker, Ana Luisa ; LIMA, Lavina Lúcia Vieira ; Guedes, Francisca Danielle. <b>Me perdi e me achei no Brasil</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; BARRETO, A. <b>L. O. ; FREIRE, R. S. ; SOUZA, Maria de Fátima Costa de ; FERNANDES, A. C. ; CAMELO, L. S. ; GOMES, T. A. . Desafio Empresarial</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>FERNANDES, A. <b>C. ; FREIRE, R. S. ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante . Biodiesel</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, R. <b>S. ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante . Biodiesel</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, R. <b>S. ; SOUZA, M. F. C. ; PEQUENO, M. C ; CASTRO FILHO, J. A. . Biodiesel</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>FERNANDES, Alisandra Cavalcante ; FREIRE, R. <b>S. ; SOUZA, M. F. C. ; CASTRO FILHO, J. A. ; PEQUENO, M. C . É o bicho</b>. 2009.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>GOMES, Fernando Antônio de Carvalho ; SOUZA, O. <b>; MAIA, J. G. R. . Apollo</b>. 2009.</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; FREIRE, Raquel Santiago ; SOUZA, Maria de Fátima Costa de . Construtora RIVED</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; FERNANDES, Alisandra Cavalcante ; FREIRE, R. S. ; SOUZA, Maria de Fátima Costa de ; PEQUENO, M. C. . É o bicho</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; FREIRE, Raquel Santiago ; SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante . Conhecendo o Universo</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; FERNANDES, A. <b>C. ; FREIRE, R. S. ; SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante . E o Bicho</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; FREIRE, R. <b>S. ; SOUZA, Maria de Fátima Costa de . Construtora Rived</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO FILHO, José Aires de ; FREIRE, R. <b>S. ; SOUZA, Maria de Fátima Costa de ; PEQUENO, Mauro Cavalcante . Conhecendo o Universo</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREIRE, R. <b>S. ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, J. A. ; FERNANDES, Alisandra Cavalcante ; PEQUENO, Mauro Cavalcante . Feira dos pesos</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FREIRE, R. <b>S. ; SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, José Aires de ; FERNANDES, A. C. ; PEQUENO, Mauro Cavalcante . Feira dos Pesos</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FREIRE, R. <b>S.; FERNANDES, Alisandra Cavalcante ; CASTRO FILHO, J. A. ; SOUZA, M. F. C. ; PEQUENO, M. C . Feira dos Pesos</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>PEQUENO, M. C. ; PEQUENO, H. S. L.. <b>Sistema de Áudioconferência para o Ensino a Distância - E-VOZ</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUZA, J. <b>T. ; CAMPOS, G. A. L. ; CARMO, R. A. F . EasyMeta</b>. 2008.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; BARRETO, N. <b>C. ; VASCONCELLOS, K. C. ; CASTRO, A. R. P. ; ELIANA, ; OLIVEIRA, E. M. ; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante . Dentro das Leis</b>. 2008.</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PEQUENO, H. S. L. <b>FrameTV - Um Framework para o Desenvolvimento de Aplicações Interativas para o Ambiente de Televisão Digital</b>. 2007.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CAMELO, L. <b>S. ; SIQUEIRA, R. A. F. ; AMARAL, L. L. . Pontos em Batalha</b>. 2007.</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>AIRES, J. ; SARMENTO, W. W. F. ; PAULA, P. S. ; PEQUENO, H. S. L.. <b>Sistema On-line para Criação de Projetos e Comunicades - Socarates</b>. 2006.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, M. C. ; PAULA, P. S. ; SARMENTO, W. W. F. ; PEQUENO, H. S. L. ; CASTRO, M. F.. <b>Aplicações de Consulta em Quiosques Multimídia</b>. 2006.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SALES, G. <b>L. ; OLIVEIRA, E. M. ; Castro-Filho, J. A. ; FREIRE, R. S. ; MACEDO, L. N. . Gangorra Interativa</b>. 2006.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; Barreto, Daisyane C. ; BARRETO, N. C. ; CAMELO, L. S. ; GOMES, T. A.. <b>Arquitetura das Escadas</b>. 2006.</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; SOUZA, Maria de Fátima Costa de ; LEITE, Monalisa de Abreu ; BARRETO, Daisyane Carneiro ; BARRETO, Natasha Carneiro ; GOMES, Thiago de Albuquerque . Arquitetura de Escadas</b>. 2005.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Castro-Filho, J. <b>A. ; FREIRE, R. S. ; Leite, M. A. . Balança Interativa</b>. 2005.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SALES, Gilvandenys Leite ; CASTRO FILHO, J. <b>A. ; VIEIRA, Rafael Siqueira Telles . Pato Quântico</b>. 2005.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SALES, Gilvandenys Leite ; CASTRO FILHO, J. <b>A. ; OLIVEIRA, Eliana Moreira de ; FREIRE, Raquel Santiago ; MACÊDO, Laécio Nobre de . Gangorra Interativa</b>. 2005.</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; PEQUENO, Mauro Cavalcante ; CAMELO, Lorena Silva ; VIEIRA, Rafael Siqueira Telles ; GOMES, Thiago de Albuquerque ; OLIVEIRA, Edna Bandeira de ; OLIVEIRA, Manuel Mavenier de . Desafio Funções</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LEITE JUNIOR, A. <b>J. M.; MUNGUBA, Marilene Calderaro da Silva ; NOVAIS, Carlos Eduardo Brito . Dieta Irada, videogame</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LEITE JUNIOR, A. <b>J. M. ; NOVAIS, C. E. B. . Dieta Irada</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; VÁRIOS. <b>Curso Gestão de Cidades, Material Didático em CD-ROM</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PEQUENO, H. S. L.; PAULA, P. S. ; SARMENTO, W. W. F.. <b>Simulado do Exame Nacional do Ensino Médio - ENEM</b>. 2004.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>TRAJANO, ERNESTO; GUIGUE, Didier ; BARBOSA, A. C. ; PESSOA, B. ; ROLIM, A. L. ; ANDRADE, N. F.. <b>SOAL - Sonic Object Analysis Library, v 1.2</b>. 2004.</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GUIGUE, Didier ; TRAJANO DE LIMA, ERNESTO ; BARBOSA, A. C. ; ANDRADE, N. F. ; PESSOA, B.. <b>SOAL - Sonic Object Analysis Library, v 1.0</b>. 2003.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>PEQUENO, M. C. ; SARMENTO, W. W. F. ; PEQUENO, H. S. L. ; PAULA, P. S. ; LOUREIRO, R. C.. <b>Sistema Online de Aprendizagem SOLAR</b>. 2003.</td></tr>
+            </table></div><div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.; CAMPELO, F. J. ; SANTOS, A. J. O. DOS . Cartas Interativas</b>. 2002.</td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>A.. Balança Interativa:</b>. 2001.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GOMES, George Allan Menezes; LEITE JÚNIOR, Antônio José Melo ; ALMENDRA, Camilo Camilo ; BARROS FILHO, Edgar Marçal de ; SANTOS, Emanuele Marques dos ; MENDONÇA JÚNIOR, G. <b>M. ; GOMES, Humberto Ovídio Osório ; CAMPELO, Luiz David Sales de Paula ; TERCEIRO, A. M. ; FONTENELLE, C. V. ; MOTA, Francisco Ronaldo de Freitas ; BRAGA, Luiz Cláudio de Mello ; LIMA, Marlon Cavalcanti ; REZENDE, Neil Armstrong ; MEDEIROS, P. Í. S. . Papo 3D</b>. 2001.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MAIA, J. <b>G. R.; PEQUENO, Mauro Cavalcante ; VIDAL, Creto Augusto . Ambiente VDL</b>. 2001.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MAIA, J. <b>G. R.. Jota3D</b>. 2001.</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JÚNIOR, Antônio José Melo ; GOMES, George Allan Menezes ; REZENDE, Neil Armstrong ; SANTOS, Emanuele Marques dos ; GOMES, Humberto Ovídio Osório ; ALMENDRA, Camilo Camilo ; MENDONÇA-JUNIOR, Glaudiney Moreira ; CAMPELO, Luiz David Sales de Paula ; BRAGA, Luiz Cláudio de Mello ; LIMA, Marlon Cavalcanti ; ALVES, Jônatas Gomes ; BARROS FILHO, Edgar Marçal de ; MOTA, Francisco Ronaldo de Freitas. <b>VirtualTrip</b>. 2000.</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; MALONEY, A.. <b>Staircase Interactive Diagram</b>. 1998.</td></tr>
+            </table></div><div id="dv-year-1994"><h3 class="year">1994</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Balança: Um Software para Aprendizagem de Algebra</b>. 1994.</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

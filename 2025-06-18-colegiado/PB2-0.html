@@ -1,0 +1,369 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Capítulos de livros publicados'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2001,
+3],
+[2003,
+1],
+[2006,
+1],
+[2007,
+5],
+[2008,
+3],
+[2009,
+2],
+[2010,
+2],
+[2011,
+3],
+[2012,
+8],
+[2013,
+4],
+[2014,
+5],
+[2015,
+8],
+[2016,
+8],
+[2017,
+14],
+[2018,
+3],
+[2019,
+1],
+[2020,
+5],
+[2021,
+6],
+[2022,
+3],
+[2023,
+2],
+[2024,
+3]]}]});
+        });
+        </script>
+        
+                <h3>Capítulos de livros publicados</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 90<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LOPES, E. C. ; MOREIRA NETO, M. ; COUTINHO, E. F. ; PAILLARD, G. A. L. ; MOREIRA, L. O.. <b>Ciência de Dados Educacionais: Conceitos, Aplicações e Desafios. Tecnologias Educacionais Digitais. 1ed</b>. Em: . 2024.v. 1, p. 151-162. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; CARVALHO, M. M. ; MARCAL, E.. <b>Sistemas de Suporte à Educação a Distância e Avaliação de Usabilidade em Cursos on-line</b>. Em: Monteiro, Aureotilde; Fernandes, Solange Jarcem. (Org.). A coordenação pedagógica em foco: velhos desafios e múltiplas experiências. 1ed.Campo Grande. : UFMS. 2024.p. 140-157. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO BRITO; COUTINHO, SOLANGE GALVÃO. <b>Por uma sistematização da teoria da caligrafia</b>. Em: Solange Galvão Coutinho; Eva Rolim Miranda; Silvio Barreto Campello. (Org.). [in] formar novos sentidos ¿ Vol 4. 1ed.São Paulo. : Editora Blucher. 2024.v. 4, p. 28-53. </td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COSTA, A. J. S. ; CASTRO FILHO, J. A. ; VASCONCELOS, Francisco Herbert Lima. <b>A FABRICAÇÃO DIGITAL DE MATERIAIS MANIPULÁVEIS PARA O ENSINO DE MATEMÁTICA: Uma revisão sistemática da literatura</b>. Em: Edgar Marçal de Barros Filho; Ana Paula de Medeiros Ribeiro; Emanuel Ferreira Coutinho; Francisco Ari de Andrade. (Org.). Tecnologia Educacional: Teoria e prática. 1ed.Curitiba. : CRV. 2023.v. 1, p. 211-220. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>RODRIGUES, M. S. ; CASTRO FILHO, J. A.. <b>O uso pedagógico de tecnologias digitais no ensino de matemática</b>. Em: Luís Távora Furtado Ribeiro; Diana Nara da Silva Oliveira; Sidney Soares Filho; José Antonio Gabriel Neto. (Org.). Educação Brasileira: dilemas históricos e contemporâneos. 1ed.Manaus. : Alexa Cultural. 2023.v. 1, p. 183-196. </td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FERREIRA, R. ; SABOIA, INGA ; PERNENCAR, C. ; OLIVEIRA, D.. <b>A influência das redes sociais na jornada do paciente bariátrico</b>. Em: Hernán Yaguana; Alfonso Sánchez Mujica; Gonzalo Pisco. (Org.). Nuevas miradas de la comunicación y el periodismo. 1ed. : Ria Editorial. 2022.v. 1, p. 18-44. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, SOLANGE. <b>CALIGRAFIA PARA O DESIGN DE TIPOS: RELATO DE UMA EXPERIÊNCIA DE ENSINO</b>. Em: Guilherme Ranoya Seixas Lins; Solange Galvão Coutinho; Eva Rolim Miranda. (Org.). Fronteiras do Design: [In]formar novos sentidos. 1ed.São Paulo. : Bucher. 2022.v. 3, p. 118-151. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>OLIVEIRA, D. ; OLIVEIRA, F. ; Pernencar, Claudia ; MORAIS, B. ; SILVA, J. ; COSTA, A. ; PEREIRA, J. ; SABOIA, INGA. <b>LICOR: Beyond the Design System. A Proposal to Empower Teams to Develop Software in Compliance with the Principles of Accessibility: Usability, and Privacy by Design in the Extreme Contexts and Challenging Domains Post-COVID-19. HCI International 2022 ? Communications in Computer and Information Science. 1ed</b>. Em: . : Springer. 2022.v. 1654, p. 139-147. </td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DE CASTRO FILHO, JOSÉ AIRES; DE CASTRO, JUSCILEIDE BRAGA ; FREIRE, Raquel Santiago. <b>Contributions of Digital Technologies to the Development of Algebraic Thinking at School</b>. Em: Alina Galvão Spinillo; Sintria Labres Lautert; Rute Borba. (Org.).. (Org.). Mathematical Reasoning of Children and Adults. 1ed. : Springer International Publishing. 2021.p. 219-238. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. ; FREIRE, R. S. ; MAIA, D. L.. <b>Estudo de Caso como método de pesquisa em Informática na Educação</b>. Em: Mariano Pimentel, Edméa Santos. (Org.). Metodologia de Pesquisa Científica em Informática na Educação: abordagem qualitativa. 1ed.Porto Alegre. : Sociedade Brasileira de Computação. 2021.v. 1, p. 1-21. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, R. F. ; SOUZA, Maria de Fátima Costa de. <b>Reprojecting a Fitness App Regarding Retention and Usability Using Nielsen?s Heuristics</b>. Em: Soares, M.M.; Rosenzweig, E.; Marcus, A.. (Org.). Reprojecting a Fitness App Regarding Retention and Usability Using Nielsen?s Heuristics. 1ed. : Springer. 2021.v. 12780, p. 434-449. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MAIA, D. L. ; CASTRO FILHO, J. A. ; DA SILVA, MARIA AURICÉLIA. <b>Tecnologias Móveis na Educação: o legado do Projeto UCA para o desenvolvimento de propostas pedagógicas no modelo de um dispositivo por aluno</b>. Em: Edméa Santos; Fábio Ferrentini Sampaio; Mariano Pimentel. (Org.). Informática na Educação: sociedade e políticas. 1ed.Porto Alegre. : Sociedade Brasileira de Computação. 2021.v. 1, p. 1. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PERNENCAR, C. ; SABOIA, I. F. ; SANTOS, R. ; Santos, Rúben. <b>O ensino remoto em contexto COVID-19 na prática projetual baseada em Design Thinking</b>. Em: Francisco Rui Cádima; Ivone Ferreir. (Org.). Perspectivas multidisciplinares da Comunicação em contexto de pandemiaColeção ICNOVACoord. Francisco Rui Cádima& Ivone Ferreira. 1ed. 2021.v. II, p. 235-263. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>SABINO, R. F. S. ; VIDAL, CRETO A. ; CAVALCANTE-NETO, Joaquim Bento ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Fast and Robust Ray/OBB Intersection Using the Lorentz Transformation</b>. Em: Adam Marrs, Peter Shirley, Ingo Wald. (Org.). Ray Tracing Gems II. 1ed.Berkeley, CA. : Apress. 2021.p. 519-528. </td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; SOUZA, D. C. ; LEITAO, D. A. ; CASTRO, J. B. ; HITZSCHKY, R. A. ; ARRUDA, J. S. ; SIQUEIRA, L. M. R. C. ; NASCIMENTO, K. A. S.. <b>FORMAÇÃO DOCENTE E EDUCAÇÃO: CONTRIBUIÇÕES DAS TECNOLOGIAS DIGITAIS PARA A PRÁXIS EM SALA DE AULA</b>. Em: Adriana Hoffman; Andrea Vilella Mafra da Silva; Edmea Oliveira dos Santos; Walcéa Barreto Alves. (Org.). Didática(s) entre diálogos, insurgências e políticas: tensões e perspectivas na relação entre educação, comunicações e tecnologia. 1ed.Petrópolis. : DP et Alii. 2020.v. 1, p. 601-633. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R.S. ; FIGUEIREDO, M. V. C. ; CASTRO FILHO, J. A.. <b>METODOLOGIAS ATIVAS: REFLEXÕES SOBRE UMA EXPERIÊNCIA NO ENSINO SUPERIOR</b>. Em: Adriana Hoffman; Andrea Vilella Mafra da Silva; Edmea Oliveira dos Santos; Walcéa Barreto Alves. (Org.). Didática(s) entre diálogos, insurgências e políticas: tensões e perspectivas na relação entre educação, comunicações e tecnologias. 1ed.Rio de Janeiro/Petrópolis. : Faperj; CNPq; Capes; Endipe /DP et Alii. 2020.v. 1, p. 1017-1024. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FURTADO, ELIZABETH S. ; Mendes, Marilia S. ; Oliveira, Denilson C. ; Lima, Lanna. <b>An Analysis of UX Based on Users¿ Emotional Intention and Values, Both Expressed Through Twitter Posts. Communications in Computer and Information Science. 1ed</b>. Em: . : Springer International Publishing. 2020.p. 79-98. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MAIA, D. L. ; CARVALHO, R. L. ; CASTRO FILHO, J. A.. <b>Tecnologias móveis numa formação colaborativa docente sobre estruturas multiplicativas</b>. Em: Ernani Martins dos Santos; Sintria Labres Lautert. (Org.). Diálogos sobre o ensino, aprendizagem e a formação de professores: contribuições da Psicologia da Educação Matemática. 1ed.Recife. : Editora Universidade de Pernambuco ? EDUPE. 2020.v. 1, p. 182-213. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Pernencar, Claudia ; SABOIA, INGA. <b>How Is the Administrator's Experience in Managing Health Facebook Groups?. Advances in Medical Technologies and Clinical Practice. 1ed</b>. Em: . : IGI Global. 2020.p. 315-341. </td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>APRENDIZAGEM COLABORATIVA MÓVEL: integrando dispositivos móveis à prática pedagógica de uma professora</b>. Em: Andréa Karla Ferreira Nunes; Anne Alilma Silva Souza Ferrete; Fernando Silvio Cavalcante Pimentel. (Org.). Transformações do presente: experiências com a tecnologia para a educação do futuro. 1ed.Curitiba. : CRV. 2019.v. 1, p. 29-52. </td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. B. ; CASTRO FILHO, J. A.. <b>CONSTRUÇÃO DE MÍDIAS DIGITAIS PARA A COMPREENSÃO DE CONCEITOS MATEMÁTICOS</b>. Em: Marcelo Vieira Pustilnik. (Org.). ROBÓTICA EDUCACIONAL E APRENDIZAGEM: o lúdico e o aprender fazendo em sala de aula. 1ed.curitiba. : CRV. 2018.v. 1, p. 67-80. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>MAIA, D. L. ; CASTRO FILHO, J. A.. <b>Dispositivos móveis e redes sociais como instrumentos para formação de professores que ensinam matemática</b>. Em: Márcia Cristina de Costa Trindade Cyrino. (Org.). Temáticas emergentes de pesquisas sobre a formação de professores que ensinam matemática [livro eletrônico] : desafios e perspectivas. 1ed.Brasília. : SBEM. 2018.v. 1, p. 101-124. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Mendes, Marilia S.; Furtado, Elizabeth. <b>An Experience of Textual Evaluation Using the MALTU Methodology. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2018.p. 236-246. </td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARRÊTO, Marcília Chagas ; CASTRO, J. B. ; CASTRO FILHO, J. A.. <b>Desempenho e esquemas de estudantes do 6° ao 9° ano ao resolverem situações multiplicativas</b>. Em: José Aires de Castro Filho; Eurivalda Ribeiro dos Santos Santana; Sintria Labres Lautert. (Org.). Ensinando multiplicação e divisão do 6º ao 9º ano. 1ed.Ibicaraí. : Via Litterarum. 2017.v. 1, p. 41-80. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; BARRÊTO, Marcília Chagas ; CASTRO, J. B.. <b>Situações elaboradas e aplicadas por professores em formação</b>. Em: José Aires de Castro Filho; Eurivalda Ribeiro dos Santos Santana; Sintria Labres Lautert. (Org.). Ensinando multiplicação e divisão do 6º ao 9º ano. 1ed.Ibicaraí. : Via Litterarum. 2017.v. 1, p. 81-107. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO, J. B. ; CASTRO FILHO, J. A. ; BARRÊTO, Marcília Chagas. <b>Teoria dos Campos Conceituais</b>. Em: José Aires de Castro Filho; Eurivalda Ribeiro dos Santos Santana; Sintria Labres Lautert. (Org.). Ensinando multiplicação e divisão do 6º ao 9º ano. 1ed.Ibicaraí. : Via Litterarum. 2017.v. 1, p. 13-39. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>COUTINHO, E. F. ; BARROS FILHO, E. M. ; SOUZA, Maria de Fátima Costa de. <b>Engenharia de Software e Aplicações Multimídia</b>. Em: Edgar Marçal de Barros Filho; Georgia da C. Pereira; Emanuel Ferreira Coutinho; José Gilvan R. Maia; Cátia Luzia O. da Silva; Fernando Lincoln C. L. Mattos, Maria de Fátima Costa de Souza. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed.Campinas. : Pontes editora. 2017.v. 1, p. 284-306. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>COUTINHO, E. F. ; MOREIRA, L. O. ; PAILLARD, G. A. L.. <b>Desenvolvimento de Aplicações Web e Banco de Dados</b>. Em: Edgar Marçal; Georgia da C. Pereira; Emanuel Ferreira Coutinho; José Gilvan R. Maia; Cátia Luzia O. da Silva; Fernando Lincoln C. L. Mattos; Maria de Fátima C. de Souza.. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed.Campinas. : Pontes Editores. 2017.p. 104-124. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>DARIN, T. G. R. ; SILVA, C. L. O. ; SOUZA, Maria de Fátima Costa de. <b>Princípios Básicos da Interação Humano-Computador para Sistemas e Mídias Digitais</b>. Em: Edgar Marçal de Barros Filho; Georgia da C. Pereira; Emanuel Ferreira Coutinho; José Gilvan R. Maia; Cátia Luzia O. da Silva; Fernando Lincoln C. L. Mattos, Maria de Fátima Costa de Souza. (Org.). Sistemas e Mídias Digitais: uma introdução. 1ed.Campinas. : Pontes editora. 2017.v. 1, p. 381-405. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>FREITAS, J. T. ; SILVA FILHO, J. R. ; FRANCO, A. O. R. ; MAIA, J. G. R.. <b>Estrutura Genérica de um Jogo Digital</b>. Em: Edgar Marçal de Barros Filho; Georgia da Cruz Pereira; Emanuel Ferreira Coutinho; José Gilvan Rodrigues Maia; Cátia Luzia Oliveira da Silva; Fernando Lincoln Carneiro Leão Mattos; Maria de Fátima Costa da Souza. (Org.). Sistemas e Mídias Digitais: uma introdução. 1ed.Campinas. : Pontes Editora. 2017.v. 1, p. 162-191. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>LEITE JUNIOR, ANTONIO JOSÉ MELO; SANTOS, C. C.. <b>Matemática Aplicada à Multimídia</b>. Em: Edgar Marçal. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed. 2017.p. 20. </td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Lima, Afonso M. S. ; Silva, Paloma B. S. ; Cruz, Lívia A. ; Mendes, Marilia S.. <b>Investigating the Polarity of User Postings in a Social System. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2017.p. 246-257. </td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MARCAL, E. ; SILVA, Henrique Barbosa. <b>Gestão de Negócios e Projetos Multimídia</b>. Em: Edgar Marçal; Geórgia da C. Pereira; Emanuel Ferreira Coutinho; José Gilvan R. Maia; Cátia Luzia O. da Silva; Fernando Lincoln C.L.Mattos; Maria de Fátima C.de Souza. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed.Campinas. : Pontes Editora. 2017.v. 1, p. 218-245. </td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MENDONCA JUNIOR, G. M. ; CHICCA JUNIOR, N. A. ; NOVAIS, C. E. B. ; PEGADO, V. ; Nascimento, Lízie S.. <b>Design de Jogos Digitais</b>. Em: Marçal, Edgar. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed.Campinas. : Pontes Editores. 2017.v. 1, p. 126-160. </td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SABOIA, I. F. ; NOVAIS, C. E. B.. <b>Design de Interfaces gráficas</b>. Em: Edgar Marçal; Geórgia Pereira; Emanuel Coutinho; José Gilvan Maia; Cátia SIlva; Fernando Lincoln Matos; Maria de Fátima Souza. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed. : Pontes Editores. 2017.v. 1, p. 474-494. </td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SABOIA, I. F. ; NOVAIS, C. E. B.. <b>Tudo o que você queria saber sobre infografia</b>. Em: Edgar Marçal; Geórgia Pereira;‎ Emanuel Coutinho;‎ José Gilvan Maia;‎ Cátia SIlva;‎ Fernando Lincoln Matos;‎ Maria de Fátima Souza. (Org.). Sistemas e Mídias Digitais: Uma introdução. 1ed. : Pontes Editores. 2017.v. 1, p. 496-513. </td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SILVA, C. M. R. ; Osmundo, Maria Lidiana Ferreira ; CASTRO FILHO, JOSÉ AIRES. <b>APRENDIZAGEM E TECNOLOGIA: ANÁLISE DO PROCESSAMENTO DE TEXTO ESCRITO EM INGLÊS COM E SEM INSERÇÃO DE GLOSSÁRIOS MULTIMIDIÁTICOS</b>. Em: José Aires de Castro Filho; Pedro Rogério; Carolina Morais. (Org.). Arte, Ciência e Educação. 1ed.Fortaleza. : IMPRECE. 2017.v. 1, p. 39-61. </td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Castro Filho, José Aires de; MAIA, D. L. ; CASTRO, J. B. ; BARRETO, Antônio Luiz de Oliveira ; FREIRE, R. S.. <b>DAS TABULETAS AOS TABLETS: tecnologias e aprendizagem da Matemática</b>. Em: CASTRO FILHO, José Aires de; BARRETO, Marcilia Chagas; BARGUIL, Paulo Meireles; MAIA, Dennys Leite; PINHEIRO, Joserlene Lima.. (Org.). Matemática, cultura e tecnologia: perspectivas internacionais.. 1ed.Curitiba. : CRV. 2016.v. 1, p. 13-34. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FRANCO, A. O. R. ; MAIA, JOSÉ G. R. ; GOMES, F. A. C.. <b>A Programming Framework for Autonomous NPCs</b>. Em: Eric Lengyel. (Org.). Game Engine Gems 3. 1ed.Wellesley. : A K Peters. 2016.v. 3, p. 255-265. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MAIA, D. L. ; CARVALHO, R. L. ; CASTRO FILHO, J. A.. <b>Tecnologias Móveis numa formação colaborativa sobre estruturas multiplicativas</b>. Em: Sintria Lautert, Ernani Martins. (Org.). Diálogos sobre o ensino, aprendizagem e a formação de professores. 1ed.Rio de Janeiro. : Editora Autografia. 2016.v. 1, p. 182-214. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MAIA, D. L. ; DIAS, A. C. A. M. ; COSTA, A. N. T. ; MORAES, S. S. ; CASTRO FILHO, J. A.. <b>ANÁLISE DE ESTRATÉGIAS DE RESOLUÇÃO DE PROBLEMAS MULTIPLICATIVOS COMO ELEMENTO PARA FORMAÇÃO E PRÁTICA DOCENTE</b>. Em: Ana Cláudia Gouveia de Sousa, Dennys Leite Maia, Mércia de Oliveira Pontes. (Org.). LEITURAS E ESCRITAS: TECENDO SABERES EM EDUCAÇÃO MATEMÁTICA. 1ed.Natal. : Edufrn. 2016.v. 1, p. 588-605. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Uma revisão da Literatura sobre Aprendizagem Móvel no Ensino Fundamental</b>. Em: Ana Maria Iório Dias; Elisângela Bezerra Magalhães; Gabriel Nunes Lopes Ferreira. (Org.). A Aprendizagem como razão do ensino. 1ed.Fortaleza. : Imprece. 2016.v. 1, p. 69-90. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Oliveira, Denilson C. ; Furtado, Elizabeth ; Mendes, Marilia S.. <b>Do Users Express Values During Use of Social Systems? A Classification of Their Postings in Personal, Social and Technical Values. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2016.p. 130-140. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Osmundo, Maria Lidiana Ferreira ; SILVA, C. M. R. ; CASTRO FILHO, J. A.. <b>A Educomunicação através de práticas colaborativas na produção audiovisual</b>. Em: Francisco Ari de Andrade, Maria Aurea Albuquerque Guerra, Vera Lúcia Pontes Juvêncio, Munique de Souza Freitas. (Org.). Caminhos da Educação: Questões, debates e experiências. 1ed.Curitiba. : Editora CRV. 2016.v. 1, p. 315-330. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SILVA, Henrique Barbosa; RIBEIRO, Ana Paula de Medeiros ; CARVALHO, A. O. P.. <b>A formação de conselheiros municipais de educação do Ceará: concepções, fundamentos, funcionamento e avaliação</b>. Em: Henrique Barbosa Silva; Ana Paula de Medeiros Ribeiro; Alanna Oliveira Pereira Carvalho.. (Org.). A democratização da gestão municipal: Criação e fortalecimento dos Conselhos Municipais de Educação do Ceará. 1ed.Fortaleza. : EdUECE. 2016.v. 1, p. 15-57. </td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; MAIA, D. L. ; DA SILVA, MARIA AURICÉLIA. <b>Lições do Projeto UCA: aprendizados e desafios</b>. Em: CASTRO FILHO, José Aires de; SILVA, Maria Auricélia da; MAIA, Dennys Leite. (Org.). Lições do Projeto Um Computador por Aluno: estudos e pesquisas no contexto da escola pública. 1ed.Fortaleza. : EdUECE. 2015.v. 1, p. 9-20. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; FREIRE, Raquel Santiago. <b>O conhecimento algébrico de uma professora dos anos iniciais no uso de tecnologias digitais</b>. Em: : SANT'ANA, Claudinei de Camargo; SANTANA, Irani Parolin; AMARAL, Rosemeire dos Santos. (Org.). Grupo de Estudos em Educação Matemática: ações cooperativas e colaborativas constituídas por várias vozes. 1ed.São Carlos. : Pedro & João Editores. 2015.v. 1, p. 313-338. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DE CASTRO, JUSCILEIDE BRAGA ; CASTRO FILHO, J. A.. <b>O TRATAMENTO DA INFORMAÇÃO A PARTIR DO LAPTOP EDUCACIONAL</b>. Em: ​CASTRO FILHO, José Aires de; SILVA, Maria Auricélia da; MAIA, Dennys Leite. (Org.). Lições do Projeto Um Computador por Aluno: estudos e pesquisas no contexto da escola pública. 1ed.Fortaleza. : EdUECE. 2015.v. 1, p. 161-191. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LIMA, MIXILENE S. S. ; MELO, M. B. O. ; Bezerra, Ellen Lacerda Carvalho ; CASTRO FILHO, J. A.. <b>Alunos contadores de histórias: uma experiência utilizando o laptop educacional</b>. Em: Francisco Ari de Andrade, Flávio Muniz Chaves, Luzianny Borges Rocha, Maria Simone Euclides. (Org.). Educação Brasileira: aportes e tendências. 1ed.Curitiba. : Editora CRV. 2015.v. 1, p. 217-226. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Mendes, Marilia S.; Furtado, Elizabeth ; Militao, Guido ; de Castro, Miguel F.. <b>Hey, I Have a Problem in the System: Who Can Help Me? An Investigation of Facebook Users Interaction When Facing Privacy Problems. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2015.v. 9190, p. 391-403. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Mendes, Marília S.; Furtado, Elizabeth ; Furtado, Vasco ; de Castro, Miguel F.. <b>Investigating Usability and User Experience from the User Postings in Social Systems. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2015.v. 9182, p. 216-228. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>ATIVIDADES COLABORATIVAS: O USO DO GOOGLE MAPS NA ESCOLA</b>. Em: CASTRO FILHO, José Aires de; SILVA, Maria Auricélia da; MAIA, Dennys Leite (Orgs.). (Org.). Lições do Projeto Um Computador por Aluno: estudos e pesquisas no contexto da escola pública. 1ed.Fortaleza. : EdUECE. 2015.v. 1, p. 51-87. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Silva, Maria Auricélia da ; BARBOSA, Jaiane Ramos ; CASTRO FILHO, J. A.. <b>TRABALHO COLABORATIVO: APRENDENDO E ENSINANDO COM O LAPTOP</b>. Em: ​CASTRO FILHO, José Aires de; SILVA, Maria Auricélia da; MAIA, Dennys Leite. (Org.). Lições do Projeto Um Computador por Aluno: estudos e pesquisas no contexto da escola pública. 1ed.Fortaleza. : EdUECE. 2015.v. 1, p. 23-50. </td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; NASCIMENTO, K. A. S. ; Silva, Maria Auricélia da ; BARBOSA, Jaiane Ramos. <b>TECNOLOGIAS DIGITAIS, MOBILIDADE E EDUCAÇÃO: PERSPECTIVAS CONTEMPORÂNEAS PARA A DIDÁTICA E A PRÁTICA DE ENSINO</b>. Em: Maria Marina Dias Cavalcante; José Albio Moreira de Sales; Isabel Maria Sabino de Farias; Maria Socorro Lucena Lima. (Org.). Didática e a prática de ensino: diálogos sobre a escola, a formação de professores e a sociedade. 1ed.Fortaleza. : EdUECE. 2014.v. 1, p. 309-327. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LIMA, MIXILENE S. S. ; Osmundo, Maria Lidiana Ferreira ; MENDES, W. M. F. ; NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Trabalho colaborativo: a produção de aplicativo colaborativo educacional</b>. Em: Francisco Ari de Andrade, Carlos Augusto Viana, Renata Aquino. (Org.). Educação Brasileira: conceitos e contextos. 1ed.Fortaleza. : Edições UFC. 2014.v. 1, p. 286-306. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Mendes, Marília S.; Furtado, Elizabeth ; Furtado, Vasco ; de Castro, Miguel F.. <b>How Do Users Express Their Emotions Regarding the Social System in Use? A Classification of Their Postings by Using the Emotional Analysis of Norman. Lecture Notes in Computer Science. 1ed</b>. Em: . : Springer International Publishing. 2014.p. 229-241. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Silva, Maria Auricélia da ; BARBOSA, Jaiane Ramos ; CASTRO FILHO, J. A.. <b>FORMAÇÃO DOCENTE E TRABALHO COLABORATIVO NO PROJETO UM COMPUTADOR POR ALUNO</b>. Em: Isabel Maria Sabino de Farias; Maria Socorro Lucena Lima; Maria Marina Dias Cavalcante; José Albio Moreira de Sales. (Org.). Didática e Prática de Ensino na relação com a Formação de Professores. 1ed.Fortaleza. : Eduece. 2014.v. 1, p. 3666-3677. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Silva, Maria Auricélia da ; BARBOSA, Jaiane Ramos ; Castro Filho, José Aires de. <b>Aprender a colaborar, colaborar para aprender: práticas pedagógicas com suporte computacional</b>. Em: Kelma Socorro Alves Lopes de Matos. (Org.). Cultura de Paz, Ética e espiritualidade IV. 1ed.Fortaleza. : Edições UFC. 2014.v. 1, p. 427-440. </td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Castro, Juscileide ; CASTRO FILHO, J. A.. <b>Aprendendo gráficos com Objetos de Aprendizagem</b>. Em: Marcilia Chagas Barreto, Joserlene Lima Pinheiro, Rodrigo Lacerda Carvalho, Dennys Leite Maia. (Org.). Matemática, Aprendizagem e Ensino. 1ed.Fortaleza. : EdUECE. 2013.v. 1, p. 129-150. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>MAIA, D. L. ; CARVALHO, R. L. ; CASTRO FILHO, J. A.. <b>O laptop educacional no ensino de Função: experiência de Aprendizagem Colaborativa com Suporte Computacional</b>. Em: Marcilia Chagas Barreto, Joserlene Lima Pinheiro, Rodrigo Lacerda Carvalho, Dennys Leite Maia. (Org.). Matemática, Aprendizagem e Ensino. 1ed.Fortaleza. : EdUECE. 2013.v. 1, p. 113-128. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MENDES, Marilia Soares.; Furtado, Elizabeth ; THEOPHILO, F. ; FRANKLIN, M.. <b>A Study about the Usability Evaluation of Social Systems from Messages in Natural Language</b>. Em: César Collazos; Andréia Liborio; Cristian Rusu. (Org.). A Study about the Usability Evaluation of Social Systems from Messages in Natural Language. 1ed. 2013.v. 8278, p. 59-62. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Mendes, Marília Soares; S. Celes, Clayson S. F. ; Furtado, Elizabeth. <b>Specification of Interaction of Digital TV Applications in Converged Scenarios and Using Pre-patterns. Communications in Computer and Information Science. 1ed.Berlin</b>. Em: . : Springer Berlin Heidelberg. 2013.v. 278, p. 641-654. </td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; DAVID, Priscila Barros ; SOUZA, Claudenice de Freitas. <b>FORMAçãO DOCENTE PARA A EAD</b>. Em: Júlio Araújo; Nukácia Araújo. (Org.). EaD EM TELA: DOCÊNCIA, ENSINO E FERRAMENTAS DIGITAIS. 1ed.Campinas. : Pontes Editora. 2012.v. 1, p. 67-92. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; CASTRO FILHO, J. A.. <b>Álgebra inicial, objetos de aprendizagem e manipulativos: trajetórias de estudos de intervenção na escola</b>. Em: Alina Galvão Spinillo e Síntria Labres Lautert. (Org.). A pesquisa em psicologia e suas implicações para a educação matemática. 1ed.Recife. : Universitária da UFPE. 2012.v. 1, p. 1-226. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>FREIRE, Raquel Santiago ; Castro Filho, José Aires de. <b>Álgebra inicial, objetos digitais de aprendizagem e manipulativos: trajetórias de estudos de intervenção na escola</b>. Em: Alina Galvão Spinillo, Sintria Labres Lautert. (Org.). A Pesquisa em Psicologia e suas implicações para a Educação Matemática. 1ed.Recife. : Editora Universitária da UFPE. 2012.v. 1, p. 139-174. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Furtado, Elizabeth ; MENDES, Marilia Soares.. <b>VERIFICAÇÃO DE REQUISITOS USANDO PRÉ-PADRÕES E SUA VALIDAÇÃO SOB A ÓTICA DA APROPRIAÇÃO DA TECNOLOGIA. Qualidade da Interação de Sistemas e Novas abordagens para a avaliação. 1ed.Curitiba</b>. Em: . : EDITORA CRV. 2012.v. 1, p. 77-90. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NASCIMENTO, K. A. S. ; Pontes, Renata Lopes Jaguaribe ; Viana, Katyúscia Mota ; CASTRO FILHO, J. A.. <b>FORMAÇÃO E PRÁTICA DOCENTE COM O LAPTOP EDUCACIONAL</b>. Em: LEITE, Yoshie Ussami Ferrari; MARIN, Alda Junqueira; PIMENTA, Selma Garrido; REALI, Aline Maria de Medeiros Rodrigues. (Org.). POLÍTICAS DE FORMAÇÃO INICIAL E CONTÍNUA DE PROFESSORES. 1ed.Araraquara. : Junqueira e Marin Editores. 2012.v. 1, p. 4699-4708. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Pontes, Renata Lopes Jaguaribe ; NASCIMENTO, K. A. S. ; Cavalcante , Andrea Pinheiro Paiva ; Viana, Katyúscia Mota ; CASTRO FILHO, J. A.. <b>ATIVIDADES COM O LAPTOP EDUCACIONAL E A FORMAÇÃO EM SERVIÇO</b>. Em: TOMMASIELLO, Maria Guiomar Carneiro; MARIN, Alda Junqueira; PIMENTA, Selma Garrido; CARVALHO, Luiz Marcelo de; FUSARI, José Cerchi. (Org.). DIDÁTICA E PRÁTICAS DE ENSINO NA REALIDADE ESCOLAR CONTEMPORÂNEA: CONSTATAÇÕES, ANÁLISES E PROPOSIÇÕES. 1ed.Araraquara. : Junqueira e Marin Editores. 2012.v. 1, p. 4416-4427. </td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Silva, Maria Auricélia da ; Castro Filho, José Aires de. <b>APRENDIZAGEM COLABORATIVA PARA A CONSTRUÇÃO DE UMA CULTURA DE PAZ NA ESCOLA</b>. Em: Kelma Socorro Alves Lopes de Matos. (Org.). Cultura de paz, ética e espiritualidade III. 1ed.Fortaleza. : Edições UFC. 2012.v. 1, p. 1-9. </td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Silva, Maria Auricélia da ; NASCIMENTO, K. A. S. ; Morais, Márcia de Oliveira ; CASTRO FILHO, J. A.. <b>ENSINANDO E APRENDENDO TRIGONOMETRIA COM O SUPORTE DO LAPTOP EDUCACIONAL</b>. Em: TOMMASIELLO, Maria Guiomar Carneiro; MARIN, Alda Junqueira; PIMENTA, Selma Garrido; CARVALHO, Luiz Marcelo de; FUSARI, José Cerchi. (Org.). DIDÁTICA E PRÁTICAS DE ENSINO NA REALIDADE ESCOLAR CONTEMPORÂNEA: CONSTATAÇÕES, ANÁLISES E PROPOSIÇÕES. 1ed.Araraquara. : Junqueira e Marin Editores. 2012.v. 1, p. 4428-4438. </td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DAVID, Priscila Barros ; Castro Filho, José Aires de. <b>Dialogicidade nas Ciências Exatas: Debates Síncronos e Assíncronos em AVA</b>. Em: Carlos Vaz de Carvalho; Ricardo Azambuja Silveira; Manuel Caeiro Rodriguez. (Org.). TICAI2009: TICs Aplicadas a la enseñanza/aprendizaje de la Ingeniería.. Porto, Portugal. : Editora Politema - Fundação Instituto politécnico do Porto. 2011.v. 1, p. 203-212. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Guedes, Francisca Danielle ; Pontes, Renata Lopes Jaguaribe ; Mesquita, Ofélia Alencar ; Castro Filho, José Aires de. <b>Ciberespaço e Educação: a emergência do ciberprofessor</b>. Em: José Rogêrio Santana, José Gerardo Vasconcelos, Vania Marilande Ceccatto, Francisco Herbert Lima Vasconcelos, Júlio Wilson Ribeiro. (Org.). Inovações, Cibercultura e Educação. 1ed.Fortaleza. : Edições UFC. 2011.v. 1, p. 154-165. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SANTANA, J. R. ; SANTOS JUNIOR, F. F. U. ; CECCATTO, V. M. ; PEREIRA, L. P. ; MAIA, JOSÉ G. R. ; PEQUENO, H. S. L. ; VASCONCELOS, F. H. L. ; POLAK, Y. N. S. ; SANTOS, E. F. A. ; SENA, M. A.. <b>Educação biomédica assistida por computador: análise comparativa entre Visible Body e Google Body quanto a suas potencialidades e limitações no ensino de anatomia humana</b>. Em: José Rogério Santana; Lia Machado Fiuza Fialho; Francisco Fleury Uchoa Santos Junior; Vânia Marilande Ceccatto; Milena Abrão de Sena. (Org.). Bioinformática, Ciências Biomédicas e Educação. 1ed.Fortaleza. : Edições UFC. 2011.p. 21-42. </td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDONÇA-JUNIOR, Glaudiney Moreira ; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento ; LEITE JÚNIOR, Antônio José Melo ; GOMES, George Allan Menezes. <b>Interação e Comportamento de Entidades em Ambientes Virtuais</b>. Em: José Remo Ferreira Brega; Judith Kelner.. (Org.). Interação em Realidade Virtual e Realidade Aumentada. 1ed.Bauru. : Canal 6. 2010.v. 1, p. 35-55. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SOUZA, J. T. ; CARMO, R. A. F ; CAMPOS, G. A. L.. <b>On The Combination of Feature and Instance Selection</b>. Em: Yagang Zhang. (Org.). Machine Learning. : INTECH. 2010.p. 157-172. </td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; PEQUENO, Mauro Cavalcante ; POLAK, Ymiracy Nascimento de Souza. <b>Mestrado Profissionalizante na modalidade não presencial: uma cartografia pulsante</b>. Em: Fátima Bayma de Oliveira. (Org.). Desafios da educação: contribuições estratégicas para o ensino superior. Rio de Janeiro: E-papers. : Fundação Gétulio Vargas. 2009.v. 1, p. 91-98. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DAVID, Priscila Barros ; CASTRO FILHO, J. A.. <b>Educação Dialógica e Educação a Distância</b>. Em: João Batista de Albuquerque Figueiredo, Maria Eleni Henrique da Silva. (Org.). Formação humana e dialogicidade em Paulo Freire. 1ed.Fortaleza. : Editora Universidade Federall do Ceará - UFC. 2009.v. 1, p. 128-149. </td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MAIA, J. G. R.; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento. <b>Efficient Collision Detection using Transformation Semantics</b>. Em: Scott Jacobs. (Org.). Game Programming Gems. 1ed.Boston. : Charles River Media. 2008.v. 7, p. 179-189. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SALES, Gilvandenys Leite ; Soares, José Marques ; Barroso, Giovanni Cordeiro ; CASTRO FILHO, J. A. ; França, Allyson Bonetti ; Dourado Júnior, Carlos Maurício Jaborandy de Mattos. <b>Indicadores de Desempenho Learning Vectors: Uma Aplicação em Fóruns do Ambiente Virtual MOODLE</b>. Em: Carlos Vaz de Carvalho, Martín Llamas Nistal e Ricardo Silveira. (Org.). TICAI2008: TICs para a Aprendizagem da Engenharia. 1ed. : IEEE, Sociedad de Educación, Capítulo Español. 2008.v. 1, p. 77-82. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Tamanini, Isabelle ; Machado, Thais C. Sampaio ; Mendes, Marília Soares ; CARVALHO, Ana Lisse ; Furtado, Maria Elizabeth S. ; Pinheiro, Plácido R.. <b>A Model for Mobile Television Applications Based on Verbal Decision Analysis</b>. Em: Prof. Toshio Fukuda; Prof. Tarek Sobh; Prof. Khaled Elleithy. (Org.). Advances in Computer and Information Sciences and Engineering. 1ed.Bridgeport. : Springer Netherlands. 2008.p. 399-404. </td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CARVALHO, Ana Lisse ; MENDES, Marilia Soares. ; FURTADO, Maria Elizabeth Sucupira ; PINHEIRO, Plácido. <b>Analysis of the Interaction Design for Mobile TV Applications based on Multi-Criteria</b>. Em: Huaying Shu; Li Xu. (Org.). Research and Practical Issues of Enterprise Information Systems. Beijing. 2007..</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Tecnologia, Educação e Formação de Professores: superando dificuldades históricas</b>. Em: José Albio Moreira de Sales, Marcília Chagas Barreto, João Batista Carvalho Nunes, Ana Ignez Belém Lima Nunes, Isabel Maria Sabino de Farias, Rita de Cássia Barbosa Paiva Magalhães. (Org.). Formação e Práticas Docentes. 1ed.Fortaleza. : Editora da Universidade Estadual do Ceará - EdUECE. 2007.v. 1, p. 179-190. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; LEITE, Monalisa de Abreu ; FREIRE, Raquel Santiago ; MACÊDO, Laécio Nobre de. <b>O desenvolvimento de conceitos matemáticos e científicos com o auxilio de Objetos de Aprendizagem</b>. Em: Carlos Roberto Lopes; Márcia Aparecida Fernandes. (Org.). Informática na educação : elaboração de objetos de aprendizagem. 1ed.Uberlândia. : EDUFU. 2007.v. 1, p. 20-32. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; CASTRO FILHO, J. A. ; Macêdo, Ana Angélica Mathias ; Siqueira, Daniel Márcio Batista ; OLIVEIRA, Eliana Moreira de ; SALES, Gilvandenys Leite ; FREIRE, Raquel Santiago. <b>Desenvolvendo o pensamento proporcional com o uso de um objeto de aprendizagem. Objetos de Aprendizagem - Uma proposta de Recurso Pedagógico. 01ed.Brasília</b>. Em: Carmem Lúcia Prata, Ann Cristina Aun de Azevedo Nascimento. (Org.). Objetos de aprendizagem:Uma proposta de recurso pedagógico. 1ed.Brasília. : MEC, SEED - Ministério da Educação, Secretararia de Educação a Distância. 2007.v. 01, p. 17-26. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante ; BARRETO, Daisyane Carneiro ; BARRETO, Natasha Carneiro. <b>Arquitetura das escadas: um objeto de aprendizagem para exploração dos conceitos de semelhança de triângulos, proporcionalidade e Teorema de Tales. Objetos de Aprendizagem - Uma proposta de Recurso Pedagógico. 01ed.Brasília</b>. Em: Carmem Lúcia Prata; Anna Christina Aun de Azevedo. (Org.). Objetos de Aprendizagem: Uma Proposta de Recurso Pedagógico. 1ed.Brasilia. : MEC, SEED - Ministério da Educação. Secretaria de Educação a Distância. 2007.v. 01, p. 59-69. </td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MACIEL, R. H. ; LEITE JUNIOR, A. J. M. ; PITI, D. M. G.. <b>O Fenôemno da Presença no RPG Eletrônico</b>. Em: Inês Vitorino; Andréa Pinheiro. (Org.). Mídia de Chocolate. Fortaleza. : e-papers. 2006.p. 191-206. </td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, Alex Sandro ; TEDESCO, P. ; CASTRO FILHO, J. A.. <b>Ambientes de Aprendizagem em Matemática e Ciências</b>. Em: Edla Faust Ramos; Marta Costa Rosateli; Raul Sidney Wazlawick. (Org.). Informática na Escola: Um Olhar Multidisciplnar. 1aed.Fortaleza. : Editora UFC. 2003.v. 1, p. 108-135. </td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PEQUENO, M. C. ; SILVA, C. L. O. ; PEQUENO, H. S. L. ; LOUREIRO, R. C. ; SARMENTO, W. W. F.. <b>Oficina nº4 - Internet In: Laboratório de Produção para Educação a Distância</b>. Em: Universidade Federal do Paraná. (Org.). Curso de formação em EAD-UNIREDE: Laboratório de produção para Educação a Distância. 2001..</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos ; OLIVEIRA, Joaquim Pedro ; COSTA FILHO, João Carlos. <b>A Virtual Environment for Distance Learning</b>. Em: IFIP. (Org.). Computers in Education. Dordrecht. : Kluwer Academic Publishers. 2001..</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>VDL-Distributed Virtual Reality in Distance Education</b>. Em: Comissão do ProTem-CC/CNPq. (Org.). ProTeM-CC 2001 Informatics in Education. 2001..</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

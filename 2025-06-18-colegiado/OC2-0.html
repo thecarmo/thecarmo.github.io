@@ -1,0 +1,301 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Dissertação de mestrado'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2004,
+1],
+[2005,
+2],
+[2006,
+2],
+[2007,
+2],
+[2008,
+2],
+[2009,
+4],
+[2010,
+1],
+[2011,
+1],
+[2012,
+2],
+[2013,
+6],
+[2015,
+8],
+[2016,
+3],
+[2017,
+1],
+[2018,
+2],
+[2019,
+3],
+[2020,
+1],
+[2021,
+1],
+[2022,
+2],
+[2023,
+2],
+[2024,
+8],
+[2025,
+2]]}]});
+        });
+        </script>
+        
+                <h3>Dissertação de mestrado</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 56<br>
+                    
+                    
+                    <div id="dv-year-2025"><h3 class="year">2025</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>PRISCILLA SUSY GOMES DA SILVA. <b>UMA FERRAMENTA COMPUTACIONAL PARA AUXÍLIO DIDÁTICO E AVALIAÇÃO METODOLÓGICA DE PROFISSIONAIS NA PRÁTICA CLÍNICA EM ALEITAMENTO MATERNO</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4592552506433379">Raimundo Cleodimar de Oliveira Junior</a>. <b>ReAvaLIA: Um Avaliador Baseado em Modelo de Linguagem de Grande Escala para Redações do Enem</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Cintia Arruda Lima. <b>Uma proposta de curadoria para a avaliação d seleção de Recursos Educacionais Digitais por professores do ensino fundamental</b>. Dissertação (Mestrado em Programa de Pós-Graduação em Tecnologia Educacional) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9173025178455009">DANIELY DOS REIS LIMA</a>. <b>USO DO APLICATIVO BILIBRAS PARA O ENSINO DE LIBRAS COM CRIANÇAS OUVINTES</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3436252328508573">Dayany Barros Ferreira</a>. <b>Uma investigação sobre o pensamento algébrico nos anos iniciais com o recurso educacional digital O Reino de Aljabar</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Emanuelle do Nascimento Dias Cunha. <b>O Uso de Recursos Educacionais Digitais na Prática Pedagógica de Professores dos Anos Iniciais do Ensino Fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FRANCISCO ROMES DA SILVA FILHO. <b>Confiabilidade e Interpretação dos Modelos de Aprendizado de Máquina em Ambientes Virtuais de Aprendizagem com Análise de Desempenho e Conformal Prediction</b>. Dissertação (Mestrado em COMPUTAÇÃO) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>JULIANA EVARISTO COSTA. <b>Narrativas Interativas Gamificadas (NIGs) Aplicadas aos Processos de Ensino e Aprendizagem De Matemática Financeira</b>. Dissertação (Mestrado em Programa de Pós-Graduação em Tecnologia Educacional) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Patricia da Silva Olimpio. <b>Alfa Teste: um recurso educacional digital para diagnóstico de leitura nos anos iniciais do ensino fundamental</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Robson de Sousa Morais. <b>Produção de RPG como metodologia ativa no ensino de literatura e língua portuguesa</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Karine Nascimento Portela. <b>Proposta Metodológica para a produção de hipervídeos educativos em cursos on-Line de capacitação profissional: o caso do curso Biossegurança e Boas Práticas Laboratoriais Da Difop/Codec/Progep/UFC</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Lucas de Sousa Fernandes. <b>EXTRAÇÃO DE INFORMAÇÕES DE IMAGENS DE DOCUMENTOS PESSOAIS BRASILEIROS COM DEEP LEARNING</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NATALIA DA SILVA FERNANDES. <b>ACCESSIBLE INTERACTIONS 500: UM JOGO DE TABULEIRO HÍBRIDO INCLUSIVO COM REALIDADE AUMENTADA PARA AUXILIAR O ENSINO DE QUÍMICA A ALUNOS SURDOS E OUVINTES</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/6725502545242241">SARA REBECA AGUIAR DE CARVALHO</a>. <b>A educação midiática pelo uso dos recursos educacionais digitais nos anos iniciais do ensino fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Paulo Filipe dos Santos Dantas. <b>ViSCo (View, Scan, and Control it): Uso de visão computacional para descoberta de serviços em ambientes residenciais inteligentes</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Thiago Hellen Oliveira da Silva. <b>UM MÉTODO DE AVALIAÇÃO PARA ASSISTENTES DE VOZ USANDO STORYBOARDS</b>. Dissertação (Mestrado em Informática Aplicada) - Universidade de Fortaleza, . 2020.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4759396267171131">DANILO DO CARMO DE SOUZA</a>. <b>TECNOLOGIAS DIGITAIS E A APRENDIZAGEM DE CONCEITOS ESTATÍSTICOS: A UTILIZAÇÃO DO SOFTWARE GEOGEBRA POR ESTUDANTES DO 9º ANO DO ENSINO FUNDAMENTAL</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2019.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Patrícia de Sousa Paula. <b>Utilização de Inteligência de Enxame em UAVs para Busca de Alvo Fixo de Localização Desconhecida</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2019.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Rayssa Araújo Hitzschky. <b>Desenvolvimento de um Recurso Educacional Digital (RED) de Língua Portuguesa fundamentado na Base Nacional Comum Curricular</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2019.<br><i><font size=-1>Orientadores: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>, <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></i></td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Lissiane Maria da Silva Ribeiro. <b>Avaliação do software educativo luz do saber no âmbito da usabilidade pedagógica</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Luciana Xavier De Campos. <b>Pensamento Computacional, Scratch e Resolução de Problemas: Uma pesquisa intervenção com alunos do 7o ano do ensino fundamental</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2018.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Maria Lidiana Ferreira Osmundo. <b>Uma Metodologia para a Educação Superior baseada no ensino híbrido e na aprendizagem ativa</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2017.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Ana Carla Amâncio Machado Dias. <b>O USO DE UM OBJETO DE APRENDIZAGEM PARA A COMPREENSÃO DO CAMPO CONCEITUAL DA PROPORCIONALIDADE</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/1956480147016671">Juliana Silva Arruda</a>. <b>TECNOLOGIAS DIGITAIS E EMERGÊNCIA DE ZONAS DE DESENVOLVIMENTO PROXIMAL NA SALA DE AULA</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3289161307928261">Maria Bernadete Oriá de Melo</a>. <b>Engajamento discente no uso de redes sociais em contexto escolar</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2016.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ADRIANA BEZERRA RAMALHO. <b>USO DE OBJETOS DE APRENDIZAGEM PARA O ENSINO DE MATEMÁTICA</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/6378487859876565">Antonio Rodrigo dos Santos Silva</a>. <b>Escrita Braille e Pratica de Língua Portuguesa com suporte de dispositivos móveis</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CAROLINE CAJAZEIRAS ALVES ARAÚJO. <b>GAMIFICATION COMO ESTRATÉGIA METODOLÓGICA PARA FORMAÇÃO PROFISSIONAL</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2744448576727166">Maria Lidiana Ferreira Osmundo</a>. <b>UMA METODOLOGIA PARA A EDUCAÇÃO SUPERIOR BASEADA NO ENSINO HÍBRIDO E NA APRENDIZAGEM ATIVA</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td><a href="http://lattes.cnpq.br/5230487506987723">MARLY DA COSTA SILVA</a>. <b>OBJETO DE APRENDIZAGEM CUSTOMIZÁVEL ?É O BICHO? PARA APOIO AO ENSINO DAS ESTRUTURAS ADITIVAS</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td><a href="http://lattes.cnpq.br/0396026495635323">Mixilene Sales Santos Lima</a>. <b>APRENDIZAGEM COLABORATIVA COM APOIO COMPUTACIONAL: UMA EXPERIÊNCIA NO ENSINO FUNDAMENTAL</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2015.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Rubens Henrique Pailo de Almeida. <b>UMA DERIVAC¸AO DO PARADIGMA DE REESCRITA DE ? MULTICONJUNTOS GAMMA PARA A ARQUITETURA GPU</b>. Dissertação (Mestrado em Engenharia de Sistemas e Computação) - Universidade Federal do Rio de Janeiro, . 2015.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Rui Rodrigues de Mello Junior. <b>FUSAO DE DADOS EM GAMMA</b>. Dissertação (Mestrado em Engenharia de Sistemas e Computação) - Universidade Federal do Rio de Janeiro, . 2015.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2365375677121326">Cícero Bandeira Lima Filho</a>. <b>Aprendizagem colaborativa mediada pelo squeak</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DANIEL RIBEIRO MATOS. <b>UM ALGORITMO DISTRIBUÍDO PARA ESCALONAMENTO DE SENSORES EM RSSF</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2013.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7904659823512342">Francisca Danielle Guedes</a>. <b>Planejamento de aulas com objetos educacionais digitais numa escola UCA do Ceará</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Gustavo Adolfo Campos dos Santos. <b>S-SWAP: scale-space based workload analysis and prediction</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2013.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td><a href="http://lattes.cnpq.br/5214419587137676">Jaiane Ramos Barbosa</a>. <b>Práticas colaborativas estabelecidas em uma escola UCA do Ceará</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2013.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Lavina Lúcia Vieira Lima. <b>Diversidade Cultural e mídias digitais na educação: uma experiência de encontro intercultural em um contexto escolar de Fortaleza.</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2013.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2525374702919730">Juscileide Braga de Castro</a>. <b>A utilização de objetos de aprendizagem para a compreensão e construção de gráficos estatísticos</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/8128009877760964">Renata Lopes Jaguaribe</a>. <b>O uso da Web 2.0 na Educação: um estudo de caso com participantes do projeto Um Computador por Aluno</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. 2012.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/5157637741225656">Maria Aparecida Costa de Albuquerque</a>. <b>USO E INTEGRAÇÃO DA TECNOLOGIA DIGITAL AO CURRÍCULO ESCOLAR: UMA ANÁLISE DAS PRÁTICAS DESENVOLVIDAS EM UMA ESCOLA PÚBLICA DA REDE MUNICIPAL DE FORTALEZA</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2011.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Germano de Oliveira Ribeiro. <b>Avaliação pedagógica de objetos de aprendizagem no ensino de Geografia na Visão dos professores</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2010.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7603694713928142">alisandra cavalcante fernandes</a>. <b>objetos de aprendizagem na escola: estudo de um modelo de implementação</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/2213206371526231">Claudenice de Freitas Souza</a>. <b>A prática docente em ambientes virtuais de aprendizagem: saberes necessários ao professor - tutor na educação à distância</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><a href="http://lattes.cnpq.br/7436456163727979">Ofélia Alencar de Mesquita</a>. <b>A Avaliação do Processo de Elaboração dos Materiais Didáticos para a Educação a Distância em Rede</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td><a href="http://lattes.cnpq.br/0626524930808526">Paula Patrícia Barbosa Ventura</a>. <b>Comunidades de Aprendizagem em Cursos a Distância: investigando as relações sociais em ambientes virtuais</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2009.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ANDRÉ PRADO PERETTI. <b>AVA 2.0: AMBIENTES VIRTUAIS DE APRENDIZAGEM PARA A WEB 2.0</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2008.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Francisco Herbert Lima Vasconcelos. <b>Objetos de Aprendizagem Digitais como Ferramenta de Modelagem Computacional Aplicados ao Ensino de Física</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2008.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>. <b>Ambientes Computacionais para o desenvolvimento do pensamento algébrico no Ensino Fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Valessa Cristiane Paiano. <b>Investigando ferramentas síncronas e assíncronas na interação em educação a distância</b>. Dissertação (Mestrado em tecnologia da Informação e Comunicação na For) - Universidade Federal do Ceará, . 2007.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Maria de Fátima Costa de Souza. <b>Um Ambiente de de Apoio à Avaliação de Software Educativo</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico. 2006.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><a href="http://lattes.cnpq.br/8909410628237524">monalisa de abreu leite</a>. <b>Processos de mediação de conceitos algébricos durante o uso de um objeto de aprendizagem</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2006.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3713032970984293">Gerardo Viana Júnior</a>. <b>avaliação de software para o ensino de música: reconhecendo a singularidade do conhecimento musical</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Gilvandenys Leite Sales. <b>Quantum: um Software para Aprendizagem dos Conceitos da Física Moderna e Contemporânea</b>. Dissertação (Mestrado em Mestrado Profissionalizante Em Computação) - Universidade Estadual do Ceará, . 2005.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4329634354246496">Francisca Lúcia Quitéria da Silva</a>. <b>Resolução de problemas como metodologia para aprender matemática</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2004.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

@@ -1,0 +1,415 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Apresentações de trabalho'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2000,
+1],
+[2001,
+3],
+[2003,
+1],
+[2004,
+10],
+[2005,
+3],
+[2006,
+4],
+[2007,
+1],
+[2008,
+16],
+[2009,
+1],
+[2010,
+2],
+[2011,
+4],
+[2012,
+6],
+[2013,
+5],
+[2014,
+3],
+[2015,
+11],
+[2016,
+14],
+[2017,
+1],
+[2018,
+10],
+[2019,
+3],
+[2020,
+4],
+[2021,
+1],
+[2023,
+5],
+[2024,
+2]]}]});
+        });
+        </script>
+        
+                <h3>Apresentações de trabalho</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 111<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Perspectivas histórias e teóricas acerca de tecnologias digitais e o ensino e aprendizagem de conceitos matemáticos</b>. 2024. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R.S. ; CASTRO FILHO, J. A. ; Bezerra, Ellen Lacerda Carvalho. <b>Desafios e Perspectivas para implantação de Metodologias Ativas e Inovações Pedagógicas no ensino superior</b>. 2024. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. <b>Ensinando e Aprendendo Matemática com suporte das tecnologias digitais</b>. 2023. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. <b>Entre Apps e RED's: uma jornada em busca de Inovações tecnopedagógicas</b>. 2023. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Ao hibridismo e além: uma jornada em busca de Inovações tecnopedagógicas na UFC</b>. 2023. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, J. A.; CASTRO, J. B.. <b>Contribuições da Psicologia da Educação Matemática para o desenvolvimento de recursos educacionais digitais</b>. 2023. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>COPUR-GENCTURK, Y. ; CASTRO FILHO, J. A. ; SANTANA, E. R. S. ; GISLADOTTIR, K. R. ; URBAN, M. ; YELLAND, N. ; NXUMALO, F. ; MORALES, P. Z.. <b>Global Insights, Local Solutions: The Pursuit of Justice in Teaching and Teacher Education</b>. 2023. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, S. G.. <b>TFC ? O DESENVOLVIMENTO DE UMA FONTE TIPOGRÁFICA DIGITAL COMO FERRAMENTA DE ESTUDO DE CALIGRAFIA</b>. 2021. Apresentação de Trabalho/Seminário</td></tr>
+            </table></div><div id="dv-year-2020"><h3 class="year">2020</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FRANCO, A. O. R. ; SOARES, F. F. ; NETO, ALOISIO V. LIRA ; DE MACEDO, JOSE ANTONIO F. ; REGO, P. A. L. ; GOMES, Fernando Antônio de Carvalho ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Vehicle Re-Identification By Deep Feature Embedding And Approximate Nearest Neighbors</b>. 2020. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, S. G.. <b>TFC: O desenvolvimento de uma fonte como ferramenta de aprendizagem de caligrafia</b>. 2020. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, S. G.. <b>TFC?The Development of a Digital Typeface to be Used as a Calligraphy Learning Tool</b>. 2020. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M. ; SOUSA, P. ; PERNENCAR, C.. <b>Dietitians and Nutritionists Behaviour on Social Media: A Scoping Literature Review</b>. 2020. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2019"><h3 class="year">2019</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Ensino e aprendizagem na era da cibercultura</b>. 2019. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Metodologias Ativas</b>. 2019. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M. ; VELOSO, A. I. ; SOUSA, P. ; PERNENCAR, C.. <b>Estratégias de gamificação: quando ?perder peso? é ganhar</b>. 2019. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2018"><h3 class="year">2018</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Ensino e aprendizagem na era da cibercultura</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Inovação e tecnologias no Ensino Superior</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Tecnologias, Currículo e Aprendizagem Escolar</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FILHO, JOSÉ AIRES DE CASTRO. <b>Construção de Reds alinhados com a BNCC para Ensino Fundamental</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>GOMES, GEORGE A.M.; SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; MACEDO, J. A. F. ; SILVA, T. L. C.. <b>Real-time discovery of hot routes on trajectory data streams using interactive visualization based on GPU</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAIA, D. L. ; CASTRO FILHO, J. A. ; CARVALHO, R. L.. <b>Articulação entre tecnologias digitais e linguagem na educação matemática</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MONTEIRO, C. E. F. ; BRITO, A. P. ; CASTRO FILHO, J. A. ; SANTANA, E. R. S.. <b>12 Anos de SIPEMAT</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M.. <b>Online opinion leaders and Weight loss: a literature review based model</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SABOIA, I. F.; ALMEIDA, A. M. ; SOUSA, P. ; PERNENCAR, C.. <b>I am with you: a netnographic analysis of the Instagram opinion leaders on eating behavior change</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SABOIA, I. F.; PERNENCAR, C. ; VAIRINHOS, M.. <b>Augmented Reality and nutrition field: A literature review study</b>. 2018. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2017"><h3 class="year">2017</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>OLIVEIRA, D. C. ; MENDES, MARILIA S. ; FURTADO, E.. <b>Uma Investigação da Relação entre Valores Humanos e a Intenção Emocional do Usuário em suas postagens no Twitter</b>. 2017. Apresentação de Trabalho/Simpósio</td></tr>
+            </table></div><div id="dv-year-2016"><h3 class="year">2016</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA, L. A. ; Mendes, Marília S.. <b>Uma experiência de mineração de dados em postagens do Twitter</b>. 2016. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>BARBOSA, K. S. ; PEREIRA, G. C. ; NOVAIS, C. E. B.. <b>A retórica tipográfica nos tempos da web</b>. 2016. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Supergênios Ativar: Metodologias Ativas no Ensino Tecnológico</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Supergênios Ativar 2: a Missão - Metodologias Ativas no Ensino Tecnológico</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Entendendo as metodologias ativas</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>ENTENDENDO AS METODOLOGIAS ATIVAS</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>ENTENDENDO AS METODOLOGIAS ATIVAS</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Tecnologias Móveis na Escola</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FREITAS, L. M. ; SILVA, T. H. O. ; Mendes, Marília S.. <b>Uma experiência de avaliação textual do Spotify</b>. 2016. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>LIMA, A. M. S. ; SILVA, P. B. S. ; CRUZ, L. A. ; Mendes, Marília S.. <b>Classificação de opinião em postagens relacionadas ao uso</b>. 2016. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>NOVAIS, C. E. B.; MIRANDA, E. R.. <b>Ensino de Caligrafia Canônica no Brasil: Análise do material didático e técnicas utilizadas em cursos introdutórios</b>. 2016. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>OLIVEIRA, A. I. M. ; Mendes, Marília S.. <b>Estudo e melhorias em uma ferramenta de extração de postagens de Sistemas Sociais</b>. 2016. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SABOIA, I. F. <b>Graphic Design to Ux Design - challenge change</b>. 2016. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SILVA, C. E. R. ; Mendes, Marília S.. <b>Estudo sobre Processamento da Linguagem Natural</b>. 2016. Apresentação de Trabalho/Simpósio</td></tr>
+            </table></div><div id="dv-year-2015"><h3 class="year">2015</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Aprendizagem da Matemática na era da cibercultura</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Aprendizagem de ciências na era da cibercultura</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Aprendizagem com uso das tecnologias digitais na Educação</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Castro Filho, José Aires de. <b>Ensino e Aprendizagem na era da cibercultura</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Tipografia Digital</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>SABOIA, I. F. <b>Material Design</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>SABOIA, I. F. <b>Projetando Interfaces Gráficas</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>SABOIA, I. F. <b>DeLorean: Criando Interfaces Digitais do Futuro</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>SABOIA, I. F. <b>Jogos Independentes</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SILVA, Henrique Barbosa. <b>Formação dos Conselheiros Municipais de Educação</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>Computação Musical: um panorama da área</b>. 2015. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2014"><h3 class="year">2014</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Integração das tecnologias no currículo de Matemática</b>. 2014. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>SILVA, Henrique Barbosa. <b>Gestão de Projetos em EAD</b>. 2014. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>Computação Musical: um panorama da área</b>. 2014. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2013"><h3 class="year">2013</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMEIDA FILHO, P. S. B. ; NOVAIS, C. E. B.. <b>REDESING DO SITE DO CURSO DE SISTEMAS E MÍDIAS DIGITAIS: UMA PROPOSTA DE DIÁLOGO MAIS PRÓXIMO DA REALIDADE ESTUDANTIL</b>. 2013. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Integração das tecnologias na educação: Lições do projeto UCA</b>. 2013. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MENDES, Marilia Soares.; Furtado, Elizabeth ; CASTRO, M. F.. <b>Framework de apoio na avaliação da usabilidade de softwares sociais a partir da Linguagem Natural</b>. 2013. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>OLIVEIRA, A. S. ; NOVAIS, C. E. B.. <b>TIPOGRAFIA E HIERARQUIA VISUAL: COMBINAÇÃO DE FONTES PARA O DESENVOLVIMENTO DE INTERFACES GRÁFICAS</b>. 2013. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>OLIVEIRA, A. T. ; NOVAIS, C. E. B.. <b>PROCESSO DE CRIAÇÃO DA IDENTIDADE VISUAL DO SITE DO SMD</b>. 2013. Apresentação de Trabalho/Congresso</td></tr>
+            </table></div><div id="dv-year-2012"><h3 class="year">2012</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CARMO, R. A. ; NOVAIS, C. E. B.. <b>Infográficos linha do tempo de história da arte e do design</b>. 2012. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; GOMES, Alex Sandro ; Jucá, Adelmir Menezes. <b>Das Tabuletas aos Tablets: Tecnologias e Educação Matemática</b>. 2012. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, Alex Sandro ; Carvalho, Componente: Ana Beatriz Gomes ; CASTRO FILHO, J. A.. <b>A adoção de tecnologias e a formação docente</b>. 2012. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, Antônio José Melo ; VIDAL, Creto Augusto ; GOMES, George Allan Menezes ; CAVALCANTE-NETO, Joaquim Bento ; CHICCA JUNIOR, Natal A. ; SANTOS, Alysson D. ; GATTASS, Marcelo. <b>System Model for Shooting Training Based on Interactive Video, Tridimensional Computer Graphics and Laser Ray Capture</b>. 2012. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>OLIVEIRA, A. S. ; NOVAIS, C. E. B.. <b>EXPOSIÇÃO DE IMAGEM NO FACEBOOK - O CONTROLE DE PRIVACIDADE EM FOTOS PESSOAIS NA REDE SOCIAIS</b>. 2012. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>OLIVEIRA, A. T. ; NOVAIS, C. E. B.. <b>O Tipo da Fonte - O blog como ferramenta de construção de conhecimento</b>. 2012. Apresentação de Trabalho/Congresso</td></tr>
+            </table></div><div id="dv-year-2011"><h3 class="year">2011</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; Paiva, Ana. <b>Tendências da IE</b>. 2011. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DARIN, T. G. R. ; NOVAIS, C. E. B.. <b>Prática do Design de Interação em uma experiência conjunta entre as disciplinas de IHC, Design de Interfaces e Semiótica</b>. 2011. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, C. E. B. <b>￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼Jogos Sérios: panorama e oportunidades</b>. 2011. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>Computação Musical: o que diab'é isso, macho?</b>. 2011. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2010"><h3 class="year">2010</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Munguba, Marilene ; NOVAIS, C. E. B. ; CRUZ, L. A. ; PONTES, A. G. O. ; LIMA JUNIOR, R. B. ; LIMA, M. F.. <b>MEMOLIBRAS ? JOGO ELETRÔNICO COMO FERRAMENTA CONTEXTUALIZADA DE MEDIAÇÃO DE APRENDIZAGEM DA LÍNGUA BRASILEIRA DE SINAIS PELA CRIANÇA SURDA</b>. 2010. Apresentação de Trabalho/Seminário</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Midias Digitais</b>. 2010. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2009"><h3 class="year">2009</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>Uma metodologia para o projeto da interação utilizando técnicas de Prototipação da Experiência e Pré-patterns</b>. 2009. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2008"><h3 class="year">2008</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARRETO, Antônio Luiz de Oliveira ; CASTRO FILHO, J. A.. <b>O Estudo de Funções Mediado por um Objeto de Aprendizagem</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CARMO, R. A. F; CAMPOS, G. A. L. ; SOUZA, J. T.. <b>EasyMeta: A Framework of Metaheuristics for Mono-Objective Optimization Problems</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A.; SANTOS, Marcelo Câmara dos ; BITTAR, Marilena. <b>Desafios para a Pesquisa em Educação Matemática na Sala de Aula</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>FREIRE, Raquel Santiago ; CASTRO FILHO, J. A. ; FERNANDES, Alisandra Cavalcante. <b>Iniciação a Álgebra e a Utilização de Objetos de Aprendizagem</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FURTADO, Maria Elizabeth Sucupira ; MENDES, Marilia Soares.. <b>Oficina sobre TV DIGITAL, UM OLHAR PARA O FUTURO</b>. 2008. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MAIA, C. L. B. ; CARMO, R. A. F ; CAMPOS, G. A. L. ; SOUZA, J. T.. <b>A Reactive GRASP Approach for the Regression Test Case Priorization</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MAIA, J. G. R. <b>Técnicas de Reconhecimento Facial</b>. 2008. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MAIA, J. G. R. <b>Introdução ao Desenvolvimento de Jogos Digitais</b>. 2008. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>MENDES, Marilia Soares.; FURTADO, Maria Elizabeth Sucupira. <b>Analisando o Second Life segundo critérios de IHC (Interação Humano Computador)</b>. 2008. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MENDES, Marilia Soares.; MATOS, Italo. <b>Um Sistema de criação de conteúdos para serviços de Televisão Digital</b>. 2008. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MENDES, Marilia Soares.; MATOS, Italo ; FURTADO, Maria Elizabeth Sucupira ; OSCAR,. <b>Um sistema para criação de conteúdos em diversas plataformas a partir da experiência dos usuários</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>NOGUEIRA, N. P. ; CAMPOS, G. A. L. ; SOUZA, Maria de Fátima Costa de ; SOUZA, J. T.. <b>Inclusão Digital do Idoso</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>NOVAIS, C. E. B.; Loureiro, Robson Carlos. <b>Desarrollo de materiales educativos en la Universidad de Fortaleza</b>. 2008. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>OREY, Michael ; West, Richard ; AMIEL, Tel ; CASTRO FILHO, J. A.. <b>Mesa-Redonda: Educational Open-resources and Multi-culturalism</b>. 2008. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; ANDRADE, R. M. C. ; CASTRO FILHO, José Aires de. <b>Aplicando Engenharia de Software Orientado a Modelos ao Desenvolvimento de Objetos de Aprendizagem</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; ANDRADE, R. M. C.. <b>ExpertDSL: um perfil para o suporte à definição de escopo pedagógico em um processo de desenvolvimento de objetos de aprendizagem orientado a modelos</b>. 2008. Apresentação de Trabalho/Simpósio</td></tr>
+            </table></div><div id="dv-year-2007"><h3 class="year">2007</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B. <b>O ensino a distância e a utilização das ferramentas do Unifor Online</b>. 2007. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2006"><h3 class="year">2006</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; VIDAL, Creto Augusto. <b>CRAbCVE? Uma Arquitetura Para Viabilização de CVEs através da Internet</b>. 2006. Apresentação de Trabalho/Simpósio</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>MENDES, Marilia Soares. <b>Mapeamento da TVD para Palm</b>. 2006. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Munguba, Marilene ; LEITE JUNIOR, A. J. M. ; Magalhães, Wladmir Capelo ; Antunes, Maria de Fátima ; Fonseca, Syene ; Barbosa, Izabel Cristina Falcão Juvenal ; da Silva, Carlos Antônio Bruno ; NOVAIS, C. E. B.. <b>"Dieta Irada": Como uma equipe interdisciplinar vence o desafio de criar um videogame para educação nutricional infantil</b>. 2006. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Introdução à Educação a distância</b>. 2006. Apresentação de Trabalho/Conferência ou palestra</td></tr>
+            </table></div><div id="dv-year-2005"><h3 class="year">2005</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>NOVAIS, C. E. B. <b>Um estudo de caso de reestruturação de cd-rom multimídia</b>. 2005. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; LEITE JUNIOR, A. J. M.. <b>Uma proposta de metodologia de criação de videotutoriais para ferramentas de educação a distância</b>. 2005. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>POLAK, Ymiracy Nascimento de Souza ; Munhoz, Antoino S ; DINIZ, Paulo Ricardo ; PEQUENO, Mauro Cavalcante ; CASTRO FILHO, J. A. ; SCHNEIDER, Karla. <b>Gestão de Programas Educacionais Corporativos Não Presenciais</b>. 2005. Apresentação de Trabalho/Congresso</td></tr>
+            </table></div><div id="dv-year-2004"><h3 class="year">2004</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Estratégias e Erros Utilizados na Resolução de Problemas Algébricos</b>. 2004. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Resolução de Problemas como Metodologia para Aprender Matemática</b>. 2004. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>Competências Matemáticas de Alunos de Primieiro e Segundo Ciclos em Situações Aditivas e Multipçicativas</b>. 2004. Apresentação de Trabalho/Comunicação</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MACÊDO, Laécio Nobre de ; FREIRE, Raquel Santiago ; CASTRO FILHO, J. A.. <b>Uso de Um Ambiente Informatizado para Desenvolver Conceitos Algébricos</b>. 2004. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>MAIA, J. G. R. <b>Uma Arquitetura para Motores Gráficos Customizáveis, Expansíveis e Portáveis para Aplicações de RV</b>. 2004. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>NOVAIS, C. E. B.; Cardoso, A. B. B. ; REINALDO, G. F.. <b>E o palhaço, o que é que ele é? Uma análise dos simbolismos do palhaço</b>. 2004. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>NOVAIS, C. E. B.; LEITE JUNIOR, A. J. M.. <b>Dieta Irada - Fases da confecção de um jogo educacional</b>. 2004. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>NOVAIS, C. E. B.; LEITE JUNIOR, A. J. M.. <b>Dieta Irada - Etapas da criação do jogo educativo</b>. 2004. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>POLAK, Ymiracy Nascimento de Souza ; SUJIMOTO, Hélio ; ASSIS, Elisa ; GIANNASI, Maria Júlia ; CASTRO FILHO, J. A. ; PEQUENO, Mauro Cavalcante. <b>Criação do Centro de Pesquisa e Tecnologia em Educação à Distância na UNOPAR</b>. 2004. Apresentação de Trabalho/Congresso</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SOUZA, Maria de Fátima Costa de; CASTRO FILHO, José Aires de ; PEQUENO, Mauro Cavalcante. <b>Uma Abordagem Semi-Automática para a Avaliação Comparativa de Software Educacional de Matemática</b>. 2004. Apresentação de Trabalho/Simpósio</td></tr>
+            </table></div><div id="dv-year-2003"><h3 class="year">2003</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LEITE JUNIOR, A. J. M. <b>Construção de Curso em EAD - A Necessidade Multidisciplinar</b>. 2003. Apresentação de Trabalho/Comunicação</td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; MENDONÇA JÚNIOR, G. M. ; VIDAL, Creto Augusto. <b>Realidade Virtual na Educação: Um Estudo de Caso</b>. 2001. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GOMES, George Allan Menezes; VIDAL, Creto Augusto. <b>Construção de Ambientes Virtuais Colaborativos Tridimensionais</b>. 2001. Apresentação de Trabalho/Outra</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, George Allan Menezes; VIDAL, Creto Augusto. <b>Estratégias para Representação de Avatares</b>. 2001. Apresentação de Trabalho/Outra</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>GOMES, George Allan Menezes; MENDONÇA JÚNIOR, G. M. ; VIDAL, Creto Augusto. <b>AVAL Chat 3D: Um Estudo de Caso de Ambiente de Realidade Virtual Multiusuário</b>. 2000. Apresentação de Trabalho/Outra</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:39:23<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              
