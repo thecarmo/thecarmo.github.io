@@ -1,0 +1,26 @@
+nodedef> name VARCHAR, idLattes VARCHAR, label VARCHAR, rotulo VARCHAR, lat DOUBLE, lon DOUBLE, collaborationRank DOUBLE, producaoBibliografica DOUBLE, artigoEmPeriodico DOUBLE, livro DOUBLE, capituloDeLivro DOUBLE, trabalhoEmCongresso DOUBLE, resumoExpandido DOUBLE, resumo DOUBLE, posDoutorado DOUBLE, dutorado DOUBLE, mestrado DOUBLE, ic DOUBLE, color VARCHAR
+0,2610619567290943,Antonio Jose Melo Leite Junior,[Sem rotulo],,,1.5133501,37,24,0,0,10,0,3,0,0,1,0,'10,110,164'
+1,4467706783113621,Carlos Eduardo Brito Novais,[Sem rotulo],,,0.15,4,0,0,3,1,0,0,0,0,0,0,'10,110,164'
+2,3037263625761342,Ernesto Trajano de Lima Neto,[Sem rotulo],,,0.6667726,2,1,0,0,1,0,0,0,0,0,0,'10,110,164'
+3,4427578264303416,Gabriel Antoine Louis Paillard,[Sem rotulo],,,0.9408472,9,4,0,1,3,0,1,0,1,0,0,'10,110,164'
+4,5012576140529904,George Allan Menezes Gomes,[Sem rotulo],,,0.40726957,3,3,0,0,0,0,0,0,0,0,0,'10,110,164'
+5,9848407021720705,Henrique Barbosa Silva,[Sem rotulo],,,0.15,1,0,0,0,1,0,0,0,0,0,0,'10,110,164'
+6,8556816688689358,Henrique Sergio Lima Pequeno,[Sem rotulo],,,0.15,0,0,0,0,0,0,0,0,0,0,0,'10,110,164'
+7,4277758788188363,Inga Freire Saboia,[Sem rotulo],,,0.15,10,6,0,3,1,0,0,0,0,0,0,'10,110,164'
+8,1001172700194924,José Aires de Castro Filho,[Sem rotulo],,,1.8465704,38,18,0,5,10,5,0,0,1,7,1,'10,110,164'
+9,0022110232147076,José Gilvan Rodrigues Maia,[Sem rotulo],,,0.63294923,30,13,0,1,14,2,0,0,0,6,0,'10,110,164'
+10,8761933941200089,Maria de Fátima Costa de Souza,[Sem rotulo],,,0.51301104,4,1,0,1,1,1,0,0,0,0,0,'10,110,164'
+11,3731017260116598,Marília Soares Mendes,[Sem rotulo],,,0.15,1,1,0,0,0,0,0,0,0,0,0,'10,110,164'
+12,3102406452063651,Rafael Augusto Ferreira do Carmo,[Sem rotulo],,,1.4717604,13,3,0,0,10,0,0,0,0,1,0,'10,110,164'
+13,9322311013034336,Raquel Santiago Freire,[Sem rotulo],,,1.007469,9,2,0,2,4,1,0,0,0,0,0,'10,110,164'
+edgedef> node1 VARCHAR, node2 VARCHAR, weight DOUBLE
+0,3,1.0
+0,4,1.0
+0,12,3.0
+2,3,2.0
+2,12,2.0
+3,12,2.0
+8,9,4.0
+8,10,3.0
+8,13,7.0
+10,13,1.0

@@ -1,0 +1,169 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Resumos expandidos publicados em anais de congressos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2021,
+3],
+[2023,
+2],
+[2024,
+3]]}]});
+        });
+        </script>
+        
+                <h3>Resumos expandidos publicados em anais de congressos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 8<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COSTA, JULIANA EVARISTO ; CASTRO FILHO, JOSÉ AIRES DE ; MAIA, JOSÉ GILVAN RODRIGUES ; ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; FRANCO, ARTUR DE OLIVEIRA DA ROCHA ; OLIVEIRA, CAIO DE FREITAS ; NASCIMENTO, GABRIEL MARQUES DO ; GARCIA, PEDRO JORGE RODRIGUES ; MESQUITA, JÚLIO NATHANAEL SILVA. <b>Narrativa Interativa Gamificada - NIG: Jornada da Mel</b>. Em: Anais Estendidos do Congresso Brasileiro de Informática na Educação, 2024, Brasil. Anais Estendidos do XIII Congresso Brasileiro de Informática na Educação (CBIE 2024), v. 1, p. 187-191, 2024. <a href="http://dx.doi.org/10.5753/cbie_estendido.2024.244324" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FREIRE, R. S.; MOURA, I. L. C. ; CASTRO FILHO, J. A.. <b>Aspectos didáticos-pedagógicos no planejamento de uma componente curricular do Ensino Superior</b>. Em: Encontro Nacional de Didática e Práticas de Ensino, 2024, Paraíba. Anais do ENDIPE - Encontro Nacional de Didática e Práticas de Ensino. Campina Grande: Realize Editora, 2024. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SANTOS, JOÃO BATISTA ANDRADE ; ÁVILA, EMANUEL ; OLIVEIRA, CAIO ; GOMES, VITOR MANUEL ; MAIA, JOSÉ GILVAN R. ; FRANCO, ARTUR. <b>Analysis of cheating in human patterns using Stockfish suggestions</b>. Em: Anais Estendidos do Simpósio Brasileiro de Jogos e Entretenimento Digital, 2024, Brasil. Anais Estendidos do XXIII Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGames Estendido 2024). Porto Alegre: Sociedade Brasileira de Computação, p. 25-30, 2024. <a href="http://dx.doi.org/10.5753/sbgames_estendido.2024.241054" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. B. ; NASCIMENTO, G. M. ; MEDEIROS, M. D. ; SOUZA, MARIA DE FATIMA C. DE ; CASTRO FILHO, José Aires de. <b>Mestre dos Sucos: mix de frações - Um Recurso Educacional Digital gamificado para desenvolver habilidades cognitivas e socioemocionais</b>. Em: CONGRESSO BRASILEIRO DE INFORMÁTICA NA EDUCAÇÃO (CBIE), 2023, Passo Fundo. Anais Estendidos do XII Congresso Brasileiro de Informática na Educação (CBIE 2023), p. 201-204, 2023. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DIAS, E. N. ; CASTRO FILHO, J. <b>O Uso dos Recursos Educacionais Digitais (RED) de Língua Portuguesa e Matemática no Planejamento dos Professores do Ensino Fundamental em Uma Escola Municipal de Fortaleza</b>. Em: I ENCONTRO DE PESQUISAS SOBRE EDUCAÇÃO E CULTURA DIGITAL (EPECD), 2023, Recife. Anais do I ENCONTRO DE PESQUISAS SOBRE EDUCAÇÃO E CULTURA DIGITAL (EPECD), v. 1, p. 1-6, 2023. </td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO, J. B. ; CASTRO FILHO, J. A. ; MEDEIROS, M. D. ; OLIVEIRA, R. M. ; NASCIMENTO, G. M. ; LEITE, I. B.. <b>Chocomática inauguração: um Recurso Educacional Digital para aprendizagem colaborativa de Álgebra nos anos iniciais</b>. Em: VI Congresso sobre Tecnologias na Educação, 2021, Mossoró. Anais do VI Congresso sobre Tecnologias na Educação. Porto Alegre: Sociedade Brasileira da Computação, v. 1, p. 458-464, 2021. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GOMES, N. M. C. C. ; OLIVEIRA, R. M. ; CASTRO, J. B. ; CASTRO FILHO, J. A. ; FREITAS, F. Y. M.. <b>Aprendizagem de conceitos aditivos com suporte do Recurso Educacional Digital Ilha das Operações</b>. Em: VI Congresso sobre Tecnologias na Educação, 2021, Mossoró. Anais do VI Congresso sobre Tecnologias na Educação. Porto Alegre: Sociedade Brasileira da Computação, v. 1, p. 494-500, 2021. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>SOUZA, M. F. C. ; CASTRO FILHO, J. A. ; HITZSCHKY, R. A. ; LIMA, C. A. ; OLIVEIRA, C. O. S. ; GERMANO, A. ; MOURAO, J. A. F. ; Bezerra, Ellen Lacerda Carvalho. <b>Explorando as Potencialidades Pedagógicas e a Portabilidade de Recursos Educacionais Digitais (RED) do Repositório Athena</b>. Em: VI Congresso sobre Tecnologias na Educação, 2021, Mossoró. Anais do VI Congresso sobre Tecnologias na Educação. Porto Alegre: Sociedade Brasileira da Computação, v. 1, p. 501-507, 2021. </td></tr>
+            </table></div>
+                    </table>
+                <br><p><br>(*) Relatório criado com produções desde 2021 até 2025
+<br>Data de processamento: 20/06/2025 10:35:17<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

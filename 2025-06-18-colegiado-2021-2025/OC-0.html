@@ -1,0 +1,315 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de orientações concluídas'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2021,
+20],
+[2022,
+16],
+[2023,
+17],
+[2024,
+18],
+[2025,
+8]]}]});
+        });
+        </script>
+        
+                <h3>Total de orientações concluídas</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 79<br>
+                    
+                    
+                    <div id="dv-year-2025"><h3 class="year">2025</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALAN CÉSAR VIEIRA DE ARAÚJO. <b>MECÂNICAS DE VIRADA COMO SUPORTE DA ESPETACULARIZAÇÃO DOS ESPORTS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Antônio Guilherme do Nascimento Pereira. <b>EXPLORANDO A EFICIÊNCIA DA APRENDIZAGEM DE MÁQUINA NA PREVISÃO DE RESULTADOS DO BRASILEIRÃO DA SÉRIE A: UMA ANÁLISE DE DADOS E ALGORITMOS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Felipe Cosme Martins. <b>GamificaTempo: Uma proposta de desenvolvimento de Aplicativo Mobile de Gestão de Tempo e Produtividade com Sistema de Recompensa baseado em Gamificação</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Luiz Eduardo Gomes Xavier. <b>GERAÇÃO PROCEDURAL DE TEXTURAS UTILIZANDO ALGORITMOS DE RUÍDO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PRISCILLA SUSY GOMES DA SILVA. <b>UMA FERRAMENTA COMPUTACIONAL PARA AUXÍLIO DIDÁTICO E AVALIAÇÃO METODOLÓGICA DE PROFISSIONAIS NA PRÁTICA CLÍNICA EM ALEITAMENTO MATERNO</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td><a href="http://lattes.cnpq.br/4592552506433379">Raimundo Cleodimar de Oliveira Junior</a>. <b>ReAvaLIA: Um Avaliador Baseado em Modelo de Linguagem de Grande Escala para Redações do Enem</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>REINALDO DA SILVA NASCIMENTO. <b>RELATO DE EXPERIÊNCIA NO DESENVOLVIMENTO E PUBLICAÇÃO DE UM APLICATIVO MÓVEL: SIMULADO DETRAN BRASIL</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Vitor Emanuel Vidal da Silva. <b>AVALIAÇÃO COMPARATIVA ENTRE METODOLOGIAS ÁGEIS E CONVENCIONAIS NA GESTÃO DE PROJETOS ACADÊMICOS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2025.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Antônio Emerson Farias da Silva. <b>Aprendizagem móvel e colaborativa no ensino fundamental (projeto de extensão)</b>. (Pedagogia) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Caio Brandão da Costa. <b>SMDFÓLIO: UMA PROPOSTA DE SISTEMA DE REPOSITÓRIO INSTITUCIONAL E PORTFÓLIO INDIVIDUAL PARA O CURSO DE SISTEMAS E MÍDIAS DIGITAIS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CARLOS JESSÉ FREIRE DE ALMEIDA CASTRO. <b>SERENINHO: PLANEJAMENTO DA EXPERIÊNCIA DE UM APLICATIVO DE TERAPIA COGNITIVO-COMPORTAMENTAL</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4277758788188363">Inga Freire Saboia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Cintia Arruda Lima. <b>Uma proposta de curadoria para a avaliação d seleção de Recursos Educacionais Digitais por professores do ensino fundamental</b>. Dissertação (Mestrado em Programa de Pós-Graduação em Tecnologia Educacional) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9173025178455009">DANIELY DOS REIS LIMA</a>. <b>USO DO APLICATIVO BILIBRAS PARA O ENSINO DE LIBRAS COM CRIANÇAS OUVINTES</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td><a href="http://lattes.cnpq.br/3436252328508573">Dayany Barros Ferreira</a>. <b>Uma investigação sobre o pensamento algébrico nos anos iniciais com o recurso educacional digital O Reino de Aljabar</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Emanuelle do Nascimento Dias Cunha. <b>O Uso de Recursos Educacionais Digitais na Prática Pedagógica de Professores dos Anos Iniciais do Ensino Fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Enayle Santos Moura. <b>ANÁLISE COMPARATIVA DE BIBLIOTECAS E TECNOLOGIAS DE ÁUDIO 3D: UM ESTUDO DE CASO EM OVERWATCH 2</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>FRANCISCO ROMES DA SILVA FILHO. <b>Confiabilidade e Interpretação dos Modelos de Aprendizado de Máquina em Ambientes Virtuais de Aprendizagem com Análise de Desempenho e Conformal Prediction</b>. Dissertação (Mestrado em COMPUTAÇÃO) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>HELLEN MARIA BEZERRA DA SILVA. <b>"AVALIAÇÃO DA ACESSIBILIDADE DO SISTEMA DE VENDAS ONLINE DE PASSAGENS DA GUANABARA PARA PESSOAS CEGAS"</b>. (Graduação em Ciência da Computação) - Universidade Federal do Ceará em Russas, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>JULIANA EVARISTO COSTA. <b>Narrativas Interativas Gamificadas (NIGs) Aplicadas aos Processos de Ensino e Aprendizagem De Matemática Financeira</b>. Dissertação (Mestrado em Programa de Pós-Graduação em Tecnologia Educacional) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>JÚLIO CÉSAR LUZ GOMES DA COSTA. <b>GUIANDO FUTUROS PROFISSIONAIS DE UX DESIGN: UM ESTUDO SOBRE AS COMPETÊNCIAS FUNDAMENTAIS SEGUNDO ACADEMIA E MERCADO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4277758788188363">Inga Freire Saboia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Leandro Holanda Torres. <b>IA GENERATIVA NA TI: UMA ANÁLISE DAS PERCEPÇÕES, IMPACTOS E POTENCIAIS AMEAÇAS NO TRABALHO DOS PROFISSIONAIS DE TECNOLOGIA DA INFORMAÇÃO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Milla Barbosa Rios Cajazeiras. <b>Integrando STEAM e inglês nas escolas públicas brasileiras (projeto de extensão)</b>. (Letras - Inglês) - Universidade Federal do Ceará, Universidade Federal do Ceará. 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Patricia da Silva Olimpio. <b>Alfa Teste: um recurso educacional digital para diagnóstico de leitura nos anos iniciais do ensino fundamental</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>PEDRO LUCAS MACIEL MOREIRA. <b>RECOMENDAÇÕES PARA PLATAFORMAS DE SELEÇÃO DE EMPREGO COM FOCO NA INSERÇÃO DE PESSOAS TRANS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4277758788188363">Inga Freire Saboia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>REBECCA CÂMARA CAVALCANTE. <b>AVALIAÇÃO DO DESIGN INCLUSIVO E ACESSÍVEL DO SISTEMA INTEGRADO DE GERENCIAMENTO ACADÊMICO DA UFC PARA USUÁRIOS CEGOS E COM BAIXA VISÃO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Robson de Sousa Morais. <b>Produção de RPG como metodologia ativa no ensino de literatura e língua portuguesa</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2024.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ADRIAN WILKER SILVA COELHO. <b>AVALIAÇÃO DA USABILIDADE E EXPERIÊNCIA DE USO NO YOUTUBE EM PÚBLICO DA TERCEIRA IDADE - ESTUDO DE CASO NA CIDADE DE PALHANO, CEARÁ</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Ana Carolina Clark Roriz. <b>Um estudo bibliográfico acerca da relação entre empreendedorismo e inovação na universidade</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>BRUNO FERREIRA NOGUEIRA. <b>A UTILIZAÇÃO DAS REDES SOCIAIS POR UM MICROEMPREENDEDOR DO RAMO ALIMENTÍCIO EM FORTALEZA: Um Estudo de Caso</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>Diego David Lemos de Sousa. <b>Redes Sociais Virtuais e o Impulsionamento do Discurso de Ódio</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FRANCISCO PAULO SÉRGIO DA SILVA. <b>AVALIAÇÃO DA USABILIDADE E ACESSIBILIDADE NOS SITES DE CAMPIS DO INTERIOR DA UNIVERSIDADE FEDERAL DO CEARÁ</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>IAGO DE AQUINO OLIVEIRA. <b>AVALIAÇÃO TEXTUAL DA JOGABILIDADE EM JOGOS</b>. (Graduação em Ciência da Computação) - Universidade Federal do Ceará em Russas, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>JOSE LUCAS ALVES PEREIRA. <b>UMA AVALIAÇÃO DA COMUNICABILIDADE EM AMBIENTES VIRTUAIS DE APRENDIZAGEM</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Karine Nascimento Portela. <b>Proposta Metodológica para a produção de hipervídeos educativos em cursos on-Line de capacitação profissional: o caso do curso Biossegurança e Boas Práticas Laboratoriais Da Difop/Codec/Progep/UFC</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Lucas de Lima Silva. <b>Experimentos de Transferência Neural de Estilo em Aplicações de Visão Computacional</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Lucas de Sousa Fernandes. <b>EXTRAÇÃO DE INFORMAÇÕES DE IMAGENS DE DOCUMENTOS PESSOAIS BRASILEIROS COM DEEP LEARNING</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>MARIA EDUARDA FERREIRA LEANDRO. <b>REDE SOCIAL ONLINE E SUA COLABORAÇÃO NO CONHECIMENTO DA SEXUALIDADE FEMININA</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>MATEUS EUGENIO DE ANDRADE. <b>AVALIAÇÃO DA USABILIDADE E EXPERIÊNCIA DO USUÁRIO NO HBO MAX COM O MODELO MALTU</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>PAMELA DE CASTRO FREITAS OLIVEIRA. <b>CRIAÇÃO DE QUADRINHOS DIGITAIS COMO SUPORTE PARA O ENSINO DAS TEORIAS DA COGNIÇÃO NO ENSINO SUPERIOR</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td><a href="http://lattes.cnpq.br/9598760381296500">RAYSSA MELO DE OLIVEIRA</a>. <b>Formação Online de Professores dos Anos Iniciais do Ensino Fundamental Para o Ensino de Estatística: Uma Investigação no Período Remoto Emergencial</b>. Tese (Doutorado em Educação) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>THAYS MARIA SILVA LUNES. <b>Cibercultura e as interações de jovens universitários no Instagram</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Tiago Caúla de Oliveira Maia. <b>O Uso de Modelos Generativos na Prototipação de Mecânicas Simples de Jogos Digitais</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>VITÓRIA PRISCILA SARAIVA ALVES PAIVA. <b>DESENVOLVIMENTO DE UMA APLICAÇÃO WEB PARA GESTÃO DE DOCUMENTOS DIGITAIS INTEGRADA AO GOOGLE WORKSPACE</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2023.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ANA CLÁUDIA CHAVES FROTA. <b>ARTE GENERATIVA PARA O ENSINO DE PROGRAMAÇÃO: UMA PROPOSTA DE ENGAJAMENTO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>ANTONIO RIBEIRO RODRIGUES NETO. <b>O MARKETING DIGITAL COMO UMA ALTERNATIVA EM TEMPOS DE PANDEMIA: UM ESTUDO DE CASO DAS AÇÕES DO MAGAZINE LUIZA NO ENFRENTAMENTO DA PANDEMIA DO COVID19.</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Gabriel de Melo Bastos. <b>O Processo De Desenvolvimento E Design Da Aplicação Web Oferta Fácil Para Alocação De Turmas Do Curso De Sistemas E Mídias Digitais</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>GABRIELY RODRIGUES DE LIMA. <b>UMA PROPOSTA DE METODOLOGIA DE REDESIGN APLICANDO O FRAMEWORK DECIDE E O MODELO A.C.T.</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>JOSE IONESIO DE LIMA FILHO. <b>REQUISITOS DE ACESSIBILIDADE PARA O APOIO DO ALUNO SURDO NA UNIVERSIDADE: ESTUDO DE CASO DE DEFICIÊNCIA AUDITIVA</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>JOSÉ MOAB DE SOUZA ALVES. <b>UMA ANÁLISE DAS POSTAGENS DOS USUÁRIOS QUANTO A SUA SEGURANÇA EM APLICATIVOS DE INSTITUIÇÕES FINANCEIRAS</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>Lucas Alves da Silva. <b>PROJETO EXPERIMENTAL: GUIA DE ESTILOS SIGAA - UNIVERSIDADE FEDERAL DO CEARÁ</b>. (Graduação em Comunicação Social - Publicidade e Propaganda) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Marcos André Forte Morais. <b>PROJETO COLONO: APLICANDO COMPUTAÇÃO GRÁFICA EM COLONOSCOPIA VIRTUAL</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Mateus Nogueira Targino. <b>MORETS: Desenvolvimento de uma ferramenta paraconstrução de sistemas ti pográfi cos web responsivos</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>NATALIA DA SILVA FERNANDES. <b>ACCESSIBLE INTERACTIONS 500: UM JOGO DE TABULEIRO HÍBRIDO INCLUSIVO COM REALIDADE AUMENTADA PARA AUXILIAR O ENSINO DE QUÍMICA A ALUNOS SURDOS E OUVINTES</b>. Dissertação (Mestrado em TECNOLOGIA EDUCACIONAL) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Natã Lael Gomes Raulino. <b>We are not alone: AGNES, developing a prototype to support communication between schools and student transgender women</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Paulo Sérgio Gomes Alves Filho. <b>Design Thinking aplicado a Identidades Visuais</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>RONALD DO VALE GADELHA. <b>CIÊNCIA DA COMPLEXIDADE: APLICAÇÃO NA GESTÃO DE PESSOAS EM EMPRESAS DE SISTEMAS E MÍDIAS DIGITAIS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Rui Rodrigues de Mello Junior. <b>EXPLORANDO A EQUIVALÊNCIA ENTRE UMA MÁQUINA QUÍMICA ABSTRATA E COMPUTAÇÃO DATAFLOW</b>. Tese (Doutorado em PESC - Programa de Engenharia de Sistemas e Computação) - Universidade Federal do Rio de Janeiro, . 2022.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td><a href="http://lattes.cnpq.br/6725502545242241">SARA REBECA AGUIAR DE CARVALHO</a>. <b>A educação midiática pelo uso dos recursos educacionais digitais nos anos iniciais do ensino fundamental</b>. Dissertação (Mestrado em Educação) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>Ulisses do Vale Lopes. <b>Design e Implementação de Poemas Digitais Interativos</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2022.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DAVID MACEDO DO NASCIMENTO. <b>DESENVOLVIMENTO DE UM APLICATIVO MÓVEL EM FORMA DE JOGO HÍBRIDO PARA AUXILIAR ALUNOS NO APRENDIZADO DO CONTEÚDO DE INTERAÇÕES INTERMOLECULARE</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Filipe Adrio Herculano de Sousa. <b>Experiências Instaladas, uma proposta de diagrama para mapeamento de experiências em instalações multimídia</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Francisco Walisson da Silva Lopes. <b>A Importância de Aspectos de Music Branding em Trilhas Sonoras da Era 16-bits para Experiência Sonora do Jogador</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>GABRIEL MAIA RAMOS. <b>UMA AVALIA O DA QUALIDADE DE USO DE UM SISTEMA DE SERVI OS P BLICOS DE SA DE</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>Gabriel Marques do Nascimento. <b>Desenvolvimento de narrativas interativas gamificadas para conteúdos de Matemática no Ensino Médio</b>. (Graduando em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>Gabriel Ribeiro Balan. <b>NARRATIVAS E CONTEXTUALIZAÇÃO EM RECURSOS EDUCACIONAIS DIGITAIS: O CASO DA TURMA DA MILA</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>HENRIQUE ARTUR CORDEIRO GOMES. <b>"A IMPORTÂNCIA DAS METODOLOGIAS ÁGEISCOMO FERRAMENTAS PARA DESENVOLVIMENTO DE JOGOS DIGITAIS DE PEQUENO ESCOPO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>Hyuan Peixoto Farrapo. <b>RocketDRL: a Novel 3D Environment for Training Reinforcement Learning Agents</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Josemilly Sales Barroso. <b>Desenvolvimento de Identidade Visual para a empresa Digitech</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>Lucas Cardoso Freitas. <b>O IMPACTO DO STREAMING DE JOGOS VIA TWITCH NA DECISÃO DE COMPRA DO ESPECTADOR BRASILEIRO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Lucas Farias Ferreira Gomes. <b>IMPACTOS DA PANDEMIA DE COVID-19 EM ALUNOS DE GRADUAÇÃO: UM ESTUDO ATRAVÉS DA MODELAGEM DE TÓPICOS NEURAL EM DISCUSSÕES DO REDDIT</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>Lucas Severo Melo. <b>UMA PROPOSTA DE AVALIAÇÃO DA NOSTALGIA E GAME FEEL COMO QUALIDADE DE UM JOGO ELETRÔNICO</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>Mateus Pereira dos Santos. <b>LUMi: Repositório Institucional para a Produção Audiovisual do Curso de Sistemas e Mídias Digitais</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3102406452063651">Rafael Augusto Ferreira do Carmo</a>.</font></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Paulo Filipe dos Santos Dantas. <b>ViSCo (View, Scan, and Control it): Uso de visão computacional para descoberta de serviços em ambientes residenciais inteligentes</b>. Dissertação (Mestrado em Ciências da Computação) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Supervisor: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>PEDRO BURGOS MONTEIRO PORTO. <b>UMA PROPOSTA DE METODOLOGIA DE AVALIAÇÃO DE USABILIDADE UTILIZANDO O SYSTEM USABILITY SCALE E PERGUNTAS ABERTAS</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>RAFAEL QUEIROZ MONTEIRO. <b>AVALIAÇÃO DA SAÚDE DA MARCA DA UNIMED FORTALEZA NO PERÍODO DA PANDEMIA DE COVID-19 ATRAVÉS DO SEU PERFIL DO INSTAGRAM</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>RAFAELLY FREITAS FERREIRA. <b>USER RESEARCH E CIRURGIA BARIÁTRICA: ANALISANDO A JORNADA DO PACIENTE BARIÁTRICO E O USO DE APLICATIVOS COMO SUPORTE A MUDANÇA DE COMPORTAMENTO ALIMENTAR.</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/4277758788188363">Inga Freire Saboia</a>.</font></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>Reinaldo da Cunha Linhares Filho. <b>UMA ANÁLISE DA USABILIDADE E EXPERIÊNCIA DO USUÁRIO DO BANCO INTER</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>THIAGO FIRMIANO DE OLIVEIRA. <b>TÍTULO: UM ESTUDO DA EXPERIÊNCIA DE USO EM APLICATIVOS DURANTE A PANDEMIA DO COVID-19</b>. (Graduação em Engenharia de Software) - Universidade Federal do Ceará em Russas, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>Wendel Barbosa Leite Tavares. <b>Um Estudo sobre a Transição para a 9ª Geração de Consoles</b>. (Graduação em Sistemas e Mídias Digitais) - Universidade Federal do Ceará, . 2021.<br><i><font size=-1>Orientador: <a href="http://lattes.cnpq.br/0022110232147076">José Gilvan Rodrigues Maia</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p><br>(*) Relatório criado com produções desde 2021 até 2025
+<br>Data de processamento: 20/06/2025 10:35:17<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

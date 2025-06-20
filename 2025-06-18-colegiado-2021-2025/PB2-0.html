@@ -1,0 +1,183 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Capítulos de livros publicados'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2021,
+6],
+[2022,
+3],
+[2023,
+2],
+[2024,
+3]]}]});
+        });
+        </script>
+        
+                <h3>Capítulos de livros publicados</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 14<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LOPES, E. C. ; MOREIRA NETO, M. ; COUTINHO, E. F. ; PAILLARD, G. A. L. ; MOREIRA, L. O.. <b>Ciência de Dados Educacionais: Conceitos, Aplicações e Desafios. Tecnologias Educacionais Digitais. 1ed</b>. Em: . 2024.v. 1, p. 151-162. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; CARVALHO, M. M. ; MARCAL, E.. <b>Sistemas de Suporte à Educação a Distância e Avaliação de Usabilidade em Cursos on-line</b>. Em: Monteiro, Aureotilde; Fernandes, Solange Jarcem. (Org.). A coordenação pedagógica em foco: velhos desafios e múltiplas experiências. 1ed.Campo Grande. : UFMS. 2024.p. 140-157. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NOVAIS, CARLOS EDUARDO BRITO; COUTINHO, SOLANGE GALVÃO. <b>Por uma sistematização da teoria da caligrafia</b>. Em: Solange Galvão Coutinho; Eva Rolim Miranda; Silvio Barreto Campello. (Org.). [in] formar novos sentidos ¿ Vol 4. 1ed.São Paulo. : Editora Blucher. 2024.v. 4, p. 28-53. </td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>COSTA, A. J. S. ; CASTRO FILHO, J. A. ; VASCONCELOS, Francisco Herbert Lima. <b>A FABRICAÇÃO DIGITAL DE MATERIAIS MANIPULÁVEIS PARA O ENSINO DE MATEMÁTICA: Uma revisão sistemática da literatura</b>. Em: Edgar Marçal de Barros Filho; Ana Paula de Medeiros Ribeiro; Emanuel Ferreira Coutinho; Francisco Ari de Andrade. (Org.). Tecnologia Educacional: Teoria e prática. 1ed.Curitiba. : CRV. 2023.v. 1, p. 211-220. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>RODRIGUES, M. S. ; CASTRO FILHO, J. A.. <b>O uso pedagógico de tecnologias digitais no ensino de matemática</b>. Em: Luís Távora Furtado Ribeiro; Diana Nara da Silva Oliveira; Sidney Soares Filho; José Antonio Gabriel Neto. (Org.). Educação Brasileira: dilemas históricos e contemporâneos. 1ed.Manaus. : Alexa Cultural. 2023.v. 1, p. 183-196. </td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>FERREIRA, R. ; SABOIA, INGA ; PERNENCAR, C. ; OLIVEIRA, D.. <b>A influência das redes sociais na jornada do paciente bariátrico</b>. Em: Hernán Yaguana; Alfonso Sánchez Mujica; Gonzalo Pisco. (Org.). Nuevas miradas de la comunicación y el periodismo. 1ed. : Ria Editorial. 2022.v. 1, p. 18-44. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>NOVAIS, C. E. B.; COUTINHO, SOLANGE. <b>CALIGRAFIA PARA O DESIGN DE TIPOS: RELATO DE UMA EXPERIÊNCIA DE ENSINO</b>. Em: Guilherme Ranoya Seixas Lins; Solange Galvão Coutinho; Eva Rolim Miranda. (Org.). Fronteiras do Design: [In]formar novos sentidos. 1ed.São Paulo. : Bucher. 2022.v. 3, p. 118-151. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>OLIVEIRA, D. ; OLIVEIRA, F. ; Pernencar, Claudia ; MORAIS, B. ; SILVA, J. ; COSTA, A. ; PEREIRA, J. ; SABOIA, INGA. <b>LICOR: Beyond the Design System. A Proposal to Empower Teams to Develop Software in Compliance with the Principles of Accessibility: Usability, and Privacy by Design in the Extreme Contexts and Challenging Domains Post-COVID-19. HCI International 2022 ? Communications in Computer and Information Science. 1ed</b>. Em: . : Springer. 2022.v. 1654, p. 139-147. </td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DE CASTRO FILHO, JOSÉ AIRES; DE CASTRO, JUSCILEIDE BRAGA ; FREIRE, Raquel Santiago. <b>Contributions of Digital Technologies to the Development of Algebraic Thinking at School</b>. Em: Alina Galvão Spinillo; Sintria Labres Lautert; Rute Borba. (Org.).. (Org.). Mathematical Reasoning of Children and Adults. 1ed. : Springer International Publishing. 2021.p. 219-238. </td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A. ; FREIRE, R. S. ; MAIA, D. L.. <b>Estudo de Caso como método de pesquisa em Informática na Educação</b>. Em: Mariano Pimentel, Edméa Santos. (Org.). Metodologia de Pesquisa Científica em Informática na Educação: abordagem qualitativa. 1ed.Porto Alegre. : Sociedade Brasileira de Computação. 2021.v. 1, p. 1-21. </td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GOMES, R. F. ; SOUZA, Maria de Fátima Costa de. <b>Reprojecting a Fitness App Regarding Retention and Usability Using Nielsen?s Heuristics</b>. Em: Soares, M.M.; Rosenzweig, E.; Marcus, A.. (Org.). Reprojecting a Fitness App Regarding Retention and Usability Using Nielsen?s Heuristics. 1ed. : Springer. 2021.v. 12780, p. 434-449. </td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>MAIA, D. L. ; CASTRO FILHO, J. A. ; DA SILVA, MARIA AURICÉLIA. <b>Tecnologias Móveis na Educação: o legado do Projeto UCA para o desenvolvimento de propostas pedagógicas no modelo de um dispositivo por aluno</b>. Em: Edméa Santos; Fábio Ferrentini Sampaio; Mariano Pimentel. (Org.). Informática na Educação: sociedade e políticas. 1ed.Porto Alegre. : Sociedade Brasileira de Computação. 2021.v. 1, p. 1. </td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>PERNENCAR, C. ; SABOIA, I. F. ; SANTOS, R. ; Santos, Rúben. <b>O ensino remoto em contexto COVID-19 na prática projetual baseada em Design Thinking</b>. Em: Francisco Rui Cádima; Ivone Ferreir. (Org.). Perspectivas multidisciplinares da Comunicação em contexto de pandemiaColeção ICNOVACoord. Francisco Rui Cádima& Ivone Ferreira. 1ed. 2021.v. II, p. 235-263. </td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>SABINO, R. F. S. ; VIDAL, CRETO A. ; CAVALCANTE-NETO, Joaquim Bento ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Fast and Robust Ray/OBB Intersection Using the Lorentz Transformation</b>. Em: Adam Marrs, Peter Shirley, Ingo Wald. (Org.). Ray Tracing Gems II. 1ed.Berkeley, CA. : Apress. 2021.p. 519-528. </td></tr>
+            </table></div>
+                    </table>
+                <br><p><br>(*) Relatório criado com produções desde 2021 até 2025
+<br>Data de processamento: 20/06/2025 10:35:17<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

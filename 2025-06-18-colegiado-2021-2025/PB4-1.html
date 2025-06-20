@@ -1,0 +1,305 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>ppgsmd</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>ppgsmd</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Trabalhos completos publicados em anais de congressos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[1991,
+3],
+[1992,
+1],
+[1995,
+1],
+[1997,
+2],
+[1998,
+3],
+[1999,
+6],
+[2000,
+5],
+[2001,
+11],
+[2002,
+15],
+[2003,
+18],
+[2004,
+25],
+[2005,
+35],
+[2006,
+30],
+[2007,
+42],
+[2008,
+44],
+[2009,
+46],
+[2010,
+49],
+[2011,
+37],
+[2012,
+55],
+[2013,
+44],
+[2014,
+44],
+[2015,
+53],
+[2016,
+63],
+[2017,
+61],
+[2018,
+68],
+[2019,
+56],
+[2020,
+64],
+[2021,
+56],
+[2022,
+34],
+[2023,
+32],
+[2024,
+41],
+[2025,
+3]]}]});
+        });
+        </script>
+        
+                <h3>Trabalhos completos publicados em anais de congressos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 1047<br>
+                    
+                    <center>Página: <a href="PB4-0.html">1</a> &nbsp;<b>2</b> &nbsp;</center>
+                    <div id="dv-year-2002"><h3 class="year">2002</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ALMENDRA, Camilo Camilo ; VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; SANTOS, Emanuele Marques dos. <b>Integração de Aplicações de Realidade Virtual em Rede a Ambientes de Aprendizado na Web - Um estudo de caso</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, p. 65-77, 2002.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CAMPELO, F. J. ; SANTOS, A. J. O. DOS ; CASTRO FILHO, J. A.. <b>O Uso de Java-applets em Programas Educativos</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1097-1101, 2002.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>CAVALCANTE, A.P.P.; PIERRE, Lúcia Helena ; LIMA, Nonato. <b>Rede de Radialistas contra a AIDS: Uma rede pela vida</b>. Em: <font color=#330066>INTERCOM</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>GOMES, Alex Sandro ; CASTRO FILHO, J. A. ; GITIRANA, V. ; SPINILLO, Alina Galvão ; ALVES, M. ; MELO, M. ; XIMENES, J.. <b>Avaliação de software educativo para o ensino de matemática</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1065-1071, 2002.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LEITE, Monalisa de Abreu ; NASCIMENTO, K. A. S. ; CASTRO FILHO, J. A.. <b>Balança Interativa: um software para auxiliar o desenvolvimento do raciocínio algébrico</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 1073-1077, 2002.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>MATTOS, F. L. C. L. <b>Precariedade de Práticas Colaborativas em Cursos Online: Avaliação de uma experiência de formação de professores</b>. Em: <font color=#330066>XI Encontro Nacional de Didática e Prática de Ensino - XI ENDIPE</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>MATTOS, F. L. C. L.; MAIA, S.. <b>Uma Metodologia Experimental de Estruturação de Casos Baseada em Relatos de Professores do Ensino Superior</b>. Em: <font color=#330066>XI Encontro Nacional de Didática e Prática de Ensino - XI ENDIPE</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>PEQUENO, M. C. ; LOUREIRO, Robson Carlos ; SARMENTO, W. W. F. ; PAULA, Patricia de Sousa ; PEQUENO, Henrique Sérgio ; HARRIMAN, Cátia Luzia Silva. <b>Desenvolvimento de um Ambiente Virtual de Aprendizagem</b>. Em: <font color=#330066>IE 2002 - 6° Congresso Iberoamericano</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>RODRIGUES, Maria Andréia Formico ; MAIA, J. G. R. ; MENDONÇA, Nabor das Chagas. <b>Simulação de Procedimentos Médicos Usando Java e Tecnologias da Web</b>. Em: <font color=#330066>II Workshop de Informática Médica</font>, v. II, 2002.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>RODRIGUES, Maria Andréia Formico ; MAIA, J. G. R. ; MENDONÇA, Nabor das Chagas ; CHAVES, Francisco Edvan. <b>Uma Ambiente Interiativo Distribuído Para a Simulação de Procedimentos Cirúrgios</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, p. 179-190, 2002.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SOUZA, Cidcley Teixeira de ; SOUZA, Maria de Fátima Costa de. <b>An Algebraic Approach for Specifying Reconfigurable Systems</b>. Em: <font color=#330066>International Information Technology Symposium</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SOUZA, Claudenice de Freitas ; LOPES, Ligiane de Castro ; CASTRO FILHO, J. A.. <b>LISTA DE DISCUSSÃO: INVESTIGANDO NOVAS FORMAS DE INTERAÇÃO</b>. Em: <font color=#330066>VIII Workshop de Informática na Escola</font>, v. 5, p. 914-921, 2002.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SOUZA, Claudenice de Freitas ; LOPES, Ligiane de Castro ; CASTRO FILHO, J. A.. <b>Lista de discussão como um ambiente didático de interação</b>. Em: <font color=#330066>XI ENDIPE - Encontro Nacional de Didática e Prática de Ensino</font>, 2002.</td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>VIANA, Windson; CASTRO, R. M. C. ; MENEZES, Daniel. <b>A High-Level Application Framework for Mobile System Development: IMT-2000 Case Study</b>. Em: <font color=#330066>IEEE International Conference on Telecommunications</font>, v. 3, p. 321-328, 2002.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JÚNIOR, A. J. M. ; ALMENDRA, C. C. ; SANTOS, E. M. ; MENDONÇA-JUNIOR, G. M. ; GOMES, H. O. O.. <b>Um Ambiente Virtual Compartilhado Voltado para Entretenimento</b>. Em: <font color=#330066>V Symposium on Virtual Reality</font>, p. 138-149, 2002.</td></tr>
+            </table></div><div id="dv-year-2001"><h3 class="year">2001</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere. <b>Interactive Diagrams: Investigating Java-Applets for Learning Mathematics</b>. Em: <font color=#330066>VII Workshop de Informática na Escola</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; LEITE, Monalisa de Abreu ; GOMES, Alex Sandro. <b>Listas de discussão como ferramentas pedagógicas para a formação de professores em informática educativa</b>. Em: <font color=#330066>XV Encontro de Pesquisa Educacional do Norte e Nordeste</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>GROSSKOPF, G. ; GUIGUE, Didier ; TRAJANO DE LIMA, ERNESTO. <b>Modern harmony: timbre instead of harmonic functions? Tracing or building new functionalities through the use of the GMT music analysis tools</b>. Em: <font color=#330066>International Theoretical Conference 'Compositional principles</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LEITE JUNIOR, A. J. M.; SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; ALMENDRA, Camilo Camilo. <b>Construção de Sistemas de Realidade Virtual Semi-Imersiva voltados para Educação</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 258-269, 2001.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; SARMENTO, W. W. F. ; SILVA, C. L. O. <b>Oficina nº4 - Internet In: Laboratório de Produção para Educação a Distância ed.Curitiba</b>. Em: <font color=#330066>Laboratório de Produção para Educação a Distância ed.Curitiba</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; VIDAL, C. A.. <b>Desenvolvimento de um Ambiente Virtual de Aprendizagem - Da Imaginação Ideativa a Materialização da Virtualidade</b>. Em: <font color=#330066>VII Workshop de Informática na Escola - XXI Congresso da Sociedade Brasileira de Computação</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>VIDAL, C. A. ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; PEQUENO, Mauro Cavalcante ; LOUREIRO, Robson Carlos. <b>VDL - Distributed Virtual Reality In Distance Education</b>. Em: <font color=#330066>Projects Evaluation Workshop in Informatics in Education</font>, p. 100-110, 2001.</td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>MATTOS, F. L. C. L.; BORGES NETO, H.. <b>Desenvolvimento de uma metodologia pedagógica para auxílio na formação de professores universitários no contexto de um sistema computacional multiagentes</b>. Em: <font color=#330066>XV EPENN - Encontro de Pesquisa Educacional das Regiões Norte e Nordeste</font>, 2001.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>A Distributed Implementation of Structured Gamma</b>. Em: <font color=#330066>International Conference on Parallel and Distributed Systems</font>, p. 445-450, 2001.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>PAILLARD, G. A. L.; FRANÇA, Felipe Maia Galvão ; MUYLAERT FILHO, Juarez Assumpção. <b>Uma Proposta de um Escalonador para Gamma</b>. Em: <font color=#330066>II Workshop em Sistemas Computacionais de Alto Desempenho</font>, p. 47-54, 2001.</td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SANTOS, Emanuele Marques dos ; VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo. <b>Beremiz - Integrando o Mathematica a um Ambiente Virtual em Rede</b>. Em: <font color=#330066>4th SBC Symposium on Virtual Reality</font>, p. 238-248, 2001.</td></tr>
+            </table></div><div id="dv-year-2000"><h3 class="year">2000</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A. <b>A Formação de Professores para o uso de novas tecnologias para o ensino de matemática</b>. Em: <font color=#330066>I Seminário Internacional de Pesquisa em Educação Matemática</font>, v. 1, p. 205-210, 2000.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere. <b>Discussing technology, classroom practice, curriculum, and content knowledge with teachers</b>. Em: <font color=#330066>V Congresso Ibero-americano de Informática Educativa</font>, 2000.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>MATTOS, F. L. C. L.; FURTADO, E. ; VIEIRA, F. H. S. ; SILVA, M. M.. <b>Auxílio à Solução de Problemas no Processo de Ensino através de Cenários e do Contador de Histórias</b>. Em: <font color=#330066>XI Simpósio Brasileiro de Informática na Educação</font>, 2000.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO; GUIGUE, Didier ; FERNEDA, E.. <b>Automatic Segmentation of Musical Flows: a Rational Agents Approach</b>. Em: <font color=#330066>XX Congresso Nacional da Sociedade Brasileira de Computação</font>, v. 1, 2000.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>VIDAL, Creto Augusto ; LEITE JUNIOR, A. J. M. ; ALMENDRA, Camilo Camilo ; SANTOS, Emanuele Marques dos. <b>Uma Proposta de Integração de Ferramentas Externas a Ambientes Virtuais através de Simulóides e de Aplicações Mediadoras</b>. Em: <font color=#330066>3rd Brazilian Workshop on Virtual Reality</font>, p. 131-142, 2000.</td></tr>
+            </table></div><div id="dv-year-1999"><h3 class="year">1999</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; WILHELM, Jennifer ; MELETIOU, M.. <b>Using Interactive Diagrams as a Means to Promote Deeper Content Knowledge by Students and Teachers</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>CASTRO FILHO, J. A.; WILHELM, Jennifer ; CONFREY, Jere. <b>Motion detectors in the school:Teachers making sense of rate of change and motion</b>. Em: <font color=#330066>Twenty-first Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 2, p. 703-708, 1999.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C.. <b>Projeto Virtual Distance Learning</b>. Em: <font color=#330066>WISE 99</font>, v. 1, p. 1-1, 1999.</td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>LOUREIRO, Robson Carlos ; SARMENTO, W. W. F.. <b>Um Ambiente Integrado de Aprendizagem Interoperativa</b>. Em: <font color=#330066>INFOEDUCAR</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>MATTOS, F. L. C. L. <b>Desenvolvimento de uma metodologia de ensino de didática da informática no contexto de um sistema tutorial inteligente</b>. Em: <font color=#330066>I Workshop Internacional Sobre Informática Educativa - WISE '99</font>, 1999.</td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>WILHELM, Jennifer ; CONFREY, Jere ; CASTRO FILHO, J. A. ; MALONEY, A.. <b>Interactive diagrams to address key student conceptions in mathematics</b>. Em: <font color=#330066>International Meeting of Math and Science Educational Tecnology (M/SET)</font>, 1999.</td></tr>
+            </table></div><div id="dv-year-1998"><h3 class="year">1998</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>LOUREIRO, RC. <b>Um ambiente Integrado de Aprendizagem Interoperativa</b>. Em: <font color=#330066>INFOEDUCAR</font>, v. 1, p. 1-2, 1998.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LOUREIRO, RC; GURGEL, T. ; PEQUENO, M. C.. <b>Informática Educativa: Uma Possibilidade de Interoperação no Ensino a Distância e Presencial</b>. Em: <font color=#330066>IV Congresso Iberoamericano de Informática educacional</font>, 1998.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>TRAJANO DE LIMA, ERNESTO. <b>A Klavierstück XI de Stockhausen: uma imensa melodia de timbres</b>. Em: <font color=#330066>XI Encontro Anual da ANPPOM - Associação Nacional de Pesquisa e Pós-Graduação em Música.</font>, p. 286-291, 1998.</td></tr>
+            </table></div><div id="dv-year-1997"><h3 class="year">1997</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; CONFREY, Jere ; MALONEY, A.. <b>Interactive diagrams: A new learning tool</b>. Em: <font color=#330066>Nineteenth Annual Meeting of the North American Chapter of the International Group for the Psychology of Mathematics Education</font>, v. 1, p. 579-584, 1997.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LOUREIRO, RC; PEQUENO, M. C. ; GURGEL, T.. <b>Informática Educativa - O Caminho do desenvolvimento de projetos</b>. Em: <font color=#330066>II Encontro Norte-Nordeste de Teleinformática na Educação</font>, 1997.</td></tr>
+            </table></div><div id="dv-year-1995"><h3 class="year">1995</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>REZENDE, N. A.; GATTASS, M.. <b>PREGO-Um Editor Gráfico de Objetos Procedurais</b>. Em: <font color=#330066>VIII Simpósio Brasileiro de Computação Gráfica e Processamento de Imagens</font>, 1995.</td></tr>
+            </table></div><div id="dv-year-1992"><h3 class="year">1992</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; ESCRIDELLI, S. ; OLIVEIRA, S. ; CARVALHO, V.. <b>LOGO na pré-escola</b>. Em: <font color=#330066>III Simpósio Brasileiro de Informática Educativa (SBIE)</font>, v. 1, p. 83-90, 1992.</td></tr>
+            </table></div><div id="dv-year-1991"><h3 class="year">1991</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>CASTRO FILHO, J. A.; GITIRANA, V. ; OLIVEIRA, S. ; CARVALHO, W. ; SCRIDELLI, S.. <b>Uma experiência com o uso de LOGO na pré-escola</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 191-205, 1991.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>GITIRANA, V. ; CASTRO FILHO, J. A. ; OLIVEIRA, S.. <b>Passo-a-Passo - Compilador Gráfico para o Ambiente LOGO do MSX</b>. Em: <font color=#330066>I Simpósio de Informática na Educação do Nordeste</font>, v. 1, p. 119-121, 1991.</td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>REZENDE, N. A.; MATOS, H. ; WEBER, W.. <b>Uma Extensão do Método dos Tableauz para Tratamento da Negação por Falha Finita</b>. Em: <font color=#330066>VII Simpósio Brasileiro de Inteligência artificial</font>, 1991.</td></tr>
+            </table></div>
+                    </table>
+                <br><p>
+<br>Data de processamento: 18/06/2025 15:34:53<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

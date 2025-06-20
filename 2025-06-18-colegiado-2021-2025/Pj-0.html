@@ -1,0 +1,191 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Total de projetos de pesquisa'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2021,
+3],
+[2022,
+3],
+[2023,
+8],
+[2024,
+4]]}]});
+        });
+        </script>
+        
+                <h3>Total de projetos de pesquisa</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 18<br>
+                    
+                    
+                    <div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><span class="projects">2024-Atual</span>. <b>DESENVOLVIMENTO PROFISSIONAL DO PROFESSOR EM AÇÕES INTERDISCIPLINARES COM EQUIDADE</b><br><i><font size=-1>Descrição: Pesquisas precisam evidenciar suportes para a tomada de decisão do professor e propiciar práticas pedagógicas equitativas, que proporcionem aos estudantes compreenderem e transformarem sua realidade social. Nos últimos 11 anos a Rede Educação Matemática Nordeste (REM-NE) desenvolve pesquisas com formação profissional de modo a subsidiar professores que ensinam matemática, para a prática pedagógica que proporcione a aprendizagem com equidade. Este projeto tem a questão de pesquisa: como um processo de desenvolvimento profissional com a implementação de sequências de ensino interdisciplinares de Matemática e Ciências pode potencializar a superação de desigualdades na aprendizagem dos estudantes, tendo foco na equidade e em realidades curriculares distintas? Como objetivo principal, analisar um processo de desenvolvimento profissional para a implementação de sequências de ensino interdisciplinares de Matemática e Ciências com foco na equidade e suas contribuições na superação de desigualdades na aprendizagem dos estudantes com realidades curriculares distintas. Pesquisadores de universidades de cinco estados do Nordeste (AL, BA, CE, PE e RN), irão planejar, implementar e refletir sobre sequências de ensino interdisciplinares para o ensino de conceitos matemáticos e de ciências. O desenho metodológico da pesquisa assume um Grupo Grande, formado pela equipe de pesquisa e os professores de Matemática e de Ciências, subdividido em Grupos Pequenos nas escolas. É esperado que os resultados produzam evidências para o processo de implementação de sequências de ensino interdisciplinares que proporcionem aprendizagem com equidade e subsidiar políticas públicas para Redes de Ensino. Além de contribuir para a realização de práticas pedagógicas interdisciplinares, de modo a influenciar no desenvolvimento profissional dos professores.. Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Graduação: (10) / Mestrado acadêmico: (8) / Doutorado: (2) . Integrantes: José Aires de Castro Filho - Integrante / Marcília Chagas Barrêto - Integrante / Eurivalda Ribeiro dos Santos Santana - Coordenador / Dennys Leite Maia - Integrante / Rodrigo Lacerda Carvalho - Integrante / Joserlene Lima Pinheiro - Integrante / Síntria Labres Lautert - Integrante / Diná da Silva Correia - Integrante / Célia Barros Nunes - Integrante / Ernani Martins dos Santos - Integrante / Juscileide Braga de Castro - Integrante / Carloney Alves de Oliveira - Integrante / Henrique Luis da Silva Santos - Integrante / Luana Cerqueira de Almeida - Integrante / Maria Margarete do Rosário Farias - Integrante / Maria Elizabete Souza Couto - Integrante / Tamiles da Silva Oliveira - Integrante / Tia Cintria Madkins - Integrante / Mariana Souto-Manning - Integrante / Clovis Lisbôa dos Santos Junior - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><span class="projects">2024-Atual</span>. <b>eSTEAMulAR: uma abordagem interdisciplinar e equitativa para integrar Inteligência Artificial e STEAM em escolas públicas brasileiras</b><br><i><font size=-1>Descrição: A STEAM, acrônimo formado pelas iniciais em inglês de Science, Technology, Engineering, Arts and Mathematics, surge como uma abordagem para explorar o currículo escolar de maneira atual conforme as inovações tecnológicas. Essa abordagem se alinha à Base Nacional Comum Curricular (BNCC), pois propõe a inserção de tecnologias na sala de aula, não limitando os alunos ao simples ato de usá-las, mas também criá-las e refletir sobre elas, de forma ética, fomentando o pensamento científico, crítico e criativo. No Brasil a STEAM ainda é abordada de forma tímida, havendo pouco investimento para desenvolver conhecimentos tecnológicos em ascensão no campo do trabalho. A presente proposta tem a seguinte questão de pesquisa: como e que elementos precisam ser considerados na formação inicial de professores para a elaboração de sequências didáticas baseadas na abordagem STEAM, de modo que possam contribuir com a aprendizagem dos estudantes? Alguns estudos já indicam contribuições positivas dessa abordagem no desenvolvimento de diversos letramentos como o Matemático, o Científico e o Digital. A equipe de pesquisa será formada por pesquisadores de duas universidades brasileiras e duas americanas. Ao longo dos últimos anos, os pesquisadores participantes dessa proposta têm juntado esforços para formar professores e investigar a contribuição dessa abordagem para a aprendizagem de estudantes da escola básica. A pesquisa acontecerá no contexto da formação inicial, tendo como sujeitos, estudantes de Licenciaturas. Inicialmente, estes participantes responderão um instrumento de perfil para analisar o seu conhecimento a respeito da abordagem STEAM, interdisciplinaridade e prática pedagógica. Em seguida, estudantes serão formados para o planejamento e implementação de sequências didáticas interdisciplinares com abordagem STEAM. Ao final, haverá uma reflexão e socialização das práticas desenvolvidas e das suas aprendizagens... Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Graduação: (10) / Mestrado acadêmico: (6) / Doutorado: (1) . Integrantes: Maria de Fátima Costa de Souza - Coordenador / Daisyane Carneiro Barreto - Integrante / Juscileide Braga de Castro - Integrante / Dennys Leite Maia - Integrante / Lídia A. B. Cardoso - Integrante / José Aires de Costa Filho - Integrante / Lucas Vasconcelos de Lima - Integrante / Leonardo Gomes Lopes - Integrante / PAULO IGO LIMA VALE - Integrante / José Jailton Vasconcelos Junior - Integrante / Francisco Marcelo Bezerra Paiva - Integrante / Murilo Alves Wanderley Junior - Integrante / Raíza Araújo Domingos Soares - Integrante / Giluiza Catarina Cardoso Alves Borges - Integrante / Mariana da Silva - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font><br><i><font size=-1>Descrição: A STEAM, acrônimo formado pelas iniciais em inglês de Science, Technology, Engineering, Arts and Mathematics, surge como uma abordagem para explorar o currículo escolar de maneira atual conforme as inovações tecnológicas. Essa abordagem se alinha à Base Nacional Comum Curricular (BNCC), pois propõe a inserção de tecnologias na sala de aula, não limitando os alunos ao simples ato de usá-las, mas também criá-las e refletir sobre elas, de forma ética, fomentando o pensamento científico, crítico e criativo. No Brasil a STEAM ainda é abordada de forma tímida, havendo pouco investimento para desenvolver conhecimentos tecnológicos em ascensão no campo do trabalho. A presente proposta tem a seguinte questão de pesquisa: como e que elementos precisam ser considerados na formação inicial de professores para a elaboração de sequências didáticas baseadas na abordagem STEAM, de modo que possam contribuir com a aprendizagem dos estudantes? Alguns estudos já indicam contribuições positivas dessa abordagem no desenvolvimento de diversos letramentos como o Matemático, o Científico e o Digital. A equipe de pesquisa será formada por pesquisadores de duas universidades brasileiras e duas americanas. Ao longo dos últimos anos, os pesquisadores participantes dessa proposta têm juntado esforços para formar professores e investigar a contribuição dessa abordagem para a aprendizagem de estudantes da escola básica. A pesquisa acontecerá no contexto da formação inicial, tendo como sujeitos, estudantes de Licenciaturas. Inicialmente, estes participantes responderão um instrumento de perfil para analisar o seu conhecimento a respeito da abordagem STEAM, interdisciplinaridade e prática pedagógica. Em seguida, estudantes serão formados para o planejamento e implementação de sequências didáticas interdisciplinares com abordagem STEAM. Ao final, haverá uma reflexão e socialização das práticas desenvolvidas e das suas aprendizagens.. Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Graduação: (10) / Mestrado acadêmico: (6) / Doutorado: (1) . Integrantes: José Aires de Castro Filho - Coordenador / Daisyane Carneiro Barreto - Integrante / Lucas Vasconcelos de Lima - Integrante / Dennys Leite Maia - Integrante / Juscileide Braga de Castro - Integrante / Maria de Fátima Costa de Souza - Integrante / Lídia A. B. Cardoso - Integrante / Leonardo Gomes Lopes - Integrante / PAULO IGO LIMA VALE - Integrante / José Jailton Vasconcelos Junior - Integrante / Francisco Marcelo Bezerra Paiva - Integrante / Murilo Alves Wanderley Junior - Integrante / Raíza Araújo Domingos Soares - Integrante / Giluiza Catarina Cardoso Alves Borges - Integrante / Mariana da Silva - Integrante. Financiador(es): Conselho Nacional de Desenvolvimento Científico e Tecnológico - Auxílio financeiro.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><span class="projects">2024-Atual</span>. <b>Plataformas Adaptativas de Aprendizagem e Uso Pedagógico de Avaliações Formativas</b><br><i><font size=-1>Descrição: O projeto tem o objetivo de desenvolvimento de modelos de avaliação formativa em Língua Portuguesa e Matemática para o Ensino Fundamental, com ênfase em escolas públicas. Esses modelos foram fundamentados no uso de aprendizado de máquina e métodos estatísticos, com o propósito de parametrizar tarefas e criar instrumentos avaliativos que proporcionem devolutivas pedagógicas eficazes. O objetivo central tem sido o de transferir tecnologias educacionais para redes públicas de ensino, impulsionando inovações nos processos avaliativos.. Situação: Em andamento; Natureza: Pesquisa. Integrantes: Henrique Barbosa Silva - Coordenador / Jorge Herbert Soares de Lira - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td><span class="projects">2024-Atual</span>. <b>Realidade Virtual Aplicada ao Ensino e Aprendizagem de Astronomia</b><br><i><font size=-1>Descrição: Os recentes avanços tecnológicos nos campos da computação gráfica e da interação homem-computador têm difundido o uso de Realidade Virtual (RV) em diversas áreas de conhecimento.Nos últimos anos, ferramentas em Realidade Virtual imersiva e não-imersiva vem sendo viabilizadas como recurso educacional, devido principalmente à diminuição dos custos gerais envolvidos em sua utilização. Porém, o desenvolvimento de simulações 3D que forneçam experiências controladas, seguras, replicáveis e adaptáveis ainda é uma tarefa restrita, dados os complexos processos de elaboração de narrativas, construção do ambiente virtual e geração de elementos interativos.O presente projeto está inserido num projeto do CNPq (Universal) que contempla a realização de duas fases específicas, que deverão ocorrer de forma paralela e interrelacionada, com a plataforma em desenvolvimento servindo de base à construção dos ambientes virtuais. Neste contexto, propõe-se o uso dessa plataforma para a construção de ambientes de Realidade Virtual para uso por professores e alunos de uma Licenciatura em Física e/ou Ensino Médio.. Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Mestrado acadêmico: (1) . Integrantes: Gabriel Antoine Louis Paillard - Coordenador / Antônio José Melo Leite Junior - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><span class="projects">2023-2024</span>. <b>Ciclos de Acompanhamento das Aprendizagens no Ensino Médio</b><br><i><font size=-1>Situação: Concluído; Natureza: Pesquisa. Integrantes: Ernesto Trajano de Lima Neto - Coordenador / Henrique Sérgio Lima Pequeno - Integrante / José Gilvan Rodrigues Maia - Integrante / Antônio José Melo Leite Jr - Integrante / George Allan Menezes Gomes - Integrante / Jorge Herbert Soares de Lira - Integrante / Henrique Barbosa Silva - Integrante / Ismael Pordeus Bezerra Furtado - Integrante. Financiador(es): Ministério da Educação - Bolsa.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><span class="projects">2023-Atual</span>. <b>Integrating STEAM English in the Brazilian Public School System: A pilot study at the UFC Pedagogical Residency Program</b><br><i><font size=-1>Descrição: Current shortages in the STEAM workforce are often caused by a lack of trained teachers to educate the next generation of professionals. The term STEAM includes Arts as a pivot point to be integrated with other STEM areas because of its important role in the digital era. The implementation of STEAM initiatives in Brazilian schools and education is still limited. Teacher preparation is needed to foster learning and assist students in making connections about the interdisciplinary nature of STEAM and the relevance of this field for their future careers. Language and culture are often topics covered separately from STEAM education. Implementing a program that promotes English language learning with STEAM is a response to the acquisition of English as a second language in Brazil. Although Brazilians perceive the importance of the English language, the number of Brazilians who speak the language is low. According to the British Council (2014), only around 5 of Brazilians indicated having some knowledge of English. Even if Brazilians may know English, studies have shown that curriculum materials can be limited and might need to be revised to support learners carrying conversations beyond the textbook. Therefore, initiatives to support integrating STEAM and English learning should be pursued in order to increase professional opportunities for all students in a globalized world. This project seeks to contribute to the understanding of how an integrated ESL and STEAM curriculum could help to overcome current gaps in education. The following table summarizes the current and desired state, the gap and the desired outcome of this project.. Situação: Em andamento; Natureza: Pesquisa. Integrantes: Maria de Fátima Costa de Souza - Integrante / José Aires de Castro Filho - Coordenador / Daisyane Carneiro Barreto - Integrante / Juscileide Braga de Castro - Integrante / Lídia A. B. Cardoso - Integrante / Paula Iriane Sousa Teixeira - Integrante / Pedro Jorge Rodrigues Garcia - Integrante / Gabriel Vasconcelos da Silva - Integrante / Wellizene Silva - Integrante / Luzimara Sousa - Integrante / Liana Gadelha - Integrante / FRANCISCO RAFAEL COSTA - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8761933941200089">Maria de Fátima Costa de Souza</a>.</font><br><i><font size=-1>Descrição: Current shortages in the STEAM workforce are often caused by a lack of trained teachers to educate the next generation of professionals. The term STEAM includes Arts as a pivot point to be integrated with other STEM areas because of its important role in the digital era. The implementation of STEAM initiatives in Brazilian schools and education is still limited. Teacher preparation is needed to foster learning and assist students in making connections about the interdisciplinary nature of STEAM and the relevance of this field for their future careers. Language and culture are often topics covered separately from STEAM education. Implementing a program that promotes English language learning with STEAM is a response to the acquisition of English as a second language in Brazil. Although Brazilians perceive the importance of the English language, the number of Brazilians who speak the language is low. According to the British Council (2014), only around 5 of Brazilians indicated having some knowledge of English. Even if Brazilians may know English, studies have shown that curriculum materials can be limited and might need to be revised to support learners carrying conversations beyond the textbook. Therefore, initiatives to support integrating STEAM and English learning should be pursued in order to increase professional opportunities for all students in a globalized world. This project seeks to contribute to the understanding of how an integrated ESL and STEAM curriculum could help to overcome current gaps in education. The following table summarizes the current and desired state, the gap and the desired outcome of this project.. Situação: Concluído; Natureza: Pesquisa. Alunos envolvidos: Graduação: (4) / Mestrado profissional: (1) . Integrantes: José Aires de Castro Filho - Coordenador / Daisyane Carneiro Barreto - Integrante / Juscileide Braga de Castro - Integrante / Maria de Fátima Costa de Souza - Integrante / Lídia A. B. Cardoso - Integrante / Paula Iriane Sousa Teixeira - Integrante / Gabriel Vasconcelos da Silva - Integrante / Wellizene Silva - Integrante / Luzimara Sousa - Integrante / Liana Gadelha - Integrante. Financiador(es): Consulado Geral dos EUA em Recife - Auxílio financeiro.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><span class="projects">2023-Atual</span>. <b>Letter Fitting - Um estudo populacional sobre o espaçamento proporcional entre caracteres ortográficos e para-ortográficos em fontes de escrita latina</b><br><i><font size=-1>Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Graduação: (3) . Integrantes: Carlos Eduardo Brito Novais - Integrante / raphael de Alcântara do Carmo - Coordenador.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4467706783113621">Carlos Eduardo Brito Novais</a>.</font></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td><span class="projects">2023-2024</span>. <b>Programa Cientista-Chefe da Educação</b><br><i><font size=-1>Descrição: Integração de Avaliação, Formação e Currículo emMatemática Básica - Biênio 2021-2022. Situação: Concluído; Natureza: Pesquisa. Integrantes: Henrique Sergio Lima Pequeno - Coordenador / Jorge Herbert Soares de Lira - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/8556816688689358">Henrique Sergio Lima Pequeno</a>.</font></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td><span class="projects">2023-Atual</span>. <b>PROMOÇÃO DA SAÚDE E QUALIDADE DE VIDA NO SISTEMA PENITENCIÁRIO DO CEARÁ</b><br><i><font size=-1>Situação: Em andamento; Natureza: Pesquisa. Integrantes: Ernesto Trajano de Lima Neto - Coordenador / Ana Karina Bezerra Pinheiro - Integrante / SAMILA GOMES RIBEIRO - Integrante / Paula Renata Amorim Lessa Soares - Integrante / Luiz Fábio Silva Paiva - Integrante / Walberto Silva dos Santos - Integrante / Alex Sandro Grangeiro - Integrante / Ana Izabel Oliveira Nicolau - Integrante. Financiador(es): Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Bolsa.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td><span class="projects">2023-Atual</span>. <b>Uso de Aprendizado de Máquina em Fóruns de Ambientes Virtuais de Aprendizagem</b><br><i><font size=-1>Descrição: Fóruns desempenham um papel central nos Ambientes Virtuais de Aprendizagem (AVAs), fornecendo uma forma simples e valiosa de comunicação assíncrona entre os partícipes de cursos do ensino superior.O Aprendizado de Máquina (AM) tem se destacado como uma ferramenta essencial para a análise de fóruns, oferecendo a capacidade de fazer previsões, identificar padrões e gerar visualizações de dados. Este projeto trata do uso de soluções baseadas em AM que utilizam os fóruns dos AVAs como objeto de aprendizagem para os modelos.. Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Mestrado acadêmico: (1) . Integrantes: Gabriel Antoine Louis Paillard - Coordenador / Ernesto Trajano de Lima - Integrante / Francisco Romes da Silva Filho - Integrante / Rafael Augusto Ferreira do Carmo - Integrante. Número de produções C, T & A: 1</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td><span class="projects">2023-2024</span>. <b>Utilizando o ChatGPT no ensino: perspectivas e Desafios</b><br><i><font size=-1>Descrição: O projeto de pesquisa tem por objetivo uma revisão bibliográfica, incluindo publicações e trabalhos acadêmicos como Teses e Dissertações, acerca dos benefícios e desafios da utilização da Inteligência Artificial CHATGPT no ensino dos cursos de graduação, bem como das perspectivas sobre o uso da tecnologia.. Situação: Concluído; Natureza: Pesquisa. Alunos envolvidos: Graduação: (2) . Integrantes: Henrique Barbosa Silva - Coordenador / George Allan Menezes Gomes - Integrante / Joao Victor Barroso Alves - Integrante / Yanna Torres Goncalves - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/9848407021720705">Henrique Barbosa Silva</a>.</font></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td><span class="projects">2023-Atual</span>. <b>Validação de uma Arquitetura para Catalogação de Obras Públicas</b><br><i><font size=-1>Descrição: O Brasil é o maior país da América do Sul e o quinto maior país do mundo em área territorial, com uma população de mais de 211 milhões de acordo com o instituto de pesquisas IBGE com data de referência em 1 de julho de 2020. Com essa vastidão territorial e populacional, a gestão do país torna-se uma tarefa que exige certo grau de responsabilidade e competência dos gestores eleitos. No entanto, existem várias obras inacabadas e abandonadas que desperdiçam recursos públicos que poderiam ser investidos financeiramente em áreas como educação, segurança e saúde. Aportar a transparência devida à população sobre os valores gastos em obras públicas inacabadas e em execução.. Situação: Em andamento; Natureza: Pesquisa. Alunos envolvidos: Mestrado acadêmico: (1) . Integrantes: Gabriel Antoine Louis Paillard - Coordenador / Leonardo Oliveira Moreira - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/4427578264303416">Gabriel Antoine Louis Paillard</a>.</font></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><span class="projects">2022-Atual</span>. <b>Arte + Comp</b><br><i><font size=-1>Descrição: Cadastrado no Diretório de Grupos de Pesquisa CNPq. Situação: Em andamento; Natureza: Pesquisa. Integrantes: Antonio Jose Melo Leite Junior - Coordenador / Natal Anacleto Chicca Junior - Integrante / Ernesto Trajano de Lima - Integrante / Rafael Augusto Ferreira do Carmo - Integrante / GOMES, GEORGE A. M. - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/2610619567290943">Antonio Jose Melo Leite Junior</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><span class="projects">2022-2023</span>. <b>Materiais e Tecnologias de Suporte à Recuperação das Aprendizagens</b><br><i><font size=-1>Situação: Concluído; Natureza: Pesquisa. Integrantes: Ernesto Trajano de Lima Neto - Integrante / Henrique Sérgio Lima Pequeno - Integrante / Antônio José Melo Leite Jr - Integrante / Natal Anacleto Chicca Júnior - Integrante / George Allan Menezes Gomes - Integrante / Ricardo Brauner dos Santos - Integrante / Paulo de Tarso Cavalcante Pequeno Filho - Integrante / Davi Emmanuel Carvalho Linhares - Integrante / Hellânio Ferreira da Costa - Integrante / Henrique Bruno Oliveira Lima - Integrante / Bianca Stephani Barone - Integrante / Alex Sandro Pereira Ramos - Integrante / Jorge Herbert Soares de Lira - Coordenador. Financiador(es): Ministério da Educação - Bolsa.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><span class="projects">2022-2023</span>. <b>PROMOÇÃO DA SAÚDE E QUALIDADE DE VIDA NO SISTEMA PENITENCIÁRIO DO CEARÁ</b><br><i><font size=-1>Situação: Concluído; Natureza: Pesquisa. Alunos envolvidos: Graduação: (3) / Mestrado acadêmico: (3) / Doutorado: (1) . Integrantes: Ernesto Trajano de Lima Neto - Coordenador / Ana Karina Bezerra Pinheiro - Integrante / Hellen Lívia Oliveira Catunda - Integrante / SAMILA GOMES RIBEIRO - Integrante / Paula Renata Amorim Lessa Soares - Integrante / Purdenciana Ribeiro de Menezes - Integrante / CÍCERO SIQUEIRA MENDES - Integrante / Luiz Fábio Silva Paiva - Integrante / Michelle Steiner dos Santos - Integrante / Lara Capelo Cavalcante - Integrante / Walberto Silva dos Santos - Integrante / Augusto Cezar Moura de Macedo - Integrante / Fernanda Naiara da Frota Lobato - Integrante / Alex Sandro Grangeiro - Integrante. Financiador(es): Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico - Bolsa.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3037263625761342">Ernesto Trajano de Lima Neto</a>.</font></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td><span class="projects">2021-2024</span>. <b>Construindo uma Plataforma de White Label Open Banking para Melhorar a Inclus#8194;o Financeira e Capital Humano em Russas, Nordeste do Brasil</b><br><i><font size=-1>Descrição: O projeto cadastrado na UFC de nome Construindo uma Plataforma de Open Banking White Label para Melhorar a Inclusão Financeira e Capital Humano em Russas, Nordeste do Brasil teve seu início em novembro de 2021. Ele é financiado por um grupo de investidores internacionais, sendo este grupo capitaneado por Alejandro Vollbrechthausen. O projeto está sob a coordenação da Profa. Marília Mendes e visa à criação de um software a ser utilizado por empresas que desejem oferecer serviços financeiros, dentro da perspectiva do paradigma de open banking. O projeto tem vaga para até 67 alunos.. Situação: Concluído; Natureza: Pesquisa. Alunos envolvidos: Graduação: (67) / Especialização: (0) / Mestrado acadêmico: (0) / Mestrado profissional: (0) / Doutorado: (0) . Integrantes: Marília Soares Mendes - Coordenador / Bruno de Castro Honorato Silva - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/3731017260116598">Marília Soares Mendes</a>.</font></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td><span class="projects">2021-Atual</span>. <b>Desenvolvimento de mídias digitais e metodologias ativas no Ensino Superior: conexões entre discentes na modalidade remota e híbrida.</b><br><i><font size=-1>Descrição: O objetivo deste projeto é desenvolver mídias digitais para apoiar práticas de metodologias ativas no ensino superior remoto ou híbrido. As teorias da aprendizagem contemporâneas apontam que o processo de aprendizagem deve acontecer por meio de práticas ativas como a resolução de problemas e realização de projetos. Por isso, a importância de se valorizar o envolvimento ativo dos alunos em seu próprio processo de formação. As metodologias ativas utilizam situações reais e estimulam o protagonismo que são elementos importantes para a formação do discente e para o desenvolvimento do seu conhecimento. O projeto será desenvolvido em duas etapas: a primeira etapa consiste no desenvolvimento de mídias digitais e interativas. Esta etapa baseia-se em estudos sobre desenvolvimento de mídias educacionais e interativas com ênfase na colaboração e interação. A segunda etapa consistirá na realização de um estudo empírico de validação dessas mídias compreendendo a sua utilização por professores e estudantes de uma disciplina de ensino superior da Universidade Federal do Ceará. As mídias desenvolvidas serão avaliadas em relação à usabilidade e contribuição na aprendizagem e interação com os conteúdos da disciplina e entre os participantes. O projeto lança a hipótese de que as mídias que serão desenvolvidas evidenciam formas de engajamento entre os estudantes em processos de ensino e de aprendizagem como também mostram potencial de reflexões sobre práticas docentes como possibilidades para novas formas de planejamento. Além disso, o projeto busca o amadurecimento progressivo de como se compreende as metodologias ativas, seus limites e os desgastes que causa, do qual se destaca a demanda de tempo e cuidado dos docentes e seus colaboradores para planejar, projetar, elaborar conceitualmente e graficamente toda uma variedade de situações.. Situação: Em andamento; Natureza: Pesquisa. Integrantes: Raquel Santiago Freire - Coordenador.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/9322311013034336">Raquel Santiago Freire</a>.</font></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td><span class="projects">2021-2024</span>. <b>Desenvolvimento de narrativas interativas gamificadas para conteúdos de Matemática no Ensino Médio</b><br><i><font size=-1>Descrição: O presente projeto tem como propósito o desenvolvimento de narrativas interativas gamificadas para componentes curriculares de Matemática do Ensino Médio. Estas sendo definidas como um material em formato digital que utiliza da mecânica, estilo e pensamento dos jogos como meio para resolver problemas, possibilitando com sua utilização um engajamento do aluno e consequentemente a aprendizagem de competências e habilidades. As narrativas serão validadas com com estudantes de escolas públicas de Fortaleza e Crateús. O projeto será desenvolvido em duas etapas: A primeira etapa irá constar do desenvolvimento das narrativas interativas. Essa etapa se baseia em estudos acerca das tecnologias mais atuais para desenvolvimento de recursos educacionais digitais com ênfase em tecnologias que possibilitem posterior adaptação e reutilização dos recursos desenvolvidos. A segunda etapa consistirá na realização de um estudo empírico de validação das narrativas interativas, compreendendo a sua utilização por estudantes de uma escola pública de Ensino Médio da cidade de Fortaleza e outra localizada na zona rural da cidade de Crateús. As escolas participantes de Fortaleza e Crateús serão escolhidas a partir da disponibilidade para a realização de atividades com uso das narrativas interativas. As narrativas serão avaliadas em relação à usabilidade e contribuição na aprendizagem de conceitos matemáticos por parte dos alunos. O projeto trará diversas contribuições na área de pesquisa em Informática na Educação, ao propiciar um melhor conhecimento do potencial educacional surgido a partir do uso de narrativas interativas gamificadas no ambiente escolar, principalmente no tocante à aprendizagem de matemática dos alunos. Deseja-se que os resultados advindos da pesquisa sirvam de subsídios para desenvolvimentos futuros de narrativas interativas, bem como para futuras implementações do uso das tecnologias na escola, em uma visão ancorada em avanços recentes tanto no que diz respeito às teorias educacionais quanto às inovações tecnológicas.. Situação: Concluído; Natureza: Pesquisa. Alunos envolvidos: Graduação: (1) / Mestrado profissional: (2) . Integrantes: José Aires de Castro Filho - Coordenador / Gabriel Marques do Nascimento - Integrante / José Gilvan Rodrigues Maia - Integrante / Francisco Bruno Nascimento da Rocha - Integrante / Juliana Evaristo Costa - Integrante / Marisa Lima de Vasconcelos - Integrante / Artur de Oliveira da Rocha Franco - Integrante / Caio de Freitas Oliveira - Integrante / Maria do Socorro Oliveira da Silva - Integrante / Francisco Valdemir Leandro Barroso - Integrante.</font></i><br><i><font size=-1>Membro: <a href="http://lattes.cnpq.br/1001172700194924">José Aires de Castro Filho</a>.</font></td></tr>
+            </table></div>
+                    </table>
+                <br><p><br>(*) Relatório criado com produções desde 2021 até 2025
+<br>Data de processamento: 20/06/2025 10:35:17<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              

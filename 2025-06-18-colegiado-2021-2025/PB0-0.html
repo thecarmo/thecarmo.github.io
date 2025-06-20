@@ -1,0 +1,293 @@
+
+                <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><meta name="Generator" content="scriptLattes"><title>colegiado</title><link rel="stylesheet" href="css/scriptLattes.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"><link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"><link rel="stylesheet" type="text/css" href="css/dataTables.colVis.min.css"><script type="text/javascript" charset="utf8" src="js/jquery.min.js"></script><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script><script type="text/javascript" charset="utf8" src="js/dataTables.colVis.min.js"></script><script src="http://professor.ufabc.edu.br/~jesus.mena/sorttable.js"></script></head><body><div id="header2"> <button onClick="history.go(-1)">Voltar</button><h2>colegiado</h2></div>
+                
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <!--
+        <script type="text/javascript" src="./highcharts.js"></script>
+        <script type="text/javascript" src="./exporting.js"></script>
+        <script type="text/javascript" src="./drilldown.js"></script>
+        -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        // Load the fonts
+        Highcharts.createElement('link', {
+           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700',
+           rel: 'stylesheet',
+           type: 'text/css'
+        }, null, document.getElementsByTagName('head')[0]);
+
+        Highcharts.theme = {
+   colors: ["#1F77B4", "#118D95", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#2b908f", "#90ee7e", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "'Source Sans Pro', 'sans-serif'"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+};
+
+        Highcharts.setOptions(Highcharts.theme);
+        $(function () {
+            $('#container').highcharts({chart: {type: 'column', 
+height: 300}, 
+title: {text: 'Artigos completos publicados em periódicos'}, 
+subtitle: {text: ''}, 
+xAxis: {title: {text: ''}, 
+type: 'category'}, 
+yAxis: {min: 0, 
+title: {text: 'Quantidade', 
+align: 'middle'}, 
+labels: {overflow: 'justify'}, 
+stackLabels: {enabled: true, 
+format: '{stack}'}}, 
+tooltip: {enabled: true, 
+valueSuffix: '', 
+shared: false, 
+headerFormat: '<span style="font-size: 10px">{point.key}{point.stack}{series.stack}</span><br/>', 
+pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'}, 
+plotOptions: {bar: {dataLabels: {enabled: false}}, 
+column: {stacking: null}, 
+series: {shadow: 'true'}}, 
+legend: {enabled: false, 
+layout: 'vertical', 
+align: 'right', 
+verticalAlign: 'middle', 
+borderWidth: 1, 
+backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF'), 
+shadow: true}, 
+credits: {enabled: false}, 
+series: [{name: 'Total', 
+data: [[2021,
+15],
+[2022,
+20],
+[2023,
+14],
+[2024,
+15],
+[2025,
+4]]}]});
+        });
+        </script>
+        
+                <h3>Artigos completos publicados em periódicos</h3> <br>
+                    <div id="container" style="min-width: 310px; max-width: 1920px; height: 300; margin: 0"></div>
+                    Número total de itens: 68<br>
+                    
+                    
+                    <div id="dv-year-2025"><h3 class="year">2025</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>DA SILVA, JOSÉ NUNES ; TEOTÔNIO, MARIA DO SOCORRO CALDAS ; SILVEIRA JUCÁ, RENNER CÉSAR ; CASTRO, GUILHERME DE LIMA ; MELO LEITE, ANTONIO JOSÉ. <b>1925-2024: One Century of Educational Games in Chemistry</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2025. <a href="http://dx.doi.org/10.1021/acs.jchemed.4c01238" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>FERREIRA MAGALHÃES, LARISSA JÚLIA ; COSTA DE SOUZA, MÁRIA DE FÁTIMA. <b>ANÁLISE DA RELAÇÃO ENTRE USABILIDADE E SEGURANÇA DA INFORMAÇÃO: UMA REVISÃO DE ESCOPOANALYSIS OF THE RELATIONSHIP BETWEEN USABILITY AND INFORMATION SECURITY: A SCOPING REVIEWANÁLISIS DE LA RELACIÓN ENTRE USABILIDAD Y SEGURIDAD DE LA INFORMACIÓN: UNA REVISIÓN DE ALCANCEANÁLISE DA RELAÇÃO ENTRE USABILIDADE E SEGURANÇA DA INFORMAÇÃO: UMA REVISÃO DE ESCOPO</b>. <font color=#330066>RECIMA21 - Revista Científica Multidisciplinar - ISSN 2675-6218</font>. v. 6, p. e636309, issn: 2675-6218, 2025. <a href="http://dx.doi.org/10.47820/recima21.v6i3.6309" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>NUNES DA SILVA JÚNIOR, JOSÉ ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; SILVEIRA JUCÁ, RENNER CÉSAR. <b>POPPING BALLOONS: A FUN ACTIVITY TO ENGAGE STUDENTS IN REVIEW OF CHEMICAL NOMENCLATURE AND STEREOCHEMISTRY BY USING EDUCATIONAL GAMES AND LOW-COST MATERIALS</b>. <font color=#330066>QUIMICA NOVA</font>. v. 1, p. 1, issn: 0100-4042, 2025. <a href="http://dx.doi.org/10.21577/0100-4042.20250124" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>RODRIGUES MAIA, JOSÉ GILVAN; DE CARVALHO GOMES, FERNANDO ANTONIO ; PORTO PINHEIRO, LUIZ GONZAGA ; DE SÁ SALES, LEONARDO ADOLPHO ; GONÇALVES PINTO, JOÃO ODILO ; SIQUEIRA PINHEIRO, FERNANDO ANTONIO. <b>Priority Index for Bariatric Surgery Based on a New Classification of Severity in Obesity</b>. <font color=#330066>OBESITY SURGERY</font>. v. 36, p. 1-9, issn: 0960-8923, 2025. <a href="http://dx.doi.org/10.1007/s11695-025-07716-9" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2024"><h3 class="year">2024</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARBOSA, PEDRO LUIS SARAIVA ; DAMAZIO, GABRIELA NAYARA DUARTE OLIVEIRA ; CARVALHO, WINDSON VIANA DE ; CARMO, RAFAEL AUGUSTO FERREIRA DO ; OLIVEIRA, EVANDRO NOGUEIRA DE. <b>Explorando técnicas de análise de dados em exames de avaliação de estudantes de graduação no contexto brasileiro</b>. <font color=#330066>AVALIAÇÃO: REVISTA DA AVALIAÇÃO DA EDUCAÇÃO SUPERIOR</font>. v. 29, p. e024030, issn: 1982-5765, 2024. <a href="http://dx.doi.org/10.1590/1982-57652024v29id279513" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>COSTA, JULIANA EVARISTO ; ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; FILHO, JOSÉ AIRES DE CASTRO ; MAIA, JOSÉ GILVAN RODRIGUES ; NASCIMENTO, GABRIEL MARQUES DO. <b>Validação da narrativa interativa gamificada (NIG) jornada da Mel para a aprendizagem de matemática financeira.</b>. <font color=#330066>REVISTA CONEXÕES - CIÊNCIA E TECNOLOGIA</font>. v. 18, p. e022007, issn: 2176-0144, 2024. <a href="http://dx.doi.org/10.21439/conexoes.v18i0.3259" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DA ROCHA FRANCO, ARTUR DE OLIVEIRA ; DE CARVALHO, WINDSON VIANA ; DA SILVA, JOSÉ WELLINGTON FRANCO ; MAIA, JOSÉ GILVAN RODRIGUES ; DE CASTRO, MIGUEL FRANKLIN. <b>Managing and controlling digital role-playing game elements: A current state of affairs</b>. <font color=#330066>ENTERTAINMENT COMPUTING</font>. v. 51, p. 100708, issn: 1875-9521, 2024. <a href="http://dx.doi.org/10.1016/j.entcom.2024.100708" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; DE LIMA CASTRO, GUILHERME ; SILVEIRA JUCÁ, RENNER CÉSAR ; NUNES, FÁTIMA MIRANDA ; JANÔ NOBRE, DAVI ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; OLIVEIRA ALEXANDRE, FRANCISCO SERRA ; SILVA DE SOUSA, ULISSES ; MONTEIRO, ANDRÉ JALLES. <b>Vikings: An Online Cooperative Game for Reviewing Thermochemistry, Chemical Equilibrium, and Chemical Kinetics</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2024. <a href="http://dx.doi.org/10.1021/acs.jchemed.3c01310" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; DE SOUSA OLIVEIRA, JOSÉ MARIANO ; WINUM, JEAN-YVES ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; DO NASCIMENTO, DAVID MACEDO ; SILVA DE SOUSA, ULISSES ; PIMENTA, ANTÔNIA TORRES ÁVILA ; MONTEIRO, ANDRÉ JALLES. <b>Addition to -Interactions 500: Design, Implementation, and Evaluation of a Hybrid Board Game for Aiding Students in the Review of Intermolecular Forces During Covid-19 Pandemic-</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2024. <a href="http://dx.doi.org/10.1021/acs.jchemed.4c00946" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; MONTEIRO, ANDRÉ JALLES ; VEGA, KIMBERLY BENEDETTI ; BASSO, ANDREA. <b>Design, Implementation, and Evaluation of a Web-Based Board Game for Aiding Students? Review of the Resonance of Organic Compounds</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2024. <a href="http://dx.doi.org/10.1021/acs.jchemed.3c00842" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; RIBEIRO, MARIA ELENIR NOBRE PINHO ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; DE OLIVEIRA ALEXANDRE, MARIA CLARA ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; MONTEIRO, ANDRÉ JALLES. <b>Space Race Game: A Web-Based Board Game for Aiding Students in Reviewing Thermochemistry, Chemical Equilibrium, and Chemical Kinetics</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2024. <a href="http://dx.doi.org/10.1021/acs.jchemed.3c00981" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>FERREIRA, DAYANY BARROS ; SOUZA, DANILO DO CARMOS DE ; CASTRO FILHO, JOSÉ AIRES ; CASTRO, JUSCILEIDE BRAGA DE. <b>Gamificação no Ensino de Matemática: análise das contribuições do Recurso Educacional Digital 'Ilhas das Operações' para a aprendizagemGamification in Mathematics Teaching: Contributions of the Digital Educational Resource 'Ilhas das Operações' to LearningGamificación en la Enseñanza de las Matemáticas: Contribuciones del Recurso Educativo Digital 'Ilhas das Operações</b>. <font color=#330066>Revista Ensino em Debate</font>. v. 4, p. e2024025-18, issn: 2965-6753, 2024. <a href="http://dx.doi.org/10.21439/2965-6753.v4.e2024025" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>LOPES, E. C. ; LIMA, I. H. A. ; MARCAL, E. ; COUTINHO, EMANUEL F. ; MOREIRA, LEONARDO O. ; PAILLARD, GABRIEL A. L.. <b>Elaboração e aplicação de sistemas de recomendação para a personalização do Ensino: uma revisão sistemática</b>. <font color=#330066>CADERNOS CAJUÍNA</font>. v. 9, p. 1, issn: 2448-0916, 2024. <a href="http://dx.doi.org/10.52641/" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>NUNES DA SILVA JÚNIOR, JOSÉ ; C. S. JUCÁ, RENNER ; S. C. TEOTÔNIO, MARIA ; JOSÉ MELO LEITE JUNIOR, ANTONIO ; ESDRAS DE ANDRADE UCHOA, DANIEL ; ZAMPIERI, DÁVILA ; CLARA DE O. ALEXANDRE, MARIA. <b>Modelagem e avaliação de um jogo educacional como estratégia para o ensino de segurança de laboratório em Química</b>. <font color=#330066>QUÍMICA NOVA NA ESCOLA (IMPRESSO)</font>. v. 1, p. 1, issn: 0104-8899, 2024. <a href="http://dx.doi.org/10.21577/0104-8899.20160427" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>OTERO, M. R. ; GAZZOLA, M. P. ; CASTRO FILHO, J. A. ; GOMES, A. S.. <b>Teaching and learning mathematics using digital games in the classroom</b>. <font color=#330066>REVIEW OF SCIENCE, MATHEMATICS and ICT EDUCATION</font>. v. 18, p. 69-87, issn: 1792-3999, 2024. <a href="http://dx.doi.org/10.26220/rev.5065" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>QUEIROS, LEANDRO MARQUES ; GOMES, A. S. ; CASTRO FILHO, J. A. ; SILVA, CARLOS JOSE PEREIRA DA ; PEREIRA, JOSE WILSON ; GABRIEL, JOAO VICTOR ; SANTOS, ERNANI MARTINS. <b>Percepção da Efetividade do Jogo Educativo Móvel Trevo S.A. para Aprendizagem de Combinatória por Professores e Estudantes</b>. <font color=#330066>JORNAL INTERNACIONAL DE ESTUDOS EM EDUCAÇÃO MATEMÁTICA</font>. v. 17, p. 49-57, issn: 2176-5634, 2024. <a href="http://dx.doi.org/10.17921/2176-5634.2024v17n1p49-57" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>ROCHA MESQUITA, RUAN ; VALÉRIO MARTINS, DANIEL ; RODRIGUES MAIA, JOSÉ GILVAN. <b>Demarcação de Território Virtual: Uma Proposta de Criação do Ponto de Memória Digital Anacé do Ceará</b>. <font color=#330066>REVISTA EUROAMERICANA DE ANTROPOLOGIA</font>. v. 1, p. 181-201, issn: 2387-1555, 2024. <a href="http://dx.doi.org/10.14201/rea202314181201" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SILVA, BRUNO CORREIA DA ; RODRIGUES MAIA, JOSÉ GILVAN ; VIANA DE CARVALHO, WINDSON. <b>Procedural content generation in pervasive games: state of affairs, mistakes, and successes</b>. <font color=#330066>INTERNATIONAL JOURNAL OF PERVASIVE COMPUTING AND COMMUNICATIONS (PRINT)</font>. v. 20, p. 345-364, issn: 1742-7371, 2024. <a href="http://dx.doi.org/10.1108/IJPCC-11-2023-0314" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>VASCONCELOS, M. L. ; UTSUMI, M. C. ; CASTRO, J. B. ; LAUTERT, S. L. ; CASTRO FILHO, J. A.. <b>CICLO INVESTIGATIVO PPDAC: UMA SEQUÊNCIA DE ENSINO PARA DESENVOLVER ELEMENTOS DO LETRAMENTO ESTATÍSTICO NOS ANOS INICIAIS</b>. <font color=#330066>PAIDÉI@ (SANTOS)</font>. v. 16, p. 1-18, issn: 1982-6109, 2024. <a href="http://dx.doi.org/10.5281/zenodo.12752303" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2023"><h3 class="year">2023</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>BARBOSA, PEDRO LUIS SARAIVA ; CARMO, RAFAEL AUGUSTO FERREIRA DO ; GOMES, JOÃO P. P. ; VIANA, WINDSON. <b>Adaptive learning in computer science education: A scoping review</b>. <font color=#330066>Education and Information Technologies</font>. v. 28, p. 1, issn: 1360-2357, 2023. <a href="http://dx.doi.org/10.1007/s10639-023-12066-z" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>LACERDA CARVALHO BEZERRA, ELLEN ; ARAÚJO HITZSCHKY, RAYSSA ; SANTIAGO FREIRE, RAQUEL ; AIRES CASTRO FILHO, JOSÉ. <b>METODOLOGIAS ATIVAS E O PROTAGONISMO DISCENTE NA PRODUÇÃO DE MÍDIAS DIGITAIS NO ENSINO SUPERIOR</b>. <font color=#330066>Tear: Revista de Educação, Ciência e Tecnologia</font>. v. 12, p. 1-20, issn: 2238-8079, 2023. <a href="http://dx.doi.org/10.35819/tear.v12.n2.a6876" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>COSTA, JULIANA EVARISTO ; ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; VASCONCELOS, FRANCISCO HERBERT LIMA ; CASTRO FILHO, JOSÉ AIRES DE ; MAIA, JOSÉ GILVAN RODRIGUES. <b>A Influência das Avaliações Externas SAEB e SPAECE nas Estratégias Educacionais no Estado do Ceará: uma Análise Sobre a Disciplina de Matemática em Escolas Públicas de Ensino Médio</b>. <font color=#330066>REVISTA DE ENSINO, EDUCAÇÃO E CIÊNCIAS HUMANAS</font>. v. 24, p. 308-314, issn: 2447-8733, 2023. <a href="http://dx.doi.org/10.17921/2447-8733.2023v24n2p308-314" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; ALEXANDRE, MARIA CLARA ; OLIVEIRA ALEXANDRE, FRANCISCO SERRA ; DA SILVA, LUCAS LIMA ; WINUM, JEAN-YVES. <b>CR322: A Web-Based Board Game for Aiding Students in Reviewing Chemical Reactivity</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2023. <a href="http://dx.doi.org/10.1021/acs.jchemed.3c00758" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>FERNANDES, NATÁLIA ; LEITE JUNIOR, ANTONIO JOSÉ MELO ; MARÇAL, EDGAR ; VIANA, WINDSON. <b>Augmented reality in education for people who are deaf or hard of hearing: a systematic literature review</b>. <font color=#330066>Universal Access in the Information Society</font>. v. 1, p. 1, issn: 1615-5289, 2023. <a href="http://dx.doi.org/10.1007/s10209-023-00994-z" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FRANCO, A. O. R. ; DA SILVA, JOSÉ WELLINGTON FRANCO ; MAIA, JOSE GILVAN RODRIGUES ; CASTRO, Miguel Franklin de. <b>Harnessing generative grammars and genetic algorithms for immersive 2D maps</b>. <font color=#330066>ENTERTAINMENT COMPUTING</font>. v. 47, p. 1, issn: 1875-9521, 2023.</td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>GONDIM, R. S. P. ; PINTO, A. C. P. ; CASTRO FILHO, J. A. ; VASCONCELOS, Francisco Herbert Lima. <b>A Cultura Maker como Estratégia de Ensino e Aprendizagem: uma Revisão Sistemática da Literatura</b>. <font color=#330066>REVISTA DE ENSINO, EDUCAÇÃO E CIÊNCIAS HUMANAS</font>. v. 23, p. 19-28, issn: 2447-8733, 2023. <a href="http://dx.doi.org/10.17921/2447-8733.2022v23n5p841-848" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>LIMA, G. ; LOPES, L. ; RAULINO, N. ; NUNES, C. ; SABOIA, INGA ; LEITE JR, A. J. M.. <b>TRANSforming Design Through Emotion: An Application to Support Brazilian Transgender Student Women</b>. <font color=#330066>Interacting With Computers</font>. v. 35, p. 53-54, issn: 1873-7951, 2023.</td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>MELO, DILENE FONTINELE CATUNDA ; DE ANDRADE, LUIZ ODORICO MONTEIRO ; PERNENCAR, CLAUDIA ALEXANDRA DA CUNHA ; BARRETO, IVANA CRISTINA DE HOLANDA CUNHA ; AVILA, ROBERLANDIA EVANGELISTA LOPES ; KATZ, LETÍCIA MARIA CORREIA ; SABÓIA, INGA FREIRE ; THEOPHILO, REBECCA LUCENA. <b>Linha de cuidado do CÃ¢ncer do Colo do Ã?tero: prÃ¡ticas, desafios e perspectivas na atenÃ§Ã£o primÃ¡ria Ã  saÃºde</b>. <font color=#330066>CONTRIBUCIONES A LAS CIENCIAS SOCIALES</font>. v. 16, p. 24942-24960, issn: 1988-7833, 2023. <a href="http://dx.doi.org/10.55905/revconv.16n.11-013" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>SABINO, RODOLFO ; VIDAL, Creto Augusto ; CAVALCANTE-NETO, Joaquim Bento ; MAIA, JOSÉ GILVAN RODRIGUES. <b>Building Oriented Bounding Boxes by the intermediate use of ODOPs</b>. <font color=#330066>COMPUTERS & GRAPHICS-UK</font>. v. 116, p. 251-261, issn: 0097-8493, 2023. <a href="http://dx.doi.org/10.1016/j.cag.2023.08.028" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>SILVA FILHO, F. R. ; CARMO, R. A. F ; ANTOINE LOUIS PAILLARD, GABRIEL ; LIMA, E. T.. <b>Uso de Aprendizado de Máquina em Fóruns de Ambientes Virtuais de Aprendizagem: Uma Revisão Sistemática de Literatura.</b>. <font color=#330066>RENOTE. REVISTA NOVAS TECNOLOGIAS NA EDUCAÇÃO</font>. v. 21, p. 220-233, issn: 1679-1916, 2023. <a href="http://dx.doi.org/10.22456/1679-1916.137743" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>SILVA, D. G. ; CASTRO, J. B. ; CASTRO FILHO, J. A.. <b>Educação midiática e BNCC: uma revisão sistemática sobre seus impactos</b>. <font color=#330066>TEORIA E PRÁTICA DA EDUCAÇÃO. VOL. 15 N.1 JAN/ABR 2012</font>. v. 26, p. 1-16, issn: 2237-8707, 2023. <a href="http://dx.doi.org/10.4025/tpe.v26i1.65673" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SILVEIRA, RAQUEL ; PERNENCAR, CLÁUDIA ; DE SOUSA, FÁBIO ; GOMES, KAMILA ; OLIVEIRA, DEIVITH ; SABOIA, INGA ; MOURÃO, CRISTIANE ; MONTEIRO, ODORICO ; BARRETO, IVANA. <b>GISSA intelligent chatbot experience - How effective was the interaction between pregnant women and a chatbot during the COVID-19 pandemic?</b>. <font color=#330066>PROCEDIA COMPUTER SCIENCE</font>. v. 219, p. 1271-1278, issn: 1877-0509, 2023. <a href="http://dx.doi.org/10.1016/j.procs.2023.01.411" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>SIQUEIRA, LILIANE MARIA RAMALHO DE CASTRO ; CASTRO FILHO, J. A. ; ARRUDA, JULIANA SILVA. <b>Tecnologias digitais e a tomada de decisão na contabilidade: a importância das Metodologias Ativas na aprendizagem</b>. <font color=#330066>RENOTE. REVISTA NOVAS TECNOLOGIAS NA EDUCAÇÃO</font>. v. 21, p. 117-127, issn: 1679-1916, 2023. <a href="http://dx.doi.org/10.22456/1679-1916.134332" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2022"><h3 class="year">2022</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>Barbosa, Ícaro da Silva ; VIDAL, C. A. ; Cavalcante-Neto, Joaquim B. ; LEITE JUNIOR, A. J. M. ; Gomes, George Allan Menezes. <b>Proposta de Arquitetura para Simuladores de Realidade Virtual Voltados à Capacitação de Forças Policiais.</b>. <font color=#330066>Comunicações em Informática</font>. v. 6, p. 9-12, issn: 2595-0622, 2022. <a href="http://dx.doi.org/10.22478/ufpb.2595-0622.2022v6n2.64069" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>Barbosa, I. S. ; Vidal, C.A. ; CAVALCANTE-NETO, J.B. ; Leite-Jr, A.J.M. ; GOMES, George Allan Menezes. <b>Proposta de Arquitetura para Simuladores de Realidade Virtual Voltados à Capacitação de Forças Policiais</b>. <font color=#330066>Comunicações em Informática</font>. v. 6, p. 9-12, issn: 2595-0622, 2022. <a href="http://dx.doi.org/10.22478/ufpb.2595-0622.2022v6n2.64069" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>Barbosa, Ícaro da Silva ; VIDAL, C. A. ; Cavalcante-Neto, Joaquim B. ; Leite Junior, Antônio José Melo ; GOMES, George Allan Menezes. <b>Proposta de Arquitetura para Simuladores de Realidade Virtual Voltados à Capacitação de Forças Policiais.</b>. <font color=#330066>Comunicações em Informática</font>. v. 6, p. 9-12, issn: 2595-0622, 2022. <a href="http://dx.doi.org/10.22478/ufpb.2595-0622.2022v6n2.64069" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>CASTRO-FILHO, JOSE AIRES DE; SANTANA, EURIVALDA RIBEIRO DOS SANTOS ; COUTO, MARIA ELIZABETE SOUZA ; CASTRO, JUSCILEIDE BRAGA DE ; Maia, Dennys Leite. <b>Supporting mathematics public school teachers? professional development and the teaching of statistics in elementary and middle school: An imperative for teacher education in Brazil</b>. <font color=#330066>International Electronic Journal of Mathematics Education</font>. v. 17, p. em0705-11, issn: 1306-3030, 2022. <a href="http://dx.doi.org/10.29333/iejme/12305" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DA SILVA JUNIOR, JOSÉ NUNES ; SOUSA LIMA, MARY ANNE ; NUNES, FÁTIMA MIRANDA ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; DE OLIVEIRA ASSIS, DJHEYSON CARLOS ; JANÔ NOBRE, DAVI ; WINUM, JEAN-YVES ; MONTEIRO, ANDRÉ JALLES ; FERREIRA DE LIMA, DIOGO THOMAS. <b>Addition to -Nomenclature Bets: An Innovative Computer-Based Game to Aid Students in the Study of Nomenclature of Organic Compounds-Version 2.0-</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2022. <a href="http://dx.doi.org/10.1021/acs.jchemed.2c00167" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; CASTRO, GUILHERME DE LIMA ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; MONTEIRO, ANDRÉ JALLES ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA. <b>Gamification of an Entire Introductory Organic Chemistry Course: A Strategy to Enhance the Students? Engagement</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. acs.jchemed.1c00766, issn: 0021-9584, 2022. <a href="http://dx.doi.org/10.1021/acs.jchemed.1c00766" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; WINUM, JEAN-YVES ; BASSO, ANDREA ; GELATI, LUCA ; MONI, LISA ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; MAFEZOLI, JAIR ; ZAMPIERI, DÁVILA ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; VEJA, KIMBERLY BENEDETTI ; MONTEIRO, ANDRÉ JALLES. <b>STR120: A Web-Based Board Game for Aiding Students in Review of the Structural Theory of Organic Compounds</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2022. <a href="http://dx.doi.org/10.1021/acs.jchemed.2c00389" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; ZAMPIERI, DÁVILA ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; ALEXANDRE, FRANCISCO SERRA OLIVEIRA ; WINUM, JEAN-YVES ; BASSO, ANDREA ; MONTEIRO, ANDRÉ JALLES ; DA SILVA, LUCAS LIMA. <b>A Virtual Game-Based Tournament to Engage Students in Reviewing Organic Acids and Bases Concepts</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 1, p. 1, issn: 0021-9584, 2022. <a href="http://dx.doi.org/10.1021/acs.jchemed.1c01220" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>DA SILVA, THIAGO H. O. ; Furtado, Vasco ; Furtado, Elizabeth ; Mendes, Marilia ; ALMEIDA, VIRGILIO ; SALES, LANNA. <b>How Do Illiterate People Interact with an Intelligent Voice Assistant?</b>. <font color=#330066>INTERNATIONAL JOURNAL OF HUMAN-COMPUTER INTERACTION</font>. v. 1, p. 1-19, issn: 1044-7318, 2022. <a href="http://dx.doi.org/10.1080/10447318.2022.2121219" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>DE LIMA, GABRIELY ; LOPES, LUCAS ; RAULINO, NATÃ ; NUNES, CAIO ; SABOIA, INGA ; LEITE, A J M. <b>TRANSforming Design Through Emotion: An Application to Support Brazilian Transgender Student Women</b>. <font color=#330066>INTERACTING WITH COMPUTERS</font>. v. 1, p. 1, issn: 0953-5438, 2022. <a href="http://dx.doi.org/10.1093/iwc/iwac038" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>Pernencar, Claudia ; AGUILAR, PAULO ; SABOIA, INGA ; BARRETO, IVANA ; THEOPHILO, REBECCA ; OLIVEIRA, DEIVITH ; MONTEIRO, LUIZ ODORICO. <b>Systematic mapping of digital health apps - A methodological proposal based on the World Health Organization classification of interventions</b>. <font color=#330066>Digital Health</font>. v. 8, p. 205520762211290, issn: 2055-2076, 2022. <a href="http://dx.doi.org/10.1177/20552076221129071" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>PERNENCAR, CLÁUDIA ; SABOIA, INGA ; DIAS, JOANA CARMO. <b>How Far Can Conversational Agents Contribute to IBD Patient Health Care-A Review of the Literature</b>. <font color=#330066>FRONTIERS IN PUBLIC HEALTH</font>. v. 10, p. 1-30, issn: 2296-2565, 2022. <a href="http://dx.doi.org/10.3389/fpubh.2022.862432" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>QUEIROS, L. M. ; GOMES, A. S. ; PEREIRA, J. W. ; CASTRO FILHO, J. A. ; SANTOS, E. M. ; SILVA NETO, D. F.. <b>Enigmas de Yucatàn: Recurso Educacional Digital para o Ensino de Geometria Espacial</b>. <font color=#330066>Revista Brasileira de Informática na Educação (RBIE)</font>. v. 30, p. 108-135, issn: 2317-6121, 2022. <a href="http://dx.doi.org/10.5753/rbie.2022.2140" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>ROCHA, F. B. N. ; COSTA, J. E. ; MAIA, JOSÉ GILVAN RODRIGUES ; CASTRO FILHO, J. A.. <b>Digital games in Mathematics teaching and learning processes: A focus on high school Authors</b>. <font color=#330066>RESEARCH, SOCIETY AND DEVELOPMENT</font>. v. 11, p. e183111032748, issn: 2525-3409, 2022.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>ROCHA, F. B. N. ; COSTA, J. E. ; MAIA, JOSÉ GILVAN RODRIGUES ; CASTRO FILHO, J. A.. <b>Analysis of microdata of mathematics of ENEM from 2017-2019 of Northeast</b>. <font color=#330066>RESEARCH, SOCIETY AND DEVELOPMENT</font>. v. 11, p. e207111032716, issn: 2525-3409, 2022.</td></tr>
+            
+            <tr valign="top"><td>16. &nbsp;</td> <td>ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; COSTA, JULIANA EVARISTO ; MAIA, JOSÉ GILVAN RODRIGUES ; Castro Filho, José Aires de. <b>Os jogos digitais nos processos de ensino e aprendizagem de Matemática: Um foco no ensino médio</b>. <font color=#330066>RESEARCH, SOCIETY AND DEVELOPMENT</font>. v. 11, p. e183111032748-10, issn: 2525-3409, 2022. <a href="http://dx.doi.org/10.33448/rsd-v11i10.32748" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>17. &nbsp;</td> <td>ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; COSTA, JULIANA EVARISTO ; MAIA, JOSÉ GILVAN RODRIGUES ; CASTRO FILHO, JOSÉ AIRES DE ; LIMA, LUCIANA DE. <b>Potencialidades e dificuldades do uso das tecnologias digitais na prÃ¡tica docente por professores de matemÃ¡tica</b>. <font color=#330066>RESEARCH, SOCIETY AND DEVELOPMENT</font>. v. 11, p. e32111133284-10, issn: 2525-3409, 2022. <a href="http://dx.doi.org/10.33448/rsd-v11i11.33284" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>18. &nbsp;</td> <td>ROCHA, FRANCISCO BRUNO NASCIMENTO DA ; COSTA, JULIANA EVARISTO ; MAIA, JOSÉ GILVAN RODRIGUES ; Castro Filho, José Aires de ; VASCONCELOS, Francisco Herbert Lima. <b>Análise dos microdados de matemática do ENEM de 2017-2019 do Nordeste</b>. <font color=#330066>RESEARCH, SOCIETY AND DEVELOPMENT</font>. v. 11, p. e207111032716-13, issn: 2525-3409, 2022. <a href="http://dx.doi.org/10.33448/rsd-v11i10.32716" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>19. &nbsp;</td> <td>ROCHA, PAULO ; SOUZA, ALISSON ; MAIA, GILVAN ; MATTOS, CÉSAR ; SILVA, FRANCISCO AIRTON ; REGO, PAULO ; NGUYEN, TUAN ANH ; LEE, JAE-WOO. <b>Evaluating Link Lifetime Prediction to Support Computational Offloading Decision in VANETs</b>. <font color=#330066>SENSORS</font>. v. 22, p. 6038-6059, issn: 1424-8220, 2022. <a href="http://dx.doi.org/10.3390/s22166038" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>20. &nbsp;</td> <td>SANTANA, E. R. S. ; LAUTERT, S. L. ; CASTRO FILHO, J. A. ; NUNES, C. B. ; SANTOS, E. M.. <b>Northeast Mathematical Education Network: professional development and statistical teaching from a critical and equity perspective</b>. <font color=#330066>REVISTA BRASILEIRA DE ENSINO DE CIÊNCIA E TECNOLOGIA</font>. v. 1, p. 33-55, issn: 1982-873X, 2022. <a href="http://dx.doi.org/10.3895/rbect.v15n1.14789" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div><div id="dv-year-2021"><h3 class="year">2021</h3> <table>
+            <tr valign="top"><td>1. &nbsp;</td> <td>ARRAIS NETO, J. C. F. ; ARAUJO, F. L. N. ; MOREIRA NETO, M. ; Paillard, G. A. L. ; MOREIRA, L. O.. <b>Um Estudo Exploratório entre Banco de Dados NoSQL e Armazenamento de Dados em Blockchain</b>. <font color=#330066>REVISTA SISTEMAS E MÍDIAS DIGITAIS</font>. v. 6, p. 1-15, issn: 2525-9555, 2021.</td></tr>
+            
+            <tr valign="top"><td>2. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; SOUSA LIMA, MARY ANNE ; ÁVILA PIMENTA, ANTONIA TORRES ; NUNES, FÁTIMA MIRANDA ; MONTEIRO, ÁLVARO CARVALHO ; LEITE JÚNIOR, ANTONIO JOSÉ MELO ; ZAMPIERI, DÁVILA ; OLIVEIRA ALEXANDRE, FRANCISCO SERRA ; DE SOUSA, ULISSES SILVA ; PACIONI, NATALIA LORENA ; WINUM, JEAN-YVES. <b>Design, implementation, and evaluation of a game-based application for aiding chemical engineering and chemistry students to review the organic reactions</b>. <font color=#330066>EDUCATION FOR CHEMICAL ENGINEERS</font>. v. 34, p. 106-114, issn: 1749-7728, 2021. <a href="http://dx.doi.org/10.1016/j.ece.2020.11.007" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>3. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; UCHOA, DANIEL ESDRAS DE ANDRADE ; SOUSA LIMA, MARY ANNE ; MONTEIRO, ANDRÉ JALLES ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; WINUM, JEAN-YVES ; BASSO, ANDREA. <b>Addition to -Stereochemistry Game: Creating and Playing a Fun Board Game To Engage Students in Reviewing Stereochemistry Concepts-The Online Version-</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 98, p. 3055-3057, issn: 0021-9584, 2021. <a href="http://dx.doi.org/10.1021/acs.jchemed.1c00708" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>4. &nbsp;</td> <td>DA SILVA JÚNIOR, JOSÉ NUNES ; ZAMPIERI, DÁVILA ; DE MATTOS, MARCOS CARLOS ; DUQUE, BRUNA RIBEIRO ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; SILVA DE SOUSA, ULISSES ; DO NASCIMENTO, DAVID MACEDO ; SOUSA LIMA, MARY ANNE ; MONTEIRO, ANDRÉ JALLES. <b>Addition to -A Hybrid Board Game to Engage Students in Reviewing Organic Acids and Bases Concepts-: Using the Game Remotely during the COVID-19 Pandemic</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 98, p. 2138-2140, issn: 0021-9584, 2021. <a href="http://dx.doi.org/10.1021/acs.jchemed.1c00240" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>5. &nbsp;</td> <td>DA SILVA, JOSÉ NUNES ; LEITE, ANTONIO JOSÉ MELO ; WINUM, JEAN-YVES ; BASSO, ANDREA ; DE SOUSA, ULISSES SILVA ; DO NASCIMENTO, DAVID MACEDO ; ALVES, SAMUEL MOURA. <b>HSG400 - Design, implementation, and evaluation of a hybrid board game for aiding chemistry and chemical engineering students in the review of stereochemistry during and after the COVID-19 pandemic</b>. <font color=#330066>EDUCATION FOR CHEMICAL ENGINEERS</font>. v. 36, p. 90-99, issn: 1749-7728, 2021. <a href="http://dx.doi.org/10.1016/j.ece.2021.04.004" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>6. &nbsp;</td> <td>FERREIRA COUTINHO, EMANUEL ; GILVAN RODRIGUES MAIA, JOSÉ. <b>Um relato das percepções dos alunos sobre o desenvolvimento de tecnologias aplicadas a produtos educacionais</b>. <font color=#330066>RENOTE. REVISTA NOVAS TECNOLOGIAS NA EDUCAÇÃO</font>. v. 19, p. 262-271, issn: 1679-1916, 2021. <a href="http://dx.doi.org/10.22456/1679-1916.121224" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>7. &nbsp;</td> <td>HITZSCHKY, R. A. ; CASTRO FILHO, J. A. ; FREIRE, R. S.. <b>Recurso Educacional Digital (RED) para os anos iniciais do Ensino Fundamental: aspectos pedagógicos e a Base Nacional Comum Curricular</b>. <font color=#330066>RENOTE. REVISTA NOVAS TECNOLOGIAS NA EDUCAÇÃO</font>. v. 18, p. 408-417, issn: 1679-1916, 2021. <a href="http://dx.doi.org/10.22456/1679-1916.110262" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>8. &nbsp;</td> <td>JÚNIOR, JOSÉ; OLIVEIRA, JOSÉ ; ALEXANDRE, FRANCISCO ; JUNIOR, ANTONIO. <b>COVERAGE OF INTERMOLECULAR FORCES IN ORGANIC CHEMISTRY TEXTBOOKS</b>. <font color=#330066>QUÍMICA NOVA (ONLINE)</font>. v. 1, p. 1, issn: 1678-7064, 2021. <a href="http://dx.doi.org/10.21577/0100-4042.20170766" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>9. &nbsp;</td> <td>Maria De Jesus Costa ; JÚNIOR, JOSÉ ; Sara Stephane Moreira Torres. <b>Uma Proposta de Método  para Avaliação da  Qualidade de Identidades  Visuais Adaptativas</b>. <font color=#330066>BRANDTRENDS JOURNAL</font>. v. 21, p. 115-136, issn: 2237-8529, 2021.</td></tr>
+            
+            <tr valign="top"><td>10. &nbsp;</td> <td>MELLO, RUI R. ; ARAÚJO, LEANDRO S. ; ALVES, TIAGO A. O. ; MARZULO, LEANDRO A. J. ; PAILLARD, GABRIEL A. L. ; FRANÇA, FELIPE M. G.. <b>Gamma - General Abstract Model for Multiset mAnipulation and dynamic dataflow model: An equivalence study</b>. <font color=#330066>CONCURRENCY AND COMPUTATION-PRACTICE & EXPERIENCE</font>. v. AOP, p. 1-30, issn: 1532-0626, 2021. <a href="http://dx.doi.org/10.1002/cpe.6176" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>11. &nbsp;</td> <td>NUNES DA SILVA JÚNIOR, JOSÉ ; SOUSA LIMA, MARY ANNE ; SILVA DE SOUSA, ULISSES ; MACEDO DO NASCIMENTO, DAVID ; MELO LEITE JUNIOR, ANTONIO JOSÉ ; VEGA, KIMBERLY BENEDETTI ; ROY, BÉATRICE ; WINUM, JEAN-YVES. <b>Addition to -Reactions: An Innovative and Fun Hybrid Game to Engage the Students Reviewing Organic Reactions in the Classroom-: Using the Game Remotely during the COVID-19 Pandemic</b>. <font color=#330066>JOURNAL OF CHEMICAL EDUCATION</font>. v. 98, p. 2735-2737, issn: 0021-9584, 2021. <a href="http://dx.doi.org/10.1021/acs.jchemed.1c00669" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>12. &nbsp;</td> <td>PORTO, P. B. M. ; LEITE JUNIOR, A. J. M.. <b>Uma proposta de metodologia de avaliacao de usabilidade utilizando o System Usability Scale e perguntas abertas</b>. <font color=#330066>REVISTA SISTEMAS E MÍDIAS DIGITAIS</font>. v. 6, p. 1/5, issn: 2525-9555, 2021.</td></tr>
+            
+            <tr valign="top"><td>13. &nbsp;</td> <td>SABOIA, INGA; PISCO ALMEIDA, ANA MARGARIDA ; SOUSA, PEDRO ; PERNENCAR, CLÁUDIA ; SILVA, RUI. <b>What are Dietitians and Nutritionists doing on social media? A proposal of an online survey</b>. <font color=#330066>PROCEDIA COMPUTER SCIENCE</font>. v. 181, p. 793-802, issn: 1877-0509, 2021. <a href="http://dx.doi.org/10.1016/j.procs.2021.01.232" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            
+            <tr valign="top"><td>14. &nbsp;</td> <td>Sara Stephane Moreira Torres ; Maria De Jesus Costa ; LEITE, ANTONIO JOSÉ MELO. <b>Proposta de metodologia  de avaliação da  identificação do usuário x  marca em identidades  visuais adaptativas</b>. <font color=#330066>BRANDTRENDS JOURNAL</font>. v. 21, p. 137-158, issn: 2237-8529, 2021.</td></tr>
+            
+            <tr valign="top"><td>15. &nbsp;</td> <td>Ventura, Paula Patrícia Barbosa ; Castro Filho, José Aires de. <b>Indicadores de metodologias ativas com suporte das tecnologias digitais (Indicators of Active Methodologies Supported By Digital Technologies)</b>. <font color=#330066>REVISTA ELETRÔNICA DE EDUCAÇÃO (SÃO CARLOS)</font>. v. 15, p. e4600068-23, issn: 1982-7199, 2021. <a href="http://dx.doi.org/10.14244/198271994600" target="_blank" style="PADDING-RIGHT:4px;"><img border=0 src="doi.png"></a></td></tr>
+            </table></div>
+                    </table>
+                <br><p><br>(*) Relatório criado com produções desde 2021 até 2025
+<br>Data de processamento: 20/06/2025 10:35:17<br>         <div id="footer">         Relatório gerado por <a href="http://scriptlattes.sourceforge.net/">scriptLattes V9</a>.         Os resultados podem ser afetados por possíveis falhas decorrentes de inconsistências no preenchimento dos Currículos Lattes. E-mail de contato: <a href="mailto:admin@email.com">admin@email.com</a>         </div> </body></html>
+              
