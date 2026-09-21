@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rafael A. F. do Carmo — UFC</title>
+<meta name="description" content="Rafael Augusto Ferreira do Carmo — professor adjunto da Universidade Federal do Ceará. Coordena o projeto do MaCaMu, instrumento de comunicação entre a Central de Transplantes e as equipes transplantadoras. Pôster no CBIS 2026.">
+<meta name="author" content="Rafael Augusto Ferreira do Carmo">
+<link rel="canonical" href="https://rafael.carmo.cc/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Rafael A. F. do Carmo — UFC">
+<meta property="og:description" content="Professor adjunto da UFC. Comunicação entre a Central de Transplantes e as equipes transplantadoras — pôster no CBIS 2026.">
+<meta property="og:url" content="https://rafael.carmo.cc/">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23236d78'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="assets/vendor/bulma.min.css">
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="assets/vendor/htmx.min.js" defer></script>
+<script src="assets/config.js" defer></script>
+</head>
+
+<body>
+
+<header class="cabecalho">
+  <div class="container is-max-desktop px-4">
+
+    <p class="faixa-evento">
+      <strong>CBIS 2026</strong>
+      <span>Sessão Pôster 01</span>
+      <span class="quando">qua 23/09 · 13h30–14h30 · Lobby</span>
+    </p>
+
+    <h1 class="title is-2 nome">Rafael Augusto Ferreira do Carmo</h1>
+    <p class="cargo">Professor adjunto · Instituto UFC Virtual · Universidade Federal do Ceará</p>
+
+    <p class="sintese">
+      Computação aplicada à educação e à saúde. Coordeno o projeto que desenvolve o
+      <strong>MaCaMu</strong> — um instrumento para organizar a comunicação entre a Central de
+      Transplantes e as equipes transplantadoras. Doutor em Statistical Science pela University
+      College London.
+    </p>
+
+    <nav class="acoes" aria-label="Formas de contato">
+      <a class="button is-primary" data-link="email" href="mailto:carmorafael@virtual.ufc.br">
+        Escrever e-mail
+      </a>
+      <a class="button" data-link="wa" href="https://wa.me/5585981089287?text=Ol%C3%A1%2C%20Rafael!%20Nos%20conhecemos%20no%20CBIS%202026." target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+      <a class="button" data-link="github" href="https://github.com/thecarmo" target="_blank" rel="noopener">
+        GitHub
+      </a>
+      <a class="button is-ghost" href="contato.vcf" download>
+        Salvar contato
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<div class="abas">
+  <div class="container is-max-desktop px-4">
+    <div class="tabs is-boxed">
+      <ul id="barra-abas" role="tablist">
+        <li data-aba="poster" class="is-active">
+          <a href="?s=poster" role="tab"
+             hx-get="parciais/poster.html" hx-target="#painel">
+            O pôster
+          </a>
+        </li>
+        <li data-aba="macamu">
+          <a href="?s=macamu" role="tab"
+             hx-get="parciais/macamu.html" hx-target="#painel">
+            MaCaMu
+          </a>
+        </li>
+        <li data-aba="sobre">
+          <a href="?s=sobre" role="tab"
+             hx-get="parciais/sobre.html" hx-target="#painel">
+            Trajetória
+          </a>
+        </li>
+        <li data-aba="producao">
+          <a href="?s=producao" role="tab"
+             hx-get="parciais/producao.html" hx-target="#painel">
+            Produção
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<main class="container is-max-desktop px-4">
+  <p class="carregando" id="indicador">carregando…</p>
+  <div id="painel" role="region" aria-live="polite" hx-indicator="#indicador"></div>
+</main>
+
+<footer class="rodape">
+  <div class="container is-max-desktop px-4">
+    <div class="columns is-variable is-4">
+
+      <div class="column">
+        <h3 class="mb-4" style="font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;">Contato</h3>
+        <dl class="ficha">
+          <div>
+            <dt>E-mail</dt>
+            <dd><a data-link="email" href="mailto:carmorafael@virtual.ufc.br"><span data-texto="email">carmorafael@virtual.ufc.br</span></a></dd>
+          </div>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd><a data-link="wa" href="https://wa.me/5585981089287?text=Ol%C3%A1%2C%20Rafael!%20Nos%20conhecemos%20no%20CBIS%202026." target="_blank" rel="noopener"><span data-texto="whatsapp">(85) 98108-9287</span></a></dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a data-link="github" href="https://github.com/thecarmo" target="_blank" rel="noopener">github.com/thecarmo</a></dd>
+          </div>
+          <div>
+            <dt>Lattes</dt>
+            <dd><a data-link="lattes" href="http://lattes.cnpq.br/3102406452063651" target="_blank" rel="noopener">lattes.cnpq.br/3102406452063651</a></dd>
+          </div>
+          <div>
+            <dt>ORCID</dt>
+            <dd><a data-link="orcid" href="https://orcid.org/0000-0002-5080-1688" target="_blank" rel="noopener">0000-0002-5080-1688</a></dd>
+          </div>
+          <div>
+            <dt>Telefone</dt>
+            <dd><a data-link="tel" href="tel:+558533669465"><span data-texto="telefone">(85) 3366-9465</span></a></dd>
+          </div>
+          <div>
+            <dt>Endereço</dt>
+            <dd>Instituto UFC Virtual — Av. Mister Hull, s/n<br>Campus do Pici, Bloco 901<br>60455-760 · Fortaleza, CE</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="column is-narrow has-text-centered">
+        <h3 class="mb-4" style="font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;">Esta página</h3>
+        <img class="qr" src="assets/qr-pagina.svg" alt="QR code para esta página" width="132" height="132">
+        <p class="is-size-7 mt-2" data-texto="url">rafael.carmo.cc/</p>
+        <p class="mt-4">
+          <a class="button is-small" href="contato.vcf" download>Salvar contato (.vcf)</a>
+        </p>
+      </div>
+
+    </div>
+
+    <p class="creditos">
+      Página estática — HTML, <a href="https://htmx.org" target="_blank" rel="noopener">htmx</a>
+      e <a href="https://bulma.io" target="_blank" rel="noopener">Bulma</a>, sem rastreadores e sem
+      dependência de CDN.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* -------------------------------------------------------------------------
+   O htmx carrega as parciais (hx-get / hx-target nas abas). O histórico é
+   controlado aqui, e não por hx-push-url: como a aba é função pura de ?s=…,
+   basta empurrar o estado no clique e recarregar a parcial no voltar. Isso
+   evita depender do cache de histórico do htmx, que num site estático perde
+   o conteúdo do painel ao voltar (a URL ?s=… devolve sempre o index vazio).
+------------------------------------------------------------------------- */
+(function () {
+  var ABAS = ["poster", "macamu", "sobre", "producao"];
+
+  function atual() {
+    var s = new URLSearchParams(location.search).get("s");
+    return ABAS.indexOf(s) >= 0 ? s : "poster";
+  }
+
+  function marcar(aba) {
+    document.querySelectorAll("#barra-abas li").forEach(function (li) {
+      var ativo = li.dataset.aba === aba;
+      li.classList.toggle("is-active", ativo);
+      li.querySelector("a").setAttribute("aria-selected", ativo ? "true" : "false");
+    });
+  }
+
+  function mostrar(aba) {
+    marcar(aba);
+    htmx.ajax("GET", "parciais/" + aba + ".html", "#painel");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var aba = atual();
+    history.replaceState({ aba: aba }, "", "?s=" + aba);
+    mostrar(aba);
+  });
+
+  document.getElementById("barra-abas").addEventListener("click", function (e) {
+    var li = e.target.closest("li[data-aba]");
+    if (!li) return;
+    var aba = li.dataset.aba;
+    if (aba === atual()) return;
+    history.pushState({ aba: aba }, "", "?s=" + aba);
+    marcar(aba);            // o htmx já está buscando a parcial
+  });
+
+  window.addEventListener("popstate", function () { mostrar(atual()); });
+})();
+</script>
+
+</body>
+</html>

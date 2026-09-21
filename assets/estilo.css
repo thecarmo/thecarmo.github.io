@@ -1,0 +1,254 @@
+/* ---------------------------------------------------------------------------
+   Ajustes sobre o Bulma. Poucos, de propósito: sóbrio, texto escuro em fundo
+   claro, um único acento. O Bulma 1.x já traz modo escuro automático.
+--------------------------------------------------------------------------- */
+:root {
+  /* acento: verde-petróleo sóbrio */
+  --bulma-primary-h: 186deg;
+  --bulma-primary-s: 52%;
+  --bulma-primary-l: 29%;
+  --bulma-link-h: 186deg;
+  --bulma-link-s: 52%;
+  --bulma-link-l: 29%;
+
+  --bulma-body-font-size: 1.05em;
+  --bulma-body-line-height: 1.65;
+  --acento: hsl(186deg 52% 29%);
+  --regua: hsl(0deg 0% 0% / 0.1);
+
+  /* O Bulma deriva a cor do texto sobre o primário e a cor de link em tempo
+     de build; como o acento foi trocado aqui, elas precisam ser refeitas à
+     mão — sem isso o botão primário fica com texto escuro sobre fundo
+     escuro (2.9:1) e a aba ativa fica em turquesa claro sobre branco. */
+  --bulma-primary-invert-h: 0deg;
+  --bulma-primary-invert-s: 0%;
+  --bulma-primary-invert-l: 100%;
+  --bulma-link-text: var(--acento);
+  --bulma-tabs-link-active-color: var(--acento);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bulma-primary-l: 62%;
+    --bulma-link-l: 66%;
+    --bulma-primary-invert-l: 12%;   /* primário fica claro: texto escuro */
+    --acento: hsl(186deg 45% 62%);
+    --regua: hsl(0deg 0% 100% / 0.14);
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- cabeçalho ---------------------------------------------------------- */
+.cabecalho {
+  border-bottom: 1px solid var(--regua);
+  padding: 2.75rem 0 2rem;
+}
+
+.cabecalho .nome {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.cabecalho .cargo {
+  color: var(--bulma-text-weak);
+  font-size: 1.05rem;
+  margin-top: 0.35rem;
+}
+
+.cabecalho .sintese {
+  max-width: 46rem;
+  margin-top: 1.1rem;
+}
+
+/* faixa do congresso */
+.faixa-evento {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.6rem;
+  border-left: 3px solid var(--acento);
+  padding: 0.35rem 0 0.35rem 0.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+}
+
+.faixa-evento strong { color: var(--acento); }
+.faixa-evento .quando { color: var(--bulma-text-weak); }
+
+/* ---- botões de contato -------------------------------------------------- */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.acoes .button { font-weight: 600; }
+
+/* ---- abas --------------------------------------------------------------- */
+.abas {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bulma-scheme-main);
+  border-bottom: 1px solid var(--regua);
+}
+
+.abas .tabs { margin-bottom: 0; }
+.abas .tabs ul { border-bottom: 0; }
+
+/* no celular as quatro abas precisam caber sem rolagem lateral */
+@media screen and (max-width: 480px) {
+  .abas .tabs { font-size: 0.8rem; }
+  .abas .tabs a { padding: 0.55em 0.7em; }
+}
+
+/* ---- painel htmx -------------------------------------------------------- */
+#painel {
+  padding: 2.25rem 0 1rem;
+  min-height: 24rem;
+}
+
+#painel > section { animation: entra 0.18s ease-out; }
+
+@keyframes entra {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #painel > section { animation: none; }
+}
+
+/* indicador de carregamento do htmx */
+.carregando {
+  display: none;
+  color: var(--bulma-text-weak);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+.htmx-request .carregando,
+.htmx-request.carregando { display: block; }
+
+/* ---- conteúdo das parciais ---------------------------------------------- */
+.bloco + .bloco,
+.bloco .bloco { margin-top: 2.75rem; }
+
+/* links de texto seguem o acento nos dois temas (as abas ficam com o Bulma) */
+main a:not(.button),
+.rodape a:not(.button) { color: var(--acento); }
+
+main a:not(.button):hover,
+.rodape a:not(.button):hover { text-decoration: underline; }
+
+.bloco h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.9rem;
+}
+
+.bloco h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--bulma-text-weak);
+  margin-bottom: 0.7rem;
+}
+
+.prosa { max-width: 46rem; }
+.prosa p + p { margin-top: 0.85rem; }
+
+/* ficha: rótulo à esquerda, valor à direita */
+.ficha {
+  border-top: 1px solid var(--regua);
+  margin-top: 1rem;
+}
+
+.ficha > div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0 1.25rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--regua);
+}
+
+.ficha dt {
+  color: var(--bulma-text-weak);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 0.15rem;
+}
+
+.ficha dd { margin: 0; }
+
+@media screen and (max-width: 640px) {
+  .ficha > div { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+/* destaque de uma frase só */
+.destaque {
+  border-left: 3px solid var(--acento);
+  padding: 0.6rem 0 0.6rem 1rem;
+  margin: 1.5rem 0;
+  max-width: 46rem;
+}
+
+.destaque strong { color: var(--acento); }
+
+/* linha do tempo / listas de itens */
+.itens { list-style: none; margin: 0; padding: 0; }
+
+.itens > li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--regua);
+}
+
+.itens > li:first-child { border-top: 1px solid var(--regua); }
+
+.itens .ano {
+  color: var(--bulma-text-weak);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.itens .onde {
+  color: var(--bulma-text-weak);
+  font-size: 0.92rem;
+}
+
+/* ---- rodapé ------------------------------------------------------------- */
+.rodape {
+  border-top: 1px solid var(--regua);
+  margin-top: 3rem;
+  padding: 2.5rem 0 3rem;
+}
+
+.rodape .qr {
+  width: 132px;
+  height: 132px;
+  border: 1px solid var(--regua);
+  border-radius: 6px;
+  padding: 8px;
+  background: #fff;
+}
+
+.rodape a { word-break: break-word; }
+
+.creditos {
+  color: var(--bulma-text-weak);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* ---- impressão ---------------------------------------------------------- */
+@media print {
+  .abas, .acoes { display: none; }
+  .rodape { border-top: 1px solid #000; }
+}

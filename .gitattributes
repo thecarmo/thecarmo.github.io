@@ -1,0 +1,2 @@
+# O vCard usa CRLF; preserve os bytes do arquivo publicado.
+*.vcf -text whitespace=cr-at-eol

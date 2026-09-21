@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Carmo;Rafael Augusto Ferreira do;;Prof.;
+FN:Rafael Augusto Ferreira do Carmo
+TITLE:Professor Adjunto
+ORG:Universidade Federal do Ceará;Instituto UFC Virtual
+EMAIL;TYPE=INTERNET,WORK:carmorafael@virtual.ufc.br
+TEL;TYPE=CELL,VOICE:+5585981089287
+TEL;TYPE=WORK,VOICE:+558533669465
+ADR;TYPE=WORK:;;Av. Mister Hull s/n - Campus do Pici - Bloco 901;Fortaleza;CE;60455-760;Brasil
+URL:https://rafael.carmo.cc/
+URL;TYPE=GitHub:https://github.com/thecarmo
+URL;TYPE=Lattes:http://lattes.cnpq.br/3102406452063651
+URL;TYPE=ORCID:https://orcid.org/0000-0002-5080-1688
+NOTE:Pesquisa em comunicacao entre a Central de Transplantes e equipes transplantadoras (projeto MaCaMu). Conhecemo-nos no CBIS 2026.
+END:VCARD
